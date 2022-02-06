@@ -1,0 +1,926 @@
+<html>
+<head>
+<title>An&aacute;lisis de Algoritmos: Complejidad</title>
+</head>
+
+<body>
+<center>
+<h1>An&aacute;lisis de Algoritmos: Complejidad</h1>
+<a href="mailto:jmanas@dit.upm.es">
+José A. Mañas <tt><jmanas@dit.upm.es></tt></a><br>
+Noviembre, 1997
+</center>
+
+<dl>
+<dt>
+  <a href="#s1">1. Introducci&oacute;n</a>
+<dt>
+  <a href="#s2">2. Tiempo de Ejecuci&oacute;n</a>
+<dt>
+  <a href="#s3">3. Asintotas</a>
+<dt>
+  <a href="#s4">4. Reglas Practicas</a>
+<dt>
+  <a href="#s5">5. Problemas P, NP y NP-completos</a>
+<dt>
+  <a href="#s6">6. Conclusiones</a>
+<dt>
+  <a href="#s7">7. Bibliografia</a>
+</dl>
+
+
+<a name="s1"><h2>1. Introducci&oacute;n</h2></a>
+La resoluci&oacute;n pr&aacute;ctica de un problema exige por una parte un
+algoritmo o m&eacute;todo de resoluci&oacute;n y por otra un programa o
+codificaci&oacute;n de aquel en un ordenador real. Ambos componentes tienen su
+importancia; pero la del algoritmo es absolutamente esencial, mientras
+que la codificaci&oacute;n puede muchas veces pasar a nivel de an&eacute;cdota.
+
+<p>
+A efectos pr&aacute;cticos o ingenieriles, nos deben preocupar los recursos
+f&iacute;sicos necesarios para que un programa se ejecute. Aunque puede haber
+muchos parametros, los mas usuales son el tiempo de ejecuci&oacute;n y la
+cantidad de memoria (espacio). Ocurre con frecuencia que ambos
+parametros est&aacute;n fijados por otras razones y se plantea la pregunta
+inversa: &iquest;cual es el tamano del mayor problema que puedo resolver en
+T segundos y/o con M bytes de memoria? En lo que sigue nos centraremos
+casi siempre en el parametro tiempo de ejecuci&oacute;n, si bien las ideas
+desarrolladas son f&aacute;cilmente aplicables a otro tipo de recursos.
+
+<p>
+Para cada problema determinaremos un medida N de su tama&ntilde;o (por n&uacute;mero
+de datos) e intentaremos hallar respuestas en funci&oacute;n de dicho N. El
+concepto exacto que mide N depende de la naturaleza del problema. As&iacute;,
+para un vector se suele utizar como N su longitud; para una matriz, el
+n&uacute;mero de elementos que la componen; para un grafo, puede ser el n&uacute;mero
+de nodos (a veces es mas importante considerar el n&uacute;mero de arcos,
+dependiendo del tipo de problema a resolver); en un fichero se suele
+usar el n&uacute;mero de registros, etc. Es imposible dar una regla general,
+pues cada problema tiene su propia l&oacute;gica de coste.
+
+<a name="s2"><h2>2. Tiempo de Ejecuci&oacute;n</h2></a>
+Una medida que suele ser &uacute;til conocer es el tiempo de ejecuci&oacute;n de un
+programa en funci&oacute;n de N, lo que denominaremos T(N). Esta funci&oacute;n se
+puede medir f&iacute;sicamente (ejecutando el programa, reloj en mano), o
+calcularse sobre el c&oacute;digo contando instrucciones a ejecutar y
+multiplicando por el tiempo requerido por cada instrucci&oacute;n. As&iacute;, un
+trozo sencillo de programa como
+
+<pre>
+  S1; for (int i= 0; i &lt; N; i++) S2;
+</pre>
+
+requiere
+
+<pre>
+  T(N)= t1 + t2*N
+</pre>
+
+siendo t1 el tiempo que lleve ejecutar la serie "S1" de sentencias,
+y t2 el que lleve la serie "S2".
+
+<p>
+Pr&aacute;cticamente todos los programas reales incluyen alguna sentencia
+condicional, haciendo que las sentencias efectivamente ejecutadas
+dependan de los datos concretos que se le presenten. Esto hace que mas
+que un valor T(N) debamos hablar de un rango de valores
+
+<pre>
+  Tmin(N)  &lt;=  T(N)  &lt;=  Tmax(N)
+</pre>
+
+los extremos son habitualmente conocidos como "caso peor" y "caso mejor".
+Entre ambos se hallara algun "caso promedio" o m&aacute;s frecuente.
+
+<p>
+Cualquier f&oacute;rmula T(N) incluye referencias al par&aacute;metro N y a una
+serie de constantes "Ti" que dependen de factores externos al
+algoritmo como pueden ser la calidad del c&oacute;digo generado por el
+compilador y la velocidad de ejecuci&oacute;n de instrucciones del ordenador
+que lo ejecuta. Dado que es f&aacute;cil cambiar de compilador y que la
+potencia de los ordenadores crece a un ritmo vertiginoso (en la
+actualidad, se duplica anualmente), intentaremos analizar los
+algoritmos con algun nivel de independencia de estos factores; es
+decir, buscaremos estimaciones generales ampliamente v&aacute;lidas.
+
+<a name="s3"><h2>3. Asintotas</h2></a>
+Por una parte necesitamos analizar la potencia de los algoritmos
+independientemente de la potencia de la m&aacute;quina que los ejecute e
+incluso de la habilidad del programador que los codifique.  Por otra,
+este an&aacute;lisis nos interesa especialmente cuando el algoritmo se aplica a
+problema grandes.  Casi siempre los problemas peque&ntilde;os se pueden
+resolver de cualquier forma, apareciendo las limitaciones al atacar
+problemas grandes. No debe olvidarse que cualquier t&eacute;cnica de
+ingenier&iacute;a, si funciona, acaba aplic&aacute;ndose al problema m&aacute;s grande que
+sea posible: las tecnologias de &eacute;xito, antes o despu&eacute;s, acaban
+llev&aacute;ndose al l&iacute;mite de sus posibilidades.
+
+<p>
+Las consideraciones anteriores nos llevan a estudiar el comportamiento
+de un algoritmo cuando se fuerza el tama&ntilde;o del problema al que se
+aplica. Matem&aacute;ticamente hablando, cuando N tiende a infinito. Es
+decir, su comportamiento asint&oacute;tico.
+
+<p>
+Sean "g(n)" diferentes funciones que determinan el uso de recursos.
+Habra funciones "g" de todos los colores.
+Lo que vamos a intentar es identificar "familias" de funciones,
+usando como criterio de agrupaci&oacute;n su comportamiento asint&oacute;tico.
+
+<p>
+A un conjunto de funciones que comparten un mismo comportamiento
+asint&oacute;tico le denominaremos un &oacute;rden de complejidad'. Habitualmente
+estos conjuntos se denominan O, existiendo una infinidad de ellos.
+
+<p>
+Para cada uno de estos conjuntos se suele identificar un miembro f(n)
+que se utiliza como representante de la clase, habl&aacute;ndose del conjunto
+de funciones "g" que son del orden de "f(n)", denot&aacute;ndose como
+<pre>
+	g IN O(f(n))
+</pre>
+
+Con frecuencia nos encontraremos con que no es necesario conocer el
+comportamiento exacto, sino que basta conocer una cota superior, es
+decir, alguna funci&oacute;n que se comporte "a&uacute;n peor".
+
+<p>
+La definici&oacute;n matem&aacute;tica de estos conjuntos debe ser muy cuidadosa
+para involucrar ambos aspectos: identificaci&oacute;n de una familia y
+posible utilizaci&oacute;n como cota superior de otras funciones menos
+malas:
+
+<blockquote>
+  D&iacute;cese que el conjunto O(f(n)) es el de las funciones de orden de f(n),
+  que se define como
+
+<pre>
+  O(f(n))= {g: INTEGER -&gt; REAL<sup>+</sup>  tales que
+            existen las constantes  k  y  N<sub>0</sub> tales que
+            para todo  N &gt; N<sub>0</sub>,  g(N) &lt;= k*f(N) }
+</pre>
+</blockquote>
+
+en palabras, O(f(n)) esta formado por aquellas funciones g(n) que
+crecen a un ritmo menor o igual que el de f(n).
+
+<p>
+De las funciones "g" que forman este conjunto O(f(n)) se dice que
+<b>"est&aacute;n dominadas asint&oacute;ticamente"</b> por "f",
+en el sentido de que para N suficientemente grande,
+y salvo una constante multiplicativa "k",
+f(n) es una cota superior de g(n).
+
+<h3>3.1. &Oacute;rdenes de Complejidad</h3>
+Se dice que O(f(n)) define un <b>"orden de complejidad"</b>.
+Escogeremos como representante de este orden a
+la funci&oacute;n f(n) m&aacute;s sencilla del mismo.
+As&iacute; tendremos 
+
+<blockquote>
+<table>
+  <tr><td> O(1)              <td> orden constante
+  <tr><td> O(log n)          <td> orden logar&iacute;tmico
+  <tr><td> O(n)              <td> orden lineal
+  <tr><td> O(n log n)        <td>
+  <tr><td> O(n<sup>2</sup>)  <td> orden cuadr&aacute;tico
+  <tr><td> O(n<sup>a</sup>)  <td> orden polinomial (a &gt; 2)
+  <tr><td> O(a<sup>n</sup>)  <td> orden exponencial (a &gt; 2)
+  <tr><td> O(n!)             <td> orden factorial
+</table>
+</blockquote>
+
+<p>
+Es m&aacute;s, se puede identificar una jerarqu&iacute;a de &oacute;rdenes de complejidad
+que coincide con el orden de la tabla anterior; jerarqu&iacute;a en el
+sentido de que cada orden de complejidad superior tiene a los
+inferiores como subconjuntos. Si un algoritmo A se puede demostrar de
+un cierto orden O<sub>1</sub>,
+es cierto que tambien pertenece a todos los &oacute;rdenes superiores
+(la relaci&oacute;n de orden &ccedil;ota superior de' es transitiva);
+pero en la pr&aacute;ctica lo &uacute;til es encontrar la "menor cota superior",
+es decir el menor orden de complejidad que lo cubra.
+
+<h4>3.1.1. Impacto Pr&aacute;ctico</h4>
+Para captar la importancia relativa de los &oacute;rdenes de complejidad
+conviene echar algunas cuentas.
+
+<p>
+Sea un problema que sabemos resolver con algoritmos de diferentes
+complejidades. Para compararlos entre si, supongamos que todos ellos
+requieren 1 hora de ordenador para resolver un problema de tama&ntilde;o
+N=100.
+
+<p>
+&iquest;Qu&eacute; ocurre si disponemos del doble de tiempo?
+Notese que esto es lo mismo que disponer del mismo tiempo en un
+odenador el doble de potente, y que el ritmo actual de progreso del
+hardware es exactamente ese:
+<blockquote>
+  "duplicaci&oacute;n anual del n&uacute;mero de instrucciones por segundo".
+</blockquote>
+
+<p>
+&iquest;Qu&eacute; ocurre si queremos resolver un problema de tama&ntilde;o 2n?
+
+<blockquote>
+<table border>
+<tr><th>O(f(n))        <th>N=100  <th>t=2h   <th>N=200
+<tr><th>log n          <td>1 h    <td>10000  <td>1.15 h
+<tr><th>n              <td>1 h    <td>200    <td>2 h
+<tr><th>n log n        <td>1 h    <td>199    <td>2.30 h
+<tr><th>n<sup>2</sup>  <td>1 h    <td>141    <td>4 h
+<tr><th>n<sup>3</sup>  <td>1 h    <td>126    <td>8 h
+<tr><th>2<sup>n</sup>  <td>1 h    <td>101    <td>10<sup>30</sup> h
+</table>
+</blockquote>
+
+<p>
+Los algoritmos de complejidad O(n) y O(n log n) son los que muestran
+un comportamiento m&aacute;s "natural": pr&aacute;cticamente a doble de tiempo,
+doble de datos procesables.
+
+<p>
+Los algoritmos de complejidad logar&iacute;tmica son un descubrimiento
+fenomenal, pues en el doble de tiempo permiten atacar problemas
+notablemente mayores, y para resolver un problema el doble de grande
+s&oacute;lo hace falta un poco m&aacute;s de tiempo (ni mucho menos el doble).
+
+<p>
+Los algoritmos de tipo polin&oacute;mico no son una maravilla, y se enfrentan
+con dificultad a problemas de tama&ntilde;o creciente. La pr&aacute;ctica viene a
+decirnos que son el l&iacute;mite de lo "tratable".
+
+<p>
+Sobre la tratabilidad de los algoritmos de complejidad polin&oacute;mica
+habria mucho que hablar, y a veces semejante calificativo es puro
+eufemismo. Mientras complejidades del orden O(n<sup>2</sup>) y
+O(n<sup>3</sup>) suelen ser
+efectivamente abordables, pr&aacute;cticamente nadie acepta algoritmos de
+orden O(n<sup>100</sup>), por muy polin&oacute;micos que sean. La frontera es
+imprecisa.
+
+<p>
+Cualquier algoritmo por encima de una complejidad polin&oacute;mica se dice
+"intratable" y s&oacute;lo ser&aacute; aplicable a problemas ridiculamente peque&ntilde;os.
+
+<p>
+A la vista de lo anterior se comprende que los programadores busquen
+algoritmos de complejidad lineal. Es un golpe de suerte encontrar algo
+de complejidad logar&iacute;tmica. Si se encuentran soluciones polinomiales,
+se puede vivir con ellas; pero ante soluciones de complejidad
+exponencial, m&aacute;s vale seguir buscando.
+
+<p>
+No obstante lo anterior ...
+
+<ul>
+<li>... si un programa se va a ejecutar muy pocas veces, los costes de
+    codificaci&oacute;n y depuraci&oacute;n son los que m&aacute;s importan, relegando la
+    complejidad a un papel secundario.
+
+<p>
+<li>... si a un programa se le prev&eacute; larga vida, hay que pensar que le
+    tocar&aacute; mantenerlo a otra persona y, por tanto, conviene tener en
+    cuenta su legibilidad, incluso a costa de la complejidad de los
+    algoritmos empleados.
+
+<p>
+<li>... si podemos garantizar que un programa s&oacute;lo va a trabajar sobre
+    datos peque&ntilde;os (valores bajos de N), el orden de complejidad del
+    algoritmo que usemos suele ser irrelevante, pudiendo llegar a ser
+    incluso contraproducente.
+
+    <p>
+    Por ejemplo, si disponemos de dos algoritmos para el mismo
+    problema, con tiempos de ejecuci&oacute;n respectivos:
+    <blockquote>
+    <table border>
+    <tr><th>algoritmo  <th>tiempo  <th>complejidad
+    <tr><td>f          <td>100 n          <td>O(n)
+    <tr><td>g          <td>n<sup>2</sup>  <td>O(n<sup>2</sup>)
+    </table>
+    </blockquote>
+
+    asint&oacute;ticamente, "f" es mejor algoritmo que "g";
+    pero esto es cierto a partir de  N &gt; 100.<br>
+    Si nuestro problema no va a tratar jam&aacute;s problemas de tama&ntilde;o mayor
+    que 100, es mejor soluci&oacute;n usar el algoritmo "g".
+
+    <p>
+    El ejemplo anterior muestra que las constantes que aparecen en las
+    f&oacute;rmulas para T(n), y que desaparecen al calcular las funciones de
+    complejidad, pueden ser decisivas desde el punto de vista de
+    ingenier&iacute;a. Pueden darse incluso ejemplos m&aacute;s dramaticos:
+    <blockquote>
+    <table border>
+    <tr><th>algoritmo  <th>tiempo  <th>complejidad
+    <tr><td>f          <td>n       <td>O(n)
+    <tr><td>g          <td> 100 n  <td>O(n)
+    </table>
+    </blockquote>
+
+    a&uacute;n siendo dos algoritmos con id&eacute;ntico comportamiento asint&oacute;tico,
+    es obvio que el algoritmo "f" es siempre 100 veces m&aacute;s r&aacute;pido que
+    el "g" y candidato primero a ser utilizado.
+
+<p>
+<li>... usualmente un programa de baja complejidad en cuanto a tiempo de
+    ejecuci&oacute;n, suele conllevar un alto consumo de memoria; y viceversa.
+    A veces hay que sopesar ambos factores, qued&aacute;ndonos en alg&uacute;n
+    punto de compromiso.
+
+<p>
+<li>... en problemas de c&aacute;lculo num&eacute;rico hay que tener en cuenta m&aacute;s
+    factores que su complejidad pura y dura, o incluso que su tiempo
+    de ejecuci&oacute;n: queda por considerar la precisi&oacute;n del c&aacute;lculo, el
+    m&aacute;ximo error introducido en c&aacute;lculos intermedios, la estabilidad
+    del algoritmo, etc. etc.
+</ul>
+
+<h3>3.2. Propiedades de los Conjuntos O(f)</h3>
+No entraremos en muchas profundidades, ni en demostraciones,
+que se pueden hallar en los libros especializados.
+No obstante, algo hay que saber de c&oacute;mo se trabaja con los conjuntos
+O() para poder evaluar los algoritmos con los que nos encontremos.
+
+<p>
+Para simplificar la notaci&oacute;n, usaremos O(f) para decir O(f(n))
+
+<p>
+Las primeras reglas s&oacute;lo expresan matem&aacute;ticamente el concepto de
+jerarqu&iacute;a de &oacute;rdenes de complejidad:
+
+<p>
+A.  La relaci&oacute;n de orden definida por
+<blockquote>
+      f < g  &lt;=&gt;  f(n) IN O(g)<br>
+      es reflexiva:  f(n) IN O(f)<br>
+      y transitiva:  f(n) IN O(g)  y  g(n) IN O(h)  =&gt;  f(n) IN O(h)
+</blockquote>
+
+<p>
+B.  f IN O(g)  y  g IN O(f)  &lt;=&gt;  O(f) = O(g)
+
+<p>
+Las siguientes propiedades se pueden utilizar como reglas para el
+c&aacute;lculo de &oacute;rdenes de complejidad. Toda la maquinaria matem&aacute;tica para
+el c&aacute;lculo de l&iacute;mites se puede aplicar directamente:
+
+<pre>
+C.  Lim<sub>(n-&gt;inf)</sub>f(n)/g(n) = 0  =&gt;  f IN O(g)
+				=&gt;  g NOT_IN O(f)
+				=&gt;  O(f) es subconjunto de O(g)
+</pre>
+
+<pre>
+D.  Lim<sub>(n-&gt;inf)</sub>f(n)/g(n) = k  =&gt;  f IN O(g)
+				=&gt;  g IN O(f)
+				=&gt;  O(f) = O(g)
+</pre>
+
+<pre>
+E.  Lim<sub>(n-&gt;inf)</sub>f(n)/g(n)= INF =&gt;  f NOT_IN O(g)
+				=&gt;  g IN O(f)
+				=&gt;  O(f) es superconjunto de O(g)
+</pre>
+
+<p>
+Las que siguen son reglas habituales en el c&aacute;lculo de l&iacute;mites:
+
+<pre>
+F.  Si  f, g IN O(h)  =&gt;  f+g IN O(h)
+</pre>
+
+<pre>
+G.  Sea k una constante, f(n) IN O(g)  =&gt;  k*f(n) IN O(g)
+</pre>
+
+<pre>
+H.  Si  f IN O(h1)  y  g IN O(h2)  =&gt;  f+g IN O(h1+h2)
+</pre>
+
+<pre>
+I.  Si  f IN O(h1)  y  g IN O(h2)  =&gt;  f*g IN O(h1*h2)
+</pre>
+
+<pre>
+J.  Sean los reales  0 < a < b  =&gt;  O(n<sup>a</sup>) es subconjunto de O(n<sup>b</sup>)
+</pre>
+
+<pre>
+K.  Sea P(n) un polinomio de grado k  =&gt;  P(n) IN O(n<sup>k</sup>)
+</pre>
+
+<pre>
+L.  Sean los reales a, b &gt; 1  =&gt;  O(log<sub>a</sub>) = O(log<sub>b</sub>)
+</pre>
+
+<p>
+La regla [L] nos permite olvidar la base en la que se calculan los
+logaritmos en expresiones de complejidad.
+
+<p>
+La combinaci&oacute;n de las reglas [K, G] es probablemente la m&aacute;s usada,
+permitiendo de un plumazo olvidar todos los componentes de un
+polinomio, menos su grado.
+
+<p>
+Por &uacute;ltimo, la regla [H] es la basica para analizar el concepto de
+secuencia en un programa: la composici&oacute;n secuencial de dos trozos de
+programa es de orden de complejidad el de la suma de sus partes.
+
+<a name="s4"><h2>4. Reglas Pr&aacute;cticas</h2></a>
+Aunque no existe una receta que siempre funcione para calcular la
+complejidad de un algoritmo, si es posible tratar sistematicamente una
+gran cantidad de ellos, basandonos en que suelen estar bien
+estructurados y siguen pautas uniformes.
+
+<p>
+Loa algoritmos bien estructurados combinan las sentencias de alguna de
+las formas siguientes
+<ol>
+  <li> sentencias sencillas
+  <li> secuencia (;)
+  <li> decisi&oacute;n (if)
+  <li> bucles
+  <li> llamadas a procedimientos
+</ol>
+
+<h3>4.0. Sentencias sencillas</h3>
+Nos referimos a las sentencias de asignaci&oacute;n, entrada/salida, etc.
+siempre y cuando no trabajen sobre variables estructuradas cuyo tama&ntilde;o
+este relacionado con el tama&ntilde;o N del problema.
+La inmensa mayor&iacute;a de las sentencias de un algoritmo requieren un
+tiempo constante de ejecuci&oacute;n, siendo su complejidad O(1).
+
+<h3>4.1. Secuencia (;)</h3>
+La complejidad de una serie de elementos de un programa es del orden
+de la suma de las complejidades individuales, aplic&aacute;ndose las
+operaciones arriba expuestas.
+
+<h3>4.2. Decisi&oacute;n (if)</h3>
+La condici&oacute;n suele ser de O(1), complejidad a sumar con la peor
+posible, bien en la rama THEN, o bien en la rama ELSE.
+En decisiones multiples (ELSE IF, SWITCH CASE), se tomara la peor de las ramas.
+
+<h3>4.3. Bucles</h3>
+En los bucles con contador expl&iacute;cito, podemos distinguir dos casos,
+que el tama&ntilde;o N forme parte de los l&iacute;mites o que no.
+Si el bucle se realiza un n&uacute;mero fijo de veces, independiente de N,
+entonces la repetici&oacute;n s&oacute;lo introduce una constante multiplicativa que
+puede absorberse.
+<pre>
+Ej.- for (int i= 0; i &lt; K; i++) { algo_de_O(1) }      =&gt;  K*O(1) = O(1)
+</pre>
+
+Si el tama&ntilde;o N aparece como l&iacute;mite de iteraciones ...
+
+<pre>
+Ej.- for (int i= 0; i &lt; N; i++) { algo_de_O(1) }  =&gt;  N * O(1) = O(n)
+
+Ej.- for (int i= 0; i &lt; N; i++) {
+       for (int j= 0; j &lt; N; j++) {
+         algo_de_O(1)
+       }
+     }
+</pre>
+<blockquote>
+tendremos N * N * O(1) = O(n<sup>2</sup>)
+</blockquote>
+
+<pre>
+Ej.- for (int i= 0; i &lt; N; i++) {
+       for (int j= 0; j &lt; i; j++) {
+         algo_de_O(1)
+       }
+     }
+</pre>
+<blockquote>
+     el bucle exterior se realiza N veces, mientras que el interior se
+     realiza <tt>1, 2, 3, ... N</tt> veces respectivamente. En total,
+     <pre>
+       1 + 2 + 3 + ... + N = N*(1+N)/2  -&gt; O(n<sup>2</sup>)
+     </pre>
+</blockquote>
+
+A veces aparecen bucles multiplicativos, donde la evoluci&oacute;n de la
+variable de control no es lineal (como en los casos anteriores)
+<pre>
+Ej.- c= 1;
+     while (c &lt; N) {
+       algo_de_O(1)
+       c= 2*c;
+     }
+</pre>
+<blockquote>
+    El valor incial de "c" es 1, siendo "2<sup>k</sup>" al cabo de "k"
+    iteraciones.
+    El n&uacute;mero de iteraciones es tal que<br>
+      <tt>2<sup>k</sup> &gt;= N  =&gt;  k= eis (log<sub>2</sub> (N))</tt>
+      [el entero inmediato superior]<br>
+    y, por tanto, la complejidad del bucle es  O(log n).
+</blockquote>
+
+<pre>
+Ej.- c= N;
+     while (c &gt; 1) {
+       algo_de_O(1)
+       c= c / 2;
+     }
+</pre>
+<blockquote>
+  Un razonamiento an&aacute;logo nos lleva a log<sub>2</sub>(N)
+  iteraciones y, por tanto, a un orden O(log n) de complejidad.
+</blockquote>
+
+<pre>
+Ej.- for (int i= 0; i &lt; N; i++) {
+       c= i;
+       while (c &gt; 0) {
+         algo_de_O(1)
+         c= c/2;
+       }
+     }
+</pre>
+<blockquote>
+     tenemos un bucle interno de orden O(log n) que se ejecuta N
+     veces, luego el conjunto es de orden O(n log n)
+</blockquote>
+
+<h3>4.4. Llamadas a procedimientos</h3>
+La complejidad de llamar a un procedimiento viene dada por la
+complejidad del contenido del procedimiento en s&iacute;. El coste de llamar
+no es sino una constante que podemos obviar inmediatamente dentro de
+nuestros an&aacute;lisis asint&oacute;ticos.
+
+<p>
+El c&aacute;lculo de la complejidad asociada a un procedimiento puede
+complicarse not&aacute;blemente si se trata de procedimientos recursivos.
+Es f&aacute;cil que tengamos que aplicar t&eacute;cnicas propias de la matem&aacute;tica
+discreta, tema que queda fuera de los l&iacute;mites de esta nota t&eacute;cnica.
+
+<h3>4.5. Ejemplo: evaluaci&oacute;n de un polinomio</h3>
+Vamos a aplicar lo explicado hasta ahora a un problema de f&aacute;cil
+especificaci&oacute;n:
+dise&ntilde;ar un programa para evaluar un polinomio  P(x)
+de grado N;
+
+<p>
+<table border="1">
+  <tr><td><pre>
+class Polinomio {
+  private double[] coeficientes;
+
+  Polinomio (double[] coeficientes) {
+    this.coeficientes= new double[coeficientes.length];
+    System.arraycopy(coeficientes, 0, this.coeficientes, 0,
+                     coeficientes.length);
+  }
+
+  double evalua_1 (double x) {
+    double resultado= 0.0;
+    for (int termino= 0; termino &lt; coeficientes.length; termino++) {
+      double xn= 1.0;
+      for (int j= 0; j &lt; termino; j++)
+	xn*= x;			// x elevado a n
+      resultado+= coeficientes[termino] * xn;
+    }
+    return resultado;
+  }
+}
+</pre></td></tr>
+</table>
+
+<p>
+Como medida del tama&ntilde;o tomaremos para N el grado del polinomio, que es
+el n&uacute;mero de coeficientes en C.
+As&iacute; pues, el bucle m&aacute;s exterior (1) se ejecuta N veces.
+El bucle interior (2) se ejecuta, respectivamente
+<pre>
+    1 + 2 + 3 + ... + N veces  =  N*(1+N)/2  =&gt;  O(n<sup>2</sup>)
+</pre>
+
+Intuitivamente, sin embargo, este problema deber&iacute;a ser menos complejo,
+pues repugna al sentido com&uacute;n que sea de una complejidad tan elevada.
+Se puede ser m&aacute;s inteligente a la hora de evaluar la potencia
+x<sup>n</sup>:
+
+<p>
+<table border="1">
+  <tr><td><pre>
+  double evalua_2 (double x) {
+    double resultado= 0.0;
+    for (int termino= 0; termino &lt; coeficientes.length; termino++) {
+      resultado+= coeficientes[termino] * potencia(x, termino);
+    }
+    return resultado;
+  }
+
+  private double potencia (double x, int n) {
+    if (n == 0)
+      return 1.0;
+    // si es potencia impar ...
+    if (n%2 == 1)
+      return x * potencia(x, n-1);
+    // si es potencia par ...
+    double t= potencia(x, n/2);
+    return t*t;
+  }
+</pre></td></tr>
+</table>
+
+<p>
+El an&aacute;lisis de la funci&oacute;n Potencia es delicado, pues si el exponente
+es par, el problema tiene una evoluci&oacute;n logar&iacute;tmica; mientras que si
+es impar, su evoluci&oacute;n es lineal. No obstante, como si "j" es impar
+entonces "j-1" es par, el caso peor es que en la mitad de los casos
+tengamos "j" impar y en la otra mitad sea par.
+El caso mejor, por contra, es que siempre sea "j" par.
+
+<p>
+Un ejemplo de caso peor seria x<sup>31</sup>, que implica la siguiente serie
+para j:
+<pre>
+31  30  15  14  7  6  3  2  1
+</pre>
+cuyo n&uacute;mero de terminos podemos acotar superiormente por
+<pre>
+  2 * eis (log<sub>2</sub>(j)),
+</pre>
+donde eis(r) es el entero inmediatamente superior
+(este c&aacute;lculo responde al razonamiento de que en el caso mejor
+visitaremos eis(log<sub>2</sub>(j)) valores pares de "j";
+y en el caso peor podemos encontrarnos con otros tantos n&uacute;meros
+impares entremezclados).
+
+<p>
+Por tanto, la complejidad de Potencia es de orden  O(log n).
+
+<p>
+Insertada la funci&oacute;n Potencia en la funci&oacute;n EvaluaPolinomio, la
+complejidad compuesta es del orden  O(n log n), al multiplicarse por N
+un subalgoritmo de O(log n).
+
+<p>
+As&iacute; y todo, esto sigue resultando estravagante y excesivamente costoso.
+En efecto, basta reconsiderar el algoritmo almacenando las potencias
+de "X" ya calculadas para mejorarlo sensiblemente:
+
+<p>
+<table border="1">
+  <tr><td><pre>
+  double evalua_3 (double x) {
+    double xn= 1.0;
+    double resultado= coeficientes[0];
+    for (int termino= 1; termino &lt; coeficientes.length; termino++) {
+      xn*= x;
+      resultado+= coeficientes[termino] * xn;
+    }
+    return resultado;
+  }
+</pre></td></tr>
+</table>
+
+que queda en un algoritmo de O(n).
+
+<p>
+Habiendo N coeficientes C distintos, es imposible encontrar ningun
+algoritmo de un orden inferior de complejidad.
+
+<p>
+En cambio, si es posible encontrar otros algoritmos de id&eacute;ntica
+complejidad:
+
+<p>
+<table border="1">
+  <tr><td><pre>
+  double evalua_4 (double x) {
+    double resultado= 0.0;
+    for (int termino= coeficientes.length-1; termino &gt;= 0; termino--) {
+      resultado= resultado * x +
+	coeficientes[termino];
+    }
+    return resultado;
+  }
+</pre></td></tr>
+</table>
+
+<p>
+No obstante ser ambos algoritmos de id&eacute;ntico orden de complejidad,
+cabe resaltar que sus tiempos de ejecuci&oacute;n ser&aacute;n notablemente
+distintos. En efecto, mientras el &uacute;ltimo algoritmo ejecuta N
+multiplicaciones y N sumas, el pen&uacute;ltimo requiere 2N multiplicaciones
+y N sumas. Si, como es frecuente, el tiempo de ejecuci&oacute;n es
+notablemente superior para realizar una multiplicaci&oacute;n, cabe razonar
+que el &uacute;ltimo algoritmo ejecutar&aacute; en la mitad de tiempo que el
+anterior.
+
+<h4>4.5.1. Medidas de laboratorio</h4>
+La siguiente tabla muestra algunas medidas de la eficacia de nuestros
+algoritmos sobre una 
+<a href="Polinomio.java">implementación en Java</a>:
+
+<p>
+<table align="center" border="1">
+<tr>
+  <th>grado</th><th>evalua_1</th><th>evalua_2</th><th>evalua_3</th><th>evalua_4</th>
+</tr>
+<tr>
+  <td align="right">1</td><td align="right">0</td><td align="right">10</td><td align="right">0</td><td align="right">0</td>
+</tr>
+<tr>
+  <td align="right">2</td><td align="right">10</td><td align="right">0</td><td align="right">0</td><td align="right">0</td>
+</tr>
+<tr>
+  <td align="right">5</td><td align="right">0</td><td align="right">0</td><td align="right">0</td><td align="right">0</td>
+</tr>
+<tr>
+  <td align="right">10</td><td align="right">0</td><td align="right">10</td><td align="right">0</td><td align="right">0</td>
+</tr>
+<tr>
+  <td align="right">20</td><td align="right">0</td><td align="right">10</td><td align="right">0</td><td align="right">0</td>
+</tr>
+<tr>
+  <td align="right">50</td><td align="right">40</td><td align="right">20</td><td align="right">0</td><td align="right">10</td>
+</tr>
+<tr>
+  <td align="right">100</td><td align="right">130</td><td align="right">60</td><td align="right">0</td><td align="right">0</td>
+</tr>
+<tr>
+  <td align="right">200</td><td align="right">521</td><td align="right">140</td><td align="right">0</td><td align="right">10</td>
+</tr>
+<tr>
+  <td align="right">500</td><td align="right">3175</td><td align="right">400</td><td align="right">10</td><td align="right">10</td>
+</tr>
+<tr>
+  <td align="right">1000</td><td align="right">63632</td><td align="right">1171</td><td align="right">872</td><td align="right">580</td>
+</tr>
+</table>
+
+<p align="center">
+<img src="medidas.png">
+</p>
+
+<a name="s5"><h2>5. Problemas P, NP y NP-completos</h2></a>
+Hasta aqu&iacute; hemos venido hablando de algoritmos. Cuando nos enfrentamos
+a un problema concreto, habr&aacute; una serie de algoritmos aplicables. Se
+suele decir que el orden de complejidad de un problema es el del mejor
+algoritmo que se conozca para resolverlo. As&iacute; se clasifican los
+problemas, y los estudios sobre algoritmos se aplican a la realidad.
+
+<p>
+Estos estudios han llevado a la constataci&oacute;n de que existen problemas
+muy dif&iacute;ciles, problemas que desafian la utilizaci&oacute;n de los
+ordenadores para resolverlos. En lo que sigue esbozaremos las clases
+de problemas que hoy por hoy se escapan a un tratamiento inform&aacute;tico.
+
+<dl>
+<dt>
+<b>Clase P.-</b>
+<dd>
+  Los algoritmos de complejidad polin&oacute;mica se dice que son tratables en
+  el sentido de que suelen ser abordables en la pr&aacute;ctica. Los problemas
+  para los que se conocen algoritmos con esta complejidad se dice que
+  forman la clase P.
+
+  Aquellos problemas para los que la mejor soluci&oacute;n que se conoce es de
+  complejidad superior a la polin&oacute;mica, se dice que son problemas
+  intratables. Seria muy interesante encontrar alguna soluci&oacute;n
+  polin&oacute;mica (o mejor) que permitiera abordarlos.
+
+<p>
+<dt>
+<b>Clase NP.-</b>
+<dd>
+  Algunos de estos problemas intratables pueden caracterizarse por el
+  curioso hecho de que puede aplicarse un algoritmo polin&oacute;mico para
+  comprobar si una posible soluci&oacute;n es v&aacute;lida o no. Esta caracter&iacute;stica
+  lleva a un m&eacute;todo de resoluci&oacute;n no determinista consistente en aplicar
+  heur&iacute;sticos para obtener soluciones hipot&eacute;ticas que se van
+  desestimando (o aceptando) a ritmo polin&oacute;mico.
+  Los problemas de esta clase se denominan NP
+  (la N de no-deterministas y la P de polin&oacute;micos).
+
+<p>
+<dt>
+<b>Clase NP-completos.-</b>
+<dd>
+  Se conoce una amplia variedad de problemas de tipo NP, de los cuales
+  destacan algunos de ellos de extrema complejidad. Gr&aacute;ficamente podemos
+  decir que algunos problemas se hayan en la "frontera externa" de la
+  clase NP. Son problemas NP, y son los peores problemas posibles de
+  clase NP. Estos problemas se caracterizan por ser todos "iguales" en el
+  sentido de que si se descubriera una soluci&oacute;n P para alguno de ellos,
+  esta soluci&oacute;n ser&iacute;a f&aacute;cilmente aplicable a todos ellos. Actualmente
+  hay un premio de prestigio equivalente al Nobel reservado para el que 
+  descubra semejante soluci&oacute;n ... &iexcl;y se duda seriamente de que alguien
+  lo consiga!
+
+<dd>
+  Es m&aacute;s, si se descubriera una soluci&oacute;n para los problemas
+  NP-completos, esta ser&iacute;a aplicable a todos los problemas NP y, por
+  tanto, la clase NP desaparecer&iacute;a del mundo cient&iacute;fico al carecerse de
+  problemas de ese tipo. Realmente, tras a&ntilde;os de b&uacute;squeda exhaustiva de
+  dicha soluci&oacute;n, es hecho ampliamente aceptado que no debe existir,
+  aunque nadie ha demostrado, todav&iacute;a, la imposibilidad de su
+  existencia.
+</dl>
+
+<a name="s6"><h2>6. Conclusiones</h2></a>
+Antes de realizar un programa conviene elegir un buen algoritmo, donde
+por bueno entendemos que utilice pocos recursos, siendo usualmente los
+m&aacute;s importantes el tiempo que lleve ejecutarse y la cantidad de
+espacio en memoria que requiera. Es enga&ntilde;oso pensar que todos los
+algoritmos son "m&aacute;s o menos iguales" y confiar en nuestra habilidad
+como programadores para convertir un mal algoritmo en un producto
+eficaz. Es asimismo enga&ntilde;oso confiar en la creciente potencia de las
+m&aacute;quinas y el abaratamiento de las mismas como remedio de todos los
+problemas que puedan aparecer.
+
+<p>
+En el an&aacute;lisis de algoritmos se considera usualmente el caso peor, si
+bien a veces conviene analizar igualmente el caso mejor y hacer alguna
+estimaci&oacute;n sobre un caso promedio. Para independizarse de factores
+coyunturales tales como el lenguaje de programaci&oacute;n, la habilidad del
+codificador, la m&aacute;quina soporte, etc. se suele trabajar con un c&aacute;lculo
+asint&oacute;tico que indica como se comporta el algoritmo para datos muy
+grandes y salvo algun coeficiente multiplicativo. Para problemas
+peque&ntilde;os es cierto que casi todos los algoritmos son "m&aacute;s o menos
+iguales", primando otros aspectos como esfuerzo de codificaci&oacute;n,
+legibilidad, etc. Los &oacute;rdenes de complejidad s&oacute;lo son importantes para
+grandes problemas. 
+
+<a name="s7"><h2>7. Bibliografia</h2></a>
+Es dif&iacute;cil encontrar libros que traten este tema a un nivel
+introductorio sin caer en amplios desarrollos matem&aacute;ticos, aunque
+tambien es cierto que casi todos los libros que se precien dedican
+alguna breve secci&oacute;n al tema. Probablemente uno de los libros que s&oacute;lo
+dedican un cap&iacute;tulo; pero es extremadamente claro es
+<blockquote>
+  L. Goldschlager and A. Lister.<br>
+  Computer Science, A Modern Introduction<br>
+  Series in Computer Science. Prentice-Hall Intl., London (UK),
+  1982.<br>
+</blockquote>
+
+Siempre hay alg&uacute;n cl&aacute;sico con una presentaci&oacute;n excelente, pero
+entrando en mayores honduras matem&aacute;ticas como
+<blockquote>
+  A. V. Aho, J. E. Hopcroft, and J. D. Ullman.<br>
+  Data Structures and Algorithms<br>
+  Addison-Wesley, Massachusetts, 1983.<br>
+</blockquote>
+
+Recientemente ha aparecido un libro en castellano con una presentaci&oacute;n
+muy buena, si bien esta escrito en plan matem&aacute;tico y, por tanto,
+repleto de demostraciones (un poco duro)
+<blockquote>
+  Carmen Torres<br>
+  Dise&ntilde;o y An&aacute;lisis de Algoritmos<br>
+  Paraninfo, 1992<br>
+</blockquote>
+
+<!--
+El libro que usamos por usar Pascal, se limita al
+an&aacute;lisis num&eacute;rico de algunos algoritmos, contabilizando operaciones
+costosas. Sirve para comparar algoritmos; pero no entra en
+complejidad:
+<blockquote>
+  N. Wirth.<br>
+  Algoritmos y Estructuras de Datos<br>
+  Prentice-Hall Hispanoamericana, Mexico, 1987.<br>
+</blockquote>
+-->
+
+Para un estudio serio hay que irse a libros de matem&aacute;tica discreta,
+lo que es toda una asignatura en s&iacute; misma; pero se pueden recomendar
+un par de libros modernos, pr&aacute;cticos y especialmente claros:
+<blockquote>
+  R. Skvarcius and W. B. Robinson.<br>
+  Discrete Mathematics with Computer Science Applications<br>
+  Benjamin/Cummings, Menlo Park, California, 1986.<br>
+<p>
+  R. L. Graham, D. E. Knuth, and O. Patashnik.<br>
+  Concrete Mathematics<br>
+  Addison-Wesley, 1990.<br>
+</blockquote>
+
+Para saber m&aacute;s de problemas NP y NP-completos, hay que acudir a la
+"biblia", que en este tema se denomina
+<blockquote>
+  M. R. Garey and D. S. Johnson.<br>
+  Computers and Intractability: A Guide to the Theory of
+  NP-Completeness<br>
+  Freeman, 1979.<br>
+</blockquote>
+
+S&oacute;lo a efectos documentales, perm&iacute;tasenos citar al inventor de las
+nociones de complejidad y de la notaci&oacute;n O():
+<blockquote>
+  P. Bachmann<br>
+  Analytische Zahlen Theorie<br>
+  1894<br>
+</blockquote>
+
+</html>

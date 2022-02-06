@@ -1,0 +1,21 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "e1649fa4-207b-4297-b879-0fee20de1619": {
+      "ProjectGuid": "e1649fa4-207b-4297-b879-0fee20de1619",
+      "DisplayName": "P1_listas",
+      "ColorIndex": 0
+    },
+    "5e06d244-5526-4275-a271-fa1ae967e394": {
+      "ProjectGuid": "5e06d244-5526-4275-a271-fa1ae967e394",
+      "DisplayName": "BibliotecaClases",
+      "ColorIndex": 1
+    },
+    "75d2917c-1eea-4eb4-8a7a-bbdd89e17d1f": {
+      "ProjectGuid": "75d2917c-1eea-4eb4-8a7a-bbdd89e17d1f",
+      "DisplayName": "Clases",
+      "ColorIndex": 2
+    }
+  },
+  "NextColorIndex": 3
+}

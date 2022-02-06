@@ -1,0 +1,29 @@
+﻿<Properties StartupConfiguration="{13D1F3EE-21DC-4393-A55F-0BF1A4B558F2}|Default">
+  <MonoDevelop.Ide.ItemProperties.TPP01 PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Modelo/Autor.cs">
+    <Files>
+      <File FileName="TPP01/Program.cs" Line="20" Column="1" />
+      <File FileName="Modelo/Autor.cs" Line="89" Column="13" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="TPP01" expanded="True">
+            <Node name="Modelo" expanded="True">
+              <Node name="Autor.cs" selected="True" />
+            </Node>
+            <Node name="TPP01" expanded="True">
+              <Node name="Properties" expanded="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>

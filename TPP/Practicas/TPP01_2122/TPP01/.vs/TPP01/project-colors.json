@@ -1,0 +1,16 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "13d1f3ee-21dc-4393-a55f-0bf1a4b558f2": {
+      "ProjectGuid": "13d1f3ee-21dc-4393-a55f-0bf1a4b558f2",
+      "DisplayName": "TPP01",
+      "ColorIndex": 0
+    },
+    "ad764f06-a10d-4c5c-99b6-aa69ccf84e86": {
+      "ProjectGuid": "ad764f06-a10d-4c5c-99b6-aa69ccf84e86",
+      "DisplayName": "Modelo",
+      "ColorIndex": 1
+    }
+  },
+  "NextColorIndex": 2
+}

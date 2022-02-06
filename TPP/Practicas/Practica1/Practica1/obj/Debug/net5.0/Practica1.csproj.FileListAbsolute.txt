@@ -1,0 +1,15 @@
+/Users/blanc/Documents/2-curso-2-cuatri/TPP/Practicas/Practica1/Practica1/bin/Debug/net5.0/Practica1.deps.json
+/Users/blanc/Documents/2-curso-2-cuatri/TPP/Practicas/Practica1/Practica1/bin/Debug/net5.0/Practica1.runtimeconfig.json
+/Users/blanc/Documents/2-curso-2-cuatri/TPP/Practicas/Practica1/Practica1/bin/Debug/net5.0/Practica1.runtimeconfig.dev.json
+/Users/blanc/Documents/2-curso-2-cuatri/TPP/Practicas/Practica1/Practica1/bin/Debug/net5.0/Practica1.dll
+/Users/blanc/Documents/2-curso-2-cuatri/TPP/Practicas/Practica1/Practica1/bin/Debug/net5.0/ref/Practica1.dll
+/Users/blanc/Documents/2-curso-2-cuatri/TPP/Practicas/Practica1/Practica1/bin/Debug/net5.0/Practica1.pdb
+/Users/blanc/Documents/2-curso-2-cuatri/TPP/Practicas/Practica1/Practica1/obj/Debug/net5.0/Practica1.csproj.AssemblyReference.cache
+/Users/blanc/Documents/2-curso-2-cuatri/TPP/Practicas/Practica1/Practica1/obj/Debug/net5.0/Practica1.GeneratedMSBuildEditorConfig.editorconfig
+/Users/blanc/Documents/2-curso-2-cuatri/TPP/Practicas/Practica1/Practica1/obj/Debug/net5.0/Practica1.AssemblyInfoInputs.cache
+/Users/blanc/Documents/2-curso-2-cuatri/TPP/Practicas/Practica1/Practica1/obj/Debug/net5.0/Practica1.AssemblyInfo.cs
+/Users/blanc/Documents/2-curso-2-cuatri/TPP/Practicas/Practica1/Practica1/obj/Debug/net5.0/Practica1.csproj.CoreCompileInputs.cache
+/Users/blanc/Documents/2-curso-2-cuatri/TPP/Practicas/Practica1/Practica1/obj/Debug/net5.0/Practica1.dll
+/Users/blanc/Documents/2-curso-2-cuatri/TPP/Practicas/Practica1/Practica1/obj/Debug/net5.0/ref/Practica1.dll
+/Users/blanc/Documents/2-curso-2-cuatri/TPP/Practicas/Practica1/Practica1/obj/Debug/net5.0/Practica1.pdb
+/Users/blanc/Documents/2-curso-2-cuatri/TPP/Practicas/Practica1/Practica1/obj/Debug/net5.0/Practica1.genruntimeconfig.cache

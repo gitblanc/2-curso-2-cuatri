@@ -1,0 +1,1 @@
+    public enum Estaciones { Invierno = 0 , Primavera = 1, Otoño = 2, Verano = 3 };

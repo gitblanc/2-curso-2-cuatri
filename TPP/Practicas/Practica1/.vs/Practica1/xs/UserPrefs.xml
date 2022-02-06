@@ -1,0 +1,27 @@
+﻿<Properties StartupConfiguration="{7C48F9D7-7CB9-47F9-8884-6C34F5BBC1CF}|Default">
+  <MonoDevelop.Ide.Workbench ActiveDocument="bibliotecadeclases/Cultivo.cs">
+    <Files>
+      <File FileName="bibliotecadeclases/Cultivo.cs" Line="1" Column="1" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="Practica1" expanded="True">
+            <Node name="bibliotecadeclases" expanded="True">
+              <Node name="Cultivo.cs" selected="True" />
+            </Node>
+            <Node name="Practica1" expanded="True" />
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.ItemProperties.bibliotecadeclases FirstBuild="True" />
+  <MonoDevelop.Ide.ItemProperties.Practica1 PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>
