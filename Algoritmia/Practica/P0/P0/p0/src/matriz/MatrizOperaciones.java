@@ -25,34 +25,41 @@ public class MatrizOperaciones {
 	}
 
 	private int[][] obtenerMatrizFichero(String nomFich) {
-		String[] linea;
-		int n;
-		int[][] matrixAux;
+		String linea;
+		String[] lineas = new String[2];
+		int i = 0;
 
 		try {
 			BufferedReader fichero = new BufferedReader(new FileReader(nomFich));
-				n = Integer.parseInt(fichero.readLine());
-				linea = fichero.readLine().split("\t");
-				matrixAux = new int[n][n];
-				for (int i = 0; i < n; i++) {
-					for (int j = 0; j < n; j++) {
-						matrixAux[i][j] = añadirAMatriz();
-					}
-				fichero.close();
+			while (fichero.ready()) {
+				linea = fichero.readLine();
+				lineas[i] = linea;
+				i++;
+			}
+			fichero.close();
+			
 		} catch (FileNotFoundException fnfe) {
 			System.out.println("El archivo no se ha encontrado.");
 		} catch (IOException ioe) {
 			new RuntimeException("Error de entrada/salida.");
 		}
+		return analizarLineas(lineas);
+		
 	}
 
-	private void añadirAMatriz(int k, int[][] matrixAux) {
-		for (int i = 0; i < matrixAux.length; i++) {
-			for (int j = 0; j < matrixAux.length; j++) {
-				matrixAux[i][j] = k;
+	private int[][] analizarLineas(String[] lineas) {
+		String[] datosMatriz = null;
+		int n = Integer.parseInt(lineas[0]);
+		int[][] nuevaMatriz = new int[n][n];
+		datosMatriz = lineas[1].split("\t");
+		int cont = 0;
+		for(int i = 0; i < nuevaMatriz.length; i++) {
+			for(int j = 0; j < nuevaMatriz.length; j++) {
+				nuevaMatriz[i][j] = Integer.parseInt(datosMatriz[cont]);
+				cont++;
 			}
-
 		}
+		return nuevaMatriz;
 	}
 
 	private void rellenarValores(int min, int max) {

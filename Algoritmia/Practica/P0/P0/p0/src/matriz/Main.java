@@ -14,6 +14,8 @@ public class Main {
 	    matrix.escribir();
 	    System.out.println("Fin del camino");
 	    
+	    MatrizOperaciones m2 = new MatrizOperaciones("src/matriz/matriz.txt");
+	    m2.escribir();
 	}
 
 }
