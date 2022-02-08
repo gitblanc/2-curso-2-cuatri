@@ -1,0 +1,12 @@
+/Users/blanc/Documents/2-curso-2cuatri/TPP/Practicas/Practica 2/lab02/parameters/bin/Release/netcoreapp3.1/parameters.deps.json
+/Users/blanc/Documents/2-curso-2cuatri/TPP/Practicas/Practica 2/lab02/parameters/bin/Release/netcoreapp3.1/parameters.runtimeconfig.json
+/Users/blanc/Documents/2-curso-2cuatri/TPP/Practicas/Practica 2/lab02/parameters/bin/Release/netcoreapp3.1/parameters.runtimeconfig.dev.json
+/Users/blanc/Documents/2-curso-2cuatri/TPP/Practicas/Practica 2/lab02/parameters/bin/Release/netcoreapp3.1/parameters.dll
+/Users/blanc/Documents/2-curso-2cuatri/TPP/Practicas/Practica 2/lab02/parameters/bin/Release/netcoreapp3.1/parameters.pdb
+/Users/blanc/Documents/2-curso-2cuatri/TPP/Practicas/Practica 2/lab02/parameters/obj/Release/netcoreapp3.1/parameters.GeneratedMSBuildEditorConfig.editorconfig
+/Users/blanc/Documents/2-curso-2cuatri/TPP/Practicas/Practica 2/lab02/parameters/obj/Release/netcoreapp3.1/parameters.AssemblyInfoInputs.cache
+/Users/blanc/Documents/2-curso-2cuatri/TPP/Practicas/Practica 2/lab02/parameters/obj/Release/netcoreapp3.1/parameters.AssemblyInfo.cs
+/Users/blanc/Documents/2-curso-2cuatri/TPP/Practicas/Practica 2/lab02/parameters/obj/Release/netcoreapp3.1/parameters.csproj.CoreCompileInputs.cache
+/Users/blanc/Documents/2-curso-2cuatri/TPP/Practicas/Practica 2/lab02/parameters/obj/Release/netcoreapp3.1/parameters.dll
+/Users/blanc/Documents/2-curso-2cuatri/TPP/Practicas/Practica 2/lab02/parameters/obj/Release/netcoreapp3.1/parameters.pdb
+/Users/blanc/Documents/2-curso-2cuatri/TPP/Practicas/Practica 2/lab02/parameters/obj/Release/netcoreapp3.1/parameters.genruntimeconfig.cache

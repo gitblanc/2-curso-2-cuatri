@@ -24,16 +24,19 @@ namespace Clases
         /// <summary>
         /// Método que busca un elemento en la lista
         /// </summary>
-        public int GetElement(int value)
+        public int GetElement(uint value)
         {
             Node aux = _head;
-            int i = 0;
-            while (aux != null && !aux.GetValue.Equals(value))
+            uint i = 0;
+            while (aux != null)
             {
+                if (i == value) {
+                    return aux.GetValue;
+                }
                 aux = aux.GetNext;
                 i++;
             }
-            return aux == null ? -1 : aux.GetValue;
+            throw new ArgumentException("Unable to access that position");
         }
 
         /// <summary>
@@ -79,31 +82,23 @@ namespace Clases
         /// <summary>
         /// Imprime todos los nodos de la lista
         /// </summary>
-        public void PrintElements() {
-            Node nodoActual = _head;
-            if (nodoActual == null) {
-                Console.WriteLine("No hay elementos");
-                Console.WriteLine();
+        public string PrintElements() { 
+
+            StringBuilder sb = new StringBuilder();
+            sb.AppendFormat("{0}", _length);
+            Node current = _head;
+            while (current != null) {
+                sb.Append(current.GetValue);
+                sb.Append(" ");
+                current = current.GetNext;
             }
-            else {
-                Console.WriteLine();
-                Console.WriteLine("Length: " + Size());
-                Console.WriteLine();
-                Console.Write("[");
-                while (nodoActual != null && nodoActual.GetNext != null) {
-                    Console.Write(nodoActual.ToString() + " , ");
-                    nodoActual = nodoActual.GetNext;
-                }
-                Console.Write(nodoActual.ToString());
-                Console.WriteLine("]");
-                Console.WriteLine();
-            }
+            return sb.ToString();
         }
 
         /// <summary>
         /// Método que devuelve la posición de un elemento en la lista
         /// </summary>
-        public int IndexOf(int value)
+        public int IndexOf(uint value)
         {
             return GetElement(value);
         }
@@ -113,7 +108,7 @@ namespace Clases
         /// 
         /// Nota: lo he comentado en exceso porque me parece un método bastante lioso
         /// </summary>
-        public void Remove(int element)
+        public bool Remove(int element)
         {
             //Se hace una copia de la cabeza
             Node actualNode = _head;
@@ -136,6 +131,7 @@ namespace Clases
                     //La cabeza pasa a ser el nuevo nodo y la lista disminuye en tamaño
                     _head = actualNode;
                     _length--;
+                    return true;
                 }
                 //Si la cabeza no es el elemento que queremos eliminar
                 else
@@ -153,17 +149,20 @@ namespace Clases
                         actualNode = null;
                         //Se disminuye el tamaño de la lista
                         _length--;
+                        return true;
                     }
                     else
                     {
                         Console.WriteLine("El elemento " + element.ToString() + " no se ha podido encontrar en la lista");
                         Console.WriteLine();
+                        return false;
                     }
                 }
             }
             else {
                 Console.WriteLine("La lista está vacía");
                 Console.WriteLine();
+                return false;
             }
         }
     }

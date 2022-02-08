@@ -1,0 +1,32 @@
+﻿<Properties StartupConfiguration="{5626BBD1-358D-4F05-8160-2CB68EED570F}|Default">
+  <MonoDevelop.Ide.Workbench ActiveDocument="vector/Vector.cs">
+    <Files>
+      <File FileName="vector/Class1.cs" Line="8" Column="9" />
+      <File FileName="vector.test/VectorTest.cs" Line="59" Column="23" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="lab02" expanded="True">
+            <Node name="autoboxing" expanded="True" />
+            <Node name="default.argument.values" expanded="True" />
+            <Node name="extension.methods" expanded="True" />
+            <Node name="parameters2" expanded="True" />
+            <Node name="vector" expanded="True">
+              <Node name="Vector.cs" selected="True" />
+            </Node>
+            <Node name="vector.test" expanded="True" />
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.ItemProperties.vector.test FirstBuild="True" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Release" />
+  <MonoDevelop.Ide.ItemProperties.vector FirstBuild="True" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>

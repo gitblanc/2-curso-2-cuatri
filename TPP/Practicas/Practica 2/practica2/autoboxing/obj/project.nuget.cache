@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "1qkVjbLVjiezdn3jJHtoH7YKlX+8diKW2irGuiv6blTKYof83c6ZGz7J/dHnFEYRFTlc6U3jC9suMOlsuufRcg==",
+  "success": true,
+  "projectFilePath": "/Users/blanc/Documents/2-curso-2cuatri/TPP/Practicas/Practica 2/practica2/autoboxing/autoboxing.csproj",
+  "expectedPackageFiles": [
+    "/Users/blanc/.nuget/packages/microsoft.csharp/4.7.0/microsoft.csharp.4.7.0.nupkg.sha512",
+    "/Users/blanc/.nuget/packages/system.data.datasetextensions/4.5.0/system.data.datasetextensions.4.5.0.nupkg.sha512",
+    "/Users/blanc/.nuget/packages/microsoft.netcore.app.host.osx-x64/3.1.22/microsoft.netcore.app.host.osx-x64.3.1.22.nupkg.sha512"
+  ],
+  "logs": []
+}
