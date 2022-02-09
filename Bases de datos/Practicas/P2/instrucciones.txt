@@ -1,0 +1,25 @@
+select * from marcas where ciudadm='barcelona';--1
+select * from clientes where ciudad = 'madrid' and apellido = 'garcia';--2
+select * from clientes where ciudad = 'madrid' or apellido = 'garcia';--2
+select apellido, ciudad from clientes;--3
+select apellido from clientes where ciudad = 'madrid';--4
+select nombrem from marcas where cifm in (
+    select cifm from marco where codcoche in (
+        select codcoche from coches where modelo = 'gtd'));--5
+select nombrem from marcas where cifm in (
+    select cifm from marco where codcoche in (
+        select codcoche from ventas where color = 'rojo'));--6
+select distinct nombrem from marcas m, marco mc, coches c where m.cifm = mc.cifm and mc.codcoche = c.codcoche and c.modelo = 'gtd';--6
+select distinct marcas.nombrem from marcas inner join marco on marcas.cifm=marco.cifm inner join coches on coches.codcoche=marco.codcoche where coches.modelo='gtd';--6
+select nombrech from coches where modelo = (
+    select modelo from coches where nombrech = 'cordoba');--7
+select v.codcoche from ventas v, concesionarios cn where v.cifc=cn.cifc and cn.ciudadc = 'madrid';--18
+select c.nombre from clientes c, ventas v, concesionarios cn where c.dni=v.dni and v.cifc = cn.cifc and cn.nombrec = 'dcar';--19
+select c.nombre, c.apellido from clientes c, ventas v, coches ch where c.dni = v.dni and v.codcoche = ch.codcoche and v.color = 'blanco' and ch.modelo = 'gti';--20
+select c.nombre, c.apellido from clientes c, ventas v, coches ch, concesionarios cn where c.dni = v.dni and v.cifc = cn.cifc and cn.ciudadc='madrid' and ch.codcoche = v.codcoche and ch.modelo = 'gti';--21
+select cifc, SUM(cantidad)as numero_coches from distribucion GROUP BY cifc;--25
+select * from clientes order by nombre; --30 ascendente
+select * from clientes order by nombre desc; --30 descendente
+select * from concesionarios where cifc in (select cifc from distribucion group by cifc having sum(cantidad) > (select avg(total) from (select sum(cantidad) as total from distribucion group by cifc)));--32
+select * from clientes where dni in (select dni from (select count(codcoche), dni from ventas group by dni order by count(codcoche) desc)where rownum <=2);--34 rownum = fetche
+create view clientesmascoches as select * from clientes where dni in (select dni from (select count(codcoche), dni from ventas group by dni order by count(codcoche) desc)where rownum <=2);--35
