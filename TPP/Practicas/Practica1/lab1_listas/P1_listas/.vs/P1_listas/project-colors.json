@@ -15,7 +15,12 @@
       "ProjectGuid": "75d2917c-1eea-4eb4-8a7a-bbdd89e17d1f",
       "DisplayName": "Clases",
       "ColorIndex": 2
+    },
+    "612d8055-154d-4089-8501-e07021f2df81": {
+      "ProjectGuid": "612d8055-154d-4089-8501-e07021f2df81",
+      "DisplayName": "ListTests",
+      "ColorIndex": 3
     }
   },
-  "NextColorIndex": 3
+  "NextColorIndex": 4
 }

@@ -4,11 +4,46 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-//@UO285176
+//@UO285176-implementación polimórfica
 namespace Clases
 {
     public class List
     {
+        internal class Node
+        {
+            private Object _value;
+            private Node _next;
+
+            public Node(Object value, Node next)
+            {
+                _value = value;
+                _next = next;
+            }
+
+            public Node(Object value)
+            {
+                _value = value;
+                _next = null;
+            }
+
+            public Node GetNext
+            {
+                get { return _next; }
+                set { _next = value; }
+            }
+
+            public Object GetValue
+            {
+                get { return _value; }
+                set { _value = value; }
+            }
+
+            public override string ToString()
+            {
+                return "" + _value;
+            }
+        }
+
         private Node _head;
         private int _length;
 
@@ -24,7 +59,7 @@ namespace Clases
         /// <summary>
         /// Método que busca un elemento en la lista
         /// </summary>
-        public int GetElement(uint value)
+        public Object GetElement(int value)
         {
             Node aux = _head;
             uint i = 0;
@@ -36,7 +71,23 @@ namespace Clases
                 aux = aux.GetNext;
                 i++;
             }
-            throw new ArgumentException("Unable to access that position");
+            return null;
+        }
+
+        /// <summary>
+        /// Método que devuelve un boolean en función de si el elemento buscado está o no en la lista
+        /// </summary>
+        public bool Contains(Object value) {
+            Node aux = _head;
+            while (aux != null)
+            {
+                if (aux == value)
+                {
+                    return true;
+                }
+                aux = aux.GetNext;
+            }
+            return false;
         }
 
         /// <summary>
@@ -58,7 +109,7 @@ namespace Clases
         /// <summary>
         /// Método que añade un nuevo nodop a la lista
         /// </summary>
-        public void Add(int element)
+        public void Add(Object element)
         {
             Node newNode = new Node(element);
             Node actualNode = _head;
@@ -82,25 +133,18 @@ namespace Clases
         /// <summary>
         /// Imprime todos los nodos de la lista
         /// </summary>
-        public string PrintElements() { 
+        public override string ToString() { 
 
             StringBuilder sb = new StringBuilder();
-            sb.AppendFormat("{0}", _length);
+            sb.AppendFormat("Length: {0} \n[", _length);
             Node current = _head;
             while (current != null) {
                 sb.Append(current.GetValue);
                 sb.Append(" ");
                 current = current.GetNext;
             }
+            sb.Append("]");
             return sb.ToString();
-        }
-
-        /// <summary>
-        /// Método que devuelve la posición de un elemento en la lista
-        /// </summary>
-        public int IndexOf(uint value)
-        {
-            return GetElement(value);
         }
 
         /// <summary>
@@ -108,7 +152,7 @@ namespace Clases
         /// 
         /// Nota: lo he comentado en exceso porque me parece un método bastante lioso
         /// </summary>
-        public bool Remove(int element)
+        public bool Remove(Object element)
         {
             //Se hace una copia de la cabeza
             Node actualNode = _head;
