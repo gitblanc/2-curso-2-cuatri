@@ -136,7 +136,7 @@ namespace Clases
         public override string ToString() { 
 
             StringBuilder sb = new StringBuilder();
-            sb.AppendFormat("[", _length);
+            sb.AppendFormat("Length: {0} \n[", _length);
             Node current = _head;
             while (current != null) {
                 sb.Append(current.GetValue);
