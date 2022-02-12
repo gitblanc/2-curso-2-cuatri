@@ -65,7 +65,8 @@ namespace Clases
             uint i = 0;
             while (aux != null)
             {
-                if (i == value) {
+                if (i == value)
+                {
                     return aux.GetValue;
                 }
                 aux = aux.GetNext;
@@ -77,11 +78,12 @@ namespace Clases
         /// <summary>
         /// Método que devuelve un boolean en función de si el elemento buscado está o no en la lista
         /// </summary>
-        public bool Contains(Object value) {
+        public bool Contains(Object element)
+        {
             Node aux = _head;
             while (aux != null)
             {
-                if (aux == value)
+                if (aux.GetValue.Equals(element))
                 {
                     return true;
                 }
@@ -133,12 +135,14 @@ namespace Clases
         /// <summary>
         /// Imprime todos los nodos de la lista
         /// </summary>
-        public override string ToString() { 
+        public override string ToString()
+        {
 
             StringBuilder sb = new StringBuilder();
-            sb.AppendFormat("Length: {0} \n[", _length);
+            sb.AppendFormat("[", _length);
             Node current = _head;
-            while (current != null) {
+            while (current != null)
+            {
                 sb.Append(current.GetValue);
                 sb.Append(" ");
                 current = current.GetNext;
@@ -160,7 +164,7 @@ namespace Clases
             if (actualNode != null)
             {
                 //Si la cabeza es el elemento que queremos eliminar
-                if (actualNode.GetValue == element)
+                if (actualNode.GetValue.Equals(element))
                 {
                     //Si el siguiente elemento no es null
                     if (actualNode.GetNext != null)
@@ -180,7 +184,7 @@ namespace Clases
                 //Si la cabeza no es el elemento que queremos eliminar
                 else
                 {
-                    while (actualNode.GetNext != null && actualNode.GetNext.GetValue != element)
+                    while (actualNode.GetNext != null && !actualNode.GetNext.GetValue.Equals(element))
                     {
                         //Se toma el siguiente elemento
                         actualNode = actualNode.GetNext;
@@ -203,7 +207,8 @@ namespace Clases
                     }
                 }
             }
-            else {
+            else
+            {
                 Console.WriteLine("La lista está vacía");
                 Console.WriteLine();
                 return false;

@@ -1,0 +1,11 @@
+C:\Users\blanc\OneDrive\Documentos\2-curso-2-cuatri\TPP\Teoría\theory.examples\theory.examples\examples\object.orientation\overload\parameter.passing\bin\Release\netcoreapp3.1\parameter.passing.exe
+C:\Users\blanc\OneDrive\Documentos\2-curso-2-cuatri\TPP\Teoría\theory.examples\theory.examples\examples\object.orientation\overload\parameter.passing\bin\Release\netcoreapp3.1\parameter.passing.deps.json
+C:\Users\blanc\OneDrive\Documentos\2-curso-2-cuatri\TPP\Teoría\theory.examples\theory.examples\examples\object.orientation\overload\parameter.passing\bin\Release\netcoreapp3.1\parameter.passing.runtimeconfig.json
+C:\Users\blanc\OneDrive\Documentos\2-curso-2-cuatri\TPP\Teoría\theory.examples\theory.examples\examples\object.orientation\overload\parameter.passing\bin\Release\netcoreapp3.1\parameter.passing.runtimeconfig.dev.json
+C:\Users\blanc\OneDrive\Documentos\2-curso-2-cuatri\TPP\Teoría\theory.examples\theory.examples\examples\object.orientation\overload\parameter.passing\bin\Release\netcoreapp3.1\parameter.passing.dll
+C:\Users\blanc\OneDrive\Documentos\2-curso-2-cuatri\TPP\Teoría\theory.examples\theory.examples\examples\object.orientation\overload\parameter.passing\bin\Release\netcoreapp3.1\parameter.passing.pdb
+C:\Users\blanc\OneDrive\Documentos\2-curso-2-cuatri\TPP\Teoría\theory.examples\theory.examples\examples\object.orientation\overload\parameter.passing\obj\Release\netcoreapp3.1\parameter.passing.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\blanc\OneDrive\Documentos\2-curso-2-cuatri\TPP\Teoría\theory.examples\theory.examples\examples\object.orientation\overload\parameter.passing\obj\Release\netcoreapp3.1\parameter.passing.csproj.CoreCompileInputs.cache
+C:\Users\blanc\OneDrive\Documentos\2-curso-2-cuatri\TPP\Teoría\theory.examples\theory.examples\examples\object.orientation\overload\parameter.passing\obj\Release\netcoreapp3.1\parameter.passing.dll
+C:\Users\blanc\OneDrive\Documentos\2-curso-2-cuatri\TPP\Teoría\theory.examples\theory.examples\examples\object.orientation\overload\parameter.passing\obj\Release\netcoreapp3.1\parameter.passing.pdb
+C:\Users\blanc\OneDrive\Documentos\2-curso-2-cuatri\TPP\Teoría\theory.examples\theory.examples\examples\object.orientation\overload\parameter.passing\obj\Release\netcoreapp3.1\parameter.passing.genruntimeconfig.cache

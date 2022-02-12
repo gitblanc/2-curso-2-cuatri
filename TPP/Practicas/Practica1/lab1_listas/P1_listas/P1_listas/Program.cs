@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Clases;
+using ConjuntoV1;
 
 namespace P1_listas
 {
@@ -11,16 +11,18 @@ namespace P1_listas
     {
         static void Main(string[] args)
         {
-            List list = new List();
-            //Se añaden 5 elementos -> Add()
-            list.Add(1);
-            list.Add(2);
-            list.Add(3);
-            list.Add(4);
-            list.Add(5);
-            Console.WriteLine(list.ToString());
+            Conjunto c = new Conjunto();
+            Conjunto c2 = new Conjunto();
+            c += 1;
+            c += 2;
+            c += 3;
 
-            
+            c2 += 2;
+            c2 += 3;
+            c2 += 4;
+
+            c |= c2;//se unen los conjuntos
+
         }
     }
 }

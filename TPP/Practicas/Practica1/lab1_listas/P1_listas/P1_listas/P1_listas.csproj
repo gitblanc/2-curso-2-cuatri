@@ -54,6 +54,10 @@
       <Project>{75d2917c-1eea-4eb4-8a7a-bbdd89e17d1f}</Project>
       <Name>Clases</Name>
     </ProjectReference>
+    <ProjectReference Include="..\ConjuntoV1\ConjuntoV1.csproj">
+      <Project>{53472c06-65be-4057-be68-8fe301537e3a}</Project>
+      <Name>ConjuntoV1</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

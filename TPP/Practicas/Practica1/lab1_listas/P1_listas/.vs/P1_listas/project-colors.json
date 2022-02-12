@@ -20,7 +20,32 @@
       "ProjectGuid": "612d8055-154d-4089-8501-e07021f2df81",
       "DisplayName": "ListTests",
       "ColorIndex": 3
+    },
+    "00394a46-7fa2-42ae-9aca-a52f023f2a03": {
+      "ProjectGuid": "00394a46-7fa2-42ae-9aca-a52f023f2a03",
+      "DisplayName": "ListTestsv0",
+      "ColorIndex": 4
+    },
+    "ac8d7f96-e1b5-4ba1-9f1b-22b0129ed444": {
+      "ProjectGuid": "ac8d7f96-e1b5-4ba1-9f1b-22b0129ed444",
+      "DisplayName": "Conjunto",
+      "ColorIndex": 5
+    },
+    "1fbcc593-f971-4503-8e0e-50ef623d12e1": {
+      "ProjectGuid": "1fbcc593-f971-4503-8e0e-50ef623d12e1",
+      "DisplayName": "ConjuntoV0",
+      "ColorIndex": 6
+    },
+    "53472c06-65be-4057-be68-8fe301537e3a": {
+      "ProjectGuid": "53472c06-65be-4057-be68-8fe301537e3a",
+      "DisplayName": "ConjuntoV1",
+      "ColorIndex": 7
+    },
+    "8be6d1c9-0609-4bf6-a7d2-3de07651c032": {
+      "ProjectGuid": "8be6d1c9-0609-4bf6-a7d2-3de07651c032",
+      "DisplayName": "ConjuntoTests",
+      "ColorIndex": 8
     }
   },
-  "NextColorIndex": 4
+  "NextColorIndex": 9
 }

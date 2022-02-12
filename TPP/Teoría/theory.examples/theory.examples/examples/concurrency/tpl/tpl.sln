@@ -1,0 +1,43 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30907.101
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "sequential.data.processing", "sequential.data.processing\sequential.data.processing.csproj", "{786B7FBD-71B6-4997-8627-1EA0683971AF}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "data.parallelism", "data.parallelism\data.parallelism.csproj", "{E8CEC304-71BD-4C39-B54C-1D86473B47FD}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "task.parallelism", "task.parallelism\task.parallelism.csproj", "{A77F51BF-81A4-43C2-BD6A-73AE9F8BDE3B}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "sequential.task.processing", "sequential.task.processing\sequential.task.processing.csproj", "{11154011-09EC-4BE8-AA41-FFDA723D92C1}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x86 = Debug|x86
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{786B7FBD-71B6-4997-8627-1EA0683971AF}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{786B7FBD-71B6-4997-8627-1EA0683971AF}.Debug|x86.Build.0 = Debug|Any CPU
+		{786B7FBD-71B6-4997-8627-1EA0683971AF}.Release|x86.ActiveCfg = Release|Any CPU
+		{786B7FBD-71B6-4997-8627-1EA0683971AF}.Release|x86.Build.0 = Release|Any CPU
+		{E8CEC304-71BD-4C39-B54C-1D86473B47FD}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{E8CEC304-71BD-4C39-B54C-1D86473B47FD}.Debug|x86.Build.0 = Debug|Any CPU
+		{E8CEC304-71BD-4C39-B54C-1D86473B47FD}.Release|x86.ActiveCfg = Release|Any CPU
+		{E8CEC304-71BD-4C39-B54C-1D86473B47FD}.Release|x86.Build.0 = Release|Any CPU
+		{A77F51BF-81A4-43C2-BD6A-73AE9F8BDE3B}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{A77F51BF-81A4-43C2-BD6A-73AE9F8BDE3B}.Debug|x86.Build.0 = Debug|Any CPU
+		{A77F51BF-81A4-43C2-BD6A-73AE9F8BDE3B}.Release|x86.ActiveCfg = Release|Any CPU
+		{A77F51BF-81A4-43C2-BD6A-73AE9F8BDE3B}.Release|x86.Build.0 = Release|Any CPU
+		{11154011-09EC-4BE8-AA41-FFDA723D92C1}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{11154011-09EC-4BE8-AA41-FFDA723D92C1}.Debug|x86.Build.0 = Debug|Any CPU
+		{11154011-09EC-4BE8-AA41-FFDA723D92C1}.Release|x86.ActiveCfg = Release|Any CPU
+		{11154011-09EC-4BE8-AA41-FFDA723D92C1}.Release|x86.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {88FA1C8C-ADFC-419B-98A5-4BDD578CE8A4}
+	EndGlobalSection
+EndGlobal
