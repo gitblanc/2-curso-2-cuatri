@@ -44,6 +44,7 @@ public class Vector3 {
 		int[] m = new int[2];
 		for (int i = 10; i < 143489071; i *= 3) {//con la i = 143489071 el programa peta
 			long inicioTiempoMConRellena = System.currentTimeMillis();
+			v = new int[i];
 			rellena(v);
 			long inicioTiempoMSinRellena = System.currentTimeMillis();
 			maximo(v, m);
@@ -55,6 +56,8 @@ public class Vector3 {
 			System.out.println("Posición del máximo del vector = " + m[0]);
 			System.out.println("El máximo (con rellena) tardó: " + resultadoMaxConRellena+ " milisegundos");
 			System.out.println("El máximo (sin rellena) tardó: " + resultadoMaxSinRellena+ " milisegundos");
+			System.out.println(i);
+			System.out.println("---------");
 
 		}
 

@@ -156,5 +156,17 @@ namespace ConjuntoTests
             c -= c2;//se unen los conjuntos
             Assert.AreEqual("[1 ]", c.ToString());
         }
+
+        [TestMethod]
+        public void TestOperatorCorchete()
+        {
+            Conjunto c = new();
+            Conjunto c2 = new();
+            c += 1;
+            c += 2;
+            c += 3;
+
+            Assert.AreEqual(1, c[0]);
+        }
     }
 }

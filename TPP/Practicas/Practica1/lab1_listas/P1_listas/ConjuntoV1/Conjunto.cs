@@ -75,20 +75,12 @@ namespace ConjuntoV1
             return c;
         }
 
-        ///// <summary>
-        ///// Operador []
-        ///// </summary>
-        //public static bool operator [](Conjunto c, int elemento)
-        //{
-        //    return c.GetElement();
-        //}
-
     /// <summary>
     /// Operador | para la union de conjuntos
     /// </summary>
     public static Conjunto operator | (Conjunto c, Conjunto c2)
         {
-            for (int i = 0; i < c2.Size(); i++) {
+            for (uint i = 0; i < c2.Size(); i++) {
                 if (!c.Contains(c2.GetElement(i))) {
                     c.Add(c2.GetElement(i));
                 }
@@ -102,7 +94,7 @@ namespace ConjuntoV1
         public static Conjunto operator &(Conjunto c, Conjunto c2)
         {
             Conjunto aux = new Conjunto();
-            for (int i = 0; i < c2.Size(); i++)
+            for (uint i = 0; i < c2.Size(); i++)
             {
                 if (c.Contains(c2.GetElement(i)))
                 {
@@ -118,7 +110,7 @@ namespace ConjuntoV1
         public static Conjunto operator -(Conjunto c, Conjunto c2)
         {
             Conjunto aux = new Conjunto();
-            for (int i = 0; i < c2.Size(); i++)
+            for (uint i = 0; i < c2.Size(); i++)
             {
                 if (!c2.Contains(c.GetElement(i)))
                 {
@@ -126,6 +118,13 @@ namespace ConjuntoV1
                 }
             }
             return aux;
+        }
+        /// <summary>
+        /// Operador [] 
+        /// </summary>
+        public Object this[uint pos] {
+            get => GetElement(pos);
+            set {_head = new Node(value); }
         }
 
         /// <summary>
@@ -139,7 +138,7 @@ namespace ConjuntoV1
         /// <summary>
         /// Método que busca un elemento en la lista
         /// </summary>
-        public Object GetElement(int value)
+        public Object GetElement(uint value)
         {
             Node aux = _head;
             uint i = 0;
