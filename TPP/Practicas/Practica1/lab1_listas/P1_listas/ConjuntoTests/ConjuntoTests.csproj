@@ -15,6 +15,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\Clases\Clases.csproj" />
     <ProjectReference Include="..\ConjuntoV1\ConjuntoV1.csproj" />
   </ItemGroup>
 

@@ -4,6 +4,21 @@
     "C:\\Users\\blanc\\OneDrive\\Documentos\\2-curso-2-cuatri\\TPP\\Practicas\\Practica1\\lab1_listas\\P1_listas\\ConjuntoTests\\ConjuntoTests.csproj": {}
   },
   "projects": {
+    "C:\\Users\\blanc\\OneDrive\\Documentos\\2-curso-2-cuatri\\TPP\\Practicas\\Practica1\\lab1_listas\\P1_listas\\Clases\\Clases.csproj": {
+      "restore": {
+        "projectUniqueName": "C:\\Users\\blanc\\OneDrive\\Documentos\\2-curso-2-cuatri\\TPP\\Practicas\\Practica1\\lab1_listas\\P1_listas\\Clases\\Clases.csproj",
+        "projectName": "Clases",
+        "projectPath": "C:\\Users\\blanc\\OneDrive\\Documentos\\2-curso-2-cuatri\\TPP\\Practicas\\Practica1\\lab1_listas\\P1_listas\\Clases\\Clases.csproj",
+        "frameworks": {
+          "net472": {
+            "projectReferences": {}
+          }
+        }
+      },
+      "frameworks": {
+        "net472": {}
+      }
+    },
     "C:\\Users\\blanc\\OneDrive\\Documentos\\2-curso-2-cuatri\\TPP\\Practicas\\Practica1\\lab1_listas\\P1_listas\\ConjuntoTests\\ConjuntoTests.csproj": {
       "version": "1.0.0",
       "restore": {
@@ -32,6 +47,9 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
+              "C:\\Users\\blanc\\OneDrive\\Documentos\\2-curso-2-cuatri\\TPP\\Practicas\\Practica1\\lab1_listas\\P1_listas\\Clases\\Clases.csproj": {
+                "projectPath": "C:\\Users\\blanc\\OneDrive\\Documentos\\2-curso-2-cuatri\\TPP\\Practicas\\Practica1\\lab1_listas\\P1_listas\\Clases\\Clases.csproj"
+              },
               "C:\\Users\\blanc\\OneDrive\\Documentos\\2-curso-2-cuatri\\TPP\\Practicas\\Practica1\\lab1_listas\\P1_listas\\ConjuntoV1\\ConjuntoV1.csproj": {
                 "projectPath": "C:\\Users\\blanc\\OneDrive\\Documentos\\2-curso-2-cuatri\\TPP\\Practicas\\Practica1\\lab1_listas\\P1_listas\\ConjuntoV1\\ConjuntoV1.csproj"
               }

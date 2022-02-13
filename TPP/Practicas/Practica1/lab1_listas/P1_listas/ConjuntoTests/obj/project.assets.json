@@ -1661,6 +1661,15 @@
           "lib/netstandard1.3/System.Xml.XDocument.dll": {}
         }
       },
+      "Clases/1.0.0": {
+        "type": "project",
+        "compile": {
+          "bin/placeholder/Clases.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Clases.dll": {}
+        }
+      },
       "ConjuntoV1/1.0.0": {
         "type": "project",
         "compile": {
@@ -6203,6 +6212,11 @@
         "system.xml.xdocument.nuspec"
       ]
     },
+    "Clases/1.0.0": {
+      "type": "project",
+      "path": "../Clases/Clases.csproj",
+      "msbuildProject": "../Clases/Clases.csproj"
+    },
     "ConjuntoV1/1.0.0": {
       "type": "project",
       "path": "../ConjuntoV1/ConjuntoV1.csproj",
@@ -6211,6 +6225,7 @@
   },
   "projectFileDependencyGroups": {
     "net6.0": [
+      "Clases >= 1.0.0",
       "ConjuntoV1 >= 1.0.0",
       "MSTest.TestAdapter >= 2.2.7",
       "MSTest.TestFramework >= 2.2.7",
@@ -6250,6 +6265,9 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
+            "C:\\Users\\blanc\\OneDrive\\Documentos\\2-curso-2-cuatri\\TPP\\Practicas\\Practica1\\lab1_listas\\P1_listas\\Clases\\Clases.csproj": {
+              "projectPath": "C:\\Users\\blanc\\OneDrive\\Documentos\\2-curso-2-cuatri\\TPP\\Practicas\\Practica1\\lab1_listas\\P1_listas\\Clases\\Clases.csproj"
+            },
             "C:\\Users\\blanc\\OneDrive\\Documentos\\2-curso-2-cuatri\\TPP\\Practicas\\Practica1\\lab1_listas\\P1_listas\\ConjuntoV1\\ConjuntoV1.csproj": {
               "projectPath": "C:\\Users\\blanc\\OneDrive\\Documentos\\2-curso-2-cuatri\\TPP\\Practicas\\Practica1\\lab1_listas\\P1_listas\\ConjuntoV1\\ConjuntoV1.csproj"
             }

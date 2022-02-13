@@ -78,7 +78,7 @@ namespace ConjuntoV1
         ///// <summary>
         ///// Operador []
         ///// </summary>
-        //public static bool operator [ ](Conjunto c, int elemento)
+        //public static bool operator [](Conjunto c, int elemento)
         //{
         //    return c.GetElement();
         //}
@@ -88,31 +88,25 @@ namespace ConjuntoV1
     /// </summary>
     public static Conjunto operator | (Conjunto c, Conjunto c2)
         {
-            if (c2.GetElemsListed() != null)
-            {
-                foreach (Object o in c2.GetElemsListed()) {
-                    if (!c.Contains(o)) {
-                        c.Add(o);
-                    }
+            for (int i = 0; i < c2.Size(); i++) {
+                if (!c.Contains(c2.GetElement(i))) {
+                    c.Add(c2.GetElement(i));
                 }
             }
             return c;
         }
 
-        public Object[] GetElemsListed()
+        /// <summary>
+        /// Operador & para la intersección de conjuntos
+        /// </summary>
+        public static Conjunto operator &(Conjunto c, Conjunto c2)
         {
-            Object[] aux = new Object[_length];
-            Node actualNode = _head;
-            if (IsEmpty())
+            Conjunto aux = new Conjunto();
+            for (int i = 0; i < c2.Size(); i++)
             {
-                return null;
-            }
-            else
-            {
-                while (actualNode.GetNext != null)
+                if (c.Contains(c2.GetElement(i)))
                 {
-                    aux.Append(actualNode);
-                    actualNode = actualNode.GetNext;
+                    aux.Add(c2.GetElement(i));
                 }
             }
             return aux;
@@ -121,37 +115,17 @@ namespace ConjuntoV1
         /// <summary>
         /// Operador & para la intersección de conjuntos
         /// </summary>
-        public static Conjunto operator &(Conjunto c, Conjunto c2)
-        {
-            if (c2.GetElemsListed() != null)
-            {
-                foreach (Object o in c2.GetElemsListed())
-                {
-                    if (c.Contains(o))
-                    {
-                        c.Add(o);
-                    }
-                }
-            }
-            return c;
-        }
-
-        /// <summary>
-        /// Operador & para la intersección de conjuntos
-        /// </summary>
         public static Conjunto operator -(Conjunto c, Conjunto c2)
         {
-            if (c2.GetElemsListed() != null)
+            Conjunto aux = new Conjunto();
+            for (int i = 0; i < c2.Size(); i++)
             {
-                foreach (Object o in c2.GetElemsListed())
+                if (!c2.Contains(c.GetElement(i)))
                 {
-                    if (c.Contains(o))
-                    {
-                        c.Remove(o);
-                    }
+                    aux.Add(c.GetElement(i));
                 }
             }
-            return c;
+            return aux;
         }
 
         /// <summary>

@@ -122,5 +122,39 @@ namespace ConjuntoTests
             c |= c2;//se unen los conjuntos
             Assert.AreEqual("[1 2 3 4 ]", c.ToString());
         }
+
+        [TestMethod]
+        public void TestOperatorIntersection()
+        {
+            Conjunto c = new();
+            Conjunto c2 = new();
+            c += 1;
+            c += 2;
+            c += 3;
+
+            c2 += 2;
+            c2 += 3;
+            c2 += 4;
+
+            c &= c2;//se unen los conjuntos
+            Assert.AreEqual("[2 3 ]", c.ToString());
+        }
+
+        [TestMethod]
+        public void TestOperatorDifference()
+        {
+            Conjunto c = new();
+            Conjunto c2 = new();
+            c += 1;
+            c += 2;
+            c += 3;
+
+            c2 += 2;
+            c2 += 3;
+            c2 += 4;
+
+            c -= c2;//se unen los conjuntos
+            Assert.AreEqual("[1 ]", c.ToString());
+        }
     }
 }

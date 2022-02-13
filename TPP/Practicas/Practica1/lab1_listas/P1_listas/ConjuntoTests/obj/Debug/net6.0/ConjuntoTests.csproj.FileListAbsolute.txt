@@ -98,3 +98,5 @@ C:\Users\blanc\OneDrive\Documentos\2-curso-2-cuatri\TPP\Practicas\Practica1\lab1
 C:\Users\blanc\OneDrive\Documentos\2-curso-2-cuatri\TPP\Practicas\Practica1\lab1_listas\P1_listas\ConjuntoTests\obj\Debug\net6.0\ref\ConjuntoTests.dll
 C:\Users\blanc\OneDrive\Documentos\2-curso-2-cuatri\TPP\Practicas\Practica1\lab1_listas\P1_listas\ConjuntoTests\obj\Debug\net6.0\ConjuntoTests.pdb
 C:\Users\blanc\OneDrive\Documentos\2-curso-2-cuatri\TPP\Practicas\Practica1\lab1_listas\P1_listas\ConjuntoTests\obj\Debug\net6.0\ConjuntoTests.genruntimeconfig.cache
+C:\Users\blanc\OneDrive\Documentos\2-curso-2-cuatri\TPP\Practicas\Practica1\lab1_listas\P1_listas\ConjuntoTests\bin\Debug\net6.0\Clases.dll
+C:\Users\blanc\OneDrive\Documentos\2-curso-2-cuatri\TPP\Practicas\Practica1\lab1_listas\P1_listas\ConjuntoTests\bin\Debug\net6.0\Clases.pdb
