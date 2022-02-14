@@ -1,0 +1,11 @@
+E:\practica3\practica3\algorithms\bin\Release\netcoreapp3.1\algorithms.exe
+E:\practica3\practica3\algorithms\bin\Release\netcoreapp3.1\algorithms.deps.json
+E:\practica3\practica3\algorithms\bin\Release\netcoreapp3.1\algorithms.runtimeconfig.json
+E:\practica3\practica3\algorithms\bin\Release\netcoreapp3.1\algorithms.runtimeconfig.dev.json
+E:\practica3\practica3\algorithms\bin\Release\netcoreapp3.1\algorithms.dll
+E:\practica3\practica3\algorithms\bin\Release\netcoreapp3.1\algorithms.pdb
+E:\practica3\practica3\algorithms\obj\Release\netcoreapp3.1\algorithms.csproj.CoreCompileInputs.cache
+E:\practica3\practica3\algorithms\obj\Release\netcoreapp3.1\algorithms.dll
+E:\practica3\practica3\algorithms\obj\Release\netcoreapp3.1\algorithms.pdb
+E:\practica3\practica3\algorithms\obj\Release\netcoreapp3.1\algorithms.genruntimeconfig.cache
+E:\practica3\practica3\algorithms\obj\Release\netcoreapp3.1\algorithms.csproj.AssemblyReference.cache

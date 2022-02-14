@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "1rAZG29ic+PGBJVVqomnCwkiYUyIttEll5GwLbARQWM+QIWG3IksgCnMUhUUp0kBGYTFkHlKXXTp0CMW7fBPew==",
+  "success": true,
+  "projectFilePath": "E:\\practica3\\practica3\\algorithms\\algorithms.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\UO285176\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
+    "C:\\Users\\UO285176\\.nuget\\packages\\system.data.datasetextensions\\4.5.0\\system.data.datasetextensions.4.5.0.nupkg.sha512"
+  ],
+  "logs": []
+}
