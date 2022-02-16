@@ -1,0 +1,134 @@
+create table carrera(--crea la tabla carrera
+    codcarr varchar(8),
+    nombrec varchar(20),
+    duracion decimal(1,0),
+    --restricciones
+    constraint pk_carrera primary key (codcarr)
+);
+
+create table profesor(--crea la tabla profesor
+    dnip varchar(8),
+    nombrep varchar(20),
+    apellidop varchar(20),
+    domiciliop varchar(20),
+    constraint pk_profesor primary key (dnip)
+);
+
+create table alumno(--crea la tabla alumno
+    dnia varchar(8),
+    noma varchar(20),
+    apella varchar(20),
+    domicilioa varchar(20),
+    f_nacimiento date,
+    f_ingreso date,
+    constraint pk_alumno primary key (dnia)
+);
+
+create table asignatura(--crea la tabla asignatura
+    codasig varchar(8),
+    nomasig varchar(20),
+    curso decimal(1,0),
+    creditos decimal(1,0),
+    tipo varchar(20) not null,--no se puede dejar en blanco esta característica(not null)
+    codcarr varchar(8) not null,
+    constraint pk_asignatura primary key (codasig),
+    constraint fk_asignatura_carrera foreign key (codcarr) references carrera(codcarr),
+    constraint uq_asignatura_nomasig unique (nomasig),--no puede haber campos repetidos en nombre asignatura
+    constraint ck_asignatura_tipo check (tipo in('obligatoria', 'optativa','libre onfiguracion'))
+);
+
+create table imparte(--crea la tabla imparte
+    codasig varchar(8),
+    dnip varchar(8),
+    CONSTRAINT PK_IMPARTE PRIMARY KEY (codasig, dnip),
+    CONSTRAINT FK_IMPARTE_ASIGNATURA FOREIGN KEY (CODASIG) REFERENCES ASIGNATURA (CODASIG),
+    CONSTRAINT FK_IMPARTE_PROFESOR FOREIGN KEY (DNIP) REFERENCES PROFESOR (DNIP)
+);
+
+create table califica(--crea la tabla califica del modelo 1
+    nota decimal(2,0),
+    fecha_calificacion date,
+    dnia varchar(8),
+    codasig varchar(8),
+    dnip varchar(8) not null,
+    --restricciones
+    constraint pk_califica primary key (dnia, codasig),
+    constraint fk_califica_alumno foreign key (dnia) references alumno(dnia),
+    constraint fk_califica_asignatura foreign key (codasig) references asignatura(codasig),
+    constraint fk_califica_profesor foreign key (dnip) references profesor(dnip)
+);
+create table califica_m2(--crea la tabla califica del modelo 2
+    nota decimal(2,0),
+    fecha_calificacion date,
+    dnia varchar(8),
+    codasig varchar(8),
+    dnip varchar(8) not null,
+    --restricciones
+    constraint pk_califica2 primary key (dnia, codasig, dnip),
+    constraint fk_califica_alumno2 foreign key (dnia) references alumno(dnia),
+    constraint fk_calificaimparte foreign key (codasig,dnip) references imparte(codasig,dnip)--agregación
+);
+
+
+
+
+create table sala(
+    codsala varchar(8),
+    aforo decimal (2,0),
+    codcine varchar(8) not null,
+    constraint pk_sala primary key (codsala),
+    constraint fk_sala_cine foreign key (codcine) references cine(codcine)
+);
+
+create table cine(--cine creado
+    codcine varchar(8),
+    localidad varchar(20),
+    constraint pk_cine primary key(codcine)
+);
+
+create table cine3D(--cine creado
+    codcine varchar(8),
+    numsalas decimal(1,0),
+    constraint pk_cine3d primary key(codcine),
+    constraint pk_cine3d_cine foreign key (codcine) references cine(codcine)
+);
+
+drop table pelicula;--para borrar
+
+create table pelicula(--pelicula creado
+    codpelicula varchar(8),
+    titulo varchar(20),
+    duracion decimal(3,0),
+    tipo varchar(8) not null,
+    codpelicula_original varchar(8),
+    constraint pk_pelicula primary key(codpelicula),
+    constraint fk_pelicula_pelicula_original foreign key (codpelicula_original) references pelicula(codpelicula),
+    constraint ck_pelicula_tipo check (tipo in('ficcion', 'aventuras','terror')),
+    constraint uq_pelicula_titulo unique (titulo)
+);
+
+create table proyecta(--proyecta creado
+    codpelicula varchar(8),
+    codsala varchar(8),
+    fecha date,
+    sesion decimal(2,0),
+   entradas_vendidas decimal(3,0),
+    codpelicula_original varchar(8),
+    constraint pk_proyecta primary key(codpelicula, codsala, sesion,fecha),
+    constraint fk_proyecta_pelicula foreign key (codpelicula) references pelicula(codpelicula),
+    constraint fk_proyecta_sala foreign key (codsala) references sala(codsala),
+   constraint ck_proyecta_sesion check (sesion in(5,7,10))
+);
+
+drop table entrada;
+
+create table entrada(
+    codentrada varchar(8),
+    precio decimal(2,2),
+    codpelicula varchar(8) not null,
+    codsala varchar(8) not null,
+    sesion decimal(2,0) not null,
+    fecha date not null,
+    constraint pk_entrada primary key (codentrada),
+    constraint fk_entrada_proyecta foreign key(codpelicula, codsala, sesion, fecha) references proyecta(codpelicula, codsala, sesion, fecha)
+);
