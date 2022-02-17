@@ -1,0 +1,5 @@
+/Users/blanc/Documents/2-curso-2cuatri/TPP/Practicas/lab1_listas/P1_listas/Clases/bin/Release/Clases.dll
+/Users/blanc/Documents/2-curso-2cuatri/TPP/Practicas/lab1_listas/P1_listas/Clases/bin/Release/Clases.pdb
+/Users/blanc/Documents/2-curso-2cuatri/TPP/Practicas/lab1_listas/P1_listas/Clases/obj/Release/Clases.csproj.CoreCompileInputs.cache
+/Users/blanc/Documents/2-curso-2cuatri/TPP/Practicas/lab1_listas/P1_listas/Clases/obj/Release/Clases.dll
+/Users/blanc/Documents/2-curso-2cuatri/TPP/Practicas/lab1_listas/P1_listas/Clases/obj/Release/Clases.pdb

@@ -1,0 +1,16 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "599885b1-8896-45d1-a660-ef8fe8cc6780": {
+      "ProjectGuid": "599885b1-8896-45d1-a660-ef8fe8cc6780",
+      "DisplayName": "algorithms",
+      "ColorIndex": 0
+    },
+    "dedb8aff-b578-4f98-9773-169e53c4d7b5": {
+      "ProjectGuid": "dedb8aff-b578-4f98-9773-169e53c4d7b5",
+      "DisplayName": "stack",
+      "ColorIndex": 1
+    }
+  },
+  "NextColorIndex": 2
+}

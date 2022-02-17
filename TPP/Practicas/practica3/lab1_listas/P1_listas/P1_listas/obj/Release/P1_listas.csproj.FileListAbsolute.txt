@@ -1,0 +1,10 @@
+/Users/blanc/Documents/2-curso-2cuatri/TPP/Practicas/lab1_listas/P1_listas/P1_listas/bin/Release/P1_listas.exe.config
+/Users/blanc/Documents/2-curso-2cuatri/TPP/Practicas/lab1_listas/P1_listas/P1_listas/bin/Release/P1_listas.exe
+/Users/blanc/Documents/2-curso-2cuatri/TPP/Practicas/lab1_listas/P1_listas/P1_listas/bin/Release/P1_listas.pdb
+/Users/blanc/Documents/2-curso-2cuatri/TPP/Practicas/lab1_listas/P1_listas/P1_listas/bin/Release/Clases.dll
+/Users/blanc/Documents/2-curso-2cuatri/TPP/Practicas/lab1_listas/P1_listas/P1_listas/bin/Release/Clases.pdb
+/Users/blanc/Documents/2-curso-2cuatri/TPP/Practicas/lab1_listas/P1_listas/P1_listas/obj/Release/P1_listas.csproj.AssemblyReference.cache
+/Users/blanc/Documents/2-curso-2cuatri/TPP/Practicas/lab1_listas/P1_listas/P1_listas/obj/Release/P1_listas.csproj.CoreCompileInputs.cache
+/Users/blanc/Documents/2-curso-2cuatri/TPP/Practicas/lab1_listas/P1_listas/P1_listas/obj/Release/P1_listas.csproj.CopyComplete
+/Users/blanc/Documents/2-curso-2cuatri/TPP/Practicas/lab1_listas/P1_listas/P1_listas/obj/Release/P1_listas.exe
+/Users/blanc/Documents/2-curso-2cuatri/TPP/Practicas/lab1_listas/P1_listas/P1_listas/obj/Release/P1_listas.pdb

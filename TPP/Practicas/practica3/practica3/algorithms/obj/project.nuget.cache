@@ -1,11 +1,15 @@
 {
   "version": 2,
-  "dgSpecHash": "1rAZG29ic+PGBJVVqomnCwkiYUyIttEll5GwLbARQWM+QIWG3IksgCnMUhUUp0kBGYTFkHlKXXTp0CMW7fBPew==",
+  "dgSpecHash": "hrPjI0RiNlSvD4lbIWqgZOfJ8hCG262DCml6hirbkgb3GCORlcwB0RgCBKjFJzi/czy8jNMGu9ypzkz8YmOG6Q==",
   "success": true,
-  "projectFilePath": "E:\\practica3\\practica3\\algorithms\\algorithms.csproj",
+  "projectFilePath": "C:\\Users\\blanc\\OneDrive\\Documentos\\2-curso-2-cuatri\\TPP\\Practicas\\practica3\\practica3\\algorithms\\algorithms.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\UO285176\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
-    "C:\\Users\\UO285176\\.nuget\\packages\\system.data.datasetextensions\\4.5.0\\system.data.datasetextensions.4.5.0.nupkg.sha512"
+    "C:\\Users\\blanc\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
+    "C:\\Users\\blanc\\.nuget\\packages\\system.data.datasetextensions\\4.5.0\\system.data.datasetextensions.4.5.0.nupkg.sha512",
+    "C:\\Users\\blanc\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\3.1.22\\microsoft.netcore.app.host.win-x64.3.1.22.nupkg.sha512",
+    "C:\\Users\\blanc\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\3.1.10\\microsoft.aspnetcore.app.ref.3.1.10.nupkg.sha512",
+    "C:\\Users\\blanc\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\3.1.0\\microsoft.windowsdesktop.app.ref.3.1.0.nupkg.sha512",
+    "C:\\Users\\blanc\\.nuget\\packages\\microsoft.netcore.app.ref\\3.1.0\\microsoft.netcore.app.ref.3.1.0.nupkg.sha512"
   ],
   "logs": []
 }
