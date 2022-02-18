@@ -10,45 +10,90 @@ namespace Stack
     {
         private uint _numberOfElements;
         private List List { get; }
+        private bool _isEmpty;
+        private bool _isFull;
+
+        public bool IsEmpty
+        {
+            get { return List.IsEmpty(); }
+            set { _isEmpty = value; }
+        }
+
+        public bool IsFull
+        {
+            get { return List.Size() == NumberOfElements; }
+            set { _isFull = value; }
+        }
         public uint NumberOfElements
         {
             get { return _numberOfElements; }
             set { _numberOfElements = value; }
         }
 
-
+        /// <summary>
+        /// Constructor
+        /// </summary>
         public Stack(uint number)
         {
-            //Invariant();
+
             NumberOfElements = number;
+            IsEmpty = false;
+            IsFull = false;
+            List = new List();
+            Invariant();
         }
 
         public bool Push(Object obj)
         {
-            List.Add(obj);
+            //Preconditions:
+            if (NumberOfElements == 0)
+                throw new InvalidOperationException("The maximum number of elements is equal to zero");
+            if (IsFull)
+                throw new InvalidOperationException("The stack is full");
+            if (obj == null)
+                throw new ArgumentNullException("The parameter was null");
+            Invariant();
+            if (NumberOfElements < List.Size())
+            {
+                List.Add(obj);
+            }
+            else
+            {
+                IsFull = true;
+            }
+            Invariant();
+            //Postconditions
+            if (IsEmpty)
+                throw new InvalidOperationException("The stack shouldn't be empty");
             return List.Contains(obj);
         }
 
         public bool Pop()
         {
+            //Preconditions:
+            if (IsEmpty)
+                throw new InvalidOperationException("The stack shouldn't be empty");
+            Invariant();
             Object elem = List.GetElement(List.Size() - 1);
-            return List.Remove(elem);
+            Invariant();
+            List.Remove(elem);
+            //Postconditions
+            if(IsFull)
+                throw new InvalidOperationException("The stack shouldn't be full");
+            if(List == null)
+                throw new InvalidOperationException("The list shouldn't be null");
+            return !List.Contains(elem);//si lo contiene, no se ha borrado y viceversa
+
         }
 
-        private bool IsEmpty()
+
+
+        private void Invariant()
         {
-            return List.IsEmpty();
+            Debug.Assert(IsFull && IsEmpty, "Stack is both full and empty");//la pila no esta llena y vacía
+            Debug.Assert(NumberOfElements > 0 && IsEmpty, "Stack shouldn't be empty");//está vacío y el numero de elementos es > 0
+            Debug.Assert(NumberOfElements == 0 && IsFull, "Stack should be empty");
         }
-
-        private bool IsFull()
-        {
-            return List.Size() == NumberOfElements;
-        }
-
-        //private void Invariant()
-        //{
-        //    Debug.Assert()
-        //}
 
         public static void Main()
         {
