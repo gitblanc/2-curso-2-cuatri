@@ -1,0 +1,4 @@
+INDEX VERSION 1.131+C:\Users\UO285176\Desktop\Algoritmia\Practica\P2\ws2\.metadata\.plugins\org.eclipse.jdt.core
+2499878056.index
+2098144944.index
+1865797976.index
