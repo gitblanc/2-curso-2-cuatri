@@ -17,7 +17,10 @@ public class Bucle3 {
 		long t1, t2;
 		int nVeces = Integer.parseInt(arg[0]);
 
-		for (int n = 8; n <= 66000; n *= 2) {
+		for (int n = 8; n <= 5000; n *= 2) {
+			if(n > 128) {
+				nVeces = 100000;
+			}
 			t1 = System.currentTimeMillis();
 
 			for (int repeticiones = 1; repeticiones <= nVeces; repeticiones++) {

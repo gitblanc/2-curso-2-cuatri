@@ -10,7 +10,7 @@ public class Incognita {
 				for (int k = 1; k <= j; k++)
 					cont++;
 		return cont;
-
+		//COMPLEJIDAD N^3	
 	}
 
 	public static void main(String arg[]) {
@@ -18,9 +18,12 @@ public class Incognita {
 		long t1, t2;
 		int nVeces = Integer.parseInt(arg[0]);
 
-		for (int n = 1; n <= 100_000; n *= 2) {//log n
+		for (int n = 8; n <= 100_000; n *= 2) {//log n
 			t1 = System.currentTimeMillis();
 
+			if(n >= 128) {
+				nVeces = 1;
+			}
 			for (int repeticiones = 1; repeticiones <= nVeces; repeticiones++) {
 				c += bucle6(n);
 			}

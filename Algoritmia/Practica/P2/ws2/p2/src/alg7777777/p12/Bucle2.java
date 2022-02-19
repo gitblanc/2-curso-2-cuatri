@@ -17,6 +17,9 @@ public class Bucle2 {
 		int nVeces = Integer.parseInt(arg[0]);
 
 		for (int n = 8; n <= 66000; n *= 2) {
+			if(n > 128) {
+				nVeces = 100000;
+			}
 			long c = 0;
 			t1 = System.currentTimeMillis();
 

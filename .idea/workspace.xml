@@ -1,13 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="509d0acf-2f39-42ce-82b1-df440a5abc5b" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/Algoritmia/Practica/P0/P0/p0/bin/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/Algoritmia/Practica/P0/P0/p0/bin/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Algoritmia/Practica/P0/P0/p0/bin/p1/Vector3.class" beforeDir="false" afterPath="$PROJECT_DIR$/Algoritmia/Practica/P0/P0/p0/bin/p1/Vector3.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Algoritmia/Practica/P0/P0/p0/src/matriz/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/Algoritmia/Practica/P0/P0/p0/src/matriz/MatrizOperacionesTiempos.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Algoritmia/Practica/P0/P0/p0/src/p1/Vector3.java" beforeDir="false" afterPath="$PROJECT_DIR$/Algoritmia/Practica/P0/P0/p0/src/p1/Vector3.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Algoritmia/Practica/P0/TAREA 1.docx" beforeDir="false" afterPath="$PROJECT_DIR$/Algoritmia/Practica/P0/TAREA 1.docx" afterDir="false" />
-    </list>
+    <list default="true" id="509d0acf-2f39-42ce-82b1-df440a5abc5b" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -34,6 +28,9 @@
       <module name="2-curso-2-cuatri" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
       <option name="SDK_HOME" value="" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Algoritmia/Practica/P1/practica01.1 tiempos/benchmarking" />
       <option name="IS_MODULE_SDK" value="true" />

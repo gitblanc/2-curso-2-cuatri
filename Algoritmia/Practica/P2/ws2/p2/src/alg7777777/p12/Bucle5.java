@@ -21,6 +21,9 @@ public class Bucle5 {
 
 		for (int n = 8; n <= 66000; n *= 2) {
 			t1 = System.currentTimeMillis();
+			if(n >= 128) {
+				nVeces = 1;
+			}
 
 			for (int repeticiones = 1; repeticiones <= nVeces; repeticiones++) {
 				c += bucle3(n);

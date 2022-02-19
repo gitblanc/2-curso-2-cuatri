@@ -12,6 +12,6 @@
     <booleanAttribute key="org.eclipse.jdt.launching.ATTR_USE_CLASSPATH_ONLY_JAR" value="false"/>
     <stringAttribute key="org.eclipse.jdt.launching.MAIN_TYPE" value="alg7777777.p12.Bucle2"/>
     <stringAttribute key="org.eclipse.jdt.launching.MODULE_NAME" value="p2"/>
-    <stringAttribute key="org.eclipse.jdt.launching.PROGRAM_ARGUMENTS" value="10"/>
+    <stringAttribute key="org.eclipse.jdt.launching.PROGRAM_ARGUMENTS" value="1000000"/>
     <stringAttribute key="org.eclipse.jdt.launching.PROJECT_ATTR" value="p2"/>
 </launchConfiguration>
