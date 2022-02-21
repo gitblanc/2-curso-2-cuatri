@@ -7,20 +7,20 @@ using System.Threading.Tasks;
 //@UO285176-implementación polimórfica
 namespace Clases
 {
-    public class List
+    public class List<T>
     {
         internal class Node
         {
-            private Object _value;
+            private T _value;
             private Node _next;
 
-            public Node(Object value, Node next)
+            public Node(T value, Node next)
             {
                 _value = value;
                 _next = next;
             }
 
-            public Node(Object value)
+            public Node(T value)
             {
                 _value = value;
                 _next = null;
@@ -32,7 +32,7 @@ namespace Clases
                 set { _next = value; }
             }
 
-            public Object GetValue
+            public T GetValue
             {
                 get { return _value; }
                 set { _value = value; }
@@ -59,7 +59,7 @@ namespace Clases
         /// <summary>
         /// Método que busca un elemento en la lista
         /// </summary>
-        public Object GetElement(int value)
+        public T GetElement(int value)
         {
             Node aux = _head;
             uint i = 0;
@@ -72,13 +72,13 @@ namespace Clases
                 aux = aux.GetNext;
                 i++;
             }
-            return null;
+            return default;
         }
 
         /// <summary>
         /// Método que devuelve un boolean en función de si el elemento buscado está o no en la lista
         /// </summary>
-        public bool Contains(Object element)
+        public bool Contains(T element)
         {
             Node aux = _head;
             while (aux != null)
@@ -111,7 +111,7 @@ namespace Clases
         /// <summary>
         /// Método que añade un nuevo nodop a la lista
         /// </summary>
-        public void Add(Object element)
+        public void Add(T element)
         {
             Node newNode = new Node(element);
             Node actualNode = _head;
@@ -156,7 +156,7 @@ namespace Clases
         /// 
         /// Nota: lo he comentado en exceso porque me parece un método bastante lioso
         /// </summary>
-        public bool Remove(Object element)
+        public bool Remove(T element)
         {
             //Se hace una copia de la cabeza
             Node actualNode = _head;
@@ -189,7 +189,7 @@ namespace Clases
                         //Se toma el siguiente elemento
                         actualNode = actualNode.GetNext;
                     }
-                    if (actualNode.GetNext != null && actualNode.GetNext.GetValue == element)
+                    if (actualNode.GetNext != null && actualNode.GetNext.GetValue.Equals(element))
                     {
                         //Se copia el siguiente elemento al deseado en borrar
                         actualNode.GetNext = actualNode.GetNext.GetNext;
