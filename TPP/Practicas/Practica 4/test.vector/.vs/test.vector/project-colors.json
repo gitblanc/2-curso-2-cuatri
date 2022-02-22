@@ -1,0 +1,16 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "f1168928-7dae-41a0-9813-0117e82cc099": {
+      "ProjectGuid": "f1168928-7dae-41a0-9813-0117e82cc099",
+      "DisplayName": "test.vectorv1",
+      "ColorIndex": 0
+    },
+    "b3cf8918-a442-4983-9185-0c168d66eca1": {
+      "ProjectGuid": "b3cf8918-a442-4983-9185-0c168d66eca1",
+      "DisplayName": "test.diccionario",
+      "ColorIndex": 1
+    }
+  },
+  "NextColorIndex": 2
+}
