@@ -10,23 +10,26 @@ namespace Clases
     internal class ListEnumerator<T> : IEnumerator<T>
     {
         int index;//la posición del término
-        T actual;//actual term
         int maxLength;//longitud máxima del enumerador
+        List<T>.Node current;//nodo actual
+        List<T>.Node nextNode;//siguiente nodo
+        List<T>.Node _head;//la cabeza original
 
-        public ListEnumerator(int length)
+        public ListEnumerator(List<T>.Node head, int length)
         {
+            _head = head;
             maxLength = length;
             Reset();
         }
 
         T IEnumerator<T>.Current
         {
-            get { return actual; }
+            get { return current.GetValue; }
         }
 
         object IEnumerator.Current
         {
-            get { return actual; }
+            get { return current.GetValue; }
         }
 
         public void Dispose()
@@ -35,13 +38,29 @@ namespace Clases
 
         public bool MoveNext()
         {
+            if (index >= maxLength)
+                return false;
+            if (nextNode.GetValue == null)
+                return false;
+            if (nextNode.GetNext != null)
+            {
+                List<T>.Node temp = nextNode;
+                nextNode = nextNode.GetNext;
+                current = temp;
+                index++;
+                return true;
+            }
+            current = nextNode;
+            nextNode = null;
             index++;
-            return (index < maxLength);
+            return true;
         }
 
         public void Reset()
         {
             index = 0;
+            current = _head;
+            nextNode = _head.GetNext;
         }
     }
 }

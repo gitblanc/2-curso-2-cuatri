@@ -58,12 +58,12 @@ namespace Clases
         }
 
         IEnumerator<T> IEnumerable<T>.GetEnumerator() {
-            return new ListEnumerator<T>(_length);
+            return new ListEnumerator<T>(_head, _length);
         }
 
         IEnumerator IEnumerable.GetEnumerator()
         {
-            return new ListEnumerator<T>(_length);
+            return new ListEnumerator<T>(_head, _length);
         }
 
         /// <summary>
