@@ -1,0 +1,6 @@
+C:\Users\blanc\OneDrive\Documentos\2-curso-2-cuatri\TPP\Practicas\Practica1\lab1_listas\P1_listas\ListTestsv0\obj\Debug\net472\ListTestsv0.csproj.AssemblyReference.cache
+C:\Users\blanc\OneDrive\Documentos\2-curso-2-cuatri\TPP\Practicas\Practica1\lab1_listas\P1_listas\ListTestsv0\obj\Debug\net472\ListTestsv0.csproj.SuggestedBindingRedirects.cache
+C:\Users\blanc\OneDrive\Documentos\2-curso-2-cuatri\TPP\Practicas\Practica1\lab1_listas\P1_listas\ListTestsv0\obj\Debug\net472\ListTestsv0.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\blanc\OneDrive\Documentos\2-curso-2-cuatri\TPP\Practicas\Practica1\lab1_listas\P1_listas\ListTestsv0\obj\Debug\net472\ListTestsv0.AssemblyInfoInputs.cache
+C:\Users\blanc\OneDrive\Documentos\2-curso-2-cuatri\TPP\Practicas\Practica1\lab1_listas\P1_listas\ListTestsv0\obj\Debug\net472\ListTestsv0.AssemblyInfo.cs
+C:\Users\blanc\OneDrive\Documentos\2-curso-2-cuatri\TPP\Practicas\Practica1\lab1_listas\P1_listas\ListTestsv0\obj\Debug\net472\ListTestsv0.csproj.CoreCompileInputs.cache

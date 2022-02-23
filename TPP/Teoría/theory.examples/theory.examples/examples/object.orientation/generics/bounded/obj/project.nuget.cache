@@ -1,11 +1,15 @@
 {
   "version": 2,
-  "dgSpecHash": "RE6qepArd2U7JbNfmF7gD3Ax+bgZfkR+5Beg1aa4F3Sp/1h9W7ll8DJIvvBeiWyYFI8FynteannkA/ujRLXc7w==",
+  "dgSpecHash": "9KtbGjbdKHiayUZ/P5sCvlbdyStYKHLkVKe7cfZylO9psLmjcvRmaKzd5crqx/x4Xja35PrFPooVAlnk6aYWXQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\UO285176\\Desktop\\TPP\\Teoría\\theory.examples\\theory.examples\\examples\\object.orientation\\generics\\bounded\\bounded.csproj",
+  "projectFilePath": "C:\\Users\\blanc\\OneDrive\\Documentos\\2-curso-2-cuatri\\TPP\\Teoría\\theory.examples\\theory.examples\\examples\\object.orientation\\generics\\bounded\\bounded.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\UO285176\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
-    "C:\\Users\\UO285176\\.nuget\\packages\\system.data.datasetextensions\\4.5.0\\system.data.datasetextensions.4.5.0.nupkg.sha512"
+    "C:\\Users\\blanc\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
+    "C:\\Users\\blanc\\.nuget\\packages\\system.data.datasetextensions\\4.5.0\\system.data.datasetextensions.4.5.0.nupkg.sha512",
+    "C:\\Users\\blanc\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\3.1.22\\microsoft.netcore.app.host.win-x64.3.1.22.nupkg.sha512",
+    "C:\\Users\\blanc\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\3.1.10\\microsoft.aspnetcore.app.ref.3.1.10.nupkg.sha512",
+    "C:\\Users\\blanc\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\3.1.0\\microsoft.windowsdesktop.app.ref.3.1.0.nupkg.sha512",
+    "C:\\Users\\blanc\\.nuget\\packages\\microsoft.netcore.app.ref\\3.1.0\\microsoft.netcore.app.ref.3.1.0.nupkg.sha512"
   ],
   "logs": []
 }
