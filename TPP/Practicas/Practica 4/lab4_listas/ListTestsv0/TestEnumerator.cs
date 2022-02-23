@@ -1,13 +1,10 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using Clases;
 
-namespace ListTestsv0
+namespace Clases
 {
-    namespace ListTests
+    [TestClass]
+    public class TestEnumerator
     {
-        [TestClass]
-        public class TestInt
-        {
             [TestMethod]
             public void Test1()
             {
@@ -27,4 +24,4 @@ namespace ListTestsv0
             }
         }
     }
-}
+

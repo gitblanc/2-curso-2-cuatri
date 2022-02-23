@@ -27,7 +27,7 @@ namespace ListTestsv0
             [TestMethod]
             public void TestAdd()
             {
-                List list = new List();
+                List<People> list = new List<People>();
                 list.Add(p1);
                 list.Add(p2);
                 list.Add(p3);
@@ -45,7 +45,7 @@ namespace ListTestsv0
             [TestMethod]
             public void TestRemove()
             {
-                List list = new List();
+                List<People> list = new List<People>();
                 list.Add(p1);
                 list.Add(p2);
                 list.Add(p3);
@@ -57,13 +57,12 @@ namespace ListTestsv0
                 Assert.AreEqual(true, list.Remove(p5));
                 Assert.AreEqual(3, list.Size());
                 Assert.IsFalse(list.Contains(p5));
-                Assert.AreEqual(false, list.Remove(32));//se elimina algo que no existe
             }
 
             [TestMethod]
             public void ToStringTest()
             {
-                List list = new List();
+                List<People> list = new List<People>();
                 Assert.AreEqual("[]", list.ToString());//si no hay ningun elemento
                 list.Add(p1);
                 list.Add(p2);
@@ -78,7 +77,7 @@ namespace ListTestsv0
             [TestMethod]
             public void GetElementTest()
             {
-                List list = new List();
+                List<People> list = new List<People>();
                 Assert.IsNull(list.GetElement(3));//si no hay ningún elemento
                 list.Add(p1);
                 list.Add(p2);

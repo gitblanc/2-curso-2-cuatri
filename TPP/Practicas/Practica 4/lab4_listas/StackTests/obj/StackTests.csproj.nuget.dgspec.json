@@ -1,56 +1,57 @@
 {
   "format": 1,
   "restore": {
-    "/Users/blanc/Documents/2-curso-2-cuatri/TPP/Practicas/Practica 4/lab4_listas/StackTests/StackTests.csproj": {}
+    "C:\\Users\\blanc\\OneDrive\\Documentos\\2-curso-2-cuatri\\TPP\\Practicas\\Practica 4\\lab4_listas\\StackTests\\StackTests.csproj": {}
   },
   "projects": {
-    "/Users/blanc/Documents/2-curso-2-cuatri/TPP/Practicas/Practica 4/lab4_listas/Clases/Clases.csproj": {
+    "C:\\Users\\blanc\\OneDrive\\Documentos\\2-curso-2-cuatri\\TPP\\Practicas\\Practica 4\\lab4_listas\\Clases\\Clases.csproj": {
       "restore": {
-        "projectUniqueName": "/Users/blanc/Documents/2-curso-2-cuatri/TPP/Practicas/Practica 4/lab4_listas/Clases/Clases.csproj",
+        "projectUniqueName": "C:\\Users\\blanc\\OneDrive\\Documentos\\2-curso-2-cuatri\\TPP\\Practicas\\Practica 4\\lab4_listas\\Clases\\Clases.csproj",
         "projectName": "Clases",
-        "projectPath": "/Users/blanc/Documents/2-curso-2-cuatri/TPP/Practicas/Practica 4/lab4_listas/Clases/Clases.csproj"
+        "projectPath": "C:\\Users\\blanc\\OneDrive\\Documentos\\2-curso-2-cuatri\\TPP\\Practicas\\Practica 4\\lab4_listas\\Clases\\Clases.csproj",
+        "frameworks": {
+          "net472": {
+            "projectReferences": {}
+          }
+        }
       },
       "frameworks": {
         "net472": {}
       }
     },
-    "/Users/blanc/Documents/2-curso-2-cuatri/TPP/Practicas/Practica 4/lab4_listas/Stack/Stackv1.csproj": {
-      "restore": {
-        "projectUniqueName": "/Users/blanc/Documents/2-curso-2-cuatri/TPP/Practicas/Practica 4/lab4_listas/Stack/Stackv1.csproj",
-        "projectName": "Stackv1",
-        "projectPath": "/Users/blanc/Documents/2-curso-2-cuatri/TPP/Practicas/Practica 4/lab4_listas/Stack/Stackv1.csproj"
-      },
-      "frameworks": {
-        "net472": {}
-      }
-    },
-    "/Users/blanc/Documents/2-curso-2-cuatri/TPP/Practicas/Practica 4/lab4_listas/StackTests/StackTests.csproj": {
+    "C:\\Users\\blanc\\OneDrive\\Documentos\\2-curso-2-cuatri\\TPP\\Practicas\\Practica 4\\lab4_listas\\StackTests\\StackTests.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/blanc/Documents/2-curso-2-cuatri/TPP/Practicas/Practica 4/lab4_listas/StackTests/StackTests.csproj",
+        "projectUniqueName": "C:\\Users\\blanc\\OneDrive\\Documentos\\2-curso-2-cuatri\\TPP\\Practicas\\Practica 4\\lab4_listas\\StackTests\\StackTests.csproj",
         "projectName": "StackTests",
-        "projectPath": "/Users/blanc/Documents/2-curso-2-cuatri/TPP/Practicas/Practica 4/lab4_listas/StackTests/StackTests.csproj",
-        "packagesPath": "/Users/blanc/.nuget/packages/",
-        "outputPath": "/Users/blanc/Documents/2-curso-2-cuatri/TPP/Practicas/Practica 4/lab4_listas/StackTests/obj/",
+        "projectPath": "C:\\Users\\blanc\\OneDrive\\Documentos\\2-curso-2-cuatri\\TPP\\Practicas\\Practica 4\\lab4_listas\\StackTests\\StackTests.csproj",
+        "packagesPath": "C:\\Users\\blanc\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\blanc\\OneDrive\\Documentos\\2-curso-2-cuatri\\TPP\\Practicas\\Practica 4\\lab4_listas\\StackTests\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "/Users/blanc/.config/NuGet/NuGet.Config"
+          "C:\\Users\\blanc\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net6.0"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "/Users/blanc/Documents/2-curso-2-cuatri/TPP/Practicas/Practica 4/lab4_listas/Clases/Clases.csproj": {
-                "projectPath": "/Users/blanc/Documents/2-curso-2-cuatri/TPP/Practicas/Practica 4/lab4_listas/Clases/Clases.csproj"
+              "C:\\Users\\blanc\\OneDrive\\Documentos\\2-curso-2-cuatri\\TPP\\Practicas\\Practica 4\\lab4_listas\\Clases\\Clases.csproj": {
+                "projectPath": "C:\\Users\\blanc\\OneDrive\\Documentos\\2-curso-2-cuatri\\TPP\\Practicas\\Practica 4\\lab4_listas\\Clases\\Clases.csproj"
               },
-              "/Users/blanc/Documents/2-curso-2-cuatri/TPP/Practicas/Practica 4/lab4_listas/Stack/Stackv1.csproj": {
-                "projectPath": "/Users/blanc/Documents/2-curso-2-cuatri/TPP/Practicas/Practica 4/lab4_listas/Stack/Stackv1.csproj"
+              "C:\\Users\\blanc\\OneDrive\\Documentos\\2-curso-2-cuatri\\TPP\\Practicas\\Practica 4\\lab4_listas\\Stack\\Stackv1.csproj": {
+                "projectPath": "C:\\Users\\blanc\\OneDrive\\Documentos\\2-curso-2-cuatri\\TPP\\Practicas\\Practica 4\\lab4_listas\\Stack\\Stackv1.csproj"
               }
             }
           }
@@ -97,8 +98,27 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/6.0.101/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.101\\RuntimeIdentifierGraph.json"
         }
+      }
+    },
+    "C:\\Users\\blanc\\OneDrive\\Documentos\\2-curso-2-cuatri\\TPP\\Practicas\\Practica 4\\lab4_listas\\Stack\\Stackv1.csproj": {
+      "restore": {
+        "projectUniqueName": "C:\\Users\\blanc\\OneDrive\\Documentos\\2-curso-2-cuatri\\TPP\\Practicas\\Practica 4\\lab4_listas\\Stack\\Stackv1.csproj",
+        "projectName": "Stackv1",
+        "projectPath": "C:\\Users\\blanc\\OneDrive\\Documentos\\2-curso-2-cuatri\\TPP\\Practicas\\Practica 4\\lab4_listas\\Stack\\Stackv1.csproj",
+        "frameworks": {
+          "net472": {
+            "projectReferences": {
+              "C:\\Users\\blanc\\OneDrive\\Documentos\\2-curso-2-cuatri\\TPP\\Practicas\\Practica 4\\lab4_listas\\Clases\\Clases.csproj": {
+                "projectPath": "C:\\Users\\blanc\\OneDrive\\Documentos\\2-curso-2-cuatri\\TPP\\Practicas\\Practica 4\\lab4_listas\\Clases\\Clases.csproj"
+              }
+            }
+          }
+        }
+      },
+      "frameworks": {
+        "net472": {}
       }
     }
   }
