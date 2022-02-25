@@ -40,8 +40,11 @@ namespace Clases
         {
             if (index >= maxLength)
                 return false;
-            if (nextNode.GetValue == null)
-                return false;
+            if (index == 0)
+            {
+                index++;
+                return true;
+            }
             if (nextNode.GetNext != null)
             {
                 List<T>.Node temp = nextNode;
