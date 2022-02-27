@@ -15,8 +15,8 @@ public class OrdenacionPruebas {
 		// Prueba ordenación: Seleccion
 		//pruebaAlgoritmoOrdenacion(new Seleccion(n));
 		
-//		// Prueba ordenación: Burbuja
-		pruebaAlgoritmoOrdenacion(new Burbuja(n));
+		// Prueba ordenación: Burbuja
+//		pruebaAlgoritmoOrdenacion(new Burbuja(n));
 //		
 //		// Prueba ordenación: RapidoFatal
 //		pruebaAlgoritmoOrdenacion(new RapidoFatal(n));
@@ -25,7 +25,8 @@ public class OrdenacionPruebas {
 //		pruebaAlgoritmoOrdenacion(new RapidoCentral(n));
 //		
 //		// Prueba ordenación: RapidoMediana
-//		pruebaAlgoritmoOrdenacion(new RapidoMediana(n));
+		pruebaAlgoritmoOrdenacion(new RapidoMediana(n));
+		
 	}
 	
 	public static void pruebaAlgoritmoOrdenacion(Vector v) {

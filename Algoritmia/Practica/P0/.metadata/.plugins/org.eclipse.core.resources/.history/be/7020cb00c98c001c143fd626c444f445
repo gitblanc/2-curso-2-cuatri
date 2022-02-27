@@ -1,0 +1,27 @@
+package matriz;
+
+public class MatrizOperacionesTiempos {
+
+	public static void main(String[] args) {
+
+		for (int i = 3; i < 143489071; i *= 2) {
+			MatrizOperaciones matrix = new MatrizOperaciones(i, 1, 4);
+			
+			long inicioTiempo = System.currentTimeMillis();
+			
+			matrix.sumarDiagonal1();
+			long finTiempo1 = System.currentTimeMillis();
+			
+			matrix.sumarDiagonal2();
+			long finTiempo2 = System.currentTimeMillis();
+			
+			System.out.println("Suma diagonal1: " + (inicioTiempo - finTiempo1));
+			System.out.println("---");
+			System.out.println("Suma diagonal2: " + (inicioTiempo - finTiempo2));
+			System.out.println(i);
+			System.out.println("--------------------");
+			
+		}
+	}
+
+}
