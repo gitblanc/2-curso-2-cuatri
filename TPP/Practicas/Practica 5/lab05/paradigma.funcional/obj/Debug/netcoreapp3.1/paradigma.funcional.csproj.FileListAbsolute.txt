@@ -1,0 +1,9 @@
+C:\Users\UO285176\Desktop\lab05\paradigma.funcional\bin\Debug\netcoreapp3.1\paradigma.funcional.deps.json
+C:\Users\UO285176\Desktop\lab05\paradigma.funcional\bin\Debug\netcoreapp3.1\paradigma.funcional.dll
+C:\Users\UO285176\Desktop\lab05\paradigma.funcional\bin\Debug\netcoreapp3.1\paradigma.funcional.pdb
+C:\Users\UO285176\Desktop\lab05\paradigma.funcional\obj\Debug\netcoreapp3.1\paradigma.funcional.csproj.AssemblyReference.cache
+C:\Users\UO285176\Desktop\lab05\paradigma.funcional\obj\Debug\netcoreapp3.1\paradigma.funcional.AssemblyInfoInputs.cache
+C:\Users\UO285176\Desktop\lab05\paradigma.funcional\obj\Debug\netcoreapp3.1\paradigma.funcional.AssemblyInfo.cs
+C:\Users\UO285176\Desktop\lab05\paradigma.funcional\obj\Debug\netcoreapp3.1\paradigma.funcional.csproj.CoreCompileInputs.cache
+C:\Users\UO285176\Desktop\lab05\paradigma.funcional\obj\Debug\netcoreapp3.1\paradigma.funcional.dll
+C:\Users\UO285176\Desktop\lab05\paradigma.funcional\obj\Debug\netcoreapp3.1\paradigma.funcional.pdb
