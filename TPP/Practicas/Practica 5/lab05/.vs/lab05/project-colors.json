@@ -1,0 +1,16 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "4b493a1e-5171-4ec9-9026-abb1ccfaceeb": {
+      "ProjectGuid": "4b493a1e-5171-4ec9-9026-abb1ccfaceeb",
+      "DisplayName": "delegates",
+      "ColorIndex": 0
+    },
+    "bd69db31-7a85-418c-9ab1-91ba93440f54": {
+      "ProjectGuid": "bd69db31-7a85-418c-9ab1-91ba93440f54",
+      "DisplayName": "paradigma.funcional",
+      "ColorIndex": 1
+    }
+  },
+  "NextColorIndex": 2
+}

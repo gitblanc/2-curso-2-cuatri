@@ -18,7 +18,7 @@ namespace paradigma.funcional
                 if (p(elem))
                     return elem;
             }
-            return default(T);
+            return default;
         }
 
         public static IEnumerable<T> Filter<T>(this IEnumerable<T> collection, Predicate<T> p)

@@ -37,17 +37,17 @@ namespace delegates
             Console.WriteLine();
         }
 
-        static void Main(string[] args)
-        {
-            double[] values = new double[] { -3, -2, -1, 0, 1, 2, 3 };
-            string[] valuesString = new string[] { "Holi", "que", "aseh" };
-            // values.Map(Square).Show();
-            values.Map(x => Math.Sqrt(x)).Show();//forma anónima, función lambda
-            values.Map(Math.Sqrt).Show();//forma anónima, función lambda de forma más abreviada
-            valuesString.Map(x => x.ToLower() + "¿?").Show();//forma anónima, función lambda->no funciona de forma anónima
-            //valuesString.Select;//lo mismo que el map
-        }
+        //static void Main(string[] args)
+        //{
+        //    double[] values = new double[] { -3, -2, -1, 0, 1, 2, 3 };
+        //    string[] valuesString = new string[] { "Holi", "que", "aseh" };
+        //    // values.Map(Square).Show();
+        //    values.Map(x => Math.Sqrt(x)).Show();//forma anónima, función lambda
+        //    values.Map(Math.Sqrt).Show();//forma anónima, función lambda de forma más abreviada
+        //    valuesString.Map(x => x.ToLower() + "¿?").Show();//forma anónima, función lambda->no funciona de forma anónima
+        //    //valuesString.Select;//lo mismo que el map
+        //}
 
-        //[1,2,3].reduce(x,acc => x+acc, 0) -> equivalente a un foreach que suma todos los elementos
+        ////[1,2,3].reduce(x,acc => x+acc, 0) -> equivalente a un foreach que suma todos los elementos
     }
 }
