@@ -1,0 +1,11 @@
+C:\Users\UO285176\Desktop\lab06\currying\bin\Debug\netcoreapp3.1\currying.exe
+C:\Users\UO285176\Desktop\lab06\currying\bin\Debug\netcoreapp3.1\currying.deps.json
+C:\Users\UO285176\Desktop\lab06\currying\bin\Debug\netcoreapp3.1\currying.runtimeconfig.json
+C:\Users\UO285176\Desktop\lab06\currying\bin\Debug\netcoreapp3.1\currying.runtimeconfig.dev.json
+C:\Users\UO285176\Desktop\lab06\currying\bin\Debug\netcoreapp3.1\currying.dll
+C:\Users\UO285176\Desktop\lab06\currying\bin\Debug\netcoreapp3.1\currying.pdb
+C:\Users\UO285176\Desktop\lab06\currying\obj\Debug\netcoreapp3.1\currying.csproj.AssemblyReference.cache
+C:\Users\UO285176\Desktop\lab06\currying\obj\Debug\netcoreapp3.1\currying.csproj.CoreCompileInputs.cache
+C:\Users\UO285176\Desktop\lab06\currying\obj\Debug\netcoreapp3.1\currying.dll
+C:\Users\UO285176\Desktop\lab06\currying\obj\Debug\netcoreapp3.1\currying.pdb
+C:\Users\UO285176\Desktop\lab06\currying\obj\Debug\netcoreapp3.1\currying.genruntimeconfig.cache

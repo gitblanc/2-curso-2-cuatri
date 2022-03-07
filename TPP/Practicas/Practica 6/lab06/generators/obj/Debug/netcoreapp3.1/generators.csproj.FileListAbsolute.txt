@@ -1,0 +1,11 @@
+C:\Users\UO285176\Desktop\lab06\generators\bin\Debug\netcoreapp3.1\generators.exe
+C:\Users\UO285176\Desktop\lab06\generators\bin\Debug\netcoreapp3.1\generators.deps.json
+C:\Users\UO285176\Desktop\lab06\generators\bin\Debug\netcoreapp3.1\generators.runtimeconfig.json
+C:\Users\UO285176\Desktop\lab06\generators\bin\Debug\netcoreapp3.1\generators.runtimeconfig.dev.json
+C:\Users\UO285176\Desktop\lab06\generators\bin\Debug\netcoreapp3.1\generators.dll
+C:\Users\UO285176\Desktop\lab06\generators\bin\Debug\netcoreapp3.1\generators.pdb
+C:\Users\UO285176\Desktop\lab06\generators\obj\Debug\netcoreapp3.1\generators.csproj.AssemblyReference.cache
+C:\Users\UO285176\Desktop\lab06\generators\obj\Debug\netcoreapp3.1\generators.csproj.CoreCompileInputs.cache
+C:\Users\UO285176\Desktop\lab06\generators\obj\Debug\netcoreapp3.1\generators.dll
+C:\Users\UO285176\Desktop\lab06\generators\obj\Debug\netcoreapp3.1\generators.pdb
+C:\Users\UO285176\Desktop\lab06\generators\obj\Debug\netcoreapp3.1\generators.genruntimeconfig.cache

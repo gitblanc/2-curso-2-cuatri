@@ -1,0 +1,11 @@
+C:\Users\UO285176\Desktop\lab06\closures\bin\Debug\netcoreapp3.1\closures.exe
+C:\Users\UO285176\Desktop\lab06\closures\bin\Debug\netcoreapp3.1\closures.deps.json
+C:\Users\UO285176\Desktop\lab06\closures\bin\Debug\netcoreapp3.1\closures.runtimeconfig.json
+C:\Users\UO285176\Desktop\lab06\closures\bin\Debug\netcoreapp3.1\closures.runtimeconfig.dev.json
+C:\Users\UO285176\Desktop\lab06\closures\bin\Debug\netcoreapp3.1\closures.dll
+C:\Users\UO285176\Desktop\lab06\closures\bin\Debug\netcoreapp3.1\closures.pdb
+C:\Users\UO285176\Desktop\lab06\closures\obj\Debug\netcoreapp3.1\closures.csproj.AssemblyReference.cache
+C:\Users\UO285176\Desktop\lab06\closures\obj\Debug\netcoreapp3.1\closures.csproj.CoreCompileInputs.cache
+C:\Users\UO285176\Desktop\lab06\closures\obj\Debug\netcoreapp3.1\closures.dll
+C:\Users\UO285176\Desktop\lab06\closures\obj\Debug\netcoreapp3.1\closures.pdb
+C:\Users\UO285176\Desktop\lab06\closures\obj\Debug\netcoreapp3.1\closures.genruntimeconfig.cache

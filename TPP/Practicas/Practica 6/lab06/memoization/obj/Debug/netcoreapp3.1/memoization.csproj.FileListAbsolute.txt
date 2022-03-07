@@ -1,0 +1,10 @@
+C:\Users\UO285176\Desktop\lab06\memoization\bin\Debug\netcoreapp3.1\memoization.exe
+C:\Users\UO285176\Desktop\lab06\memoization\bin\Debug\netcoreapp3.1\memoization.deps.json
+C:\Users\UO285176\Desktop\lab06\memoization\bin\Debug\netcoreapp3.1\memoization.runtimeconfig.json
+C:\Users\UO285176\Desktop\lab06\memoization\bin\Debug\netcoreapp3.1\memoization.runtimeconfig.dev.json
+C:\Users\UO285176\Desktop\lab06\memoization\bin\Debug\netcoreapp3.1\memoization.dll
+C:\Users\UO285176\Desktop\lab06\memoization\bin\Debug\netcoreapp3.1\memoization.pdb
+C:\Users\UO285176\Desktop\lab06\memoization\obj\Debug\netcoreapp3.1\memoization.csproj.CoreCompileInputs.cache
+C:\Users\UO285176\Desktop\lab06\memoization\obj\Debug\netcoreapp3.1\memoization.dll
+C:\Users\UO285176\Desktop\lab06\memoization\obj\Debug\netcoreapp3.1\memoization.pdb
+C:\Users\UO285176\Desktop\lab06\memoization\obj\Debug\netcoreapp3.1\memoization.genruntimeconfig.cache
