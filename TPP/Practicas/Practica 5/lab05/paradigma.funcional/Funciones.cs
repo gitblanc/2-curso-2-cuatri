@@ -18,7 +18,7 @@ namespace paradigma.funcional
                 if (p(elem))
                     return elem;
             }
-            return default;
+            return default(T);
         }
 
         public static IEnumerable<T> Filter<T>(this IEnumerable<T> collection, Predicate<T> p)
@@ -33,19 +33,21 @@ namespace paradigma.funcional
                     i++;
                 }
             }
+            Array.Resize(ref result, i);
+            if (result.Length == 0)
+                return default(T[]);
             return result;
         }
 
-        public static IEnumerable<TCD> Reduce<TD, TCD>(this IEnumerable<TD> collection, Func<TD, TCD> f)
+        public static TCD Reduce<TD, TCD>(this IEnumerable<TD> collection, Func<TCD, TD, TCD> f, TCD defecto)
         {
-            TCD[] result = new TCD[collection.Count()];
-            int i = 0;
-            foreach (TD elem in collection)
+            TCD result = defecto;
+            foreach (TD t in collection)
             {
-                result[i] = f(elem);
-                i++;
+                result = f(result, t);
             }
             return result;
         }
+
     }
 }

@@ -1,11 +1,13 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.31321.278
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.32112.339
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "delegates", "delegates\delegates.csproj", "{4B493A1E-5171-4EC9-9026-ABB1CCFACEEB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "delegates", "delegates\delegates.csproj", "{4B493A1E-5171-4EC9-9026-ABB1CCFACEEB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "paradigma.funcional", "paradigma.funcional\paradigma.funcional.csproj", "{BD69DB31-7A85-418C-9AB1-91BA93440F54}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "paradigma.funcional", "paradigma.funcional\paradigma.funcional.csproj", "{BD69DB31-7A85-418C-9AB1-91BA93440F54}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "tests", "tests\tests.csproj", "{187A1FCC-BC65-4AFE-87B4-06595957EE86}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{BD69DB31-7A85-418C-9AB1-91BA93440F54}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BD69DB31-7A85-418C-9AB1-91BA93440F54}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BD69DB31-7A85-418C-9AB1-91BA93440F54}.Release|Any CPU.Build.0 = Release|Any CPU
+		{187A1FCC-BC65-4AFE-87B4-06595957EE86}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{187A1FCC-BC65-4AFE-87B4-06595957EE86}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{187A1FCC-BC65-4AFE-87B4-06595957EE86}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{187A1FCC-BC65-4AFE-87B4-06595957EE86}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

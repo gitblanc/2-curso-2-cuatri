@@ -25,7 +25,7 @@ public class Sustraccion4
 		long t1,t2,cont;
 		int nVeces= Integer.parseInt (arg [0]);
 		boolean b=true; 
-		for (int n=1;n<=100;n++)
+		for (int n=1;n<=100;n+=3)
 		{
 			t1 = System.currentTimeMillis ();
 

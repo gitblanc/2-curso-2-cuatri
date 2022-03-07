@@ -44,6 +44,11 @@ namespace paradigma.funcional {
             }
         }
 
+        public override String ToString()
+        {
+            return String.Format("Quadrant:{0}, {1} degrees", Quadrant, Degrees);
+        }
+
     }
 
 }

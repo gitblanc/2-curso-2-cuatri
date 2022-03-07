@@ -1,0 +1,35 @@
+package clases ;
+
+
+/** Este programa sirve para ordenar n elementos
+	con un algoritmo de los "malos" (cuadrático)·
+	es la SELECCION
+ */
+public class Seleccion extends Vector
+{
+	public Seleccion(int nElementos) {
+		super(nElementos);
+	}
+	
+
+	/**
+	 * Ordenación por selección
+	 */
+	@Override
+	public void ordenar() {
+		int posmin;
+		for(int i = 0; i < elements.length - 1; i++) {
+			posmin = i;
+			for(int j = i+1; j < elements.length; j++) {
+				if(elements[j] < elements[posmin])
+					posmin = j;
+			intercambiar(posmin , i);
+			}
+		}
+	}  
+
+	@Override
+	public String getNombre() {		
+		return "Selección";
+	}  
+} 

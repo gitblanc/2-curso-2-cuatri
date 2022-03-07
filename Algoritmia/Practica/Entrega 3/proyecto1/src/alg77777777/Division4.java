@@ -8,15 +8,13 @@ public class Division4 {
 		if (n <= 0)
 			cont++;
 		else {
-			for (int i = 0; i < n; i++) {//O(n)
-				for (int j = 0; i < n; j++) {//O(n)
-					cont++; // O(1)
-				}
+			for (int i = 0; i < n; i++) {// O(n)
+				cont++; // O(1)
 			}
-			rec4(n / 3);
-			rec4(n / 3);
-			rec4(n / 3);
-			rec4(n / 3);// a = 4, b = 3, k = 2 -> O(n^2)
+			rec4(n / 2);
+			rec4(n / 2);
+			rec4(n / 2);
+			rec4(n / 2);// a = 4, b = 2, k = 1 -> O(n^2)
 		}
 		return true;
 

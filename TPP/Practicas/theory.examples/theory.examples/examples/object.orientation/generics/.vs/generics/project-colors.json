@@ -5,7 +5,12 @@
       "ProjectGuid": "96407595-21cf-439d-bafd-020b3dda8a8f",
       "DisplayName": "enumerables",
       "ColorIndex": 0
+    },
+    "cc41eeab-5372-449d-8c45-09b46def2f34": {
+      "ProjectGuid": "cc41eeab-5372-449d-8c45-09b46def2f34",
+      "DisplayName": "methods",
+      "ColorIndex": 1
     }
   },
-  "NextColorIndex": 1
+  "NextColorIndex": 2
 }
