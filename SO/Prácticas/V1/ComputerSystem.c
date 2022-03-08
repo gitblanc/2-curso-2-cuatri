@@ -53,7 +53,7 @@ void ComputerSystem_PowerOff() {
 //V1-ex0
 void ComputerSystem_PrintProgramList(){
 	ComputerSystem_DebugMessage(101,INIT);
-	for(int i = 0; i < PROGRAMSMAXNUMBER; i++){
+	for(int i = 1; i < PROGRAMSMAXNUMBER; i++){
 		if(programList[i]!=NULL){
 			ComputerSystem_DebugMessage(102,INIT,programList[i]->executableName, programList[i]->arrivalTime);
 		}

@@ -1,0 +1,61 @@
+
+--2
+create or replace procedure saludo is
+    begin 
+        DBMS_OUTPUT.PUT_LINE('Hola mundo');
+    end saludo;
+
+--3
+create or replace procedure saludo_nombre(nombre IN varchar2) is 
+  begin 
+        DBMS_OUTPUT.PUT_line('Hola' || nombre);
+  end saludo_nombre;
+  
+--4
+create or replace procedure valor_maximo is
+    maxval distribucion.cantidad%type;
+begin
+    select MAX(cantidad) into maxval
+    from distribucion;
+    dbms_output.put_line('La cantidad es ' || maxval);
+end valor_maximo;
+
+
+set serveroutput on;
+
+begin
+    valor_maximo;
+end;  
+
+--5
+create or replace procedure concesion(conce in concesionarios.cifc%type) as
+    numc distribucion.cantidad%type;
+begin
+    select sum(cantidad) into numc
+    from distribucion
+    where cifc=conce;
+        dbms_output.put_line('El concesionario ' ||conce|| ' tiene ' ||numc||  ' coches');
+end concesion;
+
+begin
+    concesion(4);
+end;
+--6
+create table totales(
+    ntVentas number,
+    ntCoches number,
+    ntMarcas number,
+    ntClientes number,
+    ntConcesionarios number);
+
+create or replace procedure crea_tabla as
+    nv number;nc number; nm number; ncl number; nco number;
+begin
+    select count(*) into nv from ventas;
+    select count(*) into nc from coches;
+    select count(*) into nm from marcas;
+    select count(*) into ncl from clientes;
+    select count(*) into nco from concesionarios;
+    insert into totales values (nv,nc,nm,ncl,nco);
+    commit;
+end crea_tabla;

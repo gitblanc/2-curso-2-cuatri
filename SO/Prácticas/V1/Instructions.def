@@ -11,5 +11,4 @@ INST(INC)	// 10	0x0a
 INST(HALT)	// 11	0x0b
 INST(OS)	// 12	0x0c
 INST(IRET)	// 13	0x0d
-//V1-ex0
-INST(MEMADD)  //14 0x0e
+INST(MEMADD)  //14 0x0e //V1-ex0
