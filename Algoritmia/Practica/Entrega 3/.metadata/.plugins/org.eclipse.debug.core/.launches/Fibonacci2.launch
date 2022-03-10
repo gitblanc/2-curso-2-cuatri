@@ -12,6 +12,6 @@
     <booleanAttribute key="org.eclipse.jdt.launching.ATTR_USE_CLASSPATH_ONLY_JAR" value="false"/>
     <stringAttribute key="org.eclipse.jdt.launching.MAIN_TYPE" value="alg77777777.Fibonacci2"/>
     <stringAttribute key="org.eclipse.jdt.launching.MODULE_NAME" value="proyecto1"/>
-    <stringAttribute key="org.eclipse.jdt.launching.PROGRAM_ARGUMENTS" value="1 1000000"/>
+    <stringAttribute key="org.eclipse.jdt.launching.PROGRAM_ARGUMENTS" value="4 1000000"/>
     <stringAttribute key="org.eclipse.jdt.launching.PROJECT_ATTR" value="proyecto1"/>
 </launchConfiguration>

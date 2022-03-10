@@ -1,11 +1,15 @@
 {
   "version": 2,
-  "dgSpecHash": "A7V5MiFgYx2Te8mQtoI4vdKty0SivJFn4W7BIdhnm5xJztO52IO32B9izMXOBkFJWRKlJtPU3HevBog7Yr+83A==",
+  "dgSpecHash": "zxIQXSv9vJH8eX089o/GNdTshDn5V0f7gPN+Qjg+ilkASHbvO6ylwwJXZGQt5SRy2ZMZjr9obCoVjMdv9ZZWSQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\UO285176\\Desktop\\lab06\\closures\\closures.csproj",
+  "projectFilePath": "C:\\Users\\blanc\\OneDrive\\Documentos\\2-curso-2-cuatri\\TPP\\Practicas\\Practica 6\\lab06\\closures\\closures.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\UO285176\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
-    "C:\\Users\\UO285176\\.nuget\\packages\\system.data.datasetextensions\\4.5.0\\system.data.datasetextensions.4.5.0.nupkg.sha512"
+    "C:\\Users\\blanc\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
+    "C:\\Users\\blanc\\.nuget\\packages\\system.data.datasetextensions\\4.5.0\\system.data.datasetextensions.4.5.0.nupkg.sha512",
+    "C:\\Users\\blanc\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\3.1.22\\microsoft.netcore.app.host.win-x64.3.1.22.nupkg.sha512",
+    "C:\\Users\\blanc\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\3.1.10\\microsoft.aspnetcore.app.ref.3.1.10.nupkg.sha512",
+    "C:\\Users\\blanc\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\3.1.0\\microsoft.windowsdesktop.app.ref.3.1.0.nupkg.sha512",
+    "C:\\Users\\blanc\\.nuget\\packages\\microsoft.netcore.app.ref\\3.1.0\\microsoft.netcore.app.ref.3.1.0.nupkg.sha512"
   ],
   "logs": []
 }

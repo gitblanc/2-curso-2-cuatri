@@ -1,0 +1,21 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "92e0d267-37f0-4a8e-935e-166d57c278ff": {
+      "ProjectGuid": "92e0d267-37f0-4a8e-935e-166d57c278ff",
+      "DisplayName": "memoization",
+      "ColorIndex": 0
+    },
+    "6fa921f4-5c26-495e-8f47-b2b936010062": {
+      "ProjectGuid": "6fa921f4-5c26-495e-8f47-b2b936010062",
+      "DisplayName": "closures",
+      "ColorIndex": 1
+    },
+    "306e5034-63ea-4f12-9170-4c450c3213df": {
+      "ProjectGuid": "306e5034-63ea-4f12-9170-4c450c3213df",
+      "DisplayName": "generators",
+      "ColorIndex": 2
+    }
+  },
+  "NextColorIndex": 3
+}
