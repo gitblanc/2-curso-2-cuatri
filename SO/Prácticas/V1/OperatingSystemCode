@@ -1,4 +1,4 @@
-11
+11 //contar como un array
 IRET // Initial Operation for OS
 HALT // Shutdown the System
 // Here interrupt vector

@@ -1,0 +1,26 @@
+﻿<Properties StartupConfiguration="{B47FE265-DF93-446E-A08C-699771F3D242}|Default">
+  <MonoDevelop.Ide.Workbench ActiveDocument="pattern.matching/Program.cs">
+    <Files>
+      <File FileName="pattern.matching/Program.cs" Line="1" Column="1" />
+      <File FileName="pattern.matching/PatternMatch.cs" Line="47" Column="58" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="pattern.matching" expanded="True">
+            <Node name="pattern.matching" expanded="True">
+              <Node name="Program.cs" selected="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.ItemProperties.fsharp PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|x86" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>

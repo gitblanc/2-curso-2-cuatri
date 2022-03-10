@@ -107,14 +107,32 @@ int OperatingSystem_LongTermScheduler() {
   
 	int PID, i,
 		numberOfSuccessfullyCreatedProcesses=0;
-	
 	for (i=0; programList[i]!=NULL && i<PROGRAMSMAXNUMBER ; i++) {
 		PID=OperatingSystem_CreateProcess(i);
-		numberOfSuccessfullyCreatedProcesses++;
-		if (programList[i]->type==USERPROGRAM) 
-			numberOfNotTerminatedUserProcesses++;
-		// Move process to the ready state
-		OperatingSystem_MoveToTheREADYState(PID);
+		//EJ 4 V1
+		if(PID == NOFREEENTRY){
+			ComputerSystem_DebugMessage(103, ERROR, programList[i]->executableName);
+		}	
+		//EJ5 V1
+		if(PID == PROGRAMDOESNOTEXIST){
+			ComputerSystem_DebugMessage(104, ERROR, programList[i]->executableName, "it does not exists");
+		}
+
+		if(PID == PROGRAMNOTVALID){
+			ComputerSystem_DebugMessage(104, ERROR, programList[i]->executableName, "invalid priority or size");
+		}
+		//EJ 6 V1
+		if(PID == TOOBIGPROCESS){
+			ComputerSystem_DebugMessage(105, ERROR, programList[i]->executableName);
+		}
+		
+		else{
+			numberOfSuccessfullyCreatedProcesses++;
+			if (programList[i]->type==USERPROGRAM) 
+				numberOfNotTerminatedUserProcesses++;
+			// Move process to the ready state
+			OperatingSystem_MoveToTheREADYState(PID);
+		}
 	}
 
 	// Return the number of succesfully created processes
@@ -134,18 +152,34 @@ int OperatingSystem_CreateProcess(int indexOfExecutableProgram) {
 
 	// Obtain a process ID
 	PID=OperatingSystem_ObtainAnEntryInTheProcessTable();
-
+	//EJ 4 V1-x1
+	if(PID < 0){
+		return NOFREEENTRY;
+	}
 	// Check if programFile exists
+	
+	//EJ 5 V1
 	programFile=fopen(executableProgram->executableName, "r");
+	if(programFile == NULL){
+		return PROGRAMDOESNOTEXIST;
+	}
 
 	// Obtain the memory requirements of the program
+	//EJ 5 V1
 	processSize=OperatingSystem_ObtainProgramSize(programFile);	
+	if(processSize == 0){
+		return PROGRAMNOTVALID;
+	}
 
 	// Obtain the priority for the process
 	priority=OperatingSystem_ObtainPriority(programFile);
 	
 	// Obtain enough memory space
+	//EJ 6 V1
  	loadingPhysicalAddress=OperatingSystem_ObtainMainMemory(processSize, PID);
+	if(loadingPhysicalAddress == TOOBIGPROCESS){
+		return TOOBIGPROCESS;
+	}
 
 	// Load program in the allocated memory
 	OperatingSystem_LoadProgram(programFile, loadingPhysicalAddress, processSize);

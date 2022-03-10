@@ -9,7 +9,7 @@
 #include "Wrappers.h"
 
 // Functions prototypes
-
+void ComputerSystem_PrintProgramList();
 // Powers on of the Computer System.
 
 void ComputerSystem_PowerOn(int argc, char *argv[], int paramIndex) {

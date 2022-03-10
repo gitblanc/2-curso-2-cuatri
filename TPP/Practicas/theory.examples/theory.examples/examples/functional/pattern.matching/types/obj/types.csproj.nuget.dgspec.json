@@ -1,0 +1,76 @@
+{
+  "format": 1,
+  "restore": {
+    "/Users/blanc/Documents/2-curso-2-cuatri/TPP/Practicas/theory.examples/theory.examples/examples/functional/pattern.matching/types/types.csproj": {}
+  },
+  "projects": {
+    "/Users/blanc/Documents/2-curso-2-cuatri/TPP/Practicas/theory.examples/theory.examples/examples/functional/pattern.matching/types/types.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/blanc/Documents/2-curso-2-cuatri/TPP/Practicas/theory.examples/theory.examples/examples/functional/pattern.matching/types/types.csproj",
+        "projectName": "types",
+        "projectPath": "/Users/blanc/Documents/2-curso-2-cuatri/TPP/Practicas/theory.examples/theory.examples/examples/functional/pattern.matching/types/types.csproj",
+        "packagesPath": "/Users/blanc/.nuget/packages/",
+        "outputPath": "/Users/blanc/Documents/2-curso-2-cuatri/TPP/Practicas/theory.examples/theory.examples/examples/functional/pattern.matching/types/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/blanc/.config/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
+          "dependencies": {
+            "Microsoft.CSharp": {
+              "target": "Package",
+              "version": "[4.7.0, )"
+            },
+            "System.Data.DataSetExtensions": {
+              "target": "Package",
+              "version": "[4.5.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.NETCore.App.Host.osx-x64",
+              "version": "[3.1.22, 3.1.22]"
+            }
+          ],
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/6.0.101/RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

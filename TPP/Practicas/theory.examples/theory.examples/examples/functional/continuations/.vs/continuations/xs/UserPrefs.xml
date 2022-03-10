@@ -1,0 +1,25 @@
+﻿<Properties StartupConfiguration="{7FF11CB8-773E-4E18-B885-14EC250C1E69}|Default">
+  <MonoDevelop.Ide.Workbench ActiveDocument="lazy.simulated/Lazy.cs">
+    <Files>
+      <File FileName="lazy.simulated/Lazy.cs" Line="1" Column="1" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="continuations" expanded="True">
+            <Node name="lazy.simulated" expanded="True">
+              <Node name="Lazy.cs" selected="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|x86" />
+  <MonoDevelop.Ide.ItemProperties.lazy PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>

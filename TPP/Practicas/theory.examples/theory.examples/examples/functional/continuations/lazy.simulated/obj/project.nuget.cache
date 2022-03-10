@@ -1,15 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "mLuhahgC3+91HU2QAsMMcP/jYJWICg34dBSNwYgBLikDNyVomfhxX035gQDGAKRYVm8ueow7vRVV0ZEuvM8Xww==",
+  "dgSpecHash": "QvFbesllo1fBSLETQGQ176L13yTNaOTkm/GmmPSeDNGxrC+tZ73YvRlqwtBdJkZpF+i7/0UNdwDYoRV8GiHn6A==",
   "success": true,
-  "projectFilePath": "C:\\Users\\blanc\\OneDrive\\Documentos\\2-curso-2-cuatri\\TPP\\Practicas\\theory.examples\\theory.examples\\examples\\functional\\continuations\\lazy.simulated\\lazy.simulated.csproj",
+  "projectFilePath": "/Users/blanc/Documents/2-curso-2-cuatri/TPP/Practicas/theory.examples/theory.examples/examples/functional/continuations/lazy.simulated/lazy.simulated.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\blanc\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
-    "C:\\Users\\blanc\\.nuget\\packages\\system.data.datasetextensions\\4.5.0\\system.data.datasetextensions.4.5.0.nupkg.sha512",
-    "C:\\Users\\blanc\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\3.1.22\\microsoft.netcore.app.host.win-x64.3.1.22.nupkg.sha512",
-    "C:\\Users\\blanc\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\3.1.10\\microsoft.aspnetcore.app.ref.3.1.10.nupkg.sha512",
-    "C:\\Users\\blanc\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\3.1.0\\microsoft.windowsdesktop.app.ref.3.1.0.nupkg.sha512",
-    "C:\\Users\\blanc\\.nuget\\packages\\microsoft.netcore.app.ref\\3.1.0\\microsoft.netcore.app.ref.3.1.0.nupkg.sha512"
+    "/Users/blanc/.nuget/packages/microsoft.csharp/4.7.0/microsoft.csharp.4.7.0.nupkg.sha512",
+    "/Users/blanc/.nuget/packages/system.data.datasetextensions/4.5.0/system.data.datasetextensions.4.5.0.nupkg.sha512",
+    "/Users/blanc/.nuget/packages/microsoft.netcore.app.host.osx-x64/3.1.22/microsoft.netcore.app.host.osx-x64.3.1.22.nupkg.sha512"
   ],
   "logs": []
 }
