@@ -1,0 +1,41 @@
+﻿<Properties StartupConfiguration="{4B493A1E-5171-4EC9-9026-ABB1CCFACEEB}|Default">
+  <MonoDevelop.Ide.Workbench ActiveDocument="paradigma.funcional/Funciones.cs">
+    <Files>
+      <File FileName="paradigma.funcional/Funciones.cs" Line="43" Column="10" />
+      <File FileName="tests/FuncionesTests.cs" Line="1" Column="1" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="lab05" expanded="True">
+            <Node name="delegates" expanded="True" />
+            <Node name="paradigma.funcional" expanded="True">
+              <Node name="Funciones.cs" selected="True" />
+            </Node>
+            <Node name="tests" expanded="True" />
+          </Node>
+        </State>
+      </Pad>
+      <Pad Id="MonoDevelop.UnitTesting.TestPad">
+        <State name="__root__">
+          <Node name="lab05" expanded="True">
+            <Node name="tests" expanded="True">
+              <Node name="tests" expanded="True">
+                <Node name="FuncionesTests" expanded="True">
+                  <Node name="FilterTest" selected="True" />
+                </Node>
+              </Node>
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.ItemProperties.delegates PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>

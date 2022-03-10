@@ -1,19 +1,29 @@
-C:\Users\UO285176\Desktop\lab05\paradigma.funcional\bin\Debug\netcoreapp3.1\paradigma.funcional.deps.json
-C:\Users\UO285176\Desktop\lab05\paradigma.funcional\bin\Debug\netcoreapp3.1\paradigma.funcional.dll
-C:\Users\UO285176\Desktop\lab05\paradigma.funcional\bin\Debug\netcoreapp3.1\paradigma.funcional.pdb
-C:\Users\UO285176\Desktop\lab05\paradigma.funcional\obj\Debug\netcoreapp3.1\paradigma.funcional.csproj.AssemblyReference.cache
-C:\Users\UO285176\Desktop\lab05\paradigma.funcional\obj\Debug\netcoreapp3.1\paradigma.funcional.AssemblyInfoInputs.cache
-C:\Users\UO285176\Desktop\lab05\paradigma.funcional\obj\Debug\netcoreapp3.1\paradigma.funcional.AssemblyInfo.cs
-C:\Users\UO285176\Desktop\lab05\paradigma.funcional\obj\Debug\netcoreapp3.1\paradigma.funcional.csproj.CoreCompileInputs.cache
-C:\Users\UO285176\Desktop\lab05\paradigma.funcional\obj\Debug\netcoreapp3.1\paradigma.funcional.dll
-C:\Users\UO285176\Desktop\lab05\paradigma.funcional\obj\Debug\netcoreapp3.1\paradigma.funcional.pdb
-C:\Users\blanc\OneDrive\Documentos\2-curso-2-cuatri\TPP\Practicas\Practica 5\lab05\paradigma.funcional\bin\Debug\netcoreapp3.1\paradigma.funcional.deps.json
-C:\Users\blanc\OneDrive\Documentos\2-curso-2-cuatri\TPP\Practicas\Practica 5\lab05\paradigma.funcional\bin\Debug\netcoreapp3.1\paradigma.funcional.dll
-C:\Users\blanc\OneDrive\Documentos\2-curso-2-cuatri\TPP\Practicas\Practica 5\lab05\paradigma.funcional\bin\Debug\netcoreapp3.1\paradigma.funcional.pdb
-C:\Users\blanc\OneDrive\Documentos\2-curso-2-cuatri\TPP\Practicas\Practica 5\lab05\paradigma.funcional\obj\Debug\netcoreapp3.1\paradigma.funcional.csproj.AssemblyReference.cache
-C:\Users\blanc\OneDrive\Documentos\2-curso-2-cuatri\TPP\Practicas\Practica 5\lab05\paradigma.funcional\obj\Debug\netcoreapp3.1\paradigma.funcional.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\blanc\OneDrive\Documentos\2-curso-2-cuatri\TPP\Practicas\Practica 5\lab05\paradigma.funcional\obj\Debug\netcoreapp3.1\paradigma.funcional.AssemblyInfoInputs.cache
-C:\Users\blanc\OneDrive\Documentos\2-curso-2-cuatri\TPP\Practicas\Practica 5\lab05\paradigma.funcional\obj\Debug\netcoreapp3.1\paradigma.funcional.AssemblyInfo.cs
-C:\Users\blanc\OneDrive\Documentos\2-curso-2-cuatri\TPP\Practicas\Practica 5\lab05\paradigma.funcional\obj\Debug\netcoreapp3.1\paradigma.funcional.csproj.CoreCompileInputs.cache
-C:\Users\blanc\OneDrive\Documentos\2-curso-2-cuatri\TPP\Practicas\Practica 5\lab05\paradigma.funcional\obj\Debug\netcoreapp3.1\paradigma.funcional.dll
-C:\Users\blanc\OneDrive\Documentos\2-curso-2-cuatri\TPP\Practicas\Practica 5\lab05\paradigma.funcional\obj\Debug\netcoreapp3.1\paradigma.funcional.pdb
+C:/Users/UO285176/Desktop/lab05/paradigma.funcional/bin/Debug/netcoreapp3.1/paradigma.funcional.deps.json
+C:/Users/UO285176/Desktop/lab05/paradigma.funcional/bin/Debug/netcoreapp3.1/paradigma.funcional.dll
+C:/Users/UO285176/Desktop/lab05/paradigma.funcional/bin/Debug/netcoreapp3.1/paradigma.funcional.pdb
+C:/Users/UO285176/Desktop/lab05/paradigma.funcional/obj/Debug/netcoreapp3.1/paradigma.funcional.csproj.AssemblyReference.cache
+C:/Users/UO285176/Desktop/lab05/paradigma.funcional/obj/Debug/netcoreapp3.1/paradigma.funcional.AssemblyInfoInputs.cache
+C:/Users/UO285176/Desktop/lab05/paradigma.funcional/obj/Debug/netcoreapp3.1/paradigma.funcional.AssemblyInfo.cs
+C:/Users/UO285176/Desktop/lab05/paradigma.funcional/obj/Debug/netcoreapp3.1/paradigma.funcional.csproj.CoreCompileInputs.cache
+C:/Users/UO285176/Desktop/lab05/paradigma.funcional/obj/Debug/netcoreapp3.1/paradigma.funcional.dll
+C:/Users/UO285176/Desktop/lab05/paradigma.funcional/obj/Debug/netcoreapp3.1/paradigma.funcional.pdb
+C:/Users/blanc/OneDrive/Documentos/2-curso-2-cuatri/TPP/Practicas/Practica 5/lab05/paradigma.funcional/bin/Debug/netcoreapp3.1/paradigma.funcional.deps.json
+C:/Users/blanc/OneDrive/Documentos/2-curso-2-cuatri/TPP/Practicas/Practica 5/lab05/paradigma.funcional/bin/Debug/netcoreapp3.1/paradigma.funcional.dll
+C:/Users/blanc/OneDrive/Documentos/2-curso-2-cuatri/TPP/Practicas/Practica 5/lab05/paradigma.funcional/bin/Debug/netcoreapp3.1/paradigma.funcional.pdb
+C:/Users/blanc/OneDrive/Documentos/2-curso-2-cuatri/TPP/Practicas/Practica 5/lab05/paradigma.funcional/obj/Debug/netcoreapp3.1/paradigma.funcional.csproj.AssemblyReference.cache
+C:/Users/blanc/OneDrive/Documentos/2-curso-2-cuatri/TPP/Practicas/Practica 5/lab05/paradigma.funcional/obj/Debug/netcoreapp3.1/paradigma.funcional.GeneratedMSBuildEditorConfig.editorconfig
+C:/Users/blanc/OneDrive/Documentos/2-curso-2-cuatri/TPP/Practicas/Practica 5/lab05/paradigma.funcional/obj/Debug/netcoreapp3.1/paradigma.funcional.AssemblyInfoInputs.cache
+C:/Users/blanc/OneDrive/Documentos/2-curso-2-cuatri/TPP/Practicas/Practica 5/lab05/paradigma.funcional/obj/Debug/netcoreapp3.1/paradigma.funcional.AssemblyInfo.cs
+C:/Users/blanc/OneDrive/Documentos/2-curso-2-cuatri/TPP/Practicas/Practica 5/lab05/paradigma.funcional/obj/Debug/netcoreapp3.1/paradigma.funcional.csproj.CoreCompileInputs.cache
+C:/Users/blanc/OneDrive/Documentos/2-curso-2-cuatri/TPP/Practicas/Practica 5/lab05/paradigma.funcional/obj/Debug/netcoreapp3.1/paradigma.funcional.dll
+C:/Users/blanc/OneDrive/Documentos/2-curso-2-cuatri/TPP/Practicas/Practica 5/lab05/paradigma.funcional/obj/Debug/netcoreapp3.1/paradigma.funcional.pdb
+/Users/blanc/Documents/2-curso-2-cuatri/TPP/Practicas/Practica 5/lab05/paradigma.funcional/bin/Debug/netcoreapp3.1/paradigma.funcional.deps.json
+/Users/blanc/Documents/2-curso-2-cuatri/TPP/Practicas/Practica 5/lab05/paradigma.funcional/bin/Debug/netcoreapp3.1/paradigma.funcional.dll
+/Users/blanc/Documents/2-curso-2-cuatri/TPP/Practicas/Practica 5/lab05/paradigma.funcional/bin/Debug/netcoreapp3.1/paradigma.funcional.pdb
+/Users/blanc/Documents/2-curso-2-cuatri/TPP/Practicas/Practica 5/lab05/paradigma.funcional/obj/Debug/netcoreapp3.1/paradigma.funcional.csproj.AssemblyReference.cache
+/Users/blanc/Documents/2-curso-2-cuatri/TPP/Practicas/Practica 5/lab05/paradigma.funcional/obj/Debug/netcoreapp3.1/paradigma.funcional.GeneratedMSBuildEditorConfig.editorconfig
+/Users/blanc/Documents/2-curso-2-cuatri/TPP/Practicas/Practica 5/lab05/paradigma.funcional/obj/Debug/netcoreapp3.1/paradigma.funcional.AssemblyInfoInputs.cache
+/Users/blanc/Documents/2-curso-2-cuatri/TPP/Practicas/Practica 5/lab05/paradigma.funcional/obj/Debug/netcoreapp3.1/paradigma.funcional.AssemblyInfo.cs
+/Users/blanc/Documents/2-curso-2-cuatri/TPP/Practicas/Practica 5/lab05/paradigma.funcional/obj/Debug/netcoreapp3.1/paradigma.funcional.csproj.CoreCompileInputs.cache
+/Users/blanc/Documents/2-curso-2-cuatri/TPP/Practicas/Practica 5/lab05/paradigma.funcional/obj/Debug/netcoreapp3.1/paradigma.funcional.dll
+/Users/blanc/Documents/2-curso-2-cuatri/TPP/Practicas/Practica 5/lab05/paradigma.funcional/obj/Debug/netcoreapp3.1/paradigma.funcional.pdb

@@ -39,14 +39,13 @@ namespace paradigma.funcional
             return result;
         }
 
-        public static TCD Reduce<TD, TCD>(this IEnumerable<TD> collection, Func<TCD, TD, TCD> f, TCD defecto)
+        public static TCD Reduce<TD, TCD>(this IEnumerable<TD> collection, Func<TCD, TD, TCD> f,TCD defecto = default(TCD))
         {
-            TCD result = defecto;
             foreach (TD t in collection)
             {
-                result = f(result, t);
+                defecto = f(defecto, t);
             }
-            return result;
+            return defecto;
         }
 
     }

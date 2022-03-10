@@ -1,13 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "xsUXW1ewvlg3AhLRkixLe3JHSju07U/eYIzLHHCRhYVpZDAfwmOdR+X9aD/ROWJ0M06fzD7S+yns+QbZai3u2Q==",
+  "dgSpecHash": "AL7PGA0beJT0VL5oivfAnaJZFfboL8He+u3Ib2/sIAw1vGJgYQKYzSmHsEj+hMCDQCQnehl8lYB/Dur4g3i8jA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\blanc\\OneDrive\\Documentos\\2-curso-2-cuatri\\TPP\\Practicas\\Practica 5\\lab05\\delegates\\delegates.csproj",
+  "projectFilePath": "/Users/blanc/Documents/2-curso-2-cuatri/TPP/Practicas/Practica 5/lab05/delegates/delegates.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\blanc\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\3.1.22\\microsoft.netcore.app.host.win-x64.3.1.22.nupkg.sha512",
-    "C:\\Users\\blanc\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\3.1.10\\microsoft.aspnetcore.app.ref.3.1.10.nupkg.sha512",
-    "C:\\Users\\blanc\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\3.1.0\\microsoft.windowsdesktop.app.ref.3.1.0.nupkg.sha512",
-    "C:\\Users\\blanc\\.nuget\\packages\\microsoft.netcore.app.ref\\3.1.0\\microsoft.netcore.app.ref.3.1.0.nupkg.sha512"
+    "/Users/blanc/.nuget/packages/microsoft.netcore.app.host.osx-x64/3.1.22/microsoft.netcore.app.host.osx-x64.3.1.22.nupkg.sha512"
   ],
   "logs": []
 }

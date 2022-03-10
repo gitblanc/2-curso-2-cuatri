@@ -1,12 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "ngcdMmRDXekoKYWcXycPb7YjkOwdEmn6ndG5KifuJtbRf8vBvAVI4Gb0XFEsK5vlNKDW/YDjElr4C6XYU1T6/w==",
+  "dgSpecHash": "cNf23MuaDzbgLaVWAZvmN3X4lFnQ9URMivERh6wutkqeHOd/gJqjPAljlEKHGBO+82j21wVToSY3RtvjOsq0+A==",
   "success": true,
-  "projectFilePath": "C:\\Users\\blanc\\OneDrive\\Documentos\\2-curso-2-cuatri\\TPP\\Practicas\\Practica 5\\lab05\\paradigma.funcional\\paradigma.funcional.csproj",
-  "expectedPackageFiles": [
-    "C:\\Users\\blanc\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\3.1.10\\microsoft.aspnetcore.app.ref.3.1.10.nupkg.sha512",
-    "C:\\Users\\blanc\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\3.1.0\\microsoft.windowsdesktop.app.ref.3.1.0.nupkg.sha512",
-    "C:\\Users\\blanc\\.nuget\\packages\\microsoft.netcore.app.ref\\3.1.0\\microsoft.netcore.app.ref.3.1.0.nupkg.sha512"
-  ],
+  "projectFilePath": "/Users/blanc/Documents/2-curso-2-cuatri/TPP/Practicas/Practica 5/lab05/paradigma.funcional/paradigma.funcional.csproj",
+  "expectedPackageFiles": [],
   "logs": []
 }
