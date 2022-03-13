@@ -14,7 +14,7 @@ public class Trominov1 {
 	 */
 	public static void main(String[] args) {
 		Tromino t = new Tromino();
-		t.createTablero(4, 2, 2);
+		t.createTablero(32, 16, 16);//para 2, 2 funciona
 		t.ShowTablero();
 	}
 
