@@ -13,7 +13,7 @@ public class Division1
 		{ 
 			for (int i=1;i<n;i++) cont++ ;  //O(n)    
 			rec1 (n/3);//a = 1, b = 3, k = 1 -> O(n)
-		}//O(n^2)
+		}//O(n)
 		return true;   
 	}
 

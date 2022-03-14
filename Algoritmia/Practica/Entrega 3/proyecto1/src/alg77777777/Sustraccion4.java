@@ -14,7 +14,7 @@ public class Sustraccion4
 			cont++;   // O(1)    
 			rec4 (n-2);
 			rec4 (n-2);
-			rec4 (n-2);//a = 3, b = 1, k = 0 -> O(3^(n/2)) exponencial
+			rec4 (n-2);//a = 3, b = 2, k = 0 -> O(3^(n/2)) exponencial
 		}
 		return true;   
 	}
@@ -25,7 +25,7 @@ public class Sustraccion4
 		long t1,t2,cont;
 		int nVeces= Integer.parseInt (arg [0]);
 		boolean b=true; 
-		for (int n=1;n<=100;n+=3)
+		for (int n=1;n<=100;n+=2)
 		{
 			t1 = System.currentTimeMillis ();
 

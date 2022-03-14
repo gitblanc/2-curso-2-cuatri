@@ -14,7 +14,7 @@ public class Sustraccion2
 			for (int i=0;i<n;i++) cont++; // O(n)
 			rec2 (n-1);//a = 1, b = 1, k = 1 -> O(n^2)
 			for (int i=0;i<n;i++) cont++; // O(n)
-		}//O(n^4)
+		}//O(n^2)
 		return true;   
 	}
 

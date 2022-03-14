@@ -36,11 +36,11 @@ public class Tromino {
 		// Asignamos las coordenadas que variarán en función del cuadrante
 		int pos1 = origenX + (n / 2) - 1;
 		int pos2 = origenY + (n / 2) - 1;
-		if (n <= 2) {
+		if (n <= 2) {// Si el tamaño es el mínimo
 			int hueco = this.tablero[hx][hy];
 			generarTromino(pos1, pos2, pos1, pos2 + 1, pos1 + 1, pos2, pos1 + 1, pos2 + 1);
 			this.tablero[hx][hy] = hueco;
-		} else if (n >= 4) {
+		} else {
 			int x1 = 0;
 			int y1 = 0;
 			int x2 = 0;
@@ -102,7 +102,7 @@ public class Tromino {
 				x3 = pos1;
 				y3 = pos2 + 1;
 			}
-			generarTromino(x1, y1, x2, y2, x3, y3, x4, y4);
+			generarTromino(x1, y1, x2, y2, x3, y3, x4, y4);// se genera el tromino para cualquier cuadrante
 
 			// llamadas recursivas
 			trominoRec(cuadrante1X, cuadrante1Y, n / 2, origenX, origenY);

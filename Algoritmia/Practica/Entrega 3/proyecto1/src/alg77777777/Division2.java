@@ -14,7 +14,7 @@ public class Division2
 			rec2 (n/2);
 			rec2 (n/2);//a = 2, b = 2, k = 1 -> O(n.log(n))
 		}   
-		//O(n^2log(n))
+		//O(nlog(n))
 		return true;
 	}
 	
