@@ -1,0 +1,11 @@
+C:\Users\UO285176\Desktop\lab07\practica7\linq\bin\Debug\netcoreapp3.1\linq.exe
+C:\Users\UO285176\Desktop\lab07\practica7\linq\bin\Debug\netcoreapp3.1\linq.deps.json
+C:\Users\UO285176\Desktop\lab07\practica7\linq\bin\Debug\netcoreapp3.1\linq.runtimeconfig.json
+C:\Users\UO285176\Desktop\lab07\practica7\linq\bin\Debug\netcoreapp3.1\linq.runtimeconfig.dev.json
+C:\Users\UO285176\Desktop\lab07\practica7\linq\bin\Debug\netcoreapp3.1\linq.dll
+C:\Users\UO285176\Desktop\lab07\practica7\linq\bin\Debug\netcoreapp3.1\linq.pdb
+C:\Users\UO285176\Desktop\lab07\practica7\linq\obj\Debug\netcoreapp3.1\linq.csproj.AssemblyReference.cache
+C:\Users\UO285176\Desktop\lab07\practica7\linq\obj\Debug\netcoreapp3.1\linq.csproj.CoreCompileInputs.cache
+C:\Users\UO285176\Desktop\lab07\practica7\linq\obj\Debug\netcoreapp3.1\linq.dll
+C:\Users\UO285176\Desktop\lab07\practica7\linq\obj\Debug\netcoreapp3.1\linq.pdb
+C:\Users\UO285176\Desktop\lab07\practica7\linq\obj\Debug\netcoreapp3.1\linq.genruntimeconfig.cache

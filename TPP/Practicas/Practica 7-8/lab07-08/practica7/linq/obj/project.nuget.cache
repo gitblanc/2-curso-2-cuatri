@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "ySICgUxuGKPST0RZQ5xBSRTs/ZnZUxwJYA8oTkr2rvl8ZPKSzZjmsAnyTvJTIq9yKr88bgs41E+kEyjBCj1r6w==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\UO285176\\Desktop\\lab07\\practica7\\linq\\linq.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\UO285176\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
+    "C:\\Users\\UO285176\\.nuget\\packages\\system.data.datasetextensions\\4.5.0\\system.data.datasetextensions.4.5.0.nupkg.sha512",
+    "C:\\Users\\UO285176\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\3.1.18\\microsoft.netcore.app.host.win-x64.3.1.18.nupkg.sha512"
+  ],
+  "logs": []
+}
