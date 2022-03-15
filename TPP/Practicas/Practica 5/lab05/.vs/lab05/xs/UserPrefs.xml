@@ -1,31 +1,20 @@
 ﻿<Properties StartupConfiguration="{4B493A1E-5171-4EC9-9026-ABB1CCFACEEB}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="paradigma.funcional/Funciones.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="delegates/Program.cs">
     <Files>
       <File FileName="paradigma.funcional/Funciones.cs" Line="43" Column="10" />
-      <File FileName="tests/FuncionesTests.cs" Line="1" Column="1" />
+      <File FileName="tests/FuncionesTests.cs" />
+      <File FileName="delegates/Main1.cs" Line="1" Column="1" />
+      <File FileName="delegates/Program.cs" Line="25" Column="10" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="lab05" expanded="True">
-            <Node name="delegates" expanded="True" />
-            <Node name="paradigma.funcional" expanded="True">
-              <Node name="Funciones.cs" selected="True" />
+            <Node name="delegates" expanded="True">
+              <Node name="Program.cs" selected="True" />
             </Node>
+            <Node name="paradigma.funcional" expanded="True" />
             <Node name="tests" expanded="True" />
-          </Node>
-        </State>
-      </Pad>
-      <Pad Id="MonoDevelop.UnitTesting.TestPad">
-        <State name="__root__">
-          <Node name="lab05" expanded="True">
-            <Node name="tests" expanded="True">
-              <Node name="tests" expanded="True">
-                <Node name="FuncionesTests" expanded="True">
-                  <Node name="FilterTest" selected="True" />
-                </Node>
-              </Node>
-            </Node>
           </Node>
         </State>
       </Pad>

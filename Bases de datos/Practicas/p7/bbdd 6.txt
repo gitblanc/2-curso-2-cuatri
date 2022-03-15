@@ -1,0 +1,58 @@
+--7
+create table HistoricoClientes(
+    dni varchar(9),
+    nombre varchar(40),
+    apellido varchar(20),
+    ciudad varchar(25),
+    constraint pk_historicoClientes primary key(dni)
+);
+create or replace procedure ej7 as
+
+    uncliente historicoclientes%rowtype;
+    cursor c1  is select * from clientes;
+
+begin
+    open c1;
+        fetch c1 into uncliente;
+        while c1%found loop
+            begin
+                insert into historicoclientes values uncliente;
+            exception
+                when dup_val_on_index then
+                    update historicoclientes set nombre=uncliente.nombre,
+                        apellido=uncliente.apellido, ciudad=uncliente.ciudad
+                        where dni=uncliente.dni;
+            end;
+            fetch c1 into uncliente;
+         end loop;
+    close c1;
+end;
+
+execute ej7;
+--8
+create or replace procedure ej8_implicito as
+    begin 
+        for i in (select * from USER_OBJECTS) loop
+            DBMS_OUTPUT.PUT_LINE('Has creado el objeto ' || I.OBJECT_NAME ||
+             ' de tipo ' || I.OBJECT_NAME);
+        end loop;
+end;        
+
+call ej8_implicito();
+
+create or replace procedure ej8_explicito as
+    cursor objecto is select object_name, object_type from user_objects;
+    nombre_objeto user_objects.object_name%type;
+    tipo_objecto users_objects.object_type%type;
+    begin 
+    open objeto;
+        loop
+            fetch objeto into nombre_objeto, tipo_objeto;
+            exit when objeto%notfound;
+            DBMS_OUTPUT.PUT_LINE('Has creado el objeto ' || nombre_objeto ||
+             ' de tipo ' || tipo_objeto);
+        end loop;
+        close objeto;
+end;   
+        
+call  ej8_explicito();
