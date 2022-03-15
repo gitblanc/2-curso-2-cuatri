@@ -32,30 +32,42 @@ p2 = horner_inv(q2, r2, x2)
 print(p2)
 
 # Ejercicio 2
-def horner(p, x0):
-    n = len(p)
-    q = np.zeros(n)
-    q[0] = p[0]
-    for i in range(1, n):
-        q[i] = q[i - 1] * x0 + p[i]
-    cociente = q[:-1]
-    resto = q[-1]
-    return cociente, resto
+def factorial(num):
+    if num < 0:
+        print("Factorial of negative num does not exist")
 
+    elif num == 0:
+        return 1
 
-def pol_a_partir_de_der(der, x0):
-    p = np.zeros_like(der)
+    else:
+        fact = 1
+        while(num > 1):
+            fact *= num
+            num -= 1
+        return fact
 
-    c = np.copy(der)
-    factorial = len(der)-1
-    for k in range(len(c)-1, 0, -1):
-        r = c[k]/factorial
-        p = horner_inv(c, r, x0)
-        factorial *= k - 1
-    return p
+def funcion(der, x0):
+    n = len(der)
+    pol = np.zeros(n)
+    resta = np.zeros(n)
+    r = []
+    r.reverse()
+    contador = 0
+    for i in range(0,n):
+        r.append(der[n-i-1]/factorial(n-i-1))
+        for k in range(0,len(r)-1):
+            resta[k+1] = x0 * r[k]
+        for j in range(0, len(r)):
+            pol[j] = r[j] - resta[j]
+        for l in range(0,len(r)):
+            r[l] = pol[l]
+    return pol
 
-
-x0 = 1.
-d0 = np.array([2., 6, 14, 48, 96, 120])
-p0 = pol_a_partir_de_der(d0, x0)
+x0 = 1
+d0 = np.array([2.,6,14,48,96,120])
+p0 = funcion(d0,x0)
 print(p0)
+
+x1 = -1
+d1 = np.array([3.,0,-34,240,-1056,3120,-5760,5040])
+print(funcion(d1,x1))
