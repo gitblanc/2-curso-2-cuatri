@@ -15,7 +15,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConjuntoTests", "ConjuntoTe
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Stackv1", "Stack\Stackv1.csproj", "{50537A9A-38BA-4172-BD17-FD03EC3DA5DE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StackTests", "StackTests\StackTests.csproj", "{6193CBB3-52EE-4A45-87E8-707E1BC61596}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "StackTests", "StackTests\StackTests.csproj", "{6193CBB3-52EE-4A45-87E8-707E1BC61596}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "exam.test.student", "test.list.student\test.list.student\exam.test.list.student\exam.test.student.csproj", "{D010BEC4-C3F8-4873-803D-01EC2A1A2925}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -51,6 +53,10 @@ Global
 		{6193CBB3-52EE-4A45-87E8-707E1BC61596}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6193CBB3-52EE-4A45-87E8-707E1BC61596}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6193CBB3-52EE-4A45-87E8-707E1BC61596}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D010BEC4-C3F8-4873-803D-01EC2A1A2925}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D010BEC4-C3F8-4873-803D-01EC2A1A2925}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D010BEC4-C3F8-4873-803D-01EC2A1A2925}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D010BEC4-C3F8-4873-803D-01EC2A1A2925}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -55,7 +55,12 @@
       "ProjectGuid": "6193cbb3-52ee-4a45-87e8-707e1bc61596",
       "DisplayName": "StackTests",
       "ColorIndex": 10
+    },
+    "d010bec4-c3f8-4873-803d-01ec2a1a2925": {
+      "ProjectGuid": "d010bec4-c3f8-4873-803d-01ec2a1a2925",
+      "DisplayName": "exam.test.student",
+      "ColorIndex": 11
     }
   },
-  "NextColorIndex": 11
+  "NextColorIndex": 12
 }
