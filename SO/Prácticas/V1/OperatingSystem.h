@@ -18,6 +18,12 @@
 
 #define NOPROCESS -1
 
+//EJ 11 V1
+// In OperatingSystem.h
+#define NUMBEROFQUEUES 2
+enum TypeOfReadyToRunProcessQueues { USERPROCESSQUEUE, DAEMONSQUEUE};
+//EJ 11 V1
+
 // Contains the possible type of programs
 enum ProgramTypes { USERPROGRAM, DAEMONPROGRAM }; 
 

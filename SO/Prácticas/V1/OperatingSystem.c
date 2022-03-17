@@ -24,6 +24,17 @@ int OperatingSystem_ShortTermScheduler();
 int OperatingSystem_ExtractFromReadyToRun();
 void OperatingSystem_HandleException();
 void OperatingSystem_HandleSystemCall();
+void OperatingSystem_PrintReadyToRunQueue();							 //EJ 9 V1
+char *statesNames[5] = {"NEW", "READY", "EXECUTING", "BLOCKED", "EXIT"}; //EJ 10 V1
+
+//EJ 11 V1
+// In OperatingSystem.c
+heapItem readyToRunQueue[NUMBEROFQUEUES][PROCESSTABLEMAXSIZE];
+int numberOfReadyToRunProcesses[NUMBEROFQUEUES] = {0, 0};
+char *queueNames[NUMBEROFQUEUES] = {"USER", "DAEMONS"};
+
+int queueID;
+//EJ 11 V1
 
 // The process table
 PCB processTable[PROCESSTABLEMAXSIZE];
@@ -31,21 +42,23 @@ PCB processTable[PROCESSTABLEMAXSIZE];
 // Address base for OS code in this version
 int OS_address_base = PROCESSTABLEMAXSIZE * MAINMEMORYSECTIONSIZE;
 
-// Identifier of the current executing process
+// Identifier of the current executing processF
 int executingProcessID = NOPROCESS;
 
 // Identifier of the System Idle Process
 int sipID;
 
 // Initial PID for assignation
-int initialPID = 0;
+//int initialPID = 0;
+//EJ8 V1
+int initialPID = PROCESSTABLEMAXSIZE - 1;
 
 // Begin indes for daemons in programList
 int baseDaemonsInProgramList;
 
 // Array that contains the identifiers of the READY processes
-heapItem readyToRunQueue[PROCESSTABLEMAXSIZE];
-int numberOfReadyToRunProcesses = 0;
+//heapItem readyToRunQueue[PROCESSTABLEMAXSIZE];
+//int numberOfReadyToRunProcesses = 0;
 
 // Variable containing the number of not terminated user processes
 int numberOfNotTerminatedUserProcesses = 0;
@@ -195,7 +208,8 @@ int OperatingSystem_CreateProcess(int indexOfExecutableProgram)
 	}
 
 	// Load program in the allocated memory
-	if(OperatingSystem_LoadProgram(programFile, loadingPhysicalAddress, processSize) == TOOBIGPROCESS){
+	if (OperatingSystem_LoadProgram(programFile, loadingPhysicalAddress, processSize) == TOOBIGPROCESS)
+	{
 		return TOOBIGPROCESS;
 	}
 	// PCB initialization
@@ -225,6 +239,8 @@ void OperatingSystem_PCBInitialization(int PID, int initialPhysicalAddress, int 
 	processTable[PID].busy = 1;
 	processTable[PID].initialPhysicalAddress = initialPhysicalAddress;
 	processTable[PID].processSize = processSize;
+	//EJ10 V1
+	ComputerSystem_DebugMessage(111, SYSPROC, PID, programList[processTable[PID].programListIndex]->executableName, statesNames[NEW]);
 	processTable[PID].state = NEW;
 	processTable[PID].priority = priority;
 	processTable[PID].programListIndex = processPLIndex;
@@ -248,8 +264,10 @@ void OperatingSystem_MoveToTheREADYState(int PID)
 
 	if (Heap_add(PID, readyToRunQueue, QUEUE_PRIORITY, &numberOfReadyToRunProcesses, PROCESSTABLEMAXSIZE) >= 0)
 	{
+		ComputerSystem_DebugMessage(110, SYSPROC, PID, programList[processTable[PID].programListIndex]->executableName, statesNames[processTable[PID].state], statesNames[READY]);
 		processTable[PID].state = READY;
 	}
+	OperatingSystem_PrintReadyToRunQueue();
 }
 
 // The STS is responsible of deciding which process to execute when specific events occur.
@@ -259,8 +277,13 @@ int OperatingSystem_ShortTermScheduler()
 {
 
 	int selectedProcess;
-
-	selectedProcess = OperatingSystem_ExtractFromReadyToRun();
+	int i = 0;
+	//EJ11 V1 begin
+	for (i; i < NUMBEROFQUEUES && selectedProcess == NOPROCESS; i++)
+	{
+		selectedProcess = OperatingSystem_ExtractFromReadyToRun();
+	}
+	//ej11 end
 
 	return selectedProcess;
 }
@@ -283,6 +306,8 @@ void OperatingSystem_Dispatch(int PID)
 
 	// The process identified by PID becomes the current executing process
 	executingProcessID = PID;
+	//EJ10 V1
+	ComputerSystem_DebugMessage(110, SYSPROC, PID, programList[processTable[PID].programListIndex]->executableName, statesNames[processTable[PID].state], statesNames[EXECUTING]);
 	// Change the process' state
 	processTable[PID].state = EXECUTING;
 	// Modify hardware registers with appropriate values for the process identified by PID
@@ -403,3 +428,41 @@ void OperatingSystem_InterruptLogic(int entryPoint)
 		break;
 	}
 }
+
+// //EJ9 V1 begin
+// void OperatingSystem_PrintReadyToRunQueue()
+// {
+// 	int i = 0;
+// 	ComputerSystem_DebugMessage(106, SHORTTERMSCHEDULE);
+// 	for (i; i < numberOfReadyToRunProcesses - 1; i++)
+// 	{
+// 		//readytorunqueue[i] -> es el pid del proceso
+// 		ComputerSystem_DebugMessage(107, SHORTTERMSCHEDULE, readyToRunQueue[i].info, processTable[readyToRunQueue[i].info].priority);
+// 	}
+// 	ComputerSystem_DebugMessage(108, SHORTTERMSCHEDULE, readyToRunQueue[i].info, processTable[readyToRunQueue[i].info].priority);
+// }
+// //EJ9 V1 end
+
+//EJ 11 V1
+void OperatingSystem_PrintReadyToRunQueue()
+{
+	int i = 0;
+	int k = 0;
+	ComputerSystem_DebugMessage(106, SHORTTERMSCHEDULE);
+	ComputerSystem_DebugMessage(112, SHORTTERMSCHEDULE);
+	for (i; i < numberOfReadyToRunProcesses[0] - 1; i++)
+	{
+		//readytorunqueue[i] -> es el pid del proceso
+		ComputerSystem_DebugMessage(107, SHORTTERMSCHEDULE, readyToRunQueue[0][i].info, processTable[readyToRunQueue[0][i].info].priority);
+	}
+	ComputerSystem_DebugMessage(108, SHORTTERMSCHEDULE, readyToRunQueue[0][i].info, processTable[readyToRunQueue[0][i].info].priority);
+	
+	ComputerSystem_DebugMessage(113, SHORTTERMSCHEDULE);
+	for (k; k < numberOfReadyToRunProcesses[1] - 1; k++)
+	{
+		//readytorunqueue[i] -> es el pid del proceso
+		ComputerSystem_DebugMessage(107, SHORTTERMSCHEDULE, readyToRunQueue[1][k].info, processTable[readyToRunQueue[0][k].info].priority);
+	}
+	ComputerSystem_DebugMessage(108, SHORTTERMSCHEDULE, readyToRunQueue[1][k].info, processTable[readyToRunQueue[0][k].info].priority);
+}
+//EJ 11 V1
