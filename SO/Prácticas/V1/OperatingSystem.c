@@ -21,7 +21,7 @@ void OperatingSystem_PreemptRunningProcess();
 int OperatingSystem_CreateProcess(int);
 int OperatingSystem_ObtainMainMemory(int, int);
 int OperatingSystem_ShortTermScheduler();
-int OperatingSystem_ExtractFromReadyToRun();
+int OperatingSystem_ExtractFromReadyToRun(int);
 void OperatingSystem_HandleException();
 void OperatingSystem_HandleSystemCall();
 void OperatingSystem_PrintReadyToRunQueue();							 //EJ 9 V1
@@ -33,7 +33,6 @@ heapItem readyToRunQueue[NUMBEROFQUEUES][PROCESSTABLEMAXSIZE];
 int numberOfReadyToRunProcesses[NUMBEROFQUEUES] = {0, 0};
 char *queueNames[NUMBEROFQUEUES] = {"USER", "DAEMONS"};
 
-int queueID;
 //EJ 11 V1
 
 // The process table
@@ -168,6 +167,8 @@ int OperatingSystem_CreateProcess(int indexOfExecutableProgram)
 	int priority;
 	FILE *programFile;
 	PROGRAMS_DATA *executableProgram = programList[indexOfExecutableProgram];
+	//EJ 11
+	int queueId;
 
 	// Obtain a process ID
 	PID = OperatingSystem_ObtainAnEntryInTheProcessTable();
@@ -255,6 +256,7 @@ void OperatingSystem_PCBInitialization(int PID, int initialPhysicalAddress, int 
 		processTable[PID].copyOfPCRegister = 0;
 		processTable[PID].copyOfPSWRegister = 0;
 	}
+	processTable[PID].queueId = programList[processPLIndex]->type;
 }
 
 // Move a process to the READY state: it will be inserted, depending on its priority, in
@@ -262,7 +264,7 @@ void OperatingSystem_PCBInitialization(int PID, int initialPhysicalAddress, int 
 void OperatingSystem_MoveToTheREADYState(int PID)
 {
 
-	if (Heap_add(PID, readyToRunQueue, QUEUE_PRIORITY, &numberOfReadyToRunProcesses, PROCESSTABLEMAXSIZE) >= 0)
+	if (Heap_add(PID, readyToRunQueue[processTable[PID].queueId], QUEUE_PRIORITY, &numberOfReadyToRunProcesses[processTable[PID].queueId], PROCESSTABLEMAXSIZE) >= 0)
 	{
 		ComputerSystem_DebugMessage(110, SYSPROC, PID, programList[processTable[PID].programListIndex]->executableName, statesNames[processTable[PID].state], statesNames[READY]);
 		processTable[PID].state = READY;
@@ -281,7 +283,7 @@ int OperatingSystem_ShortTermScheduler()
 	//EJ11 V1 begin
 	for (i; i < NUMBEROFQUEUES && selectedProcess == NOPROCESS; i++)
 	{
-		selectedProcess = OperatingSystem_ExtractFromReadyToRun();
+		selectedProcess = OperatingSystem_ExtractFromReadyToRun(i);
 	}
 	//ej11 end
 
@@ -289,12 +291,12 @@ int OperatingSystem_ShortTermScheduler()
 }
 
 // Return PID of more priority process in the READY queue
-int OperatingSystem_ExtractFromReadyToRun()
+int OperatingSystem_ExtractFromReadyToRun(int queueId)
 {
 
 	int selectedProcess = NOPROCESS;
 
-	selectedProcess = Heap_poll(readyToRunQueue, QUEUE_PRIORITY, &numberOfReadyToRunProcesses);
+	selectedProcess = Heap_poll(readyToRunQueue[queueId], QUEUE_PRIORITY, &numberOfReadyToRunProcesses);
 
 	// Return most priority process or NOPROCESS if empty queue
 	return selectedProcess;
@@ -366,6 +368,7 @@ void OperatingSystem_TerminateProcess()
 
 	int selectedProcess;
 
+	ComputerSystem_DebugMessage(110, SYSPROC, executingProcessID, programList[processTable[executingProcessID].programListIndex]->executableName, statesNames[processTable[executingProcessID].state], statesNames[EXIT]);
 	processTable[executingProcessID].state = EXIT;
 
 	if (programList[processTable[executingProcessID].programListIndex]->type == USERPROGRAM)
