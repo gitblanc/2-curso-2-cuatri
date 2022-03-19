@@ -1,0 +1,12 @@
+C:\Users\blanc\OneDrive\Documentos\2-curso-2-cuatri\TPP\Practicas\Practica1\lab1_listas\P1_listas\ConjuntoV1\bin\Debug\ConjuntoV1.dll
+C:\Users\blanc\OneDrive\Documentos\2-curso-2-cuatri\TPP\Practicas\Practica1\lab1_listas\P1_listas\ConjuntoV1\bin\Debug\ConjuntoV1.pdb
+C:\Users\blanc\OneDrive\Documentos\2-curso-2-cuatri\TPP\Practicas\Practica1\lab1_listas\P1_listas\ConjuntoV1\obj\Debug\ConjuntoV1.csproj.AssemblyReference.cache
+C:\Users\blanc\OneDrive\Documentos\2-curso-2-cuatri\TPP\Practicas\Practica1\lab1_listas\P1_listas\ConjuntoV1\obj\Debug\ConjuntoV1.csproj.CoreCompileInputs.cache
+C:\Users\blanc\OneDrive\Documentos\2-curso-2-cuatri\TPP\Practicas\Practica1\lab1_listas\P1_listas\ConjuntoV1\obj\Debug\ConjuntoV1.dll
+C:\Users\blanc\OneDrive\Documentos\2-curso-2-cuatri\TPP\Practicas\Practica1\lab1_listas\P1_listas\ConjuntoV1\obj\Debug\ConjuntoV1.pdb
+C:\Users\blanc\OneDrive\Documentos\2-curso-2-cuatri\TPP\Practicas\Practica 7-8\lab7_listas\ConjuntoV1\bin\Debug\ConjuntoV1.dll
+C:\Users\blanc\OneDrive\Documentos\2-curso-2-cuatri\TPP\Practicas\Practica 7-8\lab7_listas\ConjuntoV1\bin\Debug\ConjuntoV1.pdb
+C:\Users\blanc\OneDrive\Documentos\2-curso-2-cuatri\TPP\Practicas\Practica 7-8\lab7_listas\ConjuntoV1\obj\Debug\ConjuntoV1.csproj.AssemblyReference.cache
+C:\Users\blanc\OneDrive\Documentos\2-curso-2-cuatri\TPP\Practicas\Practica 7-8\lab7_listas\ConjuntoV1\obj\Debug\ConjuntoV1.csproj.CoreCompileInputs.cache
+C:\Users\blanc\OneDrive\Documentos\2-curso-2-cuatri\TPP\Practicas\Practica 7-8\lab7_listas\ConjuntoV1\obj\Debug\ConjuntoV1.dll
+C:\Users\blanc\OneDrive\Documentos\2-curso-2-cuatri\TPP\Practicas\Practica 7-8\lab7_listas\ConjuntoV1\obj\Debug\ConjuntoV1.pdb

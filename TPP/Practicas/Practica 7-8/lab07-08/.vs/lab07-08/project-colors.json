@@ -1,0 +1,26 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "65737e81-827d-473f-a780-c3f21c4a0e83": {
+      "ProjectGuid": "65737e81-827d-473f-a780-c3f21c4a0e83",
+      "DisplayName": "linq",
+      "ColorIndex": 0
+    },
+    "75d2917c-1eea-4eb4-8a7a-bbdd89e17d1f": {
+      "ProjectGuid": "75d2917c-1eea-4eb4-8a7a-bbdd89e17d1f",
+      "DisplayName": "Clases",
+      "ColorIndex": 1
+    },
+    "a306c958-8ab1-47af-b154-78cb7851763a": {
+      "ProjectGuid": "a306c958-8ab1-47af-b154-78cb7851763a",
+      "DisplayName": "model",
+      "ColorIndex": 2
+    },
+    "8fd0a37f-7723-436c-88dc-c304510c999b": {
+      "ProjectGuid": "8fd0a37f-7723-436c-88dc-c304510c999b",
+      "DisplayName": "ListTestsv0",
+      "ColorIndex": 3
+    }
+  },
+  "NextColorIndex": 4
+}

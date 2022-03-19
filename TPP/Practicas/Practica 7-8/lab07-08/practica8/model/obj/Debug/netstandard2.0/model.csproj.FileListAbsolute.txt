@@ -1,7 +1,0 @@
-C:\Users\UO285176\Desktop\lab07\practica8\model\bin\Debug\netstandard2.0\model.deps.json
-C:\Users\UO285176\Desktop\lab07\practica8\model\bin\Debug\netstandard2.0\model.dll
-C:\Users\UO285176\Desktop\lab07\practica8\model\bin\Debug\netstandard2.0\model.pdb
-C:\Users\UO285176\Desktop\lab07\practica8\model\obj\Debug\netstandard2.0\model.csproj.AssemblyReference.cache
-C:\Users\UO285176\Desktop\lab07\practica8\model\obj\Debug\netstandard2.0\model.csproj.CoreCompileInputs.cache
-C:\Users\UO285176\Desktop\lab07\practica8\model\obj\Debug\netstandard2.0\model.dll
-C:\Users\UO285176\Desktop\lab07\practica8\model\obj\Debug\netstandard2.0\model.pdb

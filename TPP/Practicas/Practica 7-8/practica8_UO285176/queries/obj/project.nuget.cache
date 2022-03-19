@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "1L09V8bpI45wgIacGrfHEExW0Lyct9k7QV412aN5ZM6JhS0rZh/BG5Z2DiLncYs5m1SKCKsFiBEhEZmkTpj2FQ==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\blanc\\OneDrive\\Documentos\\2-curso-2-cuatri\\TPP\\Practicas\\Practica 7-8\\practica8_UO285176\\queries\\queries.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\blanc\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
+    "C:\\Users\\blanc\\.nuget\\packages\\system.data.datasetextensions\\4.5.0\\system.data.datasetextensions.4.5.0.nupkg.sha512",
+    "C:\\Users\\blanc\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\3.1.22\\microsoft.netcore.app.host.win-x64.3.1.22.nupkg.sha512"
+  ],
+  "logs": []
+}
