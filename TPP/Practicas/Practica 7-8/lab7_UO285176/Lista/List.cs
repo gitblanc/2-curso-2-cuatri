@@ -47,6 +47,11 @@ namespace Lista
 
         private Node _head;
         private int _length;
+        
+        public int NumberOfElements
+        {
+            get { return _length; }
+        }
 
         /// <summary>
         /// Constructor por defecto
@@ -164,7 +169,7 @@ namespace Lista
 
         /// <summary>
         /// Método que elimina un elemento de la lista
-        /// 
+        ///
         /// Nota: lo he comentado en exceso porque me parece un método bastante lioso
         /// </summary>
         public bool Remove(T element)
@@ -232,89 +237,89 @@ namespace Lista
         /// Método que a partir de una colección de elementos, nos devuelve el primero que cumpla un criterio dado,
         /// o su valor por defecto en caso de no existir.
         /// </summary>
-        //public T Find(Predicate<T> p)
-        //{
-        //    foreach (T elem in this)
-        //    {
-        //        if (p(elem))
-        //            return elem;
-        //    }
-        //    return default(T);
-        //}
+        public T Find(Predicate<T> p)
+        {
+            foreach (T elem in this)
+            {
+                if (p(elem))
+                    return elem;
+            }
+            return default(T);
+        }
 
-        ///// <summary>
-        ///// Método que a partir de una colección de elementos, nos devuelve todos aquellos que cumplan un criterio 
-        ///// dado (siendo éste parametrizable)
-        ///// </summary>
-        //public IEnumerable<T> Filter(Predicate<T> p)
-        //{
-        //    //Forma Eager
-        //    //T[] result = new T[collection.Count()];
-        //    //int i = 0;
-        //    //foreach (T elem in collection)
-        //    //{
-        //    //    if (p(elem))
-        //    //    {
-        //    //        result[i] = elem;
-        //    //        i++;
-        //    //    }
-        //    //}
-        //    //Array.Resize(ref result, i);
-        //    //if (result.Length == 0)
-        //    //    return default(T[]);
-        //    //return result;
+        /// <summary>
+        /// Método que a partir de una colección de elementos, nos devuelve todos aquellos que cumplan un criterio
+        /// dado (siendo éste parametrizable)
+        /// </summary>
+        public IEnumerable<T> Filter(Predicate<T> p)
+        {
+            //Forma Eager
+            //T[] result = new T[collection.Count()];
+            //int i = 0;
+            //foreach (T elem in collection)
+            //{
+            //    if (p(elem))
+            //    {
+            //        result[i] = elem;
+            //        i++;
+            //    }
+            //}
+            //Array.Resize(ref result, i);
+            //if (result.Length == 0)
+            //    return default(T[]);
+            //return result;
 
-        //    //Forma Lazy
-        //    foreach (T elem in this)
-        //    {
-        //        if (p(elem))
-        //        {
-        //            yield return elem;
-        //        }
-        //    }
-        //}
+            //Forma Lazy
+            foreach (T elem in this)
+            {
+                if (p(elem))
+                {
+                    yield return elem;
+                }
+            }
+        }
 
-        ///// <summary>
-        ///// Método que recibe una colección de elementos y una función que recibe un primer parámetro del tipo que queremos obtener 
-        ///// y un segundo parámetro del tipo de la colección. Su tipo devuelto es el propio del que queremos obtener.
-        ///// </summary>
-        //public TCD Reduce<TCD>(Func<TCD, T, TCD> f, TCD defecto = default(TCD))
-        //{
-        //    foreach (T t in this)
-        //    {
-        //        defecto = f(defecto, t);
-        //    }
-        //    return defecto;
-        //}
+        /// <summary>
+        /// Método que recibe una colección de elementos y una función que recibe un primer parámetro del tipo que queremos obtener
+        /// y un segundo parámetro del tipo de la colección. Su tipo devuelto es el propio del que queremos obtener.
+        /// </summary>
+        public TCD Reduce<TCD>(Func<TCD, T, TCD> f, TCD defecto = default(TCD))
+        {
+            foreach (T t in this)
+            {
+                defecto = f(defecto, t);
+            }
+            return defecto;
+        }
 
-        //public IEnumerable<T> Invert()
-        //{
-        //    for (int i = _length - 1; i >= 0; i--)
-        //    {
-        //        yield return GetElement(i);
-        //    }
-        //}
+        public IEnumerable<T> Invert()
+        {
+            for (int i = _length - 1; i >= 0; i--)
+            {
+                yield return this.ElementAt(i);
+            }
+        }
 
-        ///// <summary>
-        ///// Método que permite transformar los elementos de una lista y que devuelve una nueva lista con los elementos transformados.
-        ///// </summary>
-        //public IEnumerable<TResult> Map<TResult>(Func<T, TResult> function)
-        //{
-        //    foreach (T d in this)
-        //    {
-        //        yield return function(d);
-        //    }
-        //}
+        /// <summary>
+        /// Método que permite transformar los elementos de una lista y que devuelve una nueva lista con los elementos transformados.
+        /// </summary>
+        public IEnumerable<TResult> Map<TResult>(Func<T, TResult> function)
+        {
+            foreach (T d in this)
+            {
+                yield return function(d);
+            }
+        }
 
-        ///// <summary>
-        ///// Método que modifica los elementos de una lista y no devuelve nada.
-        ///// </summary>
-        //public void ForEach(Action<T> function)
-        //{
-        //    foreach (T d in this)
-        //    {
-        //        function(d);
-        //    }
-        //}
+        /// <summary>
+        /// Método que modifica los elementos de una lista y no devuelve nada.
+        /// </summary>
+        public void ForEach(Action<T> function)
+        {
+            foreach (T d in this)
+            {
+                function(d);
+            }
+        }
     }
 }

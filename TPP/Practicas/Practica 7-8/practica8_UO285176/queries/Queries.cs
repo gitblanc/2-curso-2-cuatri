@@ -26,7 +26,9 @@ namespace queries
             Query query = new Query();
             query.Homework1();
             query.Homework2();
+            query.Homework3();
             query.Homework4();
+            query.Homework5();
         }
 
         private void Query1()
@@ -199,22 +201,27 @@ namespace queries
         private void Homework2()
         {
             // Show the summation, in seconds, of the phone calls done by the employees of the Computer Science department
-            var phonecalls = model.Employees.Where(e => e.Department.Name.ToLower().Equals("computer science"))
-                .Join(model.PhoneCalls,
-                e => e.TelephoneNumber, c => c.SourceNumber,
-                (e, c) => new
-                {
-                    Employee = e.Name,
-                    Duration = c.Seconds //+ c.Seconds
-                });
-            Console.WriteLine("Calls: ");
-            Show(phonecalls);
+            //var departments = model.Departments.Where(d => d.Employees.Count(e => e.Age >= 18) > 1).
+            var suma = model.PhoneCalls
+                     .Where(c => model.Employees.Where(e => e.Department.Name.ToLower().Equals("computer science"))
+                     .Any(e => e.TelephoneNumber.Equals(c.SourceNumber))).Aggregate(0, (a, b) => a + b.Seconds);
+            Console.WriteLine("Total: ");
+            Console.WriteLine(suma);
+
         }
 
         private void Homework3()
         {
             // Show the phone calls done by each department, ordered by department names. 
             // Each line must show “Department = <Name>, Duration = <Seconds>”
+            var calls = model.Departments
+                .OrderBy(d => d.Name)
+                .Select(d => $"Department= {d.Name} - Duration " + d.Employees
+                .SelectMany(e => model.PhoneCalls
+                .Where(c => c.SourceNumber.Equals(e.TelephoneNumber)))
+                .Aggregate(0, (a, c) => a + c.Seconds));
+            Console.WriteLine("Departments calls: ");
+            Show(calls);
         }
 
         private void Homework4()
@@ -222,9 +229,16 @@ namespace queries
             // Show the departments with the youngest employee, 
             // together with the name of the youngest employee and his/her age 
             // (more than one youngest employee may exist)
-            var departamentos = model.Employees.OrderBy(e => e.Age).GroupBy(e => e.Department);
-            Console.WriteLine("Departments: ");
-            Show(departamentos);
+            var departaments = model.Employees.GroupBy(e => e.Department.Name,
+                (dep, empl) => new
+                {
+                    DepName = dep,
+                    Employees = empl,
+                    MinAge = empl.Select(e => e.Age).Min(),
+                }).Select(d => $"Department = {d.DepName}, Youngest employee = {d.Employees.First(e => e.Age.Equals(d.MinAge)).Name}" +
+                $" with age {d.MinAge}");
+            Console.WriteLine("Departments with youngest workers ");
+            Show(departaments);
         }
 
         private void Homework5()
@@ -232,6 +246,23 @@ namespace queries
             // Show the greatest summation of phone call durations, in seconds, 
             // of the employees in the same department, together with the name of the department 
             // (it can be assumed that there is only one department fulfilling that condition)
+            var departments = model.Employees.Join(
+                model.PhoneCalls, e => e.TelephoneNumber, c => c.SourceNumber,
+                (e, c) => new
+                {
+                    Department = e.Department.Name,
+                    Duration = c.Seconds,
+                }
+                ).GroupBy(
+                    e => e.Department,
+                    (dep, calls) => new
+                    {
+                        Department = dep,
+                        CallsDuration = calls.Aggregate(0, (a, b) => a + b.Duration),
+                    }
+                );
+            var departmentsAndDuration = departments.FirstOrDefault(d => d.CallsDuration == departments.Max(d => d.CallsDuration));
+            Console.WriteLine($"Department = {departmentsAndDuration.Department}, Duration = {departmentsAndDuration.CallsDuration} s");
         }
 
 

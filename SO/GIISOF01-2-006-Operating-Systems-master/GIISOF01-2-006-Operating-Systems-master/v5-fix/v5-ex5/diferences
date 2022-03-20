@@ -1,0 +1,459 @@
+1c1
+< 62 Messages Loaded
+---
+> 63 Messages Loaded
+10,11c10,11
+< 		USER: 
+< 		DAEMONS: 
+---
+> 		USER:
+> 		DAEMONS:
+45,46c45,46
+< 		USER: 
+< 		DAEMONS: [3,100]
+---
+> 		USER:
+> 		DAEMONS:[3,100]
+135,136c135,136
+< 		USER: 
+< 		DAEMONS: [2,2], [1,5], [0,5]
+---
+> 		USER:
+> 		DAEMONS:[2,2], [1,5], [0,5]
+152,153c152,153
+< 		USER: 
+< 		DAEMONS: [0,5], [1,5], [3,100]
+---
+> 		USER:
+> 		DAEMONS:[0,5], [1,5], [3,100]
+190,191c190,191
+< 		USER: 
+< 		DAEMONS: [1,5], [3,100]
+---
+> 		USER:
+> 		DAEMONS:[1,5], [3,100]
+217,218c217,218
+< 		USER: 
+< 		DAEMONS: [0,5], [3,100]
+---
+> 		USER:
+> 		DAEMONS:[0,5], [3,100]
+247,248c247,248
+< 		USER: 
+< 		DAEMONS: [1,5], [3,100]
+---
+> 		USER:
+> 		DAEMONS:[1,5], [3,100]
+279,280c279,280
+< 		USER: 
+< 		DAEMONS: [0,5], [3,100]
+---
+> 		USER:
+> 		DAEMONS:[0,5], [3,100]
+306,319d305
+< 	[92] Running Process Information:
+< 		[PID: 1, Priority: 5, WakeUp: 0, Queue: DAEMONS]
+< 	[92] Ready-to-run processes queue:
+< 		USER: 
+< 		DAEMONS: [2,2], [3,100], [0,5]
+< 	[92] SLEEPING Queue:
+< 		[--- empty queue ---]
+< 	[92] PID association with program's name:
+< 		PID: 0 -> daemon1
+< 		PID: 1 -> daemon2
+< 		PID: 2 -> daemon3
+< 		PID: 3 -> SystemIdleProcess
+< 	[92] Arrival Time Queue:
+< 		[programVerySimpleTest, 100, USER]
+326,327c312,313
+< 		USER: 
+< 		DAEMONS: [0,5], [1,5], [3,100]
+---
+> 		USER:
+> 		DAEMONS:[0,5], [3,100], [1,5]
+351,352c337,338
+< 		USER: 
+< 		DAEMONS: [1,5], [3,100]
+---
+> 		USER:
+> 		DAEMONS:[1,5], [3,100]
+387,388c373,374
+< 		USER: 
+< 		DAEMONS: [0,5], [3,100]
+---
+> 		USER:
+> 		DAEMONS:[0,5], [3,100]
+411,412c397,398
+< 		USER: 
+< 		DAEMONS: [1,5], [3,100]
+---
+> 		USER:
+> 		DAEMONS:[1,5], [3,100]
+441,442c427,428
+< 		USER: 
+< 		DAEMONS: [0,5], [3,100]
+---
+> 		USER:
+> 		DAEMONS:[0,5], [3,100]
+457,468d442
+< 	[153] Running Process Information:
+< 		[PID: 1, Priority: 5, WakeUp: 0, Queue: DAEMONS]
+< 	[153] Ready-to-run processes queue:
+< 		USER: 
+< 		DAEMONS: [2,2], [3,100], [0,5]
+< 	[153] SLEEPING Queue:
+< 		[--- empty queue ---]
+< 	[153] PID association with program's name:
+< 		PID: 0 -> daemon1
+< 		PID: 1 -> daemon2
+< 		PID: 2 -> daemon3
+< 		PID: 3 -> SystemIdleProcess
+475,476c449,450
+< 		USER: 
+< 		DAEMONS: [0,5], [1,5], [3,100]
+---
+> 		USER:
+> 		DAEMONS:[0,5], [3,100], [1,5]
+501,502c475,476
+< 		USER: 
+< 		DAEMONS: [1,5], [3,100]
+---
+> 		USER:
+> 		DAEMONS:[1,5], [3,100]
+531,532c505,506
+< 		USER: 
+< 		DAEMONS: [0,5], [3,100]
+---
+> 		USER:
+> 		DAEMONS:[0,5], [3,100]
+564,565c538,539
+< 		USER: 
+< 		DAEMONS: [1,5], [3,100]
+---
+> 		USER:
+> 		DAEMONS:[1,5], [3,100]
+585,596d558
+< 	[212] Running Process Information:
+< 		[PID: 0, Priority: 5, WakeUp: 0, Queue: DAEMONS]
+< 	[212] Ready-to-run processes queue:
+< 		USER: 
+< 		DAEMONS: [2,2], [3,100], [1,5]
+< 	[212] SLEEPING Queue:
+< 		[--- empty queue ---]
+< 	[212] PID association with program's name:
+< 		PID: 0 -> daemon1
+< 		PID: 1 -> daemon2
+< 		PID: 2 -> daemon3
+< 		PID: 3 -> SystemIdleProcess
+603,604c565,566
+< 		USER: 
+< 		DAEMONS: [1,5], [0,5], [3,100]
+---
+> 		USER:
+> 		DAEMONS:[1,5], [3,100], [0,5]
+626,627c588,589
+< 		USER: 
+< 		DAEMONS: [0,5], [3,100]
+---
+> 		USER:
+> 		DAEMONS:[0,5], [3,100]
+659,660c621,622
+< 		USER: 
+< 		DAEMONS: [1,5], [3,100]
+---
+> 		USER:
+> 		DAEMONS:[1,5], [3,100]
+684,685c646,647
+< 		USER: 
+< 		DAEMONS: [0,5], [3,100]
+---
+> 		USER:
+> 		DAEMONS:[0,5], [3,100]
+704,715d665
+< 	[262] Running Process Information:
+< 		[PID: 1, Priority: 5, WakeUp: 0, Queue: DAEMONS]
+< 	[262] Ready-to-run processes queue:
+< 		USER: 
+< 		DAEMONS: [2,2], [3,100], [0,5]
+< 	[262] SLEEPING Queue:
+< 		[--- empty queue ---]
+< 	[262] PID association with program's name:
+< 		PID: 0 -> daemon1
+< 		PID: 1 -> daemon2
+< 		PID: 2 -> daemon3
+< 		PID: 3 -> SystemIdleProcess
+722,723c672,673
+< 		USER: 
+< 		DAEMONS: [0,5], [1,5], [3,100]
+---
+> 		USER:
+> 		DAEMONS:[0,5], [3,100], [1,5]
+745,746c695,696
+< 		USER: 
+< 		DAEMONS: [1,5], [3,100]
+---
+> 		USER:
+> 		DAEMONS:[1,5], [3,100]
+778,779c728,729
+< 		USER: 
+< 		DAEMONS: [0,5], [3,100]
+---
+> 		USER:
+> 		DAEMONS:[0,5], [3,100]
+807,808c757,758
+< 		USER: 
+< 		DAEMONS: [1,5], [3,100]
+---
+> 		USER:
+> 		DAEMONS:[1,5], [3,100]
+820,831d769
+< 	[309] Running Process Information:
+< 		[PID: 0, Priority: 5, WakeUp: 0, Queue: DAEMONS]
+< 	[309] Ready-to-run processes queue:
+< 		USER: 
+< 		DAEMONS: [2,2], [3,100], [1,5]
+< 	[309] SLEEPING Queue:
+< 		[--- empty queue ---]
+< 	[309] PID association with program's name:
+< 		PID: 0 -> daemon1
+< 		PID: 1 -> daemon2
+< 		PID: 2 -> daemon3
+< 		PID: 3 -> SystemIdleProcess
+838,839c776,777
+< 		USER: 
+< 		DAEMONS: [1,5], [0,5], [3,100]
+---
+> 		USER:
+> 		DAEMONS:[1,5], [3,100], [0,5]
+864,865c802,803
+< 		USER: 
+< 		DAEMONS: [0,5], [3,100]
+---
+> 		USER:
+> 		DAEMONS:[0,5], [3,100]
+897,898c835,836
+< 		USER: 
+< 		DAEMONS: [1,5], [3,100]
+---
+> 		USER:
+> 		DAEMONS:[1,5], [3,100]
+918,929d855
+< 	[352] Running Process Information:
+< 		[PID: 0, Priority: 5, WakeUp: 0, Queue: DAEMONS]
+< 	[352] Ready-to-run processes queue:
+< 		USER: 
+< 		DAEMONS: [2,2], [3,100], [1,5]
+< 	[352] SLEEPING Queue:
+< 		[--- empty queue ---]
+< 	[352] PID association with program's name:
+< 		PID: 0 -> daemon1
+< 		PID: 1 -> daemon2
+< 		PID: 2 -> daemon3
+< 		PID: 3 -> SystemIdleProcess
+936,937c862,863
+< 		USER: 
+< 		DAEMONS: [1,5], [0,5], [3,100]
+---
+> 		USER:
+> 		DAEMONS:[1,5], [3,100], [0,5]
+959,960c885,886
+< 		USER: 
+< 		DAEMONS: [0,5], [3,100]
+---
+> 		USER:
+> 		DAEMONS:[0,5], [3,100]
+992,993c918,919
+< 		USER: 
+< 		DAEMONS: [1,5], [3,100]
+---
+> 		USER:
+> 		DAEMONS:[1,5], [3,100]
+1008,1019d933
+< 	[387] Running Process Information:
+< 		[PID: 0, Priority: 5, WakeUp: 0, Queue: DAEMONS]
+< 	[387] Ready-to-run processes queue:
+< 		USER: 
+< 		DAEMONS: [2,2], [3,100], [1,5]
+< 	[387] SLEEPING Queue:
+< 		[--- empty queue ---]
+< 	[387] PID association with program's name:
+< 		PID: 0 -> daemon1
+< 		PID: 1 -> daemon2
+< 		PID: 2 -> daemon3
+< 		PID: 3 -> SystemIdleProcess
+1026,1027c940,941
+< 		USER: 
+< 		DAEMONS: [1,5], [0,5], [3,100]
+---
+> 		USER:
+> 		DAEMONS:[1,5], [3,100], [0,5]
+1049,1050c963,964
+< 		USER: 
+< 		DAEMONS: [0,5], [3,100]
+---
+> 		USER:
+> 		DAEMONS:[0,5], [3,100]
+1082,1083c996,997
+< 		USER: 
+< 		DAEMONS: [1,5], [3,100]
+---
+> 		USER:
+> 		DAEMONS:[1,5], [3,100]
+1095,1106d1008
+< 	[419] Running Process Information:
+< 		[PID: 0, Priority: 5, WakeUp: 0, Queue: DAEMONS]
+< 	[419] Ready-to-run processes queue:
+< 		USER: 
+< 		DAEMONS: [2,2], [3,100], [1,5]
+< 	[419] SLEEPING Queue:
+< 		[--- empty queue ---]
+< 	[419] PID association with program's name:
+< 		PID: 0 -> daemon1
+< 		PID: 1 -> daemon2
+< 		PID: 2 -> daemon3
+< 		PID: 3 -> SystemIdleProcess
+1113,1114c1015,1016
+< 		USER: 
+< 		DAEMONS: [1,5], [0,5], [3,100]
+---
+> 		USER:
+> 		DAEMONS:[1,5], [3,100], [0,5]
+1139,1140c1041,1042
+< 		USER: 
+< 		DAEMONS: [0,5], [3,100]
+---
+> 		USER:
+> 		DAEMONS:[0,5], [3,100]
+1164,1175d1065
+< 	[447] Running Process Information:
+< 		[PID: 1, Priority: 5, WakeUp: 0, Queue: DAEMONS]
+< 	[447] Ready-to-run processes queue:
+< 		USER: 
+< 		DAEMONS: [2,2], [3,100], [0,5]
+< 	[447] SLEEPING Queue:
+< 		[--- empty queue ---]
+< 	[447] PID association with program's name:
+< 		PID: 0 -> daemon1
+< 		PID: 1 -> daemon2
+< 		PID: 2 -> daemon3
+< 		PID: 3 -> SystemIdleProcess
+1182,1183c1072,1073
+< 		USER: 
+< 		DAEMONS: [0,5], [1,5], [3,100]
+---
+> 		USER:
+> 		DAEMONS:[0,5], [3,100], [1,5]
+1205,1206c1095,1096
+< 		USER: 
+< 		DAEMONS: [1,5], [3,100]
+---
+> 		USER:
+> 		DAEMONS:[1,5], [3,100]
+1225,1236d1114
+< 	[467] Running Process Information:
+< 		[PID: 0, Priority: 5, WakeUp: 0, Queue: DAEMONS]
+< 	[467] Ready-to-run processes queue:
+< 		USER: 
+< 		DAEMONS: [2,2], [3,100], [1,5]
+< 	[467] SLEEPING Queue:
+< 		[--- empty queue ---]
+< 	[467] PID association with program's name:
+< 		PID: 0 -> daemon1
+< 		PID: 1 -> daemon2
+< 		PID: 2 -> daemon3
+< 		PID: 3 -> SystemIdleProcess
+1243,1244c1121,1122
+< 		USER: 
+< 		DAEMONS: [1,5], [0,5], [3,100]
+---
+> 		USER:
+> 		DAEMONS:[1,5], [3,100], [0,5]
+1266,1267c1144,1145
+< 		USER: 
+< 		DAEMONS: [0,5], [3,100]
+---
+> 		USER:
+> 		DAEMONS:[0,5], [3,100]
+1282,1293d1159
+< 	[483] Running Process Information:
+< 		[PID: 1, Priority: 5, WakeUp: 0, Queue: DAEMONS]
+< 	[483] Ready-to-run processes queue:
+< 		USER: 
+< 		DAEMONS: [2,2], [3,100], [0,5]
+< 	[483] SLEEPING Queue:
+< 		[--- empty queue ---]
+< 	[483] PID association with program's name:
+< 		PID: 0 -> daemon1
+< 		PID: 1 -> daemon2
+< 		PID: 2 -> daemon3
+< 		PID: 3 -> SystemIdleProcess
+1300,1301c1166,1167
+< 		USER: 
+< 		DAEMONS: [0,5], [1,5], [3,100]
+---
+> 		USER:
+> 		DAEMONS:[0,5], [3,100], [1,5]
+1324c1190
+< [499] _ _ _
+---
+> [499] {00 000 000}   0 0 (PID: 2, PC: 0, Accumulator: 1, PSW: 0080 [--------X-------])
+1326c1192
+< 	[501] Process [2 - daemon3] has caused an exception (invalid address) and is being terminated
+---
+> 	[501] Process [2 - daemon3] has caused an exception (invalid instruction) and is being terminated
+1349,1350c1215,1216
+< 		USER: 
+< 		DAEMONS: [1,5], [3,100]
+---
+> 		USER:
+> 		DAEMONS:[1,5], [3,100]
+1373,1374c1239,1240
+< 		USER: 
+< 		DAEMONS: [0,5], [3,100]
+---
+> 		USER:
+> 		DAEMONS:[0,5], [3,100]
+1397,1398c1263,1264
+< 		USER: 
+< 		DAEMONS: [1,5], [3,100]
+---
+> 		USER:
+> 		DAEMONS:[1,5], [3,100]
+1427,1428c1293,1294
+< 		USER: 
+< 		DAEMONS: [0,5], [3,100]
+---
+> 		USER:
+> 		DAEMONS:[0,5], [3,100]
+1460,1461c1326,1327
+< 		USER: 
+< 		DAEMONS: [1,5], [3,100]
+---
+> 		USER:
+> 		DAEMONS:[1,5], [3,100]
+1490,1491c1356,1357
+< 		USER: 
+< 		DAEMONS: [0,5], [3,100]
+---
+> 		USER:
+> 		DAEMONS:[0,5], [3,100]
+1536,1537c1402,1403
+< 		USER: 
+< 		DAEMONS: [3,100]
+---
+> 		USER:
+> 		DAEMONS:[3,100]
+1566c1432
+< [609] _ _ _
+---
+> _ _ _
+1591,1592c1457,1458
+< 		USER: 
+< 		DAEMONS: 
+---
+> 		USER:
+> 		DAEMONS:
+1600c1466
+< [612] {79 000 000} y 0 0 (PID: 3, PC: 3, Accumulator: 1819, PSW: 0080 [--------X-------])
+---
+> [612] {79 000 000} y 0 0 (PID: 3, PC: 2, Accumulator: 1819, PSW: 0080 [--------X-------])

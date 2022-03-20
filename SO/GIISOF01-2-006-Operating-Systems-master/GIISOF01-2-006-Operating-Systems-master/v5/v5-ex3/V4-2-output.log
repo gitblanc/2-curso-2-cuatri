@@ -1,0 +1,445 @@
+63 Messages Loaded
+[0] User program list:
+	 Program [programV4-11] with arrival time [20]
+	 Program [programV4-12] with arrival time [20]
+	 Program [programV4-13] with arrival time [20]
+	 Program [programV4-16] with arrival time [0]
+	 Program [programV4-14] with arrival time [10]
+	 Program [programV4-15] with arrival time [50]
+	 Program [programV4-15] with arrival time [50]
+Using asserts file: asserts
+Maximum number of asserts: 500
+[0] Asserts file unavailable
+	[0] Running Process Information:
+		[--- No running process ---]
+	[0] Ready-to-run processes queue:
+		USER:
+		DAEMONS:
+	[0] SLEEPING Queue:
+		[--- empty queue ---]
+	[0] PID association with program's name:
+	[0] Arrival Time Queue:
+		[SystemIdleProcess, 0, DAEMONS]
+		[programV4-16, 0, USER]
+		[programV4-14, 10, USER]
+		[programV4-13, 20, USER]
+		[programV4-11, 20, USER]
+		[programV4-12, 20, USER]
+		[programV4-15, 50, USER]
+		[programV4-15, 50, USER]
+	[0] Main memory state (before allocating memory):
+		[0] [0 -> 4][AVAILABLE]
+		[1] [4 -> 12][AVAILABLE]
+		[2] [16 -> 16][AVAILABLE]
+		[3] [32 -> 96][AVAILABLE]
+		[4] [128 -> 64][AVAILABLE]
+		[5] [192 -> 16][AVAILABLE]
+		[6] [208 -> 32][AVAILABLE]
+	[0] PROCESS [3 - SystemIdleProcess] requests [4] memory positions
+	[0] Partition [0: 0-> 4] has been assigned to process [3 - SystemIdleProcess]
+	[0] Main memory state (after allocating memory):
+		[0] [0 -> 4][3 - SystemIdleProcess]
+		[1] [4 -> 12][AVAILABLE]
+		[2] [16 -> 16][AVAILABLE]
+		[3] [32 -> 96][AVAILABLE]
+		[4] [128 -> 64][AVAILABLE]
+		[5] [192 -> 16][AVAILABLE]
+		[6] [208 -> 32][AVAILABLE]
+	[0] New process [3 - SystemIdleProcess] moving to the [NEW] state
+	[0] Process [3] created from program [SystemIdleProcess]
+	[0] Process [3 - SystemIdleProcess] moving from the [NEW] state to the [READY] state
+	[0] Main memory state (before allocating memory):
+		[0] [0 -> 4][3 - SystemIdleProcess]
+		[1] [4 -> 12][AVAILABLE]
+		[2] [16 -> 16][AVAILABLE]
+		[3] [32 -> 96][AVAILABLE]
+		[4] [128 -> 64][AVAILABLE]
+		[5] [192 -> 16][AVAILABLE]
+		[6] [208 -> 32][AVAILABLE]
+	[0] PROCESS [0 - SystemIdleProcess] requests [1] memory positions
+	[0] Partition [1: 4-> 12] has been assigned to process [0 - programV4-16]
+	[0] Main memory state (after allocating memory):
+		[0] [0 -> 4][3 - SystemIdleProcess]
+		[1] [4 -> 12][0 - SystemIdleProcess]
+		[2] [16 -> 16][AVAILABLE]
+		[3] [32 -> 96][AVAILABLE]
+		[4] [128 -> 64][AVAILABLE]
+		[5] [192 -> 16][AVAILABLE]
+		[6] [208 -> 32][AVAILABLE]
+	[0] ERROR: Program [programV4-16] is too big
+	[0] Running Process Information:
+		[--- No running process ---]
+	[0] Ready-to-run processes queue:
+		USER:
+		DAEMONS:[3,100]
+	[0] SLEEPING Queue:
+		[--- empty queue ---]
+	[0] PID association with program's name:
+		PID: 3 -> SystemIdleProcess
+	[0] Arrival Time Queue:
+		[programV4-14, 10, USER]
+		[programV4-11, 20, USER]
+		[programV4-12, 20, USER]
+		[programV4-13, 20, USER]
+		[programV4-15, 50, USER]
+		[programV4-15, 50, USER]
+	[0] Process [3 - SystemIdleProcess] moving from the [READY] state to the [EXECUTING] state
+[1] {79 000 000} y 0 0 (PID: 3, PC: 0, Accumulator: 0, PSW: 0082 [--------X-----Z-])
+[2] {61 516 205} a 1302 517 (PID: 3, PC: 1, Accumulator: 1819, PSW: 0080 [--------X-------])
+[3] {6E 000 000} n 0 0 (PID: 3, PC: 2, Accumulator: 1819, PSW: 0080 [--------X-------])
+[4] {6A 801 000} j -1 0 (PID: 3, PC: 1, Accumulator: 1819, PSW: 0080 [--------X-------])
+[5] {6E 000 000} n 0 0 (PID: 3, PC: 2, Accumulator: 1819, PSW: 0080 [--------X-------])
+[6] {6F 009 000} o 9 0 (PID: 3, PC: 245, Accumulator: 1819, PSW: 8080 [M-------X-------])
+	[7] Clock interrupt number [1] has occurred
+[8] {79 000 000} y 0 0 (PID: 3, PC: 2, Accumulator: 1819, PSW: 0080 [--------X-------])
+[9] {6A 801 000} j -1 0 (PID: 3, PC: 1, Accumulator: 1819, PSW: 0080 [--------X-------])
+[10] {6E 000 000} n 0 0 (PID: 3, PC: 2, Accumulator: 1819, PSW: 0080 [--------X-------])
+[11] {6F 009 000} o 9 0 (PID: 3, PC: 245, Accumulator: 1819, PSW: 8080 [M-------X-------])
+	[12] Clock interrupt number [2] has occurred
+	[12] Main memory state (before allocating memory):
+		[0] [0 -> 4][3 - SystemIdleProcess]
+		[1] [4 -> 12][0 - SystemIdleProcess]
+		[2] [16 -> 16][AVAILABLE]
+		[3] [32 -> 96][AVAILABLE]
+		[4] [128 -> 64][AVAILABLE]
+		[5] [192 -> 16][AVAILABLE]
+		[6] [208 -> 32][AVAILABLE]
+	[12] PROCESS [0 - SystemIdleProcess] requests [200] memory positions
+	[12] ERROR: Program [programV4-14] is too big
+[13] {79 000 000} y 0 0 (PID: 3, PC: 2, Accumulator: 1819, PSW: 0080 [--------X-------])
+[14] {6A 801 000} j -1 0 (PID: 3, PC: 1, Accumulator: 1819, PSW: 0080 [--------X-------])
+[15] {6E 000 000} n 0 0 (PID: 3, PC: 2, Accumulator: 1819, PSW: 0080 [--------X-------])
+[16] {6F 009 000} o 9 0 (PID: 3, PC: 245, Accumulator: 1819, PSW: 8080 [M-------X-------])
+	[17] Clock interrupt number [3] has occurred
+[18] {79 000 000} y 0 0 (PID: 3, PC: 2, Accumulator: 1819, PSW: 0080 [--------X-------])
+[19] {6A 801 000} j -1 0 (PID: 3, PC: 1, Accumulator: 1819, PSW: 0080 [--------X-------])
+[20] {6E 000 000} n 0 0 (PID: 3, PC: 2, Accumulator: 1819, PSW: 0080 [--------X-------])
+[21] {6F 009 000} o 9 0 (PID: 3, PC: 245, Accumulator: 1819, PSW: 8080 [M-------X-------])
+	[22] Clock interrupt number [4] has occurred
+	[22] Main memory state (before allocating memory):
+		[0] [0 -> 4][3 - SystemIdleProcess]
+		[1] [4 -> 12][0 - SystemIdleProcess]
+		[2] [16 -> 16][AVAILABLE]
+		[3] [32 -> 96][AVAILABLE]
+		[4] [128 -> 64][AVAILABLE]
+		[5] [192 -> 16][AVAILABLE]
+		[6] [208 -> 32][AVAILABLE]
+	[22] PROCESS [0 - SystemIdleProcess] requests [15] memory positions
+	[22] Partition [2: 16-> 16] has been assigned to process [0 - programV4-12]
+	[22] Main memory state (after allocating memory):
+		[0] [0 -> 4][3 - SystemIdleProcess]
+		[1] [4 -> 12][0 - SystemIdleProcess]
+		[2] [16 -> 16][0 - SystemIdleProcess]
+		[3] [32 -> 96][AVAILABLE]
+		[4] [128 -> 64][AVAILABLE]
+		[5] [192 -> 16][AVAILABLE]
+		[6] [208 -> 32][AVAILABLE]
+	[22] New process [0 - programV4-12] moving to the [NEW] state
+	[22] Process [0] created from program [programV4-12]
+	[22] Process [0 - programV4-12] moving from the [NEW] state to the [READY] state
+	[22] Main memory state (before allocating memory):
+		[0] [0 -> 4][3 - SystemIdleProcess]
+		[1] [4 -> 12][0 - programV4-12]
+		[2] [16 -> 16][0 - programV4-12]
+		[3] [32 -> 96][AVAILABLE]
+		[4] [128 -> 64][AVAILABLE]
+		[5] [192 -> 16][AVAILABLE]
+		[6] [208 -> 32][AVAILABLE]
+	[22] PROCESS [1 - SystemIdleProcess] requests [15] memory positions
+	[22] Partition [5: 192-> 16] has been assigned to process [1 - programV4-11]
+	[22] Main memory state (after allocating memory):
+		[0] [0 -> 4][3 - SystemIdleProcess]
+		[1] [4 -> 12][0 - programV4-12]
+		[2] [16 -> 16][0 - programV4-12]
+		[3] [32 -> 96][AVAILABLE]
+		[4] [128 -> 64][AVAILABLE]
+		[5] [192 -> 16][1 - SystemIdleProcess]
+		[6] [208 -> 32][AVAILABLE]
+	[22] New process [1 - programV4-11] moving to the [NEW] state
+	[22] Process [1] created from program [programV4-11]
+	[22] Process [1 - programV4-11] moving from the [NEW] state to the [READY] state
+	[22] Main memory state (before allocating memory):
+		[0] [0 -> 4][3 - SystemIdleProcess]
+		[1] [4 -> 12][0 - programV4-12]
+		[2] [16 -> 16][0 - programV4-12]
+		[3] [32 -> 96][AVAILABLE]
+		[4] [128 -> 64][AVAILABLE]
+		[5] [192 -> 16][1 - programV4-11]
+		[6] [208 -> 32][AVAILABLE]
+	[22] PROCESS [2 - SystemIdleProcess] requests [12] memory positions
+	[22] Partition [6: 208-> 32] has been assigned to process [2 - programV4-13]
+	[22] Main memory state (after allocating memory):
+		[0] [0 -> 4][3 - SystemIdleProcess]
+		[1] [4 -> 12][0 - programV4-12]
+		[2] [16 -> 16][0 - programV4-12]
+		[3] [32 -> 96][AVAILABLE]
+		[4] [128 -> 64][AVAILABLE]
+		[5] [192 -> 16][1 - programV4-11]
+		[6] [208 -> 32][2 - SystemIdleProcess]
+	[22] New process [2 - programV4-13] moving to the [NEW] state
+	[22] Process [2] created from program [programV4-13]
+	[22] Process [2 - programV4-13] moving from the [NEW] state to the [READY] state
+	[22] Running Process Information:
+		[PID: 3, Priority: 100, WakeUp: 0, Queue: DAEMONS]
+	[22] Ready-to-run processes queue:
+		USER:[0,5], [1,5], [2,5]
+		DAEMONS:
+	[22] SLEEPING Queue:
+		[--- empty queue ---]
+	[22] PID association with program's name:
+		PID: 0 -> programV4-12
+		PID: 1 -> programV4-11
+		PID: 2 -> programV4-13
+		PID: 3 -> SystemIdleProcess
+	[22] Arrival Time Queue:
+		[programV4-15, 50, USER]
+		[programV4-15, 50, USER]
+	[22] Process [3 - SystemIdleProcess] moving from the [EXECUTING] state to the [READY] state
+	[22] Process [0 - programV4-12] moving from the [READY] state to the [EXECUTING] state
+	[22] Running Process Information:
+		[PID: 0, Priority: 5, WakeUp: 0, Queue: USER]
+	[22] Ready-to-run processes queue:
+		USER:[2,5], [1,5]
+		DAEMONS:[3,100]
+	[22] SLEEPING Queue:
+		[--- empty queue ---]
+	[22] PID association with program's name:
+		PID: 0 -> programV4-12
+		PID: 1 -> programV4-11
+		PID: 2 -> programV4-13
+		PID: 3 -> SystemIdleProcess
+	[22] Arrival Time Queue:
+		[programV4-15, 50, USER]
+		[programV4-15, 50, USER]
+	[22] Process [3 - SystemIdleProcess] is thrown out of the processor by process [0 - programV4-12]
+[23] {79 000 000} y 0 0 (PID: 0, PC: 0, Accumulator: 0, PSW: 0002 [--------------Z-])
+[24] {77 A2B 000} w -555 0 (PID: 0, PC: 1, Accumulator: 0, PSW: 0002 [--------------Z-])
+[25] {6F 006 000} o 6 0 (PID: 0, PC: 243, Accumulator: 0, PSW: 8082 [M-------X-----Z-])
+	[26] Process [0 - programV4-12] has caused an exception (invalid address) and is being terminated
+	[26] Process [0 - programV4-12] moving from the [EXECUTING] state to the [EXIT] state
+	[26] Main memory state (before releasing memory):
+		[0] [0 -> 4][3 - SystemIdleProcess]
+		[1] [4 -> 12][0 - programV4-12]
+		[2] [16 -> 16][0 - programV4-12]
+		[3] [32 -> 96][AVAILABLE]
+		[4] [128 -> 64][AVAILABLE]
+		[5] [192 -> 16][1 - programV4-11]
+		[6] [208 -> 32][2 - programV4-13]
+	[26] Partition [1: 4-> 12] used by process [0 - programV4-12] has been released
+	[26] Main memory state (after releasing memory):
+		[0] [0 -> 4][3 - SystemIdleProcess]
+		[1] [4 -> 12][AVAILABLE]
+		[2] [16 -> 16][0 - programV4-12]
+		[3] [32 -> 96][AVAILABLE]
+		[4] [128 -> 64][AVAILABLE]
+		[5] [192 -> 16][1 - programV4-11]
+		[6] [208 -> 32][2 - programV4-13]
+	[26] Process [2 - programV4-13] moving from the [READY] state to the [EXECUTING] state
+	[26] Running Process Information:
+		[PID: 2, Priority: 5, WakeUp: 0, Queue: USER]
+	[26] Ready-to-run processes queue:
+		USER:[1,5]
+		DAEMONS:[3,100]
+	[26] SLEEPING Queue:
+		[--- empty queue ---]
+	[26] PID association with program's name:
+		PID: 0 -> programV4-12
+		PID: 1 -> programV4-11
+		PID: 2 -> programV4-13
+		PID: 3 -> SystemIdleProcess
+	[26] Arrival Time Queue:
+		[programV4-15, 50, USER]
+		[programV4-15, 50, USER]
+[27] {79 000 000} y 0 0 (PID: 2, PC: 0, Accumulator: 0, PSW: 0002 [--------------Z-])
+[28] {6F 009 000} o 9 0 (PID: 2, PC: 245, Accumulator: 0, PSW: 8082 [M-------X-----Z-])
+	[29] Clock interrupt number [5] has occurred
+[30] {79 000 000} y 0 0 (PID: 2, PC: 0, Accumulator: 0, PSW: 0002 [--------------Z-])
+[31] {6F 009 000} o 9 0 (PID: 2, PC: 245, Accumulator: 0, PSW: 8082 [M-------X-----Z-])
+	[32] Clock interrupt number [6] has occurred
+[33] {79 000 000} y 0 0 (PID: 2, PC: 0, Accumulator: 0, PSW: 0002 [--------------Z-])
+[34] {63 001 002} c 1 2 (PID: 2, PC: 1, Accumulator: 0, PSW: 0002 [--------------Z-])
+[35] {6F 006 000} o 6 0 (PID: 2, PC: 243, Accumulator: 0, PSW: 8082 [M-------X-----Z-])
+	[36] Process [2 - programV4-13] has caused an exception (invalid instruction) and is being terminated
+	[36] Process [2 - programV4-13] moving from the [EXECUTING] state to the [EXIT] state
+	[36] Main memory state (before releasing memory):
+		[0] [0 -> 4][3 - SystemIdleProcess]
+		[1] [4 -> 12][AVAILABLE]
+		[2] [16 -> 16][0 - programV4-12]
+		[3] [32 -> 96][AVAILABLE]
+		[4] [128 -> 64][AVAILABLE]
+		[5] [192 -> 16][1 - programV4-11]
+		[6] [208 -> 32][2 - programV4-13]
+	[36] Partition [6: 208-> 32] used by process [2 - programV4-13] has been released
+	[36] Main memory state (after releasing memory):
+		[0] [0 -> 4][3 - SystemIdleProcess]
+		[1] [4 -> 12][AVAILABLE]
+		[2] [16 -> 16][0 - programV4-12]
+		[3] [32 -> 96][AVAILABLE]
+		[4] [128 -> 64][AVAILABLE]
+		[5] [192 -> 16][1 - programV4-11]
+		[6] [208 -> 32][AVAILABLE]
+	[36] Process [1 - programV4-11] moving from the [READY] state to the [EXECUTING] state
+	[36] Running Process Information:
+		[PID: 1, Priority: 5, WakeUp: 0, Queue: USER]
+	[36] Ready-to-run processes queue:
+		USER:
+		DAEMONS:[3,100]
+	[36] SLEEPING Queue:
+		[--- empty queue ---]
+	[36] PID association with program's name:
+		PID: 0 -> programV4-12
+		PID: 1 -> programV4-11
+		PID: 2 -> programV4-13
+		PID: 3 -> SystemIdleProcess
+	[36] Arrival Time Queue:
+		[programV4-15, 50, USER]
+		[programV4-15, 50, USER]
+[37] {79 000 000} y 0 0 (PID: 1, PC: 0, Accumulator: 0, PSW: 0002 [--------------Z-])
+[38] {6F 009 000} o 9 0 (PID: 1, PC: 245, Accumulator: 0, PSW: 8082 [M-------X-----Z-])
+	[39] Clock interrupt number [7] has occurred
+[40] {79 000 000} y 0 0 (PID: 1, PC: 0, Accumulator: 0, PSW: 0002 [--------------Z-])
+[41] {6F 009 000} o 9 0 (PID: 1, PC: 245, Accumulator: 0, PSW: 8082 [M-------X-----Z-])
+	[42] Clock interrupt number [8] has occurred
+[43] {79 000 000} y 0 0 (PID: 1, PC: 0, Accumulator: 0, PSW: 0002 [--------------Z-])
+[44] {74 29A 000} t 666 0 (PID: 1, PC: 1, Accumulator: 0, PSW: 0002 [--------------Z-])
+[45] {6F 002 000} o 2 0 (PID: 1, PC: 241, Accumulator: 0, PSW: 8082 [M-------X-----Z-])
+	[46] Process [1 - programV4-11] has made an invalid system call (666) and is being terminated
+	[46] Process [1 - programV4-11] moving from the [EXECUTING] state to the [EXIT] state
+	[46] Main memory state (before releasing memory):
+		[0] [0 -> 4][3 - SystemIdleProcess]
+		[1] [4 -> 12][AVAILABLE]
+		[2] [16 -> 16][0 - programV4-12]
+		[3] [32 -> 96][AVAILABLE]
+		[4] [128 -> 64][AVAILABLE]
+		[5] [192 -> 16][1 - programV4-11]
+		[6] [208 -> 32][AVAILABLE]
+	[46] Partition [5: 192-> 16] used by process [1 - programV4-11] has been released
+	[46] Main memory state (after releasing memory):
+		[0] [0 -> 4][3 - SystemIdleProcess]
+		[1] [4 -> 12][AVAILABLE]
+		[2] [16 -> 16][0 - programV4-12]
+		[3] [32 -> 96][AVAILABLE]
+		[4] [128 -> 64][AVAILABLE]
+		[5] [192 -> 16][AVAILABLE]
+		[6] [208 -> 32][AVAILABLE]
+	[46] Process [3 - SystemIdleProcess] moving from the [READY] state to the [EXECUTING] state
+	[46] Running Process Information:
+		[PID: 3, Priority: 100, WakeUp: 0, Queue: DAEMONS]
+	[46] Ready-to-run processes queue:
+		USER:
+		DAEMONS:
+	[46] SLEEPING Queue:
+		[--- empty queue ---]
+	[46] PID association with program's name:
+		PID: 0 -> programV4-12
+		PID: 1 -> programV4-11
+		PID: 2 -> programV4-13
+		PID: 3 -> SystemIdleProcess
+	[46] Arrival Time Queue:
+		[programV4-15, 50, USER]
+		[programV4-15, 50, USER]
+[47] {79 000 000} y 0 0 (PID: 3, PC: 2, Accumulator: 1819, PSW: 0080 [--------X-------])
+[48] {6F 009 000} o 9 0 (PID: 3, PC: 245, Accumulator: 1819, PSW: 8080 [M-------X-------])
+	[49] Clock interrupt number [9] has occurred
+[50] {79 000 000} y 0 0 (PID: 3, PC: 2, Accumulator: 1819, PSW: 0080 [--------X-------])
+[51] {6F 009 000} o 9 0 (PID: 3, PC: 245, Accumulator: 1819, PSW: 8080 [M-------X-------])
+	[52] Clock interrupt number [10] has occurred
+	[52] Zombie process [0 -> programV4-12], with size [15] and initial address [16] is removed from system
+	[52] Zombie process [1 -> programV4-11], with size [15] and initial address [192] is removed from system
+	[52] Zombie process [2 -> programV4-13], with size [12] and initial address [208] is removed from system
+	[52] Main memory state (before allocating memory):
+		[0] [0 -> 4][3 - SystemIdleProcess]
+		[1] [4 -> 12][AVAILABLE]
+		[2] [16 -> 16][0 - programV4-12]
+		[3] [32 -> 96][AVAILABLE]
+		[4] [128 -> 64][AVAILABLE]
+		[5] [192 -> 16][AVAILABLE]
+		[6] [208 -> 32][AVAILABLE]
+	[52] PROCESS [0 - programV4-12] requests [90] memory positions
+	[52] Partition [3: 32-> 96] has been assigned to process [0 - programV4-15]
+	[52] Main memory state (after allocating memory):
+		[0] [0 -> 4][3 - SystemIdleProcess]
+		[1] [4 -> 12][AVAILABLE]
+		[2] [16 -> 16][0 - programV4-12]
+		[3] [32 -> 96][0 - programV4-12]
+		[4] [128 -> 64][AVAILABLE]
+		[5] [192 -> 16][AVAILABLE]
+		[6] [208 -> 32][AVAILABLE]
+	[52] New process [0 - programV4-15] moving to the [NEW] state
+	[52] Process [0] created from program [programV4-15]
+	[52] Process [0 - programV4-15] moving from the [NEW] state to the [READY] state
+	[52] Main memory state (before allocating memory):
+		[0] [0 -> 4][3 - SystemIdleProcess]
+		[1] [4 -> 12][AVAILABLE]
+		[2] [16 -> 16][0 - programV4-15]
+		[3] [32 -> 96][0 - programV4-15]
+		[4] [128 -> 64][AVAILABLE]
+		[5] [192 -> 16][AVAILABLE]
+		[6] [208 -> 32][AVAILABLE]
+	[52] PROCESS [1 - programV4-11] requests [90] memory positions
+	[52] ERROR: a process could not be created from program [programV4-15] because an appropriate partition is not available
+	[52] Running Process Information:
+		[PID: 3, Priority: 100, WakeUp: 0, Queue: DAEMONS]
+	[52] Ready-to-run processes queue:
+		USER:[0,300]
+		DAEMONS:
+	[52] SLEEPING Queue:
+		[--- empty queue ---]
+	[52] PID association with program's name:
+		PID: 0 -> programV4-15
+		PID: 3 -> SystemIdleProcess
+	[52] Process [3 - SystemIdleProcess] moving from the [EXECUTING] state to the [READY] state
+	[52] Process [0 - programV4-15] moving from the [READY] state to the [EXECUTING] state
+	[52] Running Process Information:
+		[PID: 0, Priority: 300, WakeUp: 0, Queue: USER]
+	[52] Ready-to-run processes queue:
+		USER:
+		DAEMONS:[3,100]
+	[52] SLEEPING Queue:
+		[--- empty queue ---]
+	[52] PID association with program's name:
+		PID: 0 -> programV4-15
+		PID: 3 -> SystemIdleProcess
+	[52] Process [3 - SystemIdleProcess] is thrown out of the processor by process [0 - programV4-15]
+[53] {79 000 000} y 0 0 (PID: 0, PC: 0, Accumulator: 0, PSW: 0002 [--------------Z-])
+[54] {74 003 000} t 3 0 (PID: 0, PC: 1, Accumulator: 0, PSW: 0002 [--------------Z-])
+[55] {6F 002 000} o 2 0 (PID: 0, PC: 241, Accumulator: 0, PSW: 8082 [M-------X-----Z-])
+	[56] Process [0 - programV4-15] has requested to terminate
+	[56] Process [0 - programV4-15] moving from the [EXECUTING] state to the [EXIT] state
+	[56] Main memory state (before releasing memory):
+		[0] [0 -> 4][3 - SystemIdleProcess]
+		[1] [4 -> 12][AVAILABLE]
+		[2] [16 -> 16][0 - programV4-15]
+		[3] [32 -> 96][0 - programV4-15]
+		[4] [128 -> 64][AVAILABLE]
+		[5] [192 -> 16][AVAILABLE]
+		[6] [208 -> 32][AVAILABLE]
+	[56] Partition [2: 16-> 16] used by process [0 - programV4-15] has been released
+	[56] Main memory state (after releasing memory):
+		[0] [0 -> 4][3 - SystemIdleProcess]
+		[1] [4 -> 12][AVAILABLE]
+		[2] [16 -> 16][AVAILABLE]
+		[3] [32 -> 96][0 - programV4-15]
+		[4] [128 -> 64][AVAILABLE]
+		[5] [192 -> 16][AVAILABLE]
+		[6] [208 -> 32][AVAILABLE]
+	[56] Process [3 - SystemIdleProcess] moving from the [READY] state to the [EXECUTING] state
+	[56] Running Process Information:
+		[PID: 3, Priority: 100, WakeUp: 0, Queue: DAEMONS]
+	[56] Ready-to-run processes queue:
+		USER:
+		DAEMONS:
+	[56] SLEEPING Queue:
+		[--- empty queue ---]
+	[56] PID association with program's name:
+		PID: 0 -> programV4-15
+		PID: 3 -> SystemIdleProcess
+[57] {79 000 000} y 0 0 (PID: 3, PC: 2, Accumulator: 1819, PSW: 0080 [--------X-------])
+[58] {6F 009 000} o 9 0 (PID: 3, PC: 245, Accumulator: 1819, PSW: 8080 [M-------X-------])
+	[59] Clock interrupt number [11] has occurred
+[60] {79 000 000} y 0 0 (PID: 3, PC: 3, Accumulator: 1819, PSW: 0080 [--------X-------])
+[61] {6F 009 000} o 9 0 (PID: 3, PC: 245, Accumulator: 1819, PSW: 8080 [M-------X-------])
+	[62] Clock interrupt number [12] has occurred
+[63] {79 000 000} y 0 0 (PID: 3, PC: 3, Accumulator: 1819, PSW: 0080 [--------X-------])
+[64] {68 000 000} h 0 0 (PID: 3, PC: 3, Accumulator: 1819, PSW: 0081 [--------X------S])
+[64] END of the simulation

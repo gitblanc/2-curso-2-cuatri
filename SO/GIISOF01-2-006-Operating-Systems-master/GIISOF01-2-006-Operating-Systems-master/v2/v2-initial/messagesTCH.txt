@@ -1,0 +1,39 @@
+// Processor messages
+1,{%s}
+2,_ _ _\n
+3, %c %d %d (PC: @R%d@@, Accumulator: @R%d@@, PSW: @R%x@@ [@R%s@@])\n
+
+
+// OperatingSystem messages
+21,@RERROR: Missing SIP program!@@\n
+22,@GProcess [%d] created from program [%s]@@\n
+23,@RProcess [%d - %s] has generated an exception and is terminating@@\n
+24,@RProcess [%d - %s] has the processor assigned@@\n
+25,@RProcess [%d - %s] has requested to terminate@@\n
+
+// Power On messages
+80,Illegal Message Number in line @R%d@@ of file @R%s@@\n
+81,Illegal Message Format in line @R%d@@ of file @R%s@@\n
+82,Verbose messages [@R%s@@] unavailable\n
+
+// Assert system messages
+84,Asserts file unavailable\n
+85,@R%@@d Asserts Loaded\n
+86,Warning maximun number of asserts reached !!!  (@R%d@@)\n
+87,Illegal Assert in line @R%d@@ of file @R%s@@\n
+88,Illegal time format in line @R%d@@ of file @R%s@@\n
+89,Illegal address format in line @R%d@@ of file @R%s@@\n
+90,@RAssert failed. Time:@@ %d@R; Element:@@ %s;
+91,@R Expected:@@ %c@R; Real:@@ %c
+92,@R Expected:@@ %d@R; Real:@@ %d
+93,@R; Memory address:@@ %d
+
+// Time
+97,New Tick (%d)\n
+
+// Formating and generic messages
+98,%s
+
+//  ComputerSystem messages
+99,@REND of the simulation@@\n
+

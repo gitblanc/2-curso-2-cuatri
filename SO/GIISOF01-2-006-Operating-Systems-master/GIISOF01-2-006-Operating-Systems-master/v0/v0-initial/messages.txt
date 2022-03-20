@@ -1,0 +1,2 @@
+1,%c %d %d [%s] 
+3,(PC: @R%d@@, Accumulator: @R%d@@ [%x])\n

@@ -1,0 +1,80 @@
+#!/bin/bash
+
+echo "4
+12
+16
+96
+64
+16
+32" > memConfig
+
+echo "32
+5
+ADD 10 0
+TRAP 7
+INC -1
+ZJUMP 2
+JUMP -3
+INC 1
+ZJUMP 2
+JUMP 85
+TRAP 3
+" > daemon1
+
+echo "32
+5
+ADD -10 0
+TRAP 7
+INC 1
+ZJUMP 2
+JUMP -3
+TRAP 23
+" > daemon2
+
+echo "32
+2
+TRAP 4
+READ 32
+WRITE 209
+WRITE 129
+ADD 10 1
+TRAP 7
+INC -1
+ZJUMP 2
+JUMP -3
+INC 1
+ZJUMP 2
+JUMP -44
+TRAP 3
+" > daemon3
+
+echo "daemon1,10
+daemon2,11
+daemon3,12" > teachersDaemons
+
+echo "30
+5
+NOP
+ADD 10 -13
+WRITE 15
+HALT
+" > programVerySimpleTest
+
+make clean; make
+
+if [ -x Simulator ]; then
+	echo
+	echo "Running: ./Simulator a programVerySimpleTest 100 "
+	echo "output saved in \"OutputForV4.log\""
+	./Simulator a programVerySimpleTest 100 2>&1 | head -n 3000 > OutputForV4.log
+	echo
+	echo "Calculating diferences and sending to \"diferences\" file..."
+	diff TeacherOutputForV4.log OutputForV4.log | tee diferences
+	echo
+	echo "Diferences are in \"diferences\" file..."
+
+else 
+	echo "Don't compile !!!"
+fi
+
+make clean &>/dev/null

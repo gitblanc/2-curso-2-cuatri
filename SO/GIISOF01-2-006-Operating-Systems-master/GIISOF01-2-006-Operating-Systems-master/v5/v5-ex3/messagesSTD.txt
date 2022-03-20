@@ -1,0 +1,51 @@
+// Students created messages
+// Format: numberOfMessage,textPrintfFormatedWithColourCodes
+//
+// numbers of messages greather than 100 for students
+//
+
+101,User program list:\n
+102,\t Program [@C%s@@] with arrival time [@C%d@@]\n
+103,@RERROR: There are not free entries in the process table for the program [%s]@@\n
+104,@RERROR: Program [%s] is not valid [--- %s ---]@@\n
+105,@RERROR: Program [%s] is too big@@\n
+106,Ready-to-run processes queue:\n
+107,[@G%d@@,%d]%s
+
+// Exercise 10
+110,Process [@G%d - %s@@] moving from the [@G%s@@] state to the [@G%s@@] state\n
+111,New process [@G%d - %s@@] moving to the [@G%s@@] state\n
+
+// Exercise 11
+112,\t\t%s:
+113,\n
+
+// Exercise 12
+115,Process [@G%d  %s@@] will transfer the control of the processor to process [@G%d  %s@@]\n
+
+// v2-ex4
+120,@CClock interrupt number [%d] has occurred\n@@
+
+// v2-ex6
+121,Process [@G%d - %s@@] is thrown out of the processor by process [@G%d - %s@@]\n
+
+//v3-ex1
+130, %c %d %d (PID: @G%d@@, PC: @R%d@@, Accumulator: @R%d@@, PSW: @R%x@@ [@R%s@@])\n
+
+//v4-ex2
+140,Process [@G%d - %s@@] has caused an exception (@R%s@@) and is being terminated\n
+
+//v4-ex4
+141,Process [@G%d - %s@@] has made an invalid system call (@R%d@@) and is being terminated\n
+
+//v4-ex6
+142,PROCESS [@G%d - %s@@] requests [@G%d@@] memory positions\n
+
+//v4-ex6
+143,Partition [@G%d: %d-> %d@@] has been assigned to process [@G%d - %s@@]\n
+
+//v4-ex6
+144,@RERROR: a process could not be created from program [%s] because an appropriate partition is not available@@\n
+
+//v4-ex7
+145,Partition [@G%d: %d-> %d@@] used by process [@G%d - %s@@] has been released\n

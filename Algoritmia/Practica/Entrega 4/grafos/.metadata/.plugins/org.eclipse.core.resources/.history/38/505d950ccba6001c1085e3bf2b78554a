@@ -1,0 +1,36 @@
+/**
+ * 
+ */
+package grafos;
+
+import java.io.BufferedReader;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.IOException;
+import java.util.List;
+
+/**
+ * @author UO285176
+ *
+ */
+public class FileUtil {
+
+	public static void loadFileCliente(String nombreFicheroEntrada, List<String> colores) {
+
+		String linea;
+		String[] datosCliente = null;
+
+		try {
+			BufferedReader fichero = new BufferedReader(new FileReader(nombreFicheroEntrada));
+			while (fichero.ready()) {
+				linea = fichero.readLine();
+				colores.add(linea);
+			}
+			fichero.close();
+		} catch (FileNotFoundException fnfe) {
+			System.out.println("El archivo no se ha encontrado.");
+		} catch (IOException ioe) {
+			new RuntimeException("Error de entrada/salida.");
+		}
+	}
+}

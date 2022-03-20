@@ -1,0 +1,27 @@
+/**
+ * 
+ */
+package grafos;
+
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+
+/**
+ * @author UO285176
+ *
+ */
+public class ColoracionMapa {
+	private HashMap<String, ArrayList<String>> paises;//num paises-> tamaño del problema
+	private HashMap<String, String> solucion;
+	private List<String> colores;
+	
+	public ColoracionMapa() {
+		sacarColores();
+		sacarPaisesYFronteras();
+	}
+
+	private void sacarColores() {
+		FileUtil.readColors("/datos/colores.txt", this.colores);
+	}
+}

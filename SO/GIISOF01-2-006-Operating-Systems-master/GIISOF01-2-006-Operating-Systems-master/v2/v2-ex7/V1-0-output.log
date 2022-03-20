@@ -1,0 +1,17 @@
+26 Messages Loaded
+Asserts file unavailable
+ User program list:
+Process [0] created from program [SystemIdleProcess]
+Process [1] created from program [programVerySimple]
+Process [2] created from program [programVerySimple]
+New Tick (1)
+{79 000 000} y 0 0 (PC: 0, Accumulator: 0, PSW: 0002 [--------------Z-])
+New Tick (2)
+{6E 000 000} n 0 0 (PC: 1, Accumulator: 0, PSW: 0002 [--------------Z-])
+New Tick (3)
+{61 00A 80D} a 10 -13 (PC: 2, Accumulator: -3, PSW: 0004 [-------------N--])
+New Tick (4)
+{77 00F 000} w 15 0 (PC: 3, Accumulator: -3, PSW: 0004 [-------------N--])
+New Tick (5)
+{68 000 000} h 0 0 (PC: 3, Accumulator: -3, PSW: 0005 [-------------N-S])
+END of the simulation

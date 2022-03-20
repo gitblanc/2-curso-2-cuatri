@@ -1,12 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "4SQc7JD9CL2m8UXqBNjAtbLD6ohc8Ce6pKIWp2/mzYE2q48Opn+iIoXAAmyxMbvO7ZaN/UjNXlCuBaKI8zHA4w==",
+  "dgSpecHash": "e2SR1yHeJKnH0JhIUPHtANMYNMHeBPQo3eYuH750hWP0S6TEjON2tsFdZHX/ctoFtmWeALqGKiz0mxhD3GEQSA==",
   "success": true,
-  "projectFilePath": "/Users/blanc/Documents/2-curso-2-cuatri/TPP/Practicas/theory.examples/theory.examples/examples/functional/pattern.matching/pattern.matching/pattern.matching.csproj",
+  "projectFilePath": "C:\\Users\\blanc\\OneDrive\\Documentos\\2-curso-2-cuatri\\TPP\\Practicas\\theory.examples\\theory.examples\\examples\\functional\\pattern.matching\\pattern.matching\\pattern.matching.csproj",
   "expectedPackageFiles": [
-    "/Users/blanc/.nuget/packages/microsoft.csharp/4.7.0/microsoft.csharp.4.7.0.nupkg.sha512",
-    "/Users/blanc/.nuget/packages/system.data.datasetextensions/4.5.0/system.data.datasetextensions.4.5.0.nupkg.sha512",
-    "/Users/blanc/.nuget/packages/microsoft.netcore.app.host.osx-x64/3.1.22/microsoft.netcore.app.host.osx-x64.3.1.22.nupkg.sha512"
+    "C:\\Users\\blanc\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
+    "C:\\Users\\blanc\\.nuget\\packages\\system.data.datasetextensions\\4.5.0\\system.data.datasetextensions.4.5.0.nupkg.sha512",
+    "C:\\Users\\blanc\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\3.1.22\\microsoft.netcore.app.host.win-x64.3.1.22.nupkg.sha512"
   ],
   "logs": []
 }

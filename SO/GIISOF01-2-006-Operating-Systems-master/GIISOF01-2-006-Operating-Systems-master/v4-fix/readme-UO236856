@@ -1,0 +1,16 @@
+Facundo Colunga, Guillermo
+UO236856
+Test 1
+./Simulator programVerySimple programVerySimple 10
+  Testing the arrival time functionality still works.
+  4 12 16 96 64 16 32
+
+Test 2
+./Simulator a programV4-11 20 programV4-12 20 programV4-13 20 programV4-16 0 programV4-14 10 programV4-15 50 programV4-15 50
+  Testing different arrival times for programs with a given memory configuration.
+  Some of the programs, like 16 should not be created.
+  4 12 16 96 64 16 32
+
+Test 3
+./script-V4-teacher-test
+  Testing the simulator against the teacher's script.

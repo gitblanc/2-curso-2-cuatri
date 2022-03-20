@@ -1,0 +1,5 @@
+30
+5
+NOP
+TRAP 1
+HALT

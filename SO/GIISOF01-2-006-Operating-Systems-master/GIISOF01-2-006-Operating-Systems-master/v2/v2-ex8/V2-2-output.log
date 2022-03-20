@@ -1,0 +1,1000 @@
+47 Messages Loaded
+[0] User program list:
+	 Program [programV2-fa] with arrival time [0]
+	 Program [iDontExist] with arrival time [0]
+	 Program [programV2-fb] with arrival time [0]
+	 Program [programV2-fc] with arrival time [0]
+[0] Asserts file unavailable
+	[0] New process [3 - SystemIdleProcess] moving to the [NEW] state.
+	[0] Process [3] created from program [SystemIdleProcess]
+	[0] Process [3 - SystemIdleProcess] moving from the [NEW] state to the [READY] state.
+	[0] New process [0 - programV2-fa] moving to the [NEW] state.
+	[0] Process [0] created from program [programV2-fa]
+	[0] Process [0 - programV2-fa] moving from the [NEW] state to the [READY] state.
+	[0] ERROR: Program [iDontExist] is not valid [--- it does not exists ---]
+	[0] New process [1 - programV2-fb] moving to the [NEW] state.
+	[0] Process [1] created from program [programV2-fb]
+	[0] Process [1 - programV2-fb] moving from the [NEW] state to the [READY] state.
+	[0] New process [2 - programV2-fc] moving to the [NEW] state.
+	[0] Process [2] created from program [programV2-fc]
+	[0] Process [2 - programV2-fc] moving from the [NEW] state to the [READY] state.
+	[0] Running Process Information:
+		[--- No running process ---]
+	[0] Ready-to-run processes queue:
+		USER:[1,999], [0,5], [2,5]
+		DAEMONS:[3,100]
+	[0] SLEEPING Queue:
+		[--- empty queue ---]
+	[0] PID association with program's name:
+		PID: 0 -> programV2-fa
+		PID: 1 -> programV2-fb
+		PID: 2 -> programV2-fc
+		PID: 3 -> SystemIdleProcess
+	[0] Process [1 - programV2-fb] moving from the [READY] state to the [EXECUTING] state.
+[1] {79 000 000} y 0 0 (PC: 0, Accumulator: 0, PSW: 0002 [--------------Z-])
+[2] {61 002 000} a 2 0 (PC: 1, Accumulator: 2, PSW: 0000 [----------------])
+[3] {69 801 000} i -1 0 (PC: 2, Accumulator: 1, PSW: 0000 [----------------])
+[4] {7A 002 000} z 2 0 (PC: 3, Accumulator: 1, PSW: 0000 [----------------])
+[5] {6A 802 000} j -2 0 (PC: 1, Accumulator: 1, PSW: 0000 [----------------])
+[6] {6F 009 000} o 9 0 (PC: 245, Accumulator: 1, PSW: 8080 [M-------X-------])
+	[7] Clock interrupt number [1] has occurred
+[8] {79 000 000} y 0 0 (PC: 1, Accumulator: 1, PSW: 0000 [----------------])
+[9] {69 801 000} i -1 0 (PC: 2, Accumulator: 0, PSW: 0002 [--------------Z-])
+[10] {7A 002 000} z 2 0 (PC: 4, Accumulator: 0, PSW: 0002 [--------------Z-])
+[11] {6F 009 000} o 9 0 (PC: 245, Accumulator: 0, PSW: 8082 [M-------X-----Z-])
+	[12] Clock interrupt number [2] has occurred
+[13] {79 000 000} y 0 0 (PC: 4, Accumulator: 0, PSW: 0002 [--------------Z-])
+[14] {69 001 000} i 1 0 (PC: 5, Accumulator: 1, PSW: 0000 [----------------])
+[15] {74 007 000} t 7 0 (PC: 6, Accumulator: 1, PSW: 0000 [----------------])
+[16] {6F 002 000} o 2 0 (PC: 241, Accumulator: 1, PSW: 8080 [M-------X-------])
+	[17] Process [0 - programV2-fa] moving from the [READY] state to the [EXECUTING] state.
+	[17] Running Process Information:
+		[PID: 0, Priority: 5, WakeUp: 0, Queue: USER]
+	[17] Ready-to-run processes queue:
+		USER:[2,5]
+		DAEMONS:[3,100]
+	[17] SLEEPING Queue:
+		[1, 999, 4]
+	[17] PID association with program's name:
+		PID: 0 -> programV2-fa
+		PID: 1 -> programV2-fb
+		PID: 2 -> programV2-fc
+		PID: 3 -> SystemIdleProcess
+[18] {79 000 000} y 0 0 (PC: 0, Accumulator: 0, PSW: 0002 [--------------Z-])
+[19] {6F 009 000} o 9 0 (PC: 245, Accumulator: 0, PSW: 8082 [M-------X-----Z-])
+	[20] Clock interrupt number [3] has occurred
+[21] {79 000 000} y 0 0 (PC: 0, Accumulator: 0, PSW: 0002 [--------------Z-])
+[22] {6F 009 000} o 9 0 (PC: 245, Accumulator: 0, PSW: 8082 [M-------X-----Z-])
+	[23] Process [1 - programV2-fb] moving from the [BLOCKED] state to the [READY] state.
+	[23] Process [0 - programV2-fa] moving from the [EXECUTING] state to the [READY] state.
+	[23] Process [1 - programV2-fb] moving from the [READY] state to the [EXECUTING] state.
+	[23] Running Process Information:
+		[PID: 1, Priority: 999, WakeUp: 4, Queue: USER]
+	[23] Ready-to-run processes queue:
+		USER:[0,5], [2,5]
+		DAEMONS:[3,100]
+	[23] SLEEPING Queue:
+		[--- empty queue ---]
+	[23] PID association with program's name:
+		PID: 0 -> programV2-fa
+		PID: 1 -> programV2-fb
+		PID: 2 -> programV2-fc
+		PID: 3 -> SystemIdleProcess
+	[23] Process [0 - programV2-fa] is thrown out of the processor by process [1 - programV2-fb]
+	[23] Clock interrupt number [4] has occurred
+[24] {79 000 000} y 0 0 (PC: 6, Accumulator: 1, PSW: 0000 [----------------])
+[25] {68 000 000} h 0 0 (PC: 6, Accumulator: 1, PSW: 0000 [----------------])
+[26] {6F 006 000} o 6 0 (PC: 243, Accumulator: 1, PSW: 8080 [M-------X-------])
+	[27] Process [1 - programV2-fb] has generated an exception and is terminating
+	[27] Process [1 - programV2-fb] moving from the [EXECUTING] state to the [EXIT] state.
+	[27] Process [0 - programV2-fa] moving from the [READY] state to the [EXECUTING] state.
+	[27] Running Process Information:
+		[PID: 0, Priority: 5, WakeUp: 0, Queue: USER]
+	[27] Ready-to-run processes queue:
+		USER:[2,5]
+		DAEMONS:[3,100]
+	[27] SLEEPING Queue:
+		[--- empty queue ---]
+	[27] PID association with program's name:
+		PID: 0 -> programV2-fa
+		PID: 1 -> programV2-fb
+		PID: 2 -> programV2-fc
+		PID: 3 -> SystemIdleProcess
+[28] {79 000 000} y 0 0 (PC: 0, Accumulator: 0, PSW: 0002 [--------------Z-])
+[29] {6F 009 000} o 9 0 (PC: 245, Accumulator: 0, PSW: 8082 [M-------X-----Z-])
+	[30] Clock interrupt number [5] has occurred
+[31] {79 000 000} y 0 0 (PC: 0, Accumulator: 0, PSW: 0002 [--------------Z-])
+[32] {6F 009 000} o 9 0 (PC: 245, Accumulator: 0, PSW: 8082 [M-------X-----Z-])
+	[33] Clock interrupt number [6] has occurred
+[34] {79 000 000} y 0 0 (PC: 0, Accumulator: 0, PSW: 0002 [--------------Z-])
+[35] {6E 000 000} n 0 0 (PC: 1, Accumulator: 0, PSW: 0002 [--------------Z-])
+[36] {6F 009 000} o 9 0 (PC: 245, Accumulator: 0, PSW: 8082 [M-------X-----Z-])
+	[37] Clock interrupt number [7] has occurred
+[38] {79 000 000} y 0 0 (PC: 1, Accumulator: 0, PSW: 0002 [--------------Z-])
+[39] {61 005 000} a 5 0 (PC: 2, Accumulator: 5, PSW: 0000 [----------------])
+[40] {74 007 000} t 7 0 (PC: 3, Accumulator: 5, PSW: 0000 [----------------])
+[41] {6F 002 000} o 2 0 (PC: 241, Accumulator: 5, PSW: 8080 [M-------X-------])
+	[42] Process [2 - programV2-fc] moving from the [READY] state to the [EXECUTING] state.
+	[42] Running Process Information:
+		[PID: 2, Priority: 5, WakeUp: 0, Queue: USER]
+	[42] Ready-to-run processes queue:
+		USER:
+		DAEMONS:[3,100]
+	[42] SLEEPING Queue:
+		[0, 5, 13]
+	[42] PID association with program's name:
+		PID: 0 -> programV2-fa
+		PID: 1 -> programV2-fb
+		PID: 2 -> programV2-fc
+		PID: 3 -> SystemIdleProcess
+[43] {79 000 000} y 0 0 (PC: 0, Accumulator: 0, PSW: 0002 [--------------Z-])
+[44] {6F 009 000} o 9 0 (PC: 245, Accumulator: 0, PSW: 8082 [M-------X-----Z-])
+	[45] Clock interrupt number [8] has occurred
+[46] {79 000 000} y 0 0 (PC: 0, Accumulator: 0, PSW: 0002 [--------------Z-])
+[47] {6F 009 000} o 9 0 (PC: 245, Accumulator: 0, PSW: 8082 [M-------X-----Z-])
+	[48] Clock interrupt number [9] has occurred
+[49] {79 000 000} y 0 0 (PC: 0, Accumulator: 0, PSW: 0002 [--------------Z-])
+[50] {6E 000 000} n 0 0 (PC: 1, Accumulator: 0, PSW: 0002 [--------------Z-])
+[51] {6F 009 000} o 9 0 (PC: 245, Accumulator: 0, PSW: 8082 [M-------X-----Z-])
+	[52] Clock interrupt number [10] has occurred
+[53] {79 000 000} y 0 0 (PC: 1, Accumulator: 0, PSW: 0002 [--------------Z-])
+[54] {61 002 000} a 2 0 (PC: 2, Accumulator: 2, PSW: 0000 [----------------])
+[55] {74 007 000} t 7 0 (PC: 3, Accumulator: 2, PSW: 0000 [----------------])
+[56] {6F 002 000} o 2 0 (PC: 241, Accumulator: 2, PSW: 8080 [M-------X-------])
+	[57] Process [3 - SystemIdleProcess] moving from the [READY] state to the [EXECUTING] state.
+	[57] Running Process Information:
+		[PID: 3, Priority: 100, WakeUp: 0, Queue: DAEMONS]
+	[57] Ready-to-run processes queue:
+		USER:
+		DAEMONS:
+	[57] SLEEPING Queue:
+		[0, 5, 13], [2, 5, 13]
+	[57] PID association with program's name:
+		PID: 0 -> programV2-fa
+		PID: 1 -> programV2-fb
+		PID: 2 -> programV2-fc
+		PID: 3 -> SystemIdleProcess
+[58] {79 000 000} y 0 0 (PC: 180, Accumulator: 0, PSW: 0082 [--------X-----Z-])
+[59] {6F 009 000} o 9 0 (PC: 245, Accumulator: 0, PSW: 8082 [M-------X-----Z-])
+	[60] Clock interrupt number [11] has occurred
+[61] {79 000 000} y 0 0 (PC: 180, Accumulator: 0, PSW: 0082 [--------X-----Z-])
+[62] {6F 009 000} o 9 0 (PC: 245, Accumulator: 0, PSW: 8082 [M-------X-----Z-])
+	[63] Clock interrupt number [12] has occurred
+[64] {79 000 000} y 0 0 (PC: 180, Accumulator: 0, PSW: 0082 [--------X-----Z-])
+[65] {61 516 205} a 1302 517 (PC: 181, Accumulator: 1819, PSW: 0080 [--------X-------])
+[66] {6F 009 000} o 9 0 (PC: 245, Accumulator: 1819, PSW: 8080 [M-------X-------])
+	[67] Process [0 - programV2-fa] moving from the [BLOCKED] state to the [READY] state.
+	[67] Running Process Information:
+		[PID: 3, Priority: 100, WakeUp: 0, Queue: DAEMONS]
+	[67] Ready-to-run processes queue:
+		USER:[0,5]
+		DAEMONS:
+	[67] SLEEPING Queue:
+		[2, 5, 13]
+	[67] PID association with program's name:
+		PID: 0 -> programV2-fa
+		PID: 1 -> programV2-fb
+		PID: 2 -> programV2-fc
+		PID: 3 -> SystemIdleProcess
+	[67] Process [3 - SystemIdleProcess] is thrown out of the processor by process [3 - SystemIdleProcess]
+	[67] Clock interrupt number [13] has occurred
+[68] {79 000 000} y 0 0 (PC: 181, Accumulator: 1819, PSW: 0080 [--------X-------])
+[69] {6E 000 000} n 0 0 (PC: 182, Accumulator: 1819, PSW: 0080 [--------X-------])
+[70] {6A 801 000} j -1 0 (PC: 181, Accumulator: 1819, PSW: 0080 [--------X-------])
+[71] {6F 009 000} o 9 0 (PC: 245, Accumulator: 1819, PSW: 8080 [M-------X-------])
+	[72] Clock interrupt number [14] has occurred
+[73] {79 000 000} y 0 0 (PC: 181, Accumulator: 1819, PSW: 0080 [--------X-------])
+[74] {6E 000 000} n 0 0 (PC: 182, Accumulator: 1819, PSW: 0080 [--------X-------])
+[75] {6A 801 000} j -1 0 (PC: 181, Accumulator: 1819, PSW: 0080 [--------X-------])
+[76] {6F 009 000} o 9 0 (PC: 245, Accumulator: 1819, PSW: 8080 [M-------X-------])
+	[77] Clock interrupt number [15] has occurred
+[78] {79 000 000} y 0 0 (PC: 181, Accumulator: 1819, PSW: 0080 [--------X-------])
+[79] {6E 000 000} n 0 0 (PC: 182, Accumulator: 1819, PSW: 0080 [--------X-------])
+[80] {6A 801 000} j -1 0 (PC: 181, Accumulator: 1819, PSW: 0080 [--------X-------])
+[81] {6F 009 000} o 9 0 (PC: 245, Accumulator: 1819, PSW: 8080 [M-------X-------])
+	[82] Clock interrupt number [16] has occurred
+[83] {79 000 000} y 0 0 (PC: 181, Accumulator: 1819, PSW: 0080 [--------X-------])
+[84] {6E 000 000} n 0 0 (PC: 182, Accumulator: 1819, PSW: 0080 [--------X-------])
+[85] {6A 801 000} j -1 0 (PC: 181, Accumulator: 1819, PSW: 0080 [--------X-------])
+[86] {6F 009 000} o 9 0 (PC: 245, Accumulator: 1819, PSW: 8080 [M-------X-------])
+	[87] Clock interrupt number [17] has occurred
+[88] {79 000 000} y 0 0 (PC: 181, Accumulator: 1819, PSW: 0080 [--------X-------])
+[89] {6E 000 000} n 0 0 (PC: 182, Accumulator: 1819, PSW: 0080 [--------X-------])
+[90] {6A 801 000} j -1 0 (PC: 181, Accumulator: 1819, PSW: 0080 [--------X-------])
+[91] {6F 009 000} o 9 0 (PC: 245, Accumulator: 1819, PSW: 8080 [M-------X-------])
+	[92] Clock interrupt number [18] has occurred
+[93] {79 000 000} y 0 0 (PC: 181, Accumulator: 1819, PSW: 0080 [--------X-------])
+[94] {6E 000 000} n 0 0 (PC: 182, Accumulator: 1819, PSW: 0080 [--------X-------])
+[95] {6A 801 000} j -1 0 (PC: 181, Accumulator: 1819, PSW: 0080 [--------X-------])
+[96] {6F 009 000} o 9 0 (PC: 245, Accumulator: 1819, PSW: 8080 [M-------X-------])
+	[97] Clock interrupt number [19] has occurred
+[98] {79 000 000} y 0 0 (PC: 181, Accumulator: 1819, PSW: 0080 [--------X-------])
+[99] {6E 000 000} n 0 0 (PC: 182, Accumulator: 1819, PSW: 0080 [--------X-------])
+[100] {6A 801 000} j -1 0 (PC: 181, Accumulator: 1819, PSW: 0080 [--------X-------])
+[101] {6F 009 000} o 9 0 (PC: 245, Accumulator: 1819, PSW: 8080 [M-------X-------])
+	[102] Clock interrupt number [20] has occurred
+[103] {79 000 000} y 0 0 (PC: 181, Accumulator: 1819, PSW: 0080 [--------X-------])
+[104] {6E 000 000} n 0 0 (PC: 182, Accumulator: 1819, PSW: 0080 [--------X-------])
+[105] {6A 801 000} j -1 0 (PC: 181, Accumulator: 1819, PSW: 0080 [--------X-------])
+[106] {6F 009 000} o 9 0 (PC: 245, Accumulator: 1819, PSW: 8080 [M-------X-------])
+	[107] Clock interrupt number [21] has occurred
+[108] {79 000 000} y 0 0 (PC: 181, Accumulator: 1819, PSW: 0080 [--------X-------])
+[109] {6E 000 000} n 0 0 (PC: 182, Accumulator: 1819, PSW: 0080 [--------X-------])
+[110] {6A 801 000} j -1 0 (PC: 181, Accumulator: 1819, PSW: 0080 [--------X-------])
+[111] {6F 009 000} o 9 0 (PC: 245, Accumulator: 1819, PSW: 8080 [M-------X-------])
+	[112] Clock interrupt number [22] has occurred
+[113] {79 000 000} y 0 0 (PC: 181, Accumulator: 1819, PSW: 0080 [--------X-------])
+[114] {6E 000 000} n 0 0 (PC: 182, Accumulator: 1819, PSW: 0080 [--------X-------])
+[115] {6A 801 000} j -1 0 (PC: 181, Accumulator: 1819, PSW: 0080 [--------X-------])
+[116] {6F 009 000} o 9 0 (PC: 245, Accumulator: 1819, PSW: 8080 [M-------X-------])
+	[117] Clock interrupt number [23] has occurred
+[118] {79 000 000} y 0 0 (PC: 181, Accumulator: 1819, PSW: 0080 [--------X-------])
+[119] {6E 000 000} n 0 0 (PC: 182, Accumulator: 1819, PSW: 0080 [--------X-------])
+[120] {6A 801 000} j -1 0 (PC: 181, Accumulator: 1819, PSW: 0080 [--------X-------])
+[121] {6F 009 000} o 9 0 (PC: 245, Accumulator: 1819, PSW: 8080 [M-------X-------])
+	[122] Clock interrupt number [24] has occurred
+[123] {79 000 000} y 0 0 (PC: 181, Accumulator: 1819, PSW: 0080 [--------X-------])
+[124] {6E 000 000} n 0 0 (PC: 182, Accumulator: 1819, PSW: 0080 [--------X-------])
+[125] {6A 801 000} j -1 0 (PC: 181, Accumulator: 1819, PSW: 0080 [--------X-------])
+[126] {6F 009 000} o 9 0 (PC: 245, Accumulator: 1819, PSW: 8080 [M-------X-------])
+	[127] Clock interrupt number [25] has occurred
+[128] {79 000 000} y 0 0 (PC: 181, Accumulator: 1819, PSW: 0080 [--------X-------])
+[129] {6E 000 000} n 0 0 (PC: 182, Accumulator: 1819, PSW: 0080 [--------X-------])
+[130] {6A 801 000} j -1 0 (PC: 181, Accumulator: 1819, PSW: 0080 [--------X-------])
+[131] {6F 009 000} o 9 0 (PC: 245, Accumulator: 1819, PSW: 8080 [M-------X-------])
+	[132] Clock interrupt number [26] has occurred
+[133] {79 000 000} y 0 0 (PC: 181, Accumulator: 1819, PSW: 0080 [--------X-------])
+[134] {6E 000 000} n 0 0 (PC: 182, Accumulator: 1819, PSW: 0080 [--------X-------])
+[135] {6A 801 000} j -1 0 (PC: 181, Accumulator: 1819, PSW: 0080 [--------X-------])
+[136] {6F 009 000} o 9 0 (PC: 245, Accumulator: 1819, PSW: 8080 [M-------X-------])
+	[137] Clock interrupt number [27] has occurred
+[138] {79 000 000} y 0 0 (PC: 181, Accumulator: 1819, PSW: 0080 [--------X-------])
+[139] {6E 000 000} n 0 0 (PC: 182, Accumulator: 1819, PSW: 0080 [--------X-------])
+[140] {6A 801 000} j -1 0 (PC: 181, Accumulator: 1819, PSW: 0080 [--------X-------])
+[141] {6F 009 000} o 9 0 (PC: 245, Accumulator: 1819, PSW: 8080 [M-------X-------])
+	[142] Clock interrupt number [28] has occurred
+[143] {79 000 000} y 0 0 (PC: 181, Accumulator: 1819, PSW: 0080 [--------X-------])
+[144] {6E 000 000} n 0 0 (PC: 182, Accumulator: 1819, PSW: 0080 [--------X-------])
+[145] {6A 801 000} j -1 0 (PC: 181, Accumulator: 1819, PSW: 0080 [--------X-------])
+[146] {6F 009 000} o 9 0 (PC: 245, Accumulator: 1819, PSW: 8080 [M-------X-------])
+	[147] Clock interrupt number [29] has occurred
+[148] {79 000 000} y 0 0 (PC: 181, Accumulator: 1819, PSW: 0080 [--------X-------])
+[149] {6E 000 000} n 0 0 (PC: 182, Accumulator: 1819, PSW: 0080 [--------X-------])
+[150] {6A 801 000} j -1 0 (PC: 181, Accumulator: 1819, PSW: 0080 [--------X-------])
+[151] {6F 009 000} o 9 0 (PC: 245, Accumulator: 1819, PSW: 8080 [M-------X-------])
+	[152] Clock interrupt number [30] has occurred
+[153] {79 000 000} y 0 0 (PC: 181, Accumulator: 1819, PSW: 0080 [--------X-------])
+[154] {6E 000 000} n 0 0 (PC: 182, Accumulator: 1819, PSW: 0080 [--------X-------])
+[155] {6A 801 000} j -1 0 (PC: 181, Accumulator: 1819, PSW: 0080 [--------X-------])
+[156] {6F 009 000} o 9 0 (PC: 245, Accumulator: 1819, PSW: 8080 [M-------X-------])
+	[157] Clock interrupt number [31] has occurred
+[158] {79 000 000} y 0 0 (PC: 181, Accumulator: 1819, PSW: 0080 [--------X-------])
+[159] {6E 000 000} n 0 0 (PC: 182, Accumulator: 1819, PSW: 0080 [--------X-------])
+[160] {6A 801 000} j -1 0 (PC: 181, Accumulator: 1819, PSW: 0080 [--------X-------])
+[161] {6F 009 000} o 9 0 (PC: 245, Accumulator: 1819, PSW: 8080 [M-------X-------])
+	[162] Clock interrupt number [32] has occurred
+[163] {79 000 000} y 0 0 (PC: 181, Accumulator: 1819, PSW: 0080 [--------X-------])
+[164] {6E 000 000} n 0 0 (PC: 182, Accumulator: 1819, PSW: 0080 [--------X-------])
+[165] {6A 801 000} j -1 0 (PC: 181, Accumulator: 1819, PSW: 0080 [--------X-------])
+[166] {6F 009 000} o 9 0 (PC: 245, Accumulator: 1819, PSW: 8080 [M-------X-------])
+	[167] Clock interrupt number [33] has occurred
+[168] {79 000 000} y 0 0 (PC: 181, Accumulator: 1819, PSW: 0080 [--------X-------])
+[169] {6E 000 000} n 0 0 (PC: 182, Accumulator: 1819, PSW: 0080 [--------X-------])
+[170] {6A 801 000} j -1 0 (PC: 181, Accumulator: 1819, PSW: 0080 [--------X-------])
+[171] {6F 009 000} o 9 0 (PC: 245, Accumulator: 1819, PSW: 8080 [M-------X-------])
+	[172] Clock interrupt number [34] has occurred
+[173] {79 000 000} y 0 0 (PC: 181, Accumulator: 1819, PSW: 0080 [--------X-------])
+[174] {6E 000 000} n 0 0 (PC: 182, Accumulator: 1819, PSW: 0080 [--------X-------])
+[175] {6A 801 000} j -1 0 (PC: 181, Accumulator: 1819, PSW: 0080 [--------X-------])
+[176] {6F 009 000} o 9 0 (PC: 245, Accumulator: 1819, PSW: 8080 [M-------X-------])
+	[177] Clock interrupt number [35] has occurred
+[178] {79 000 000} y 0 0 (PC: 181, Accumulator: 1819, PSW: 0080 [--------X-------])
+[179] {6E 000 000} n 0 0 (PC: 182, Accumulator: 1819, PSW: 0080 [--------X-------])
+[180] {6A 801 000} j -1 0 (PC: 181, Accumulator: 1819, PSW: 0080 [--------X-------])
+[181] {6F 009 000} o 9 0 (PC: 245, Accumulator: 1819, PSW: 8080 [M-------X-------])
+	[182] Clock interrupt number [36] has occurred
+[183] {79 000 000} y 0 0 (PC: 181, Accumulator: 1819, PSW: 0080 [--------X-------])
+[184] {6E 000 000} n 0 0 (PC: 182, Accumulator: 1819, PSW: 0080 [--------X-------])
+[185] {6A 801 000} j -1 0 (PC: 181, Accumulator: 1819, PSW: 0080 [--------X-------])
+[186] {6F 009 000} o 9 0 (PC: 245, Accumulator: 1819, PSW: 8080 [M-------X-------])
+	[187] Clock interrupt number [37] has occurred
+[188] {79 000 000} y 0 0 (PC: 181, Accumulator: 1819, PSW: 0080 [--------X-------])
+[189] {6E 000 000} n 0 0 (PC: 182, Accumulator: 1819, PSW: 0080 [--------X-------])
+[190] {6A 801 000} j -1 0 (PC: 181, Accumulator: 1819, PSW: 0080 [--------X-------])
+[191] {6F 009 000} o 9 0 (PC: 245, Accumulator: 1819, PSW: 8080 [M-------X-------])
+	[192] Clock interrupt number [38] has occurred
+[193] {79 000 000} y 0 0 (PC: 181, Accumulator: 1819, PSW: 0080 [--------X-------])
+[194] {6E 000 000} n 0 0 (PC: 182, Accumulator: 1819, PSW: 0080 [--------X-------])
+[195] {6A 801 000} j -1 0 (PC: 181, Accumulator: 1819, PSW: 0080 [--------X-------])
+[196] {6F 009 000} o 9 0 (PC: 245, Accumulator: 1819, PSW: 8080 [M-------X-------])
+	[197] Clock interrupt number [39] has occurred
+[198] {79 000 000} y 0 0 (PC: 181, Accumulator: 1819, PSW: 0080 [--------X-------])
+[199] {6E 000 000} n 0 0 (PC: 182, Accumulator: 1819, PSW: 0080 [--------X-------])
+[200] {6A 801 000} j -1 0 (PC: 181, Accumulator: 1819, PSW: 0080 [--------X-------])
+[201] {6F 009 000} o 9 0 (PC: 245, Accumulator: 1819, PSW: 8080 [M-------X-------])
+	[202] Clock interrupt number [40] has occurred
+[203] {79 000 000} y 0 0 (PC: 181, Accumulator: 1819, PSW: 0080 [--------X-------])
+[204] {6E 000 000} n 0 0 (PC: 182, Accumulator: 1819, PSW: 0080 [--------X-------])
+[205] {6A 801 000} j -1 0 (PC: 181, Accumulator: 1819, PSW: 0080 [--------X-------])
+[206] {6F 009 000} o 9 0 (PC: 245, Accumulator: 1819, PSW: 8080 [M-------X-------])
+	[207] Clock interrupt number [41] has occurred
+[208] {79 000 000} y 0 0 (PC: 181, Accumulator: 1819, PSW: 0080 [--------X-------])
+[209] {6E 000 000} n 0 0 (PC: 182, Accumulator: 1819, PSW: 0080 [--------X-------])
+[210] {6A 801 000} j -1 0 (PC: 181, Accumulator: 1819, PSW: 0080 [--------X-------])
+[211] {6F 009 000} o 9 0 (PC: 245, Accumulator: 1819, PSW: 8080 [M-------X-------])
+	[212] Clock interrupt number [42] has occurred
+[213] {79 000 000} y 0 0 (PC: 181, Accumulator: 1819, PSW: 0080 [--------X-------])
+[214] {6E 000 000} n 0 0 (PC: 182, Accumulator: 1819, PSW: 0080 [--------X-------])
+[215] {6A 801 000} j -1 0 (PC: 181, Accumulator: 1819, PSW: 0080 [--------X-------])
+[216] {6F 009 000} o 9 0 (PC: 245, Accumulator: 1819, PSW: 8080 [M-------X-------])
+	[217] Clock interrupt number [43] has occurred
+[218] {79 000 000} y 0 0 (PC: 181, Accumulator: 1819, PSW: 0080 [--------X-------])
+[219] {6E 000 000} n 0 0 (PC: 182, Accumulator: 1819, PSW: 0080 [--------X-------])
+[220] {6A 801 000} j -1 0 (PC: 181, Accumulator: 1819, PSW: 0080 [--------X-------])
+[221] {6F 009 000} o 9 0 (PC: 245, Accumulator: 1819, PSW: 8080 [M-------X-------])
+	[222] Clock interrupt number [44] has occurred
+[223] {79 000 000} y 0 0 (PC: 181, Accumulator: 1819, PSW: 0080 [--------X-------])
+[224] {6E 000 000} n 0 0 (PC: 182, Accumulator: 1819, PSW: 0080 [--------X-------])
+[225] {6A 801 000} j -1 0 (PC: 181, Accumulator: 1819, PSW: 0080 [--------X-------])
+[226] {6F 009 000} o 9 0 (PC: 245, Accumulator: 1819, PSW: 8080 [M-------X-------])
+	[227] Clock interrupt number [45] has occurred
+[228] {79 000 000} y 0 0 (PC: 181, Accumulator: 1819, PSW: 0080 [--------X-------])
+[229] {6E 000 000} n 0 0 (PC: 182, Accumulator: 1819, PSW: 0080 [--------X-------])
+[230] {6A 801 000} j -1 0 (PC: 181, Accumulator: 1819, PSW: 0080 [--------X-------])
+[231] {6F 009 000} o 9 0 (PC: 245, Accumulator: 1819, PSW: 8080 [M-------X-------])
+	[232] Clock interrupt number [46] has occurred
+[233] {79 000 000} y 0 0 (PC: 181, Accumulator: 1819, PSW: 0080 [--------X-------])
+[234] {6E 000 000} n 0 0 (PC: 182, Accumulator: 1819, PSW: 0080 [--------X-------])
+[235] {6A 801 000} j -1 0 (PC: 181, Accumulator: 1819, PSW: 0080 [--------X-------])
+[236] {6F 009 000} o 9 0 (PC: 245, Accumulator: 1819, PSW: 8080 [M-------X-------])
+	[237] Clock interrupt number [47] has occurred
+[238] {79 000 000} y 0 0 (PC: 181, Accumulator: 1819, PSW: 0080 [--------X-------])
+[239] {6E 000 000} n 0 0 (PC: 182, Accumulator: 1819, PSW: 0080 [--------X-------])
+[240] {6A 801 000} j -1 0 (PC: 181, Accumulator: 1819, PSW: 0080 [--------X-------])
+[241] {6F 009 000} o 9 0 (PC: 245, Accumulator: 1819, PSW: 8080 [M-------X-------])
+	[242] Clock interrupt number [48] has occurred
+[243] {79 000 000} y 0 0 (PC: 181, Accumulator: 1819, PSW: 0080 [--------X-------])
+[244] {6E 000 000} n 0 0 (PC: 182, Accumulator: 1819, PSW: 0080 [--------X-------])
+[245] {6A 801 000} j -1 0 (PC: 181, Accumulator: 1819, PSW: 0080 [--------X-------])
+[246] {6F 009 000} o 9 0 (PC: 245, Accumulator: 1819, PSW: 8080 [M-------X-------])
+	[247] Clock interrupt number [49] has occurred
+[248] {79 000 000} y 0 0 (PC: 181, Accumulator: 1819, PSW: 0080 [--------X-------])
+[249] {6E 000 000} n 0 0 (PC: 182, Accumulator: 1819, PSW: 0080 [--------X-------])
+[250] {6A 801 000} j -1 0 (PC: 181, Accumulator: 1819, PSW: 0080 [--------X-------])
+[251] {6F 009 000} o 9 0 (PC: 245, Accumulator: 1819, PSW: 8080 [M-------X-------])
+	[252] Clock interrupt number [50] has occurred
+[253] {79 000 000} y 0 0 (PC: 181, Accumulator: 1819, PSW: 0080 [--------X-------])
+[254] {6E 000 000} n 0 0 (PC: 182, Accumulator: 1819, PSW: 0080 [--------X-------])
+[255] {6A 801 000} j -1 0 (PC: 181, Accumulator: 1819, PSW: 0080 [--------X-------])
+[256] {6F 009 000} o 9 0 (PC: 245, Accumulator: 1819, PSW: 8080 [M-------X-------])
+	[257] Clock interrupt number [51] has occurred
+[258] {79 000 000} y 0 0 (PC: 181, Accumulator: 1819, PSW: 0080 [--------X-------])
+[259] {6E 000 000} n 0 0 (PC: 182, Accumulator: 1819, PSW: 0080 [--------X-------])
+[260] {6A 801 000} j -1 0 (PC: 181, Accumulator: 1819, PSW: 0080 [--------X-------])
+[261] {6F 009 000} o 9 0 (PC: 245, Accumulator: 1819, PSW: 8080 [M-------X-------])
+	[262] Clock interrupt number [52] has occurred
+[263] {79 000 000} y 0 0 (PC: 181, Accumulator: 1819, PSW: 0080 [--------X-------])
+[264] {6E 000 000} n 0 0 (PC: 182, Accumulator: 1819, PSW: 0080 [--------X-------])
+[265] {6A 801 000} j -1 0 (PC: 181, Accumulator: 1819, PSW: 0080 [--------X-------])
+[266] {6F 009 000} o 9 0 (PC: 245, Accumulator: 1819, PSW: 8080 [M-------X-------])
+	[267] Clock interrupt number [53] has occurred
+[268] {79 000 000} y 0 0 (PC: 181, Accumulator: 1819, PSW: 0080 [--------X-------])
+[269] {6E 000 000} n 0 0 (PC: 182, Accumulator: 1819, PSW: 0080 [--------X-------])
+[270] {6A 801 000} j -1 0 (PC: 181, Accumulator: 1819, PSW: 0080 [--------X-------])
+[271] {6F 009 000} o 9 0 (PC: 245, Accumulator: 1819, PSW: 8080 [M-------X-------])
+	[272] Clock interrupt number [54] has occurred
+[273] {79 000 000} y 0 0 (PC: 181, Accumulator: 1819, PSW: 0080 [--------X-------])
+[274] {6E 000 000} n 0 0 (PC: 182, Accumulator: 1819, PSW: 0080 [--------X-------])
+[275] {6A 801 000} j -1 0 (PC: 181, Accumulator: 1819, PSW: 0080 [--------X-------])
+[276] {6F 009 000} o 9 0 (PC: 245, Accumulator: 1819, PSW: 8080 [M-------X-------])
+	[277] Clock interrupt number [55] has occurred
+[278] {79 000 000} y 0 0 (PC: 181, Accumulator: 1819, PSW: 0080 [--------X-------])
+[279] {6E 000 000} n 0 0 (PC: 182, Accumulator: 1819, PSW: 0080 [--------X-------])
+[280] {6A 801 000} j -1 0 (PC: 181, Accumulator: 1819, PSW: 0080 [--------X-------])
+[281] {6F 009 000} o 9 0 (PC: 245, Accumulator: 1819, PSW: 8080 [M-------X-------])
+	[282] Clock interrupt number [56] has occurred
+[283] {79 000 000} y 0 0 (PC: 181, Accumulator: 1819, PSW: 0080 [--------X-------])
+[284] {6E 000 000} n 0 0 (PC: 182, Accumulator: 1819, PSW: 0080 [--------X-------])
+[285] {6A 801 000} j -1 0 (PC: 181, Accumulator: 1819, PSW: 0080 [--------X-------])
+[286] {6F 009 000} o 9 0 (PC: 245, Accumulator: 1819, PSW: 8080 [M-------X-------])
+	[287] Clock interrupt number [57] has occurred
+[288] {79 000 000} y 0 0 (PC: 181, Accumulator: 1819, PSW: 0080 [--------X-------])
+[289] {6E 000 000} n 0 0 (PC: 182, Accumulator: 1819, PSW: 0080 [--------X-------])
+[290] {6A 801 000} j -1 0 (PC: 181, Accumulator: 1819, PSW: 0080 [--------X-------])
+[291] {6F 009 000} o 9 0 (PC: 245, Accumulator: 1819, PSW: 8080 [M-------X-------])
+	[292] Clock interrupt number [58] has occurred
+[293] {79 000 000} y 0 0 (PC: 181, Accumulator: 1819, PSW: 0080 [--------X-------])
+[294] {6E 000 000} n 0 0 (PC: 182, Accumulator: 1819, PSW: 0080 [--------X-------])
+[295] {6A 801 000} j -1 0 (PC: 181, Accumulator: 1819, PSW: 0080 [--------X-------])
+[296] {6F 009 000} o 9 0 (PC: 245, Accumulator: 1819, PSW: 8080 [M-------X-------])
+	[297] Clock interrupt number [59] has occurred
+[298] {79 000 000} y 0 0 (PC: 181, Accumulator: 1819, PSW: 0080 [--------X-------])
+[299] {6E 000 000} n 0 0 (PC: 182, Accumulator: 1819, PSW: 0080 [--------X-------])
+[300] {6A 801 000} j -1 0 (PC: 181, Accumulator: 1819, PSW: 0080 [--------X-------])
+[301] {6F 009 000} o 9 0 (PC: 245, Accumulator: 1819, PSW: 8080 [M-------X-------])
+	[302] Clock interrupt number [60] has occurred
+[303] {79 000 000} y 0 0 (PC: 181, Accumulator: 1819, PSW: 0080 [--------X-------])
+[304] {6E 000 000} n 0 0 (PC: 182, Accumulator: 1819, PSW: 0080 [--------X-------])
+[305] {6A 801 000} j -1 0 (PC: 181, Accumulator: 1819, PSW: 0080 [--------X-------])
+[306] {6F 009 000} o 9 0 (PC: 245, Accumulator: 1819, PSW: 8080 [M-------X-------])
+	[307] Clock interrupt number [61] has occurred
+[308] {79 000 000} y 0 0 (PC: 181, Accumulator: 1819, PSW: 0080 [--------X-------])
+[309] {6E 000 000} n 0 0 (PC: 182, Accumulator: 1819, PSW: 0080 [--------X-------])
+[310] {6A 801 000} j -1 0 (PC: 181, Accumulator: 1819, PSW: 0080 [--------X-------])
+[311] {6F 009 000} o 9 0 (PC: 245, Accumulator: 1819, PSW: 8080 [M-------X-------])
+	[312] Clock interrupt number [62] has occurred
+[313] {79 000 000} y 0 0 (PC: 181, Accumulator: 1819, PSW: 0080 [--------X-------])
+[314] {6E 000 000} n 0 0 (PC: 182, Accumulator: 1819, PSW: 0080 [--------X-------])
+[315] {6A 801 000} j -1 0 (PC: 181, Accumulator: 1819, PSW: 0080 [--------X-------])
+[316] {6F 009 000} o 9 0 (PC: 245, Accumulator: 1819, PSW: 8080 [M-------X-------])
+	[317] Clock interrupt number [63] has occurred
+[318] {79 000 000} y 0 0 (PC: 181, Accumulator: 1819, PSW: 0080 [--------X-------])
+[319] {6E 000 000} n 0 0 (PC: 182, Accumulator: 1819, PSW: 0080 [--------X-------])
+[320] {6A 801 000} j -1 0 (PC: 181, Accumulator: 1819, PSW: 0080 [--------X-------])
+[321] {6F 009 000} o 9 0 (PC: 245, Accumulator: 1819, PSW: 8080 [M-------X-------])
+	[322] Clock interrupt number [64] has occurred
+[323] {79 000 000} y 0 0 (PC: 181, Accumulator: 1819, PSW: 0080 [--------X-------])
+[324] {6E 000 000} n 0 0 (PC: 182, Accumulator: 1819, PSW: 0080 [--------X-------])
+[325] {6A 801 000} j -1 0 (PC: 181, Accumulator: 1819, PSW: 0080 [--------X-------])
+[326] {6F 009 000} o 9 0 (PC: 245, Accumulator: 1819, PSW: 8080 [M-------X-------])
+	[327] Clock interrupt number [65] has occurred
+[328] {79 000 000} y 0 0 (PC: 181, Accumulator: 1819, PSW: 0080 [--------X-------])
+[329] {6E 000 000} n 0 0 (PC: 182, Accumulator: 1819, PSW: 0080 [--------X-------])
+[330] {6A 801 000} j -1 0 (PC: 181, Accumulator: 1819, PSW: 0080 [--------X-------])
+[331] {6F 009 000} o 9 0 (PC: 245, Accumulator: 1819, PSW: 8080 [M-------X-------])
+	[332] Clock interrupt number [66] has occurred
+[333] {79 000 000} y 0 0 (PC: 181, Accumulator: 1819, PSW: 0080 [--------X-------])
+[334] {6E 000 000} n 0 0 (PC: 182, Accumulator: 1819, PSW: 0080 [--------X-------])
+[335] {6A 801 000} j -1 0 (PC: 181, Accumulator: 1819, PSW: 0080 [--------X-------])
+[336] {6F 009 000} o 9 0 (PC: 245, Accumulator: 1819, PSW: 8080 [M-------X-------])
+	[337] Clock interrupt number [67] has occurred
+[338] {79 000 000} y 0 0 (PC: 181, Accumulator: 1819, PSW: 0080 [--------X-------])
+[339] {6E 000 000} n 0 0 (PC: 182, Accumulator: 1819, PSW: 0080 [--------X-------])
+[340] {6A 801 000} j -1 0 (PC: 181, Accumulator: 1819, PSW: 0080 [--------X-------])
+[341] {6F 009 000} o 9 0 (PC: 245, Accumulator: 1819, PSW: 8080 [M-------X-------])
+	[342] Clock interrupt number [68] has occurred
+[343] {79 000 000} y 0 0 (PC: 181, Accumulator: 1819, PSW: 0080 [--------X-------])
+[344] {6E 000 000} n 0 0 (PC: 182, Accumulator: 1819, PSW: 0080 [--------X-------])
+[345] {6A 801 000} j -1 0 (PC: 181, Accumulator: 1819, PSW: 0080 [--------X-------])
+[346] {6F 009 000} o 9 0 (PC: 245, Accumulator: 1819, PSW: 8080 [M-------X-------])
+	[347] Clock interrupt number [69] has occurred
+[348] {79 000 000} y 0 0 (PC: 181, Accumulator: 1819, PSW: 0080 [--------X-------])
+[349] {6E 000 000} n 0 0 (PC: 182, Accumulator: 1819, PSW: 0080 [--------X-------])
+[350] {6A 801 000} j -1 0 (PC: 181, Accumulator: 1819, PSW: 0080 [--------X-------])
+[351] {6F 009 000} o 9 0 (PC: 245, Accumulator: 1819, PSW: 8080 [M-------X-------])
+	[352] Clock interrupt number [70] has occurred
+[353] {79 000 000} y 0 0 (PC: 181, Accumulator: 1819, PSW: 0080 [--------X-------])
+[354] {6E 000 000} n 0 0 (PC: 182, Accumulator: 1819, PSW: 0080 [--------X-------])
+[355] {6A 801 000} j -1 0 (PC: 181, Accumulator: 1819, PSW: 0080 [--------X-------])
+[356] {6F 009 000} o 9 0 (PC: 245, Accumulator: 1819, PSW: 8080 [M-------X-------])
+	[357] Clock interrupt number [71] has occurred
+[358] {79 000 000} y 0 0 (PC: 181, Accumulator: 1819, PSW: 0080 [--------X-------])
+[359] {6E 000 000} n 0 0 (PC: 182, Accumulator: 1819, PSW: 0080 [--------X-------])
+[360] {6A 801 000} j -1 0 (PC: 181, Accumulator: 1819, PSW: 0080 [--------X-------])
+[361] {6F 009 000} o 9 0 (PC: 245, Accumulator: 1819, PSW: 8080 [M-------X-------])
+	[362] Clock interrupt number [72] has occurred
+[363] {79 000 000} y 0 0 (PC: 181, Accumulator: 1819, PSW: 0080 [--------X-------])
+[364] {6E 000 000} n 0 0 (PC: 182, Accumulator: 1819, PSW: 0080 [--------X-------])
+[365] {6A 801 000} j -1 0 (PC: 181, Accumulator: 1819, PSW: 0080 [--------X-------])
+[366] {6F 009 000} o 9 0 (PC: 245, Accumulator: 1819, PSW: 8080 [M-------X-------])
+	[367] Clock interrupt number [73] has occurred
+[368] {79 000 000} y 0 0 (PC: 181, Accumulator: 1819, PSW: 0080 [--------X-------])
+[369] {6E 000 000} n 0 0 (PC: 182, Accumulator: 1819, PSW: 0080 [--------X-------])
+[370] {6A 801 000} j -1 0 (PC: 181, Accumulator: 1819, PSW: 0080 [--------X-------])
+[371] {6F 009 000} o 9 0 (PC: 245, Accumulator: 1819, PSW: 8080 [M-------X-------])
+	[372] Clock interrupt number [74] has occurred
+[373] {79 000 000} y 0 0 (PC: 181, Accumulator: 1819, PSW: 0080 [--------X-------])
+[374] {6E 000 000} n 0 0 (PC: 182, Accumulator: 1819, PSW: 0080 [--------X-------])
+[375] {6A 801 000} j -1 0 (PC: 181, Accumulator: 1819, PSW: 0080 [--------X-------])
+[376] {6F 009 000} o 9 0 (PC: 245, Accumulator: 1819, PSW: 8080 [M-------X-------])
+	[377] Clock interrupt number [75] has occurred
+[378] {79 000 000} y 0 0 (PC: 181, Accumulator: 1819, PSW: 0080 [--------X-------])
+[379] {6E 000 000} n 0 0 (PC: 182, Accumulator: 1819, PSW: 0080 [--------X-------])
+[380] {6A 801 000} j -1 0 (PC: 181, Accumulator: 1819, PSW: 0080 [--------X-------])
+[381] {6F 009 000} o 9 0 (PC: 245, Accumulator: 1819, PSW: 8080 [M-------X-------])
+	[382] Clock interrupt number [76] has occurred
+[383] {79 000 000} y 0 0 (PC: 181, Accumulator: 1819, PSW: 0080 [--------X-------])
+[384] {6E 000 000} n 0 0 (PC: 182, Accumulator: 1819, PSW: 0080 [--------X-------])
+[385] {6A 801 000} j -1 0 (PC: 181, Accumulator: 1819, PSW: 0080 [--------X-------])
+[386] {6F 009 000} o 9 0 (PC: 245, Accumulator: 1819, PSW: 8080 [M-------X-------])
+	[387] Clock interrupt number [77] has occurred
+[388] {79 000 000} y 0 0 (PC: 181, Accumulator: 1819, PSW: 0080 [--------X-------])
+[389] {6E 000 000} n 0 0 (PC: 182, Accumulator: 1819, PSW: 0080 [--------X-------])
+[390] {6A 801 000} j -1 0 (PC: 181, Accumulator: 1819, PSW: 0080 [--------X-------])
+[391] {6F 009 000} o 9 0 (PC: 245, Accumulator: 1819, PSW: 8080 [M-------X-------])
+	[392] Clock interrupt number [78] has occurred
+[393] {79 000 000} y 0 0 (PC: 181, Accumulator: 1819, PSW: 0080 [--------X-------])
+[394] {6E 000 000} n 0 0 (PC: 182, Accumulator: 1819, PSW: 0080 [--------X-------])
+[395] {6A 801 000} j -1 0 (PC: 181, Accumulator: 1819, PSW: 0080 [--------X-------])
+[396] {6F 009 000} o 9 0 (PC: 245, Accumulator: 1819, PSW: 8080 [M-------X-------])
+	[397] Clock interrupt number [79] has occurred
+[398] {79 000 000} y 0 0 (PC: 181, Accumulator: 1819, PSW: 0080 [--------X-------])
+[399] {6E 000 000} n 0 0 (PC: 182, Accumulator: 1819, PSW: 0080 [--------X-------])
+[400] {6A 801 000} j -1 0 (PC: 181, Accumulator: 1819, PSW: 0080 [--------X-------])
+[401] {6F 009 000} o 9 0 (PC: 245, Accumulator: 1819, PSW: 8080 [M-------X-------])
+	[402] Clock interrupt number [80] has occurred
+[403] {79 000 000} y 0 0 (PC: 181, Accumulator: 1819, PSW: 0080 [--------X-------])
+[404] {6E 000 000} n 0 0 (PC: 182, Accumulator: 1819, PSW: 0080 [--------X-------])
+[405] {6A 801 000} j -1 0 (PC: 181, Accumulator: 1819, PSW: 0080 [--------X-------])
+[406] {6F 009 000} o 9 0 (PC: 245, Accumulator: 1819, PSW: 8080 [M-------X-------])
+	[407] Clock interrupt number [81] has occurred
+[408] {79 000 000} y 0 0 (PC: 181, Accumulator: 1819, PSW: 0080 [--------X-------])
+[409] {6E 000 000} n 0 0 (PC: 182, Accumulator: 1819, PSW: 0080 [--------X-------])
+[410] {6A 801 000} j -1 0 (PC: 181, Accumulator: 1819, PSW: 0080 [--------X-------])
+[411] {6F 009 000} o 9 0 (PC: 245, Accumulator: 1819, PSW: 8080 [M-------X-------])
+	[412] Clock interrupt number [82] has occurred
+[413] {79 000 000} y 0 0 (PC: 181, Accumulator: 1819, PSW: 0080 [--------X-------])
+[414] {6E 000 000} n 0 0 (PC: 182, Accumulator: 1819, PSW: 0080 [--------X-------])
+[415] {6A 801 000} j -1 0 (PC: 181, Accumulator: 1819, PSW: 0080 [--------X-------])
+[416] {6F 009 000} o 9 0 (PC: 245, Accumulator: 1819, PSW: 8080 [M-------X-------])
+	[417] Clock interrupt number [83] has occurred
+[418] {79 000 000} y 0 0 (PC: 181, Accumulator: 1819, PSW: 0080 [--------X-------])
+[419] {6E 000 000} n 0 0 (PC: 182, Accumulator: 1819, PSW: 0080 [--------X-------])
+[420] {6A 801 000} j -1 0 (PC: 181, Accumulator: 1819, PSW: 0080 [--------X-------])
+[421] {6F 009 000} o 9 0 (PC: 245, Accumulator: 1819, PSW: 8080 [M-------X-------])
+	[422] Clock interrupt number [84] has occurred
+[423] {79 000 000} y 0 0 (PC: 181, Accumulator: 1819, PSW: 0080 [--------X-------])
+[424] {6E 000 000} n 0 0 (PC: 182, Accumulator: 1819, PSW: 0080 [--------X-------])
+[425] {6A 801 000} j -1 0 (PC: 181, Accumulator: 1819, PSW: 0080 [--------X-------])
+[426] {6F 009 000} o 9 0 (PC: 245, Accumulator: 1819, PSW: 8080 [M-------X-------])
+	[427] Clock interrupt number [85] has occurred
+[428] {79 000 000} y 0 0 (PC: 181, Accumulator: 1819, PSW: 0080 [--------X-------])
+[429] {6E 000 000} n 0 0 (PC: 182, Accumulator: 1819, PSW: 0080 [--------X-------])
+[430] {6A 801 000} j -1 0 (PC: 181, Accumulator: 1819, PSW: 0080 [--------X-------])
+[431] {6F 009 000} o 9 0 (PC: 245, Accumulator: 1819, PSW: 8080 [M-------X-------])
+	[432] Clock interrupt number [86] has occurred
+[433] {79 000 000} y 0 0 (PC: 181, Accumulator: 1819, PSW: 0080 [--------X-------])
+[434] {6E 000 000} n 0 0 (PC: 182, Accumulator: 1819, PSW: 0080 [--------X-------])
+[435] {6A 801 000} j -1 0 (PC: 181, Accumulator: 1819, PSW: 0080 [--------X-------])
+[436] {6F 009 000} o 9 0 (PC: 245, Accumulator: 1819, PSW: 8080 [M-------X-------])
+	[437] Clock interrupt number [87] has occurred
+[438] {79 000 000} y 0 0 (PC: 181, Accumulator: 1819, PSW: 0080 [--------X-------])
+[439] {6E 000 000} n 0 0 (PC: 182, Accumulator: 1819, PSW: 0080 [--------X-------])
+[440] {6A 801 000} j -1 0 (PC: 181, Accumulator: 1819, PSW: 0080 [--------X-------])
+[441] {6F 009 000} o 9 0 (PC: 245, Accumulator: 1819, PSW: 8080 [M-------X-------])
+	[442] Clock interrupt number [88] has occurred
+[443] {79 000 000} y 0 0 (PC: 181, Accumulator: 1819, PSW: 0080 [--------X-------])
+[444] {6E 000 000} n 0 0 (PC: 182, Accumulator: 1819, PSW: 0080 [--------X-------])
+[445] {6A 801 000} j -1 0 (PC: 181, Accumulator: 1819, PSW: 0080 [--------X-------])
+[446] {6F 009 000} o 9 0 (PC: 245, Accumulator: 1819, PSW: 8080 [M-------X-------])
+	[447] Clock interrupt number [89] has occurred
+[448] {79 000 000} y 0 0 (PC: 181, Accumulator: 1819, PSW: 0080 [--------X-------])
+[449] {6E 000 000} n 0 0 (PC: 182, Accumulator: 1819, PSW: 0080 [--------X-------])
+[450] {6A 801 000} j -1 0 (PC: 181, Accumulator: 1819, PSW: 0080 [--------X-------])
+[451] {6F 009 000} o 9 0 (PC: 245, Accumulator: 1819, PSW: 8080 [M-------X-------])
+	[452] Clock interrupt number [90] has occurred
+[453] {79 000 000} y 0 0 (PC: 181, Accumulator: 1819, PSW: 0080 [--------X-------])
+[454] {6E 000 000} n 0 0 (PC: 182, Accumulator: 1819, PSW: 0080 [--------X-------])
+[455] {6A 801 000} j -1 0 (PC: 181, Accumulator: 1819, PSW: 0080 [--------X-------])
+[456] {6F 009 000} o 9 0 (PC: 245, Accumulator: 1819, PSW: 8080 [M-------X-------])
+	[457] Clock interrupt number [91] has occurred
+[458] {79 000 000} y 0 0 (PC: 181, Accumulator: 1819, PSW: 0080 [--------X-------])
+[459] {6E 000 000} n 0 0 (PC: 182, Accumulator: 1819, PSW: 0080 [--------X-------])
+[460] {6A 801 000} j -1 0 (PC: 181, Accumulator: 1819, PSW: 0080 [--------X-------])
+[461] {6F 009 000} o 9 0 (PC: 245, Accumulator: 1819, PSW: 8080 [M-------X-------])
+	[462] Clock interrupt number [92] has occurred
+[463] {79 000 000} y 0 0 (PC: 181, Accumulator: 1819, PSW: 0080 [--------X-------])
+[464] {6E 000 000} n 0 0 (PC: 182, Accumulator: 1819, PSW: 0080 [--------X-------])
+[465] {6A 801 000} j -1 0 (PC: 181, Accumulator: 1819, PSW: 0080 [--------X-------])
+[466] {6F 009 000} o 9 0 (PC: 245, Accumulator: 1819, PSW: 8080 [M-------X-------])
+	[467] Clock interrupt number [93] has occurred
+[468] {79 000 000} y 0 0 (PC: 181, Accumulator: 1819, PSW: 0080 [--------X-------])
+[469] {6E 000 000} n 0 0 (PC: 182, Accumulator: 1819, PSW: 0080 [--------X-------])
+[470] {6A 801 000} j -1 0 (PC: 181, Accumulator: 1819, PSW: 0080 [--------X-------])
+[471] {6F 009 000} o 9 0 (PC: 245, Accumulator: 1819, PSW: 8080 [M-------X-------])
+	[472] Clock interrupt number [94] has occurred
+[473] {79 000 000} y 0 0 (PC: 181, Accumulator: 1819, PSW: 0080 [--------X-------])
+[474] {6E 000 000} n 0 0 (PC: 182, Accumulator: 1819, PSW: 0080 [--------X-------])
+[475] {6A 801 000} j -1 0 (PC: 181, Accumulator: 1819, PSW: 0080 [--------X-------])
+[476] {6F 009 000} o 9 0 (PC: 245, Accumulator: 1819, PSW: 8080 [M-------X-------])
+	[477] Clock interrupt number [95] has occurred
+[478] {79 000 000} y 0 0 (PC: 181, Accumulator: 1819, PSW: 0080 [--------X-------])
+[479] {6E 000 000} n 0 0 (PC: 182, Accumulator: 1819, PSW: 0080 [--------X-------])
+[480] {6A 801 000} j -1 0 (PC: 181, Accumulator: 1819, PSW: 0080 [--------X-------])
+[481] {6F 009 000} o 9 0 (PC: 245, Accumulator: 1819, PSW: 8080 [M-------X-------])
+	[482] Clock interrupt number [96] has occurred
+[483] {79 000 000} y 0 0 (PC: 181, Accumulator: 1819, PSW: 0080 [--------X-------])
+[484] {6E 000 000} n 0 0 (PC: 182, Accumulator: 1819, PSW: 0080 [--------X-------])
+[485] {6A 801 000} j -1 0 (PC: 181, Accumulator: 1819, PSW: 0080 [--------X-------])
+[486] {6F 009 000} o 9 0 (PC: 245, Accumulator: 1819, PSW: 8080 [M-------X-------])
+	[487] Clock interrupt number [97] has occurred
+[488] {79 000 000} y 0 0 (PC: 181, Accumulator: 1819, PSW: 0080 [--------X-------])
+[489] {6E 000 000} n 0 0 (PC: 182, Accumulator: 1819, PSW: 0080 [--------X-------])
+[490] {6A 801 000} j -1 0 (PC: 181, Accumulator: 1819, PSW: 0080 [--------X-------])
+[491] {6F 009 000} o 9 0 (PC: 245, Accumulator: 1819, PSW: 8080 [M-------X-------])
+	[492] Clock interrupt number [98] has occurred
+[493] {79 000 000} y 0 0 (PC: 181, Accumulator: 1819, PSW: 0080 [--------X-------])
+[494] {6E 000 000} n 0 0 (PC: 182, Accumulator: 1819, PSW: 0080 [--------X-------])
+[495] {6A 801 000} j -1 0 (PC: 181, Accumulator: 1819, PSW: 0080 [--------X-------])
+[496] {6F 009 000} o 9 0 (PC: 245, Accumulator: 1819, PSW: 8080 [M-------X-------])
+	[497] Clock interrupt number [99] has occurred
+[498] {79 000 000} y 0 0 (PC: 181, Accumulator: 1819, PSW: 0080 [--------X-------])
+[499] {6E 000 000} n 0 0 (PC: 182, Accumulator: 1819, PSW: 0080 [--------X-------])
+[500] {6A 801 000} j -1 0 (PC: 181, Accumulator: 1819, PSW: 0080 [--------X-------])
+[501] {6F 009 000} o 9 0 (PC: 245, Accumulator: 1819, PSW: 8080 [M-------X-------])
+	[502] Clock interrupt number [100] has occurred
+[503] {79 000 000} y 0 0 (PC: 181, Accumulator: 1819, PSW: 0080 [--------X-------])
+[504] {6E 000 000} n 0 0 (PC: 182, Accumulator: 1819, PSW: 0080 [--------X-------])
+[505] {6A 801 000} j -1 0 (PC: 181, Accumulator: 1819, PSW: 0080 [--------X-------])
+[506] {6F 009 000} o 9 0 (PC: 245, Accumulator: 1819, PSW: 8080 [M-------X-------])
+	[507] Clock interrupt number [101] has occurred
+[508] {79 000 000} y 0 0 (PC: 181, Accumulator: 1819, PSW: 0080 [--------X-------])
+[509] {6E 000 000} n 0 0 (PC: 182, Accumulator: 1819, PSW: 0080 [--------X-------])
+[510] {6A 801 000} j -1 0 (PC: 181, Accumulator: 1819, PSW: 0080 [--------X-------])
+[511] {6F 009 000} o 9 0 (PC: 245, Accumulator: 1819, PSW: 8080 [M-------X-------])
+	[512] Clock interrupt number [102] has occurred
+[513] {79 000 000} y 0 0 (PC: 181, Accumulator: 1819, PSW: 0080 [--------X-------])
+[514] {6E 000 000} n 0 0 (PC: 182, Accumulator: 1819, PSW: 0080 [--------X-------])
+[515] {6A 801 000} j -1 0 (PC: 181, Accumulator: 1819, PSW: 0080 [--------X-------])
+[516] {6F 009 000} o 9 0 (PC: 245, Accumulator: 1819, PSW: 8080 [M-------X-------])
+	[517] Clock interrupt number [103] has occurred
+[518] {79 000 000} y 0 0 (PC: 181, Accumulator: 1819, PSW: 0080 [--------X-------])
+[519] {6E 000 000} n 0 0 (PC: 182, Accumulator: 1819, PSW: 0080 [--------X-------])
+[520] {6A 801 000} j -1 0 (PC: 181, Accumulator: 1819, PSW: 0080 [--------X-------])
+[521] {6F 009 000} o 9 0 (PC: 245, Accumulator: 1819, PSW: 8080 [M-------X-------])
+	[522] Clock interrupt number [104] has occurred
+[523] {79 000 000} y 0 0 (PC: 181, Accumulator: 1819, PSW: 0080 [--------X-------])
+[524] {6E 000 000} n 0 0 (PC: 182, Accumulator: 1819, PSW: 0080 [--------X-------])
+[525] {6A 801 000} j -1 0 (PC: 181, Accumulator: 1819, PSW: 0080 [--------X-------])
+[526] {6F 009 000} o 9 0 (PC: 245, Accumulator: 1819, PSW: 8080 [M-------X-------])
+	[527] Clock interrupt number [105] has occurred
+[528] {79 000 000} y 0 0 (PC: 181, Accumulator: 1819, PSW: 0080 [--------X-------])
+[529] {6E 000 000} n 0 0 (PC: 182, Accumulator: 1819, PSW: 0080 [--------X-------])
+[530] {6A 801 000} j -1 0 (PC: 181, Accumulator: 1819, PSW: 0080 [--------X-------])
+[531] {6F 009 000} o 9 0 (PC: 245, Accumulator: 1819, PSW: 8080 [M-------X-------])
+	[532] Clock interrupt number [106] has occurred
+[533] {79 000 000} y 0 0 (PC: 181, Accumulator: 1819, PSW: 0080 [--------X-------])
+[534] {6E 000 000} n 0 0 (PC: 182, Accumulator: 1819, PSW: 0080 [--------X-------])
+[535] {6A 801 000} j -1 0 (PC: 181, Accumulator: 1819, PSW: 0080 [--------X-------])
+[536] {6F 009 000} o 9 0 (PC: 245, Accumulator: 1819, PSW: 8080 [M-------X-------])
+	[537] Clock interrupt number [107] has occurred
+[538] {79 000 000} y 0 0 (PC: 181, Accumulator: 1819, PSW: 0080 [--------X-------])
+[539] {6E 000 000} n 0 0 (PC: 182, Accumulator: 1819, PSW: 0080 [--------X-------])
+[540] {6A 801 000} j -1 0 (PC: 181, Accumulator: 1819, PSW: 0080 [--------X-------])
+[541] {6F 009 000} o 9 0 (PC: 245, Accumulator: 1819, PSW: 8080 [M-------X-------])
+	[542] Clock interrupt number [108] has occurred
+[543] {79 000 000} y 0 0 (PC: 181, Accumulator: 1819, PSW: 0080 [--------X-------])
+[544] {6E 000 000} n 0 0 (PC: 182, Accumulator: 1819, PSW: 0080 [--------X-------])
+[545] {6A 801 000} j -1 0 (PC: 181, Accumulator: 1819, PSW: 0080 [--------X-------])
+[546] {6F 009 000} o 9 0 (PC: 245, Accumulator: 1819, PSW: 8080 [M-------X-------])
+	[547] Clock interrupt number [109] has occurred
+[548] {79 000 000} y 0 0 (PC: 181, Accumulator: 1819, PSW: 0080 [--------X-------])
+[549] {6E 000 000} n 0 0 (PC: 182, Accumulator: 1819, PSW: 0080 [--------X-------])
+[550] {6A 801 000} j -1 0 (PC: 181, Accumulator: 1819, PSW: 0080 [--------X-------])
+[551] {6F 009 000} o 9 0 (PC: 245, Accumulator: 1819, PSW: 8080 [M-------X-------])
+	[552] Clock interrupt number [110] has occurred
+[553] {79 000 000} y 0 0 (PC: 181, Accumulator: 1819, PSW: 0080 [--------X-------])
+[554] {6E 000 000} n 0 0 (PC: 182, Accumulator: 1819, PSW: 0080 [--------X-------])
+[555] {6A 801 000} j -1 0 (PC: 181, Accumulator: 1819, PSW: 0080 [--------X-------])
+[556] {6F 009 000} o 9 0 (PC: 245, Accumulator: 1819, PSW: 8080 [M-------X-------])
+	[557] Clock interrupt number [111] has occurred
+[558] {79 000 000} y 0 0 (PC: 181, Accumulator: 1819, PSW: 0080 [--------X-------])
+[559] {6E 000 000} n 0 0 (PC: 182, Accumulator: 1819, PSW: 0080 [--------X-------])
+[560] {6A 801 000} j -1 0 (PC: 181, Accumulator: 1819, PSW: 0080 [--------X-------])
+[561] {6F 009 000} o 9 0 (PC: 245, Accumulator: 1819, PSW: 8080 [M-------X-------])
+	[562] Clock interrupt number [112] has occurred
+[563] {79 000 000} y 0 0 (PC: 181, Accumulator: 1819, PSW: 0080 [--------X-------])
+[564] {6E 000 000} n 0 0 (PC: 182, Accumulator: 1819, PSW: 0080 [--------X-------])
+[565] {6A 801 000} j -1 0 (PC: 181, Accumulator: 1819, PSW: 0080 [--------X-------])
+[566] {6F 009 000} o 9 0 (PC: 245, Accumulator: 1819, PSW: 8080 [M-------X-------])
+	[567] Clock interrupt number [113] has occurred
+[568] {79 000 000} y 0 0 (PC: 181, Accumulator: 1819, PSW: 0080 [--------X-------])
+[569] {6E 000 000} n 0 0 (PC: 182, Accumulator: 1819, PSW: 0080 [--------X-------])
+[570] {6A 801 000} j -1 0 (PC: 181, Accumulator: 1819, PSW: 0080 [--------X-------])
+[571] {6F 009 000} o 9 0 (PC: 245, Accumulator: 1819, PSW: 8080 [M-------X-------])
+	[572] Clock interrupt number [114] has occurred
+[573] {79 000 000} y 0 0 (PC: 181, Accumulator: 1819, PSW: 0080 [--------X-------])
+[574] {6E 000 000} n 0 0 (PC: 182, Accumulator: 1819, PSW: 0080 [--------X-------])
+[575] {6A 801 000} j -1 0 (PC: 181, Accumulator: 1819, PSW: 0080 [--------X-------])
+[576] {6F 009 000} o 9 0 (PC: 245, Accumulator: 1819, PSW: 8080 [M-------X-------])
+	[577] Clock interrupt number [115] has occurred
+[578] {79 000 000} y 0 0 (PC: 181, Accumulator: 1819, PSW: 0080 [--------X-------])
+[579] {6E 000 000} n 0 0 (PC: 182, Accumulator: 1819, PSW: 0080 [--------X-------])
+[580] {6A 801 000} j -1 0 (PC: 181, Accumulator: 1819, PSW: 0080 [--------X-------])
+[581] {6F 009 000} o 9 0 (PC: 245, Accumulator: 1819, PSW: 8080 [M-------X-------])
+	[582] Clock interrupt number [116] has occurred
+[583] {79 000 000} y 0 0 (PC: 181, Accumulator: 1819, PSW: 0080 [--------X-------])
+[584] {6E 000 000} n 0 0 (PC: 182, Accumulator: 1819, PSW: 0080 [--------X-------])
+[585] {6A 801 000} j -1 0 (PC: 181, Accumulator: 1819, PSW: 0080 [--------X-------])
+[586] {6F 009 000} o 9 0 (PC: 245, Accumulator: 1819, PSW: 8080 [M-------X-------])
+	[587] Clock interrupt number [117] has occurred
+[588] {79 000 000} y 0 0 (PC: 181, Accumulator: 1819, PSW: 0080 [--------X-------])
+[589] {6E 000 000} n 0 0 (PC: 182, Accumulator: 1819, PSW: 0080 [--------X-------])
+[590] {6A 801 000} j -1 0 (PC: 181, Accumulator: 1819, PSW: 0080 [--------X-------])
+[591] {6F 009 000} o 9 0 (PC: 245, Accumulator: 1819, PSW: 8080 [M-------X-------])
+	[592] Clock interrupt number [118] has occurred
+[593] {79 000 000} y 0 0 (PC: 181, Accumulator: 1819, PSW: 0080 [--------X-------])
+[594] {6E 000 000} n 0 0 (PC: 182, Accumulator: 1819, PSW: 0080 [--------X-------])
+[595] {6A 801 000} j -1 0 (PC: 181, Accumulator: 1819, PSW: 0080 [--------X-------])
+[596] {6F 009 000} o 9 0 (PC: 245, Accumulator: 1819, PSW: 8080 [M-------X-------])
+	[597] Clock interrupt number [119] has occurred
+[598] {79 000 000} y 0 0 (PC: 181, Accumulator: 1819, PSW: 0080 [--------X-------])
+[599] {6E 000 000} n 0 0 (PC: 182, Accumulator: 1819, PSW: 0080 [--------X-------])
+[600] {6A 801 000} j -1 0 (PC: 181, Accumulator: 1819, PSW: 0080 [--------X-------])
+[601] {6F 009 000} o 9 0 (PC: 245, Accumulator: 1819, PSW: 8080 [M-------X-------])
+	[602] Clock interrupt number [120] has occurred
+[603] {79 000 000} y 0 0 (PC: 181, Accumulator: 1819, PSW: 0080 [--------X-------])
+[604] {6E 000 000} n 0 0 (PC: 182, Accumulator: 1819, PSW: 0080 [--------X-------])
+[605] {6A 801 000} j -1 0 (PC: 181, Accumulator: 1819, PSW: 0080 [--------X-------])
+[606] {6F 009 000} o 9 0 (PC: 245, Accumulator: 1819, PSW: 8080 [M-------X-------])
+	[607] Clock interrupt number [121] has occurred
+[608] {79 000 000} y 0 0 (PC: 181, Accumulator: 1819, PSW: 0080 [--------X-------])
+[609] {6E 000 000} n 0 0 (PC: 182, Accumulator: 1819, PSW: 0080 [--------X-------])
+[610] {6A 801 000} j -1 0 (PC: 181, Accumulator: 1819, PSW: 0080 [--------X-------])
+[611] {6F 009 000} o 9 0 (PC: 245, Accumulator: 1819, PSW: 8080 [M-------X-------])
+	[612] Clock interrupt number [122] has occurred
+[613] {79 000 000} y 0 0 (PC: 181, Accumulator: 1819, PSW: 0080 [--------X-------])
+[614] {6E 000 000} n 0 0 (PC: 182, Accumulator: 1819, PSW: 0080 [--------X-------])
+[615] {6A 801 000} j -1 0 (PC: 181, Accumulator: 1819, PSW: 0080 [--------X-------])
+[616] {6F 009 000} o 9 0 (PC: 245, Accumulator: 1819, PSW: 8080 [M-------X-------])
+	[617] Clock interrupt number [123] has occurred
+[618] {79 000 000} y 0 0 (PC: 181, Accumulator: 1819, PSW: 0080 [--------X-------])
+[619] {6E 000 000} n 0 0 (PC: 182, Accumulator: 1819, PSW: 0080 [--------X-------])
+[620] {6A 801 000} j -1 0 (PC: 181, Accumulator: 1819, PSW: 0080 [--------X-------])
+[621] {6F 009 000} o 9 0 (PC: 245, Accumulator: 1819, PSW: 8080 [M-------X-------])
+	[622] Clock interrupt number [124] has occurred
+[623] {79 000 000} y 0 0 (PC: 181, Accumulator: 1819, PSW: 0080 [--------X-------])
+[624] {6E 000 000} n 0 0 (PC: 182, Accumulator: 1819, PSW: 0080 [--------X-------])
+[625] {6A 801 000} j -1 0 (PC: 181, Accumulator: 1819, PSW: 0080 [--------X-------])
+[626] {6F 009 000} o 9 0 (PC: 245, Accumulator: 1819, PSW: 8080 [M-------X-------])
+	[627] Clock interrupt number [125] has occurred
+[628] {79 000 000} y 0 0 (PC: 181, Accumulator: 1819, PSW: 0080 [--------X-------])
+[629] {6E 000 000} n 0 0 (PC: 182, Accumulator: 1819, PSW: 0080 [--------X-------])
+[630] {6A 801 000} j -1 0 (PC: 181, Accumulator: 1819, PSW: 0080 [--------X-------])
+[631] {6F 009 000} o 9 0 (PC: 245, Accumulator: 1819, PSW: 8080 [M-------X-------])
+	[632] Clock interrupt number [126] has occurred
+[633] {79 000 000} y 0 0 (PC: 181, Accumulator: 1819, PSW: 0080 [--------X-------])
+[634] {6E 000 000} n 0 0 (PC: 182, Accumulator: 1819, PSW: 0080 [--------X-------])
+[635] {6A 801 000} j -1 0 (PC: 181, Accumulator: 1819, PSW: 0080 [--------X-------])
+[636] {6F 009 000} o 9 0 (PC: 245, Accumulator: 1819, PSW: 8080 [M-------X-------])
+	[637] Clock interrupt number [127] has occurred
+[638] {79 000 000} y 0 0 (PC: 181, Accumulator: 1819, PSW: 0080 [--------X-------])
+[639] {6E 000 000} n 0 0 (PC: 182, Accumulator: 1819, PSW: 0080 [--------X-------])
+[640] {6A 801 000} j -1 0 (PC: 181, Accumulator: 1819, PSW: 0080 [--------X-------])
+[641] {6F 009 000} o 9 0 (PC: 245, Accumulator: 1819, PSW: 8080 [M-------X-------])
+	[642] Clock interrupt number [128] has occurred
+[643] {79 000 000} y 0 0 (PC: 181, Accumulator: 1819, PSW: 0080 [--------X-------])
+[644] {6E 000 000} n 0 0 (PC: 182, Accumulator: 1819, PSW: 0080 [--------X-------])
+[645] {6A 801 000} j -1 0 (PC: 181, Accumulator: 1819, PSW: 0080 [--------X-------])
+[646] {6F 009 000} o 9 0 (PC: 245, Accumulator: 1819, PSW: 8080 [M-------X-------])
+	[647] Clock interrupt number [129] has occurred
+[648] {79 000 000} y 0 0 (PC: 181, Accumulator: 1819, PSW: 0080 [--------X-------])
+[649] {6E 000 000} n 0 0 (PC: 182, Accumulator: 1819, PSW: 0080 [--------X-------])
+[650] {6A 801 000} j -1 0 (PC: 181, Accumulator: 1819, PSW: 0080 [--------X-------])
+[651] {6F 009 000} o 9 0 (PC: 245, Accumulator: 1819, PSW: 8080 [M-------X-------])
+	[652] Clock interrupt number [130] has occurred
+[653] {79 000 000} y 0 0 (PC: 181, Accumulator: 1819, PSW: 0080 [--------X-------])
+[654] {6E 000 000} n 0 0 (PC: 182, Accumulator: 1819, PSW: 0080 [--------X-------])
+[655] {6A 801 000} j -1 0 (PC: 181, Accumulator: 1819, PSW: 0080 [--------X-------])
+[656] {6F 009 000} o 9 0 (PC: 245, Accumulator: 1819, PSW: 8080 [M-------X-------])
+	[657] Clock interrupt number [131] has occurred
+[658] {79 000 000} y 0 0 (PC: 181, Accumulator: 1819, PSW: 0080 [--------X-------])
+[659] {6E 000 000} n 0 0 (PC: 182, Accumulator: 1819, PSW: 0080 [--------X-------])
+[660] {6A 801 000} j -1 0 (PC: 181, Accumulator: 1819, PSW: 0080 [--------X-------])
+[661] {6F 009 000} o 9 0 (PC: 245, Accumulator: 1819, PSW: 8080 [M-------X-------])
+	[662] Clock interrupt number [132] has occurred
+[663] {79 000 000} y 0 0 (PC: 181, Accumulator: 1819, PSW: 0080 [--------X-------])
+[664] {6E 000 000} n 0 0 (PC: 182, Accumulator: 1819, PSW: 0080 [--------X-------])
+[665] {6A 801 000} j -1 0 (PC: 181, Accumulator: 1819, PSW: 0080 [--------X-------])
+[666] {6F 009 000} o 9 0 (PC: 245, Accumulator: 1819, PSW: 8080 [M-------X-------])
+	[667] Clock interrupt number [133] has occurred
+[668] {79 000 000} y 0 0 (PC: 181, Accumulator: 1819, PSW: 0080 [--------X-------])
+[669] {6E 000 000} n 0 0 (PC: 182, Accumulator: 1819, PSW: 0080 [--------X-------])
+[670] {6A 801 000} j -1 0 (PC: 181, Accumulator: 1819, PSW: 0080 [--------X-------])
+[671] {6F 009 000} o 9 0 (PC: 245, Accumulator: 1819, PSW: 8080 [M-------X-------])
+	[672] Clock interrupt number [134] has occurred
+[673] {79 000 000} y 0 0 (PC: 181, Accumulator: 1819, PSW: 0080 [--------X-------])
+[674] {6E 000 000} n 0 0 (PC: 182, Accumulator: 1819, PSW: 0080 [--------X-------])
+[675] {6A 801 000} j -1 0 (PC: 181, Accumulator: 1819, PSW: 0080 [--------X-------])
+[676] {6F 009 000} o 9 0 (PC: 245, Accumulator: 1819, PSW: 8080 [M-------X-------])
+	[677] Clock interrupt number [135] has occurred
+[678] {79 000 000} y 0 0 (PC: 181, Accumulator: 1819, PSW: 0080 [--------X-------])
+[679] {6E 000 000} n 0 0 (PC: 182, Accumulator: 1819, PSW: 0080 [--------X-------])
+[680] {6A 801 000} j -1 0 (PC: 181, Accumulator: 1819, PSW: 0080 [--------X-------])
+[681] {6F 009 000} o 9 0 (PC: 245, Accumulator: 1819, PSW: 8080 [M-------X-------])
+	[682] Clock interrupt number [136] has occurred
+[683] {79 000 000} y 0 0 (PC: 181, Accumulator: 1819, PSW: 0080 [--------X-------])
+[684] {6E 000 000} n 0 0 (PC: 182, Accumulator: 1819, PSW: 0080 [--------X-------])
+[685] {6A 801 000} j -1 0 (PC: 181, Accumulator: 1819, PSW: 0080 [--------X-------])
+[686] {6F 009 000} o 9 0 (PC: 245, Accumulator: 1819, PSW: 8080 [M-------X-------])
+	[687] Clock interrupt number [137] has occurred
+[688] {79 000 000} y 0 0 (PC: 181, Accumulator: 1819, PSW: 0080 [--------X-------])
+[689] {6E 000 000} n 0 0 (PC: 182, Accumulator: 1819, PSW: 0080 [--------X-------])
+[690] {6A 801 000} j -1 0 (PC: 181, Accumulator: 1819, PSW: 0080 [--------X-------])
+[691] {6F 009 000} o 9 0 (PC: 245, Accumulator: 1819, PSW: 8080 [M-------X-------])
+	[692] Clock interrupt number [138] has occurred
+[693] {79 000 000} y 0 0 (PC: 181, Accumulator: 1819, PSW: 0080 [--------X-------])
+[694] {6E 000 000} n 0 0 (PC: 182, Accumulator: 1819, PSW: 0080 [--------X-------])
+[695] {6A 801 000} j -1 0 (PC: 181, Accumulator: 1819, PSW: 0080 [--------X-------])
+[696] {6F 009 000} o 9 0 (PC: 245, Accumulator: 1819, PSW: 8080 [M-------X-------])
+	[697] Clock interrupt number [139] has occurred
+[698] {79 000 000} y 0 0 (PC: 181, Accumulator: 1819, PSW: 0080 [--------X-------])
+[699] {6E 000 000} n 0 0 (PC: 182, Accumulator: 1819, PSW: 0080 [--------X-------])
+[700] {6A 801 000} j -1 0 (PC: 181, Accumulator: 1819, PSW: 0080 [--------X-------])
+[701] {6F 009 000} o 9 0 (PC: 245, Accumulator: 1819, PSW: 8080 [M-------X-------])
+	[702] Clock interrupt number [140] has occurred
+[703] {79 000 000} y 0 0 (PC: 181, Accumulator: 1819, PSW: 0080 [--------X-------])
+[704] {6E 000 000} n 0 0 (PC: 182, Accumulator: 1819, PSW: 0080 [--------X-------])
+[705] {6A 801 000} j -1 0 (PC: 181, Accumulator: 1819, PSW: 0080 [--------X-------])
+[706] {6F 009 000} o 9 0 (PC: 245, Accumulator: 1819, PSW: 8080 [M-------X-------])
+	[707] Clock interrupt number [141] has occurred
+[708] {79 000 000} y 0 0 (PC: 181, Accumulator: 1819, PSW: 0080 [--------X-------])
+[709] {6E 000 000} n 0 0 (PC: 182, Accumulator: 1819, PSW: 0080 [--------X-------])
+[710] {6A 801 000} j -1 0 (PC: 181, Accumulator: 1819, PSW: 0080 [--------X-------])
+[711] {6F 009 000} o 9 0 (PC: 245, Accumulator: 1819, PSW: 8080 [M-------X-------])
+	[712] Clock interrupt number [142] has occurred
+[713] {79 000 000} y 0 0 (PC: 181, Accumulator: 1819, PSW: 0080 [--------X-------])
+[714] {6E 000 000} n 0 0 (PC: 182, Accumulator: 1819, PSW: 0080 [--------X-------])
+[715] {6A 801 000} j -1 0 (PC: 181, Accumulator: 1819, PSW: 0080 [--------X-------])
+[716] {6F 009 000} o 9 0 (PC: 245, Accumulator: 1819, PSW: 8080 [M-------X-------])
+	[717] Clock interrupt number [143] has occurred
+[718] {79 000 000} y 0 0 (PC: 181, Accumulator: 1819, PSW: 0080 [--------X-------])
+[719] {6E 000 000} n 0 0 (PC: 182, Accumulator: 1819, PSW: 0080 [--------X-------])
+[720] {6A 801 000} j -1 0 (PC: 181, Accumulator: 1819, PSW: 0080 [--------X-------])
+[721] {6F 009 000} o 9 0 (PC: 245, Accumulator: 1819, PSW: 8080 [M-------X-------])
+	[722] Clock interrupt number [144] has occurred
+[723] {79 000 000} y 0 0 (PC: 181, Accumulator: 1819, PSW: 0080 [--------X-------])
+[724] {6E 000 000} n 0 0 (PC: 182, Accumulator: 1819, PSW: 0080 [--------X-------])
+[725] {6A 801 000} j -1 0 (PC: 181, Accumulator: 1819, PSW: 0080 [--------X-------])
+[726] {6F 009 000} o 9 0 (PC: 245, Accumulator: 1819, PSW: 8080 [M-------X-------])
+	[727] Clock interrupt number [145] has occurred
+[728] {79 000 000} y 0 0 (PC: 181, Accumulator: 1819, PSW: 0080 [--------X-------])
+[729] {6E 000 000} n 0 0 (PC: 182, Accumulator: 1819, PSW: 0080 [--------X-------])
+[730] {6A 801 000} j -1 0 (PC: 181, Accumulator: 1819, PSW: 0080 [--------X-------])
+[731] {6F 009 000} o 9 0 (PC: 245, Accumulator: 1819, PSW: 8080 [M-------X-------])
+	[732] Clock interrupt number [146] has occurred
+[733] {79 000 000} y 0 0 (PC: 181, Accumulator: 1819, PSW: 0080 [--------X-------])
+[734] {6E 000 000} n 0 0 (PC: 182, Accumulator: 1819, PSW: 0080 [--------X-------])
+[735] {6A 801 000} j -1 0 (PC: 181, Accumulator: 1819, PSW: 0080 [--------X-------])
+[736] {6F 009 000} o 9 0 (PC: 245, Accumulator: 1819, PSW: 8080 [M-------X-------])
+	[737] Clock interrupt number [147] has occurred
+[738] {79 000 000} y 0 0 (PC: 181, Accumulator: 1819, PSW: 0080 [--------X-------])
+[739] {6E 000 000} n 0 0 (PC: 182, Accumulator: 1819, PSW: 0080 [--------X-------])
+[740] {6A 801 000} j -1 0 (PC: 181, Accumulator: 1819, PSW: 0080 [--------X-------])
+[741] {6F 009 000} o 9 0 (PC: 245, Accumulator: 1819, PSW: 8080 [M-------X-------])
+	[742] Clock interrupt number [148] has occurred
+[743] {79 000 000} y 0 0 (PC: 181, Accumulator: 1819, PSW: 0080 [--------X-------])
+[744] {6E 000 000} n 0 0 (PC: 182, Accumulator: 1819, PSW: 0080 [--------X-------])
+[745] {6A 801 000} j -1 0 (PC: 181, Accumulator: 1819, PSW: 0080 [--------X-------])
+[746] {6F 009 000} o 9 0 (PC: 245, Accumulator: 1819, PSW: 8080 [M-------X-------])
+	[747] Clock interrupt number [149] has occurred
+[748] {79 000 000} y 0 0 (PC: 181, Accumulator: 1819, PSW: 0080 [--------X-------])
+[749] {6E 000 000} n 0 0 (PC: 182, Accumulator: 1819, PSW: 0080 [--------X-------])
+[750] {6A 801 000} j -1 0 (PC: 181, Accumulator: 1819, PSW: 0080 [--------X-------])
+[751] {6F 009 000} o 9 0 (PC: 245, Accumulator: 1819, PSW: 8080 [M-------X-------])
+	[752] Clock interrupt number [150] has occurred
+[753] {79 000 000} y 0 0 (PC: 181, Accumulator: 1819, PSW: 0080 [--------X-------])
+[754] {6E 000 000} n 0 0 (PC: 182, Accumulator: 1819, PSW: 0080 [--------X-------])
+[755] {6A 801 000} j -1 0 (PC: 181, Accumulator: 1819, PSW: 0080 [--------X-------])
+[756] {6F 009 000} o 9 0 (PC: 245, Accumulator: 1819, PSW: 8080 [M-------X-------])
+	[757] Clock interrupt number [151] has occurred
+[758] {79 000 000} y 0 0 (PC: 181, Accumulator: 1819, PSW: 0080 [--------X-------])
+[759] {6E 000 000} n 0 0 (PC: 182, Accumulator: 1819, PSW: 0080 [--------X-------])
+[760] {6A 801 000} j -1 0 (PC: 181, Accumulator: 1819, PSW: 0080 [--------X-------])
+[761] {6F 009 000} o 9 0 (PC: 245, Accumulator: 1819, PSW: 8080 [M-------X-------])
+	[762] Clock interrupt number [152] has occurred
+[763] {79 000 000} y 0 0 (PC: 181, Accumulator: 1819, PSW: 0080 [--------X-------])
+[764] {6E 000 000} n 0 0 (PC: 182, Accumulator: 1819, PSW: 0080 [--------X-------])
+[765] {6A 801 000} j -1 0 (PC: 181, Accumulator: 1819, PSW: 0080 [--------X-------])
+[766] {6F 009 000} o 9 0 (PC: 245, Accumulator: 1819, PSW: 8080 [M-------X-------])
+	[767] Clock interrupt number [153] has occurred
+[768] {79 000 000} y 0 0 (PC: 181, Accumulator: 1819, PSW: 0080 [--------X-------])
+[769] {6E 000 000} n 0 0 (PC: 182, Accumulator: 1819, PSW: 0080 [--------X-------])
+[770] {6A 801 000} j -1 0 (PC: 181, Accumulator: 1819, PSW: 0080 [--------X-------])
+[771] {6F 009 000} o 9 0 (PC: 245, Accumulator: 1819, PSW: 8080 [M-------X-------])
+	[772] Clock interrupt number [154] has occurred
+[773] {79 000 000} y 0 0 (PC: 181, Accumulator: 1819, PSW: 0080 [--------X-------])
+[774] {6E 000 000} n 0 0 (PC: 182, Accumulator: 1819, PSW: 0080 [--------X-------])
+[775] {6A 801 000} j -1 0 (PC: 181, Accumulator: 1819, PSW: 0080 [--------X-------])
+[776] {6F 009 000} o 9 0 (PC: 245, Accumulator: 1819, PSW: 8080 [M-------X-------])
+	[777] Clock interrupt number [155] has occurred
+[778] {79 000 000} y 0 0 (PC: 181, Accumulator: 1819, PSW: 0080 [--------X-------])
+[779] {6E 000 000} n 0 0 (PC: 182, Accumulator: 1819, PSW: 0080 [--------X-------])
+[780] {6A 801 000} j -1 0 (PC: 181, Accumulator: 1819, PSW: 0080 [--------X-------])
+[781] {6F 009 000} o 9 0 (PC: 245, Accumulator: 1819, PSW: 8080 [M-------X-------])
+	[782] Clock interrupt number [156] has occurred
+[783] {79 000 000} y 0 0 (PC: 181, Accumulator: 1819, PSW: 0080 [--------X-------])
+[784] {6E 000 000} n 0 0 (PC: 182, Accumulator: 1819, PSW: 0080 [--------X-------])
+[785] {6A 801 000} j -1 0 (PC: 181, Accumulator: 1819, PSW: 0080 [--------X-------])
+[786] {6F 009 000} o 9 0 (PC: 245, Accumulator: 1819, PSW: 8080 [M-------X-------])
+	[787] Clock interrupt number [157] has occurred
+[788] {79 000 000} y 0 0 (PC: 181, Accumulator: 1819, PSW: 0080 [--------X-------])
+[789] {6E 000 000} n 0 0 (PC: 182, Accumulator: 1819, PSW: 0080 [--------X-------])
+[790] {6A 801 000} j -1 0 (PC: 181, Accumulator: 1819, PSW: 0080 [--------X-------])
+[791] {6F 009 000} o 9 0 (PC: 245, Accumulator: 1819, PSW: 8080 [M-------X-------])
+	[792] Clock interrupt number [158] has occurred
+[793] {79 000 000} y 0 0 (PC: 181, Accumulator: 1819, PSW: 0080 [--------X-------])
+[794] {6E 000 000} n 0 0 (PC: 182, Accumulator: 1819, PSW: 0080 [--------X-------])
+[795] {6A 801 000} j -1 0 (PC: 181, Accumulator: 1819, PSW: 0080 [--------X-------])
+[796] {6F 009 000} o 9 0 (PC: 245, Accumulator: 1819, PSW: 8080 [M-------X-------])
+	[797] Clock interrupt number [159] has occurred
+[798] {79 000 000} y 0 0 (PC: 181, Accumulator: 1819, PSW: 0080 [--------X-------])
+[799] {6E 000 000} n 0 0 (PC: 182, Accumulator: 1819, PSW: 0080 [--------X-------])
+[800] {6A 801 000} j -1 0 (PC: 181, Accumulator: 1819, PSW: 0080 [--------X-------])
+[801] {6F 009 000} o 9 0 (PC: 245, Accumulator: 1819, PSW: 8080 [M-------X-------])
+	[802] Clock interrupt number [160] has occurred
+[803] {79 000 000} y 0 0 (PC: 181, Accumulator: 1819, PSW: 0080 [--------X-------])
+[804] {6E 000 000} n 0 0 (PC: 182, Accumulator: 1819, PSW: 0080 [--------X-------])
+[805] {6A 801 000} j -1 0 (PC: 181, Accumulator: 1819, PSW: 0080 [--------X-------])
+[806] {6F 009 000} o 9 0 (PC: 245, Accumulator: 1819, PSW: 8080 [M-------X-------])
+	[807] Clock interrupt number [161] has occurred
+[808] {79 000 000} y 0 0 (PC: 181, Accumulator: 1819, PSW: 0080 [--------X-------])
+[809] {6E 000 000} n 0 0 (PC: 182, Accumulator: 1819, PSW: 0080 [--------X-------])
+[810] {6A 801 000} j -1 0 (PC: 181, Accumulator: 1819, PSW: 0080 [--------X-------])
+[811] {6F 009 000} o 9 0 (PC: 245, Accumulator: 1819, PSW: 8080 [M-------X-------])
+	[812] Clock interrupt number [162] has occurred
+[813] {79 000 000} y 0 0 (PC: 181, Accumulator: 1819, PSW: 0080 [--------X-------])
+[814] {6E 000 000} n 0 0 (PC: 182, Accumulator: 1819, PSW: 0080 [--------X-------])
+[815] {6A 801 000} j -1 0 (PC: 181, Accumulator: 1819, PSW: 0080 [--------X-------])
+[816] {6F 009 000} o 9 0 (PC: 245, Accumulator: 1819, PSW: 8080 [M-------X-------])
+	[817] Clock interrupt number [163] has occurred
+[818] {79 000 000} y 0 0 (PC: 181, Accumulator: 1819, PSW: 0080 [--------X-------])
+[819] {6E 000 000} n 0 0 (PC: 182, Accumulator: 1819, PSW: 0080 [--------X-------])
+[820] {6A 801 000} j -1 0 (PC: 181, Accumulator: 1819, PSW: 0080 [--------X-------])
+[821] {6F 009 000} o 9 0 (PC: 245, Accumulator: 1819, PSW: 8080 [M-------X-------])
+	[822] Clock interrupt number [164] has occurred
+[823] {79 000 000} y 0 0 (PC: 181, Accumulator: 1819, PSW: 0080 [--------X-------])
+[824] {6E 000 000} n 0 0 (PC: 182, Accumulator: 1819, PSW: 0080 [--------X-------])
+[825] {6A 801 000} j -1 0 (PC: 181, Accumulator: 1819, PSW: 0080 [--------X-------])
+[826] {6F 009 000} o 9 0 (PC: 245, Accumulator: 1819, PSW: 8080 [M-------X-------])
+	[827] Clock interrupt number [165] has occurred
+[828] {79 000 000} y 0 0 (PC: 181, Accumulator: 1819, PSW: 0080 [--------X-------])
+[829] {6E 000 000} n 0 0 (PC: 182, Accumulator: 1819, PSW: 0080 [--------X-------])
+[830] {6A 801 000} j -1 0 (PC: 181, Accumulator: 1819, PSW: 0080 [--------X-------])
+[831] {6F 009 000} o 9 0 (PC: 245, Accumulator: 1819, PSW: 8080 [M-------X-------])
+	[832] Clock interrupt number [166] has occurred
+[833] {79 000 000} y 0 0 (PC: 181, Accumulator: 1819, PSW: 0080 [--------X-------])
+[834] {6E 000 000} n 0 0 (PC: 182, Accumulator: 1819, PSW: 0080 [--------X-------])
+[835] {6A 801 000} j -1 0 (PC: 181, Accumulator: 1819, PSW: 0080 [--------X-------])
+[836] {6F 009 000} o 9 0 (PC: 245, Accumulator: 1819, PSW: 8080 [M-------X-------])
+	[837] Clock interrupt number [167] has occurred
+[838] {79 000 000} y 0 0 (PC: 181, Accumulator: 1819, PSW: 0080 [--------X-------])
+[839] {6E 000 000} n 0 0 (PC: 182, Accumulator: 1819, PSW: 0080 [--------X-------])
+[840] {6A 801 000} j -1 0 (PC: 181, Accumulator: 1819, PSW: 0080 [--------X-------])
+[841] {6F 009 000} o 9 0 (PC: 245, Accumulator: 1819, PSW: 8080 [M-------X-------])
+	[842] Clock interrupt number [168] has occurred
+[843] {79 000 000} y 0 0 (PC: 181, Accumulator: 1819, PSW: 0080 [--------X-------])
+[844] {6E 000 000} n 0 0 (PC: 182, Accumulator: 1819, PSW: 0080 [--------X-------])
+[845] {6A 801 000} j -1 0 (PC: 181, Accumulator: 1819, PSW: 0080 [--------X-------])
+[846] {6F 009 000} o 9 0 (PC: 245, Accumulator: 1819, PSW: 8080 [M-------X-------])
+	[847] Clock interrupt number [169] has occurred
+[848] {79 000 000} y 0 0 (PC: 181, Accumulator: 1819, PSW: 0080 [--------X-------])
+[849] {6E 000 000} n 0 0 (PC: 182, Accumulator: 1819, PSW: 0080 [--------X-------])
+[850] {6A 801 000} j -1 0 (PC: 181, Accumulator: 1819, PSW: 0080 [--------X-------])
+[851] {6F 009 000} o 9 0 (PC: 245, Accumulator: 1819, PSW: 8080 [M-------X-------])
+	[852] Clock interrupt number [170] has occurred
+[853] {79 000 000} y 0 0 (PC: 181, Accumulator: 1819, PSW: 0080 [--------X-------])
+[854] {6E 000 000} n 0 0 (PC: 182, Accumulator: 1819, PSW: 0080 [--------X-------])
+[855] {6A 801 000} j -1 0 (PC: 181, Accumulator: 1819, PSW: 0080 [--------X-------])
+[856] {6F 009 000} o 9 0 (PC: 245, Accumulator: 1819, PSW: 8080 [M-------X-------])
+	[857] Clock interrupt number [171] has occurred
+[858] {79 000 000} y 0 0 (PC: 181, Accumulator: 1819, PSW: 0080 [--------X-------])
+[859] {6E 000 000} n 0 0 (PC: 182, Accumulator: 1819, PSW: 0080 [--------X-------])
+[860] {6A 801 000} j -1 0 (PC: 181, Accumulator: 1819, PSW: 0080 [--------X-------])
+[861] {6F 009 000} o 9 0 (PC: 245, Accumulator: 1819, PSW: 8080 [M-------X-------])
+	[862] Clock interrupt number [172] has occurred
+[863] {79 000 000} y 0 0 (PC: 181, Accumulator: 1819, PSW: 0080 [--------X-------])
+[864] {6E 000 000} n 0 0 (PC: 182, Accumulator: 1819, PSW: 0080 [--------X-------])
+[865] {6A 801 000} j -1 0 (PC: 181, Accumulator: 1819, PSW: 0080 [--------X-------])
+[866] {6F 009 000} o 9 0 (PC: 245, Accumulator: 1819, PSW: 8080 [M-------X-------])
+	[867] Clock interrupt number [173] has occurred
+[868] {79 000 000} y 0 0 (PC: 181, Accumulator: 1819, PSW: 0080 [--------X-------])
+[869] {6E 000 000} n 0 0 (PC: 182, Accumulator: 1819, PSW: 0080 [--------X-------])
+[870] {6A 801 000} j -1 0 (PC: 181, Accumulator: 1819, PSW: 0080 [--------X-------])
+[871] {6F 009 000} o 9 0 (PC: 245, Accumulator: 1819, PSW: 8080 [M-------X-------])
+	[872] Clock interrupt number [174] has occurred
+[873] {79 000 000} y 0 0 (PC: 181, Accumulator: 1819, PSW: 0080 [--------X-------])
+[874] {6E 000 000} n 0 0 (PC: 182, Accumulator: 1819, PSW: 0080 [--------X-------])
+[875] {6A 801 000} j -1 0 (PC: 181, Accumulator: 1819, PSW: 0080 [--------X-------])
+[876] {6F 009 000} o 9 0 (PC: 245, Accumulator: 1819, PSW: 8080 [M-------X-------])
+	[877] Clock interrupt number [175] has occurred
+[878] {79 000 000} y 0 0 (PC: 181, Accumulator: 1819, PSW: 0080 [--------X-------])
+[879] {6E 000 000} n 0 0 (PC: 182, Accumulator: 1819, PSW: 0080 [--------X-------])
+[880] {6A 801 000} j -1 0 (PC: 181, Accumulator: 1819, PSW: 0080 [--------X-------])
+[881] {6F 009 000} o 9 0 (PC: 245, Accumulator: 1819, PSW: 8080 [M-------X-------])
+	[882] Clock interrupt number [176] has occurred
+[883] {79 000 000} y 0 0 (PC: 181, Accumulator: 1819, PSW: 0080 [--------X-------])
+[884] {6E 000 000} n 0 0 (PC: 182, Accumulator: 1819, PSW: 0080 [--------X-------])
+[885] {6A 801 000} j -1 0 (PC: 181, Accumulator: 1819, PSW: 0080 [--------X-------])
+[886] {6F 009 000} o 9 0 (PC: 245, Accumulator: 1819, PSW: 8080 [M-------X-------])
+	[887] Clock interrupt number [177] has occurred

@@ -1,0 +1,46 @@
+C:\Users\blanc\OneDrive\Documentos\2-curso-2-cuatri\TPP\Practicas\Practica 7-8\lab7_UO285176\Main\bin\Debug\netcoreapp3.1\linq.deps.json
+C:\Users\blanc\OneDrive\Documentos\2-curso-2-cuatri\TPP\Practicas\Practica 7-8\lab7_UO285176\Main\bin\Debug\netcoreapp3.1\linq.runtimeconfig.json
+C:\Users\blanc\OneDrive\Documentos\2-curso-2-cuatri\TPP\Practicas\Practica 7-8\lab7_UO285176\Main\bin\Debug\netcoreapp3.1\linq.runtimeconfig.dev.json
+C:\Users\blanc\OneDrive\Documentos\2-curso-2-cuatri\TPP\Practicas\Practica 7-8\lab7_UO285176\Main\bin\Debug\netcoreapp3.1\linq.exe
+C:\Users\blanc\OneDrive\Documentos\2-curso-2-cuatri\TPP\Practicas\Practica 7-8\lab7_UO285176\Main\bin\Debug\netcoreapp3.1\Main.exe
+C:\Users\blanc\OneDrive\Documentos\2-curso-2-cuatri\TPP\Practicas\Practica 7-8\lab7_UO285176\Main\bin\Debug\netcoreapp3.1\Main.deps.json
+C:\Users\blanc\OneDrive\Documentos\2-curso-2-cuatri\TPP\Practicas\Practica 7-8\lab7_UO285176\Main\bin\Debug\netcoreapp3.1\Main.runtimeconfig.json
+C:\Users\blanc\OneDrive\Documentos\2-curso-2-cuatri\TPP\Practicas\Practica 7-8\lab7_UO285176\Main\bin\Debug\netcoreapp3.1\Main.runtimeconfig.dev.json
+C:\Users\blanc\OneDrive\Documentos\2-curso-2-cuatri\TPP\Practicas\Practica 7-8\lab7_UO285176\Main\bin\Debug\netcoreapp3.1\Main.dll
+C:\Users\blanc\OneDrive\Documentos\2-curso-2-cuatri\TPP\Practicas\Practica 7-8\lab7_UO285176\Main\bin\Debug\netcoreapp3.1\Main.pdb
+C:\Users\blanc\OneDrive\Documentos\2-curso-2-cuatri\TPP\Practicas\Practica 7-8\lab7_UO285176\Main\bin\Debug\netcoreapp3.1\linq.dll
+C:\Users\blanc\OneDrive\Documentos\2-curso-2-cuatri\TPP\Practicas\Practica 7-8\lab7_UO285176\Main\bin\Debug\netcoreapp3.1\Lista.dll
+C:\Users\blanc\OneDrive\Documentos\2-curso-2-cuatri\TPP\Practicas\Practica 7-8\lab7_UO285176\Main\bin\Debug\netcoreapp3.1\linq.pdb
+C:\Users\blanc\OneDrive\Documentos\2-curso-2-cuatri\TPP\Practicas\Practica 7-8\lab7_UO285176\Main\bin\Debug\netcoreapp3.1\Lista.pdb
+C:\Users\blanc\OneDrive\Documentos\2-curso-2-cuatri\TPP\Practicas\Practica 7-8\lab7_UO285176\Main\obj\Debug\netcoreapp3.1\Main.csproj.AssemblyReference.cache
+C:\Users\blanc\OneDrive\Documentos\2-curso-2-cuatri\TPP\Practicas\Practica 7-8\lab7_UO285176\Main\obj\Debug\netcoreapp3.1\Main.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\blanc\OneDrive\Documentos\2-curso-2-cuatri\TPP\Practicas\Practica 7-8\lab7_UO285176\Main\obj\Debug\netcoreapp3.1\Main.AssemblyInfoInputs.cache
+C:\Users\blanc\OneDrive\Documentos\2-curso-2-cuatri\TPP\Practicas\Practica 7-8\lab7_UO285176\Main\obj\Debug\netcoreapp3.1\Main.AssemblyInfo.cs
+C:\Users\blanc\OneDrive\Documentos\2-curso-2-cuatri\TPP\Practicas\Practica 7-8\lab7_UO285176\Main\obj\Debug\netcoreapp3.1\Main.csproj.CoreCompileInputs.cache
+C:\Users\blanc\OneDrive\Documentos\2-curso-2-cuatri\TPP\Practicas\Practica 7-8\lab7_UO285176\Main\obj\Debug\netcoreapp3.1\Main.csproj.CopyComplete
+C:\Users\blanc\OneDrive\Documentos\2-curso-2-cuatri\TPP\Practicas\Practica 7-8\lab7_UO285176\Main\obj\Debug\netcoreapp3.1\Main.dll
+C:\Users\blanc\OneDrive\Documentos\2-curso-2-cuatri\TPP\Practicas\Practica 7-8\lab7_UO285176\Main\obj\Debug\netcoreapp3.1\Main.pdb
+C:\Users\blanc\OneDrive\Documentos\2-curso-2-cuatri\TPP\Practicas\Practica 7-8\lab7_UO285176\Main\obj\Debug\netcoreapp3.1\Main.genruntimeconfig.cache
+C:\Users\blanc\OneDrive\Documentos\2-curso-2-cuatri\TPP\Practicas\Practica 7-8\lab7_UO285176 _con_pruebasv0\Main\bin\Debug\netcoreapp3.1\linq.deps.json
+C:\Users\blanc\OneDrive\Documentos\2-curso-2-cuatri\TPP\Practicas\Practica 7-8\lab7_UO285176 _con_pruebasv0\Main\bin\Debug\netcoreapp3.1\linq.runtimeconfig.json
+C:\Users\blanc\OneDrive\Documentos\2-curso-2-cuatri\TPP\Practicas\Practica 7-8\lab7_UO285176 _con_pruebasv0\Main\bin\Debug\netcoreapp3.1\linq.runtimeconfig.dev.json
+C:\Users\blanc\OneDrive\Documentos\2-curso-2-cuatri\TPP\Practicas\Practica 7-8\lab7_UO285176 _con_pruebasv0\Main\bin\Debug\netcoreapp3.1\linq.exe
+C:\Users\blanc\OneDrive\Documentos\2-curso-2-cuatri\TPP\Practicas\Practica 7-8\lab7_UO285176 _con_pruebasv0\Main\bin\Debug\netcoreapp3.1\Main.exe
+C:\Users\blanc\OneDrive\Documentos\2-curso-2-cuatri\TPP\Practicas\Practica 7-8\lab7_UO285176 _con_pruebasv0\Main\bin\Debug\netcoreapp3.1\Main.deps.json
+C:\Users\blanc\OneDrive\Documentos\2-curso-2-cuatri\TPP\Practicas\Practica 7-8\lab7_UO285176 _con_pruebasv0\Main\bin\Debug\netcoreapp3.1\Main.runtimeconfig.json
+C:\Users\blanc\OneDrive\Documentos\2-curso-2-cuatri\TPP\Practicas\Practica 7-8\lab7_UO285176 _con_pruebasv0\Main\bin\Debug\netcoreapp3.1\Main.runtimeconfig.dev.json
+C:\Users\blanc\OneDrive\Documentos\2-curso-2-cuatri\TPP\Practicas\Practica 7-8\lab7_UO285176 _con_pruebasv0\Main\bin\Debug\netcoreapp3.1\Main.dll
+C:\Users\blanc\OneDrive\Documentos\2-curso-2-cuatri\TPP\Practicas\Practica 7-8\lab7_UO285176 _con_pruebasv0\Main\bin\Debug\netcoreapp3.1\Main.pdb
+C:\Users\blanc\OneDrive\Documentos\2-curso-2-cuatri\TPP\Practicas\Practica 7-8\lab7_UO285176 _con_pruebasv0\Main\bin\Debug\netcoreapp3.1\linq.dll
+C:\Users\blanc\OneDrive\Documentos\2-curso-2-cuatri\TPP\Practicas\Practica 7-8\lab7_UO285176 _con_pruebasv0\Main\bin\Debug\netcoreapp3.1\Lista.dll
+C:\Users\blanc\OneDrive\Documentos\2-curso-2-cuatri\TPP\Practicas\Practica 7-8\lab7_UO285176 _con_pruebasv0\Main\bin\Debug\netcoreapp3.1\linq.pdb
+C:\Users\blanc\OneDrive\Documentos\2-curso-2-cuatri\TPP\Practicas\Practica 7-8\lab7_UO285176 _con_pruebasv0\Main\bin\Debug\netcoreapp3.1\Lista.pdb
+C:\Users\blanc\OneDrive\Documentos\2-curso-2-cuatri\TPP\Practicas\Practica 7-8\lab7_UO285176 _con_pruebasv0\Main\obj\Debug\netcoreapp3.1\Main.csproj.AssemblyReference.cache
+C:\Users\blanc\OneDrive\Documentos\2-curso-2-cuatri\TPP\Practicas\Practica 7-8\lab7_UO285176 _con_pruebasv0\Main\obj\Debug\netcoreapp3.1\Main.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\blanc\OneDrive\Documentos\2-curso-2-cuatri\TPP\Practicas\Practica 7-8\lab7_UO285176 _con_pruebasv0\Main\obj\Debug\netcoreapp3.1\Main.AssemblyInfoInputs.cache
+C:\Users\blanc\OneDrive\Documentos\2-curso-2-cuatri\TPP\Practicas\Practica 7-8\lab7_UO285176 _con_pruebasv0\Main\obj\Debug\netcoreapp3.1\Main.AssemblyInfo.cs
+C:\Users\blanc\OneDrive\Documentos\2-curso-2-cuatri\TPP\Practicas\Practica 7-8\lab7_UO285176 _con_pruebasv0\Main\obj\Debug\netcoreapp3.1\Main.csproj.CoreCompileInputs.cache
+C:\Users\blanc\OneDrive\Documentos\2-curso-2-cuatri\TPP\Practicas\Practica 7-8\lab7_UO285176 _con_pruebasv0\Main\obj\Debug\netcoreapp3.1\Main.csproj.CopyComplete
+C:\Users\blanc\OneDrive\Documentos\2-curso-2-cuatri\TPP\Practicas\Practica 7-8\lab7_UO285176 _con_pruebasv0\Main\obj\Debug\netcoreapp3.1\Main.dll
+C:\Users\blanc\OneDrive\Documentos\2-curso-2-cuatri\TPP\Practicas\Practica 7-8\lab7_UO285176 _con_pruebasv0\Main\obj\Debug\netcoreapp3.1\Main.pdb
+C:\Users\blanc\OneDrive\Documentos\2-curso-2-cuatri\TPP\Practicas\Practica 7-8\lab7_UO285176 _con_pruebasv0\Main\obj\Debug\netcoreapp3.1\Main.genruntimeconfig.cache

@@ -1,0 +1,16 @@
+/**
+ * 
+ */
+package grafos;
+
+import java.util.ArrayList;
+import java.util.HashMap;
+
+/**
+ * @author UO285176
+ *
+ */
+public class ColoracionMapa {
+	private HashMap<String, ArrayList<String>> paises;//num paises-> tamaño del problema
+	private HashMap<String, String> solucion;
+}

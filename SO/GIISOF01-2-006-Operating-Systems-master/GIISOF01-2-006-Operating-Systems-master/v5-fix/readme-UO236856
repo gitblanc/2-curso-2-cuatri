@@ -1,0 +1,11 @@
+Facundo Colunga, Guillermo
+UO236856
+./Simulator printProgram printProgram printProgram
+  With the device delay time set to 30 we can see how request are
+  enqueued at the the IOWaiting queue.
+  Memconfig file as it is.
+
+./Simulator printProgram printProgram printProgram
+  With the device delay time set to 7 we can see how request are
+  executed secuentally.
+  Memconfig file as it is.

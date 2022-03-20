@@ -1,0 +1,32 @@
+55
+0
+ADD 0 0
+MEMADD 1 33
+WRITE 33
+INC -7
+ZJUMP 2
+JUMP -4
+HALT
+==========
+// Mi primer programa
+55  // Tamanio del programa en posiciones de memoria
+ADD 10 0
+INC -1
+ZJUMP 2  // Si el registro acumulador==0, saltar dos posiciones de memoria hacia adelante
+JUMP -2  // Saltar dos posiciones de memoria hacia atras
+INC 1
+SHIFT -1
+SHIFT -1
+SHIFT -1
+SHIFT -1
+SHIFT -26
+SHIFT -1
+WRITE 99
+SHIFT 1
+SHIFT 1
+SHIFT 26
+SHIFT 1
+SHIFT 1
+SHIFT 1
+READ 99
+HALT
