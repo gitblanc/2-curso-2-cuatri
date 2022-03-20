@@ -18,6 +18,8 @@ namespace linq
             }).Last();
 
             integers.ForEach(x => Console.WriteLine(x));
+            var res = integers.Invert();
+            res.ForEach(x => Console.Write(x + "-")); 
         }
     }
 

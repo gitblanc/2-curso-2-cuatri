@@ -98,3 +98,9 @@ C:\Users\blanc\OneDrive\Documentos\2-curso-2-cuatri\TPP\Practicas\Practica 7-8\l
 C:\Users\blanc\OneDrive\Documentos\2-curso-2-cuatri\TPP\Practicas\Practica 7-8\lab7_UO285176\Tests\obj\Debug\netcoreapp3.1\Tests.dll
 C:\Users\blanc\OneDrive\Documentos\2-curso-2-cuatri\TPP\Practicas\Practica 7-8\lab7_UO285176\Tests\obj\Debug\netcoreapp3.1\Tests.pdb
 C:\Users\blanc\OneDrive\Documentos\2-curso-2-cuatri\TPP\Practicas\Practica 7-8\lab7_UO285176\Tests\obj\Debug\netcoreapp3.1\Tests.genruntimeconfig.cache
+C:\Users\blanc\OneDrive\Documentos\2-curso-2-cuatri\TPP\Practicas\Practica 7-8\lab7_UO285176\Tests\bin\Debug\netcoreapp3.1\linq.deps.json
+C:\Users\blanc\OneDrive\Documentos\2-curso-2-cuatri\TPP\Practicas\Practica 7-8\lab7_UO285176\Tests\bin\Debug\netcoreapp3.1\linq.runtimeconfig.json
+C:\Users\blanc\OneDrive\Documentos\2-curso-2-cuatri\TPP\Practicas\Practica 7-8\lab7_UO285176\Tests\bin\Debug\netcoreapp3.1\linq.runtimeconfig.dev.json
+C:\Users\blanc\OneDrive\Documentos\2-curso-2-cuatri\TPP\Practicas\Practica 7-8\lab7_UO285176\Tests\bin\Debug\netcoreapp3.1\linq.exe
+C:\Users\blanc\OneDrive\Documentos\2-curso-2-cuatri\TPP\Practicas\Practica 7-8\lab7_UO285176\Tests\bin\Debug\netcoreapp3.1\linq.dll
+C:\Users\blanc\OneDrive\Documentos\2-curso-2-cuatri\TPP\Practicas\Practica 7-8\lab7_UO285176\Tests\bin\Debug\netcoreapp3.1\linq.pdb

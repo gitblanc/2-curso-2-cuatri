@@ -25,6 +25,8 @@ namespace queries
         {
             Query query = new Query();
             query.Homework1();
+            query.Homework2();
+            query.Homework4();
         }
 
         private void Query1()
@@ -187,6 +189,8 @@ namespace queries
             // and who have done phone calls longer than one minute
             var name = model.Employees.Where(e => e.Department.Name.ToLower().Equals("computer science"))
                 .Where(e => e.Office.Building.ToLower().Equals("faculty of science"))
+                .Where(e => model.PhoneCalls.Where(c => c.SourceNumber.Equals(e.TelephoneNumber))
+                .Any(c => c.Seconds >= 60))
                 .OrderBy(e => e.Age).Select(e => e.Name);
             Console.WriteLine("Employees: ");
             Show(name);//sale Bernardo
@@ -195,6 +199,16 @@ namespace queries
         private void Homework2()
         {
             // Show the summation, in seconds, of the phone calls done by the employees of the Computer Science department
+            var phonecalls = model.Employees.Where(e => e.Department.Name.ToLower().Equals("computer science"))
+                .Join(model.PhoneCalls,
+                e => e.TelephoneNumber, c => c.SourceNumber,
+                (e, c) => new
+                {
+                    Employee = e.Name,
+                    Duration = c.Seconds //+ c.Seconds
+                });
+            Console.WriteLine("Calls: ");
+            Show(phonecalls);
         }
 
         private void Homework3()
@@ -208,6 +222,9 @@ namespace queries
             // Show the departments with the youngest employee, 
             // together with the name of the youngest employee and his/her age 
             // (more than one youngest employee may exist)
+            var departamentos = model.Employees.OrderBy(e => e.Age).GroupBy(e => e.Department);
+            Console.WriteLine("Departments: ");
+            Show(departamentos);
         }
 
         private void Homework5()
