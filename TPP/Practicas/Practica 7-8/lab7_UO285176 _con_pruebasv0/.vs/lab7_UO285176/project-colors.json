@@ -15,7 +15,12 @@
       "ProjectGuid": "be6566a6-c153-4ed9-833b-1ceb3a8b920f",
       "DisplayName": "Lista",
       "ColorIndex": 2
+    },
+    "d5fbfb9d-ca20-42a5-bd2e-ddc2f9a1f7c1": {
+      "ProjectGuid": "d5fbfb9d-ca20-42a5-bd2e-ddc2f9a1f7c1",
+      "DisplayName": "exam.test.student",
+      "ColorIndex": 3
     }
   },
-  "NextColorIndex": 3
+  "NextColorIndex": 4
 }
