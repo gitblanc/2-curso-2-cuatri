@@ -1,0 +1,10 @@
+C:\Users\UO285176\Desktop\practica9\process.thread\bin\Release\netcoreapp3.1\process.thread.exe
+C:\Users\UO285176\Desktop\practica9\process.thread\bin\Release\netcoreapp3.1\process.thread.deps.json
+C:\Users\UO285176\Desktop\practica9\process.thread\bin\Release\netcoreapp3.1\process.thread.runtimeconfig.json
+C:\Users\UO285176\Desktop\practica9\process.thread\bin\Release\netcoreapp3.1\process.thread.runtimeconfig.dev.json
+C:\Users\UO285176\Desktop\practica9\process.thread\bin\Release\netcoreapp3.1\process.thread.dll
+C:\Users\UO285176\Desktop\practica9\process.thread\bin\Release\netcoreapp3.1\process.thread.pdb
+C:\Users\UO285176\Desktop\practica9\process.thread\obj\Release\netcoreapp3.1\process.thread.csproj.CoreCompileInputs.cache
+C:\Users\UO285176\Desktop\practica9\process.thread\obj\Release\netcoreapp3.1\process.thread.dll
+C:\Users\UO285176\Desktop\practica9\process.thread\obj\Release\netcoreapp3.1\process.thread.pdb
+C:\Users\UO285176\Desktop\practica9\process.thread\obj\Release\netcoreapp3.1\process.thread.genruntimeconfig.cache

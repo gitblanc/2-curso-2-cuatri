@@ -1,0 +1,11 @@
+C:\Users\UO285176\Desktop\practica9\thread.creation\bin\Debug\netcoreapp3.1\thread.creation.exe
+C:\Users\UO285176\Desktop\practica9\thread.creation\bin\Debug\netcoreapp3.1\thread.creation.deps.json
+C:\Users\UO285176\Desktop\practica9\thread.creation\bin\Debug\netcoreapp3.1\thread.creation.runtimeconfig.json
+C:\Users\UO285176\Desktop\practica9\thread.creation\bin\Debug\netcoreapp3.1\thread.creation.runtimeconfig.dev.json
+C:\Users\UO285176\Desktop\practica9\thread.creation\bin\Debug\netcoreapp3.1\thread.creation.dll
+C:\Users\UO285176\Desktop\practica9\thread.creation\bin\Debug\netcoreapp3.1\thread.creation.pdb
+C:\Users\UO285176\Desktop\practica9\thread.creation\obj\Debug\netcoreapp3.1\thread.creation.csproj.AssemblyReference.cache
+C:\Users\UO285176\Desktop\practica9\thread.creation\obj\Debug\netcoreapp3.1\thread.creation.csproj.CoreCompileInputs.cache
+C:\Users\UO285176\Desktop\practica9\thread.creation\obj\Debug\netcoreapp3.1\thread.creation.dll
+C:\Users\UO285176\Desktop\practica9\thread.creation\obj\Debug\netcoreapp3.1\thread.creation.pdb
+C:\Users\UO285176\Desktop\practica9\thread.creation\obj\Debug\netcoreapp3.1\thread.creation.genruntimeconfig.cache

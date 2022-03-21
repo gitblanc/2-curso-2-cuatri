@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "sJuU4N9KsAii7kXe9URz1X6MLL6RB1QsPaehwpH7u8ZB1oS1LUiSe85maC+KwjaddqVjn4NYK7JROPfgzoAZmA==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\UO285176\\Desktop\\practica9\\vector.modulus\\vector.modulus.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\UO285176\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
+    "C:\\Users\\UO285176\\.nuget\\packages\\system.data.datasetextensions\\4.5.0\\system.data.datasetextensions.4.5.0.nupkg.sha512"
+  ],
+  "logs": []
+}
