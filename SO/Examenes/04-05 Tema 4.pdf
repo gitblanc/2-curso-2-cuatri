@@ -1,0 +1,321 @@
+
+<!-- saved from url=(0055)http://156.35.81.1/ssoo/otra/exam/curso04-05/tema4.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<title>Examen 
+   Examen del Tema 4, 
+   20 de Abril de 2005</title>
+<style type="text/css"></style></head>
+<body>
+<h2>
+ E.U.I.T. Inform�tica de Oviedo. Sistemas Operativos. Segundo curso. <br>
+ Soluci�n del Examen del Tema 4. 20 de Abril de 2005</h2>
+<p>Si se detecta cualquier fallo o se quiere alegar algo, debe utilizarse �nicamente el <a href="http://euitio178.ccu.uniovi.es/foros/viewforum.php?f=41">foro de la asignatura</a> que hay en los foros de la EUITIO. El plazo de alegaciones finaliza el lunes 25 a las 10 de la ma�ana.</p>
+<ol>
+<li>
+<p>En la entrada/salida por DMA </p>
+<ol type="a">
+<li>El hardware del dispositivo se encarga de realizar la transferencia de datos entre el controlador del dispositivo y la memoria<br><strong><i>
+        Cierto. Es la ventaja que presenta. </i></strong>
+</li>
+<li>El procesador se encarga de realizar la transferencia de datos entre el controlador del dispositivo y la memoria principal. <br><i>
+     Falso. El encargado de hacer eso es el propio controlador del dispositivo. </i>
+</li>
+<li>No se utiliza el mecanismo de las interrupciones por ser innecesario.<br><i>
+     Falso. S� es necesario para comunicar el fin de la operaci�n o cualquier problema en la misma.</i>
+</li>
+<li>El dispositivo tiene acceso a la memoria principal del sistema.<br><strong><i>
+        Cierto. Es necesario para poder llevar a cabo la transferencia de datos.</i></strong>
+</li>
+</ol>
+</li>
+<hr>
+<li>
+<p>Atendiendo a su manera de realizar la transferencia, los dispositivos de e/s se clasifican en una serie de categor�as. Se�ale cu�les de entre las siguientes son una de ellas.</p>
+<ol type="a">
+<li>Dispositivos de bloques.<br><strong><i>
+        Cierto. Este tipo de dispositivos corresponde a una clasificaci�n en funci�n de las unidades de transferencia que utiliza.</i></strong>
+</li>
+<li>Dispositivos de caracteres. <br><strong><i>
+        Cierto. Este tipo de dispositivos corresponde a una clasificaci�n en funci�n de las unidades de transferencia que utiliza.</i></strong>
+</li>
+<li>Dispositivos de almacenamiento.<br><i>
+     Falso. Esta es una de las categor�as, junto a los de interfaz de usuario y a los de comunicaciones, pero atendiendo a su funci�n.</i>
+</li>
+<li>Dispositivos de interfaz de usuario.<br><i>
+     Falso. Esta es una de las categor�as, junto a los de almacenamiento y a los de comunicaciones, pero atendiendo a su funci�n.</i>
+</li>
+</ol>
+</li>
+<hr>
+<li>
+<p>En relaci�n con el dispositivo terminal, se�ale las afirmaciones que son ciertas.</p>
+<ol type="a">
+<li>En un terminal proyectado en memoria, no se utilizan interrupciones para realizar la salida.<br><strong><i>
+        Cierto. Considerando s�lo la salida, no son necesarias y por tanto no se utilizan.</i></strong>
+</li>
+<li>En un terminal conectado v�a serie, el hardware realiza la conversi�n de caracteres.<br><strong><i>
+        Cierto. El sistema recibe el car�cter en ASCII.</i></strong>
+</li>
+<li>En un terminal conectado v�a serie, se produce una interrupci�n tras cada env�o o recepci�n de un car�cter.<br><strong><i>
+        Cierto. Tras cada env�o o recepci�n, la UART genera una interrupci�n para notificar el hecho.</i></strong>
+</li>
+<li>En un terminal proyectado en memoria, se produce una interrupci�n tras cada pulsaci�n de una tecla.<br><strong><i>
+        Cierto. Tras cada pulsaci�n se genera una interrupci�n para notificar el hecho.</i></strong>
+</li>
+</ol>
+</li>
+<hr>
+<li>
+<p>�Cu�les de las siguientes funciones realiza el SO con relaci�n a la e/s? </p>
+<ol type="a">
+<li>Optimizar la entrada/salida<br><strong><i>
+        Cierto. Porque los dispositivos son lentos, motivo por el que se encarga de esto.</i></strong>
+</li>
+<li>Dejar al usuario la labor de instalar dispositivos nuevos para que el mismo las configure.<br><i>
+     Falso. Ya que se encarga de todo lo contrario, es decir, de automatizar la instalaci�n.</i>
+</li>
+<li>Facilita el manejo de los dispositivos.<br><strong><i>
+        Cierto. Ya que facilita una interfaz sencilla y de alto nivel.</i></strong>
+</li>
+<li>
+     Ninguna del resto de respuestas es correcta.
+     <br><i>
+       Falso. Hay otra respuesta correcta, luego �sta no lo es.
+       </i>
+</li>
+</ol>
+</li>
+<hr>
+<li>
+<p>En relaci�n al dispositivo reloj, se�ale las afirmaciones que son ciertas.</p>
+<ol type="a">
+<li>Siempre que se produce una oscilaci�n del reloj se produce una interrupci�n del mismo.<br><i>
+     Falso. Se produce una interrupci�n cada cierto n�mero de oscilaciones.</i>
+</li>
+<li>El tiempo entre dos interrupciones de reloj es configurable por el sistema operativo.<br><strong><i>
+        Cierto. Modificando el valor inicial del registro de retenci�n se puede modificar el periodo entre interrupciones.</i></strong>
+</li>
+<li>Una de las funciones t�picas gestionadas por el reloj es la planificaci�n de procesos basadas en cuanto.<br><strong><i>
+        Cierto. Es una de las funciones que se asocian a la interrupci�n del reloj.</i></strong>
+</li>
+<li>
+     Ninguna del resto de respuestas es correcta.
+     <br><i>
+       Falso. Hay otra respuesta correcta, luego �sta no lo es.
+       </i>
+</li>
+</ol>
+</li>
+<hr>
+<li>
+<p>En relaci�n a los mecanismos de mejora al funcionamiento de la entrada/salida, se�ale qu� afirmaciones son Correctas. </p>
+<ol type="a">
+<li>La t�cnica del spooling consiste en utilizar un almacenamiento intermedio en memoria secundaria para mejorar el rendimiento de dispositivos de baja velocidad.<br><strong><i>
+        Cierto. El spooling utiliza un dispositivo de almacenamiento secundario r�pido (disco) para mejorar la operaci�n de dispositivos lentos.</i></strong>
+</li>
+<li>El spooling para dispositivos de salida hace que haya menos cambios de contexto al realiza las salidas.<br><i>
+     Falso. Esa es la tarea de los buffers de e/s.</i>
+</li>
+<li>El buffer del teclado permite que no se pierdan pulsaciones aunque ning�n programa est� leyendo del teclado en ese momento.<br><strong><i>
+        Cierto. Esa es la funci�n de los buffers de entrada en general.</i></strong>
+</li>
+<li>
+     Ninguna del resto de respuestas es correcta.
+     <br><i>
+       Falso. Hay otra respuesta correcta, luego �sta no lo es.
+       </i>
+</li>
+</ol>
+</li>
+<hr>
+<li>
+<p>Se�ale, de entre las siguientes, las ventajas que aporta la utilizaci�n de los buffers del sistema operativo en dispositivos de bloques.</p>
+<ol type="a">
+<li>Mejora del rendimiento en grandes accesos secuenciales.<br><i>
+     Falso. �ste es, precisamente, uno de los inconvenientes que presenta.</i>
+</li>
+<li>Mejora el rendimiento al no tener que acudir siempre al dispositivo para realizar la operaci�n requerida.<br><strong><i>
+        Cierto. Esta es la principal ventaja que presenta.</i></strong>
+</li>
+<li>Permite el uso simult�neo de dispositivos de uso exclusivo.<br><i>
+     Falso. Eso se logra por medio del spool.</i>
+</li>
+<li>
+     Ninguna del resto de respuestas es correcta.
+     <br><i>
+       Falso. Hay otra respuesta correcta, luego �sta no lo es.
+       </i>
+</li>
+</ol>
+</li>
+<hr>
+<li>
+<p>En el software de e/s, se�ale qu� afirmaciones de las siguientes son correctas </p>
+<ol type="a">
+<li>Hay una rutina independiente del dispositivo para cada dispositivo.<br><i>
+     Falso. S�lo hay una en el sistema.</i>
+</li>
+<li>Hay un manejador de dispositivo para cada dispositivo de control distinto que haya en el sistema.<br><strong><i>
+        Cierto. Cada uno hay que gestionarlo a su manera.</i></strong>
+</li>
+<li>Cada dispositivo tiene su propio manejador de interrupci�n.<br><strong><i>
+        Cierto. Las interrupciones son propias de cada dispositivo, por lo que deben ser tratadas de manera distinta.</i></strong>
+</li>
+<li>
+     Ninguna del resto de respuestas es correcta.
+     <br><i>
+       Falso. Hay otra respuesta correcta, luego �sta no lo es.
+       </i>
+</li>
+</ol>
+</li>
+<hr>
+<li>
+<p>Cuando se recibe una petici�n de e/s </p>
+<ol type="a">
+<li>La rutina independiente del dispositivo crea un IORB y lo encola en una estructura dependiente del descriptor del perif�rico virtual sobre el que va dirigida la operaci�n.<br><i>
+     Falso. Se encola sobre el perif�rico real.</i>
+</li>
+<li>La rutina independiente del dispositivo crea un IORB y lo encola en una estructura dependiente del descriptor del perif�rico real sobre el que va dirigida la operaci�n.<br><strong><i>
+        Cierto. Se encola sobre el perif�rico real.</i></strong>
+</li>
+<li>El IORB es tratado por la rutina manejadora de la interrupci�n del dispositivo correspondiente.<br><i>
+     Falso. Lo hace el manejador del dispositivo, no de la interrupci�n.</i>
+</li>
+<li>
+     Ninguna del resto de respuestas es correcta.
+     <br><i>
+       Falso. Hay otra respuesta correcta, luego �sta no lo es.
+       </i>
+</li>
+</ol>
+</li>
+<hr>
+<li>
+<p>Respecto a las estructuras de datos utilizadas por el software de e/s </p>
+<ol type="a">
+<li>El IORB lo crea la rutina de petici�n de e/s (software independiente de dispositivo).<br><strong><i>
+        Cierto. Es esa rutina quien lo hace.</i></strong>
+</li>
+<li>El descriptor del perif�rico real se crea cuando se crea un proceso que utiliza el dispositivo en cuesti�n.<br><i>
+     Falso. Se crea al iniciar el sistema.</i>
+</li>
+<li>El descriptor del perif�rico virtual se crea cuando se crea un proceso que utiliza el dispositivo en cuesti�n.<br><strong><i>
+        Cierto. Es cuando se crea.</i></strong>
+</li>
+<li>
+     Ninguna del resto de respuestas es correcta.
+     <br><i>
+       Falso. Hay otra respuesta correcta, luego �sta no lo es.
+       </i>
+</li>
+</ol>
+</li>
+<hr>
+<li>
+<p>Cuando se termina de realizar una operaci�n de entrada/salida</p>
+<ol type="a">
+<li>El dispositivo genera una interrupci�n que ser� tratada por el manejador correspondiente.<br><strong><i>
+        Cierto. Es lo primero que ocurre.</i></strong>
+</li>
+<li>El dispositivo genera una interrupci�n que ser� ignorada si se trata de una e/s as�ncrona.<br><i>
+     Falso. </i>
+</li>
+<li>El manejador de la interrupci�n avisa al manejador del dispositivo.<br><strong><i>
+        Cierto. Es el camino que se sigue.</i></strong>
+</li>
+<li>El manejador de la interrupci�n avisa al software independiente del dispositivo.<br><i>
+     Falso. Se avisa al manejador del dispositivo.</i>
+</li>
+</ol>
+</li>
+<hr>
+<li>
+<p>Sea un disco con un factor de entrelazado (o intercalado) 2 (hay 2 sectores entre dos sectores consecutivos). </p>
+<ol type="a">
+<li>Para leer todos los sectores de una pista es necesario que el disco realice dos vueltas completas.<br><i>
+     Falso. Son necesarias al menos tres vueltas</i>
+</li>
+<li>Para leer todos los sectores de una pista es necesario que el disco realice tres vueltas completas.<br><i>
+     Falso. Son necesarias al menos tres vueltas</i>
+</li>
+<li>Se pueden leer todos los sectores de una pista en una sola vuelta.<br><i>
+     Falso. </i>
+</li>
+<li>
+     Ninguna del resto de respuestas es correcta.
+     <br><strong><i>
+         Cierto. No hay ninguna otra respuesta correcta, luego �sta lo es.
+       </i></strong>
+</li>
+</ol>
+</li>
+<hr>
+<li>
+<p>La pol�tica SLTF mejora el rendimiento del sistema de disco </p>
+<ol type="a">
+<li>Al optimizar el movimiento de la cabeza de lectura/escritura<br><i>
+     Falso. Es una pol�tica de optimizaci�n rotacional.</i>
+</li>
+<li>Utilizando una cach� de disco.<br><i>
+     Falso. No tiene nada que ver con esto.</i>
+</li>
+<li>Minimizando los tiempos de latencia.<br><strong><i>
+        Cierto. Esa es su funci�n</i></strong>
+</li>
+<li>
+     Ninguna del resto de respuestas es correcta.
+     <br><i>
+       Falso. Hay otra respuesta correcta, luego �sta no lo es.
+       </i>
+</li>
+</ol>
+</li>
+<hr>
+<li>
+<p>Sea un disco que tiene una velocidad de rotaci�n de 6000 rpm. El disco tiene 10 sectores por pista. �Cu�l ser� el peor tiempo posible de servicio de una petici�n, una vez situada la cabeza sobre la pista en cuesti�n.</p>
+<ol type="a">
+<li>0,005 segundos<br><i>
+     Falso. El caso peor corresponde a dar una vuelta completa (0,01 segundos), m�s el tiempo de leer el sector (0,01/10). En total se tardar� 0,011 sg.</i>
+</li>
+<li>0,1 segundos<br><i>
+     Falso. El caso peor corresponde a dar una vuelta completa (0,01 segundos), m�s el tiempo de leer el sector (0,01/10). En total se tardar� 0,011 sg.</i>
+</li>
+<li>0,011 segundos<br><strong><i>
+        Cierto. El caso peor corresponde a dar una vuelta completa (0,01 segundos), m�s el tiempo de leer el sector (0,01/10). En total se tardar� 0,011 sg.</i></strong>
+</li>
+<li>
+     Ninguna del resto de respuestas es correcta.
+     <br><i>
+       Falso. Hay otra respuesta correcta, luego �sta no lo es.
+       </i>
+</li>
+</ol>
+</li>
+<hr>
+<li>
+<p>De las pol�ticas de planificaci�n de disco estudiadas, s�lo algunas garantizan en todas circunstancias la ausencia de inanici�n. Se�ale cu�les. </p>
+<ol type="a">
+<li>FCFS<br><strong><i>
+        Cierto. Esta es una de ellas.</i></strong>
+</li>
+<li>SCAN n pasos<br><strong><i>
+        Cierto. Esta es una de ellas.</i></strong>
+</li>
+<li>SSTF<br><i>
+     Falso. Esta puede presentar inanici�n.</i>
+</li>
+<li>
+     Ninguna del resto de respuestas es correcta.
+     <br><i>
+       Falso. Hay otra respuesta correcta, luego �sta no lo es.
+       </i>
+</li>
+</ol>
+</li>
+<hr>
+</ol>
+
+
+</body></html>

@@ -1,0 +1,4068 @@
+
+<!-- saved from url=(0076)file:///C:/Users/Liliana/Desktop/Examenes%20SO/02-04%20Segundo%20Parcial.htm -->
+<html xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office" xmlns:w="urn:schemas-microsoft-com:office:word" xmlns:dt="uuid:C2F41010-65B3-11d1-A29F-00AA00C14882" xmlns="http://www.w3.org/TR/REC-html40"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<meta name="ProgId" content="Word.Document">
+<meta name="Generator" content="Microsoft Word 10">
+<meta name="Originator" content="Microsoft Word 10">
+<link rel="File-List" href="http://156.35.81.1/ssoo/otra/exam/curso03-04/p2-26-5-04_archivos/filelist.xml">
+<link rel="Edit-Time-Data" href="http://156.35.81.1/ssoo/otra/exam/curso03-04/p2-26-5-04_archivos/editdata.mso">
+<!--[if !mso]>
+<style>
+v\:* {behavior:url(#default#VML);}
+o\:* {behavior:url(#default#VML);}
+w\:* {behavior:url(#default#VML);}
+.shape {behavior:url(#default#VML);}
+</style>
+<![endif]-->
+<title>1.-  En el Algoritmo de Lamport aparece una condici�n como la siguiente:</title>
+<!--[if gte mso 9]><xml>
+ <o:DocumentProperties>
+  <o:Author>albizu</o:Author>
+  <o:Template>Examenes operativos</o:Template>
+  <o:LastAuthor>Miguel Riesco Albizu</o:LastAuthor>
+  <o:Revision>2</o:Revision>
+  <o:TotalTime>15</o:TotalTime>
+  <o:LastPrinted>2004-05-26T11:16:00Z</o:LastPrinted>
+  <o:Created>2004-05-27T09:34:00Z</o:Created>
+  <o:LastSaved>2004-05-27T09:34:00Z</o:LastSaved>
+  <o:Pages>1</o:Pages>
+  <o:Words>2496</o:Words>
+  <o:Characters>13732</o:Characters>
+  <o:Company>Ca' Farangayo Software Dev.</o:Company>
+  <o:Lines>114</o:Lines>
+  <o:Paragraphs>32</o:Paragraphs>
+  <o:CharactersWithSpaces>16196</o:CharactersWithSpaces>
+  <o:Version>10.2625</o:Version>
+ </o:DocumentProperties>
+ <o:CustomDocumentProperties>
+  <o:_AdHocReviewCycleID dt:dt="float">-968237070</o:_AdHocReviewCycleID>
+  <o:_EmailSubject dt:dt="string">Primer Parcial. Modelo 1</o:_EmailSubject>
+  <o:_AuthorEmail dt:dt="string">albizu@lsi.uniovi.es</o:_AuthorEmail>
+  <o:_AuthorEmailDisplayName dt:dt="string">Miguel Riesco Albizu</o:_AuthorEmailDisplayName>
+  <o:_ReviewingToolsShownOnce dt:dt="string"></o:_ReviewingToolsShownOnce>
+ </o:CustomDocumentProperties>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <w:WordDocument>
+  <w:DoNotShowRevisions/>
+  <w:DoNotPrintRevisions/>
+  <w:DoNotShowMarkup/>
+  <w:HyphenationZone>21</w:HyphenationZone>
+  <w:DisplayHorizontalDrawingGridEvery>0</w:DisplayHorizontalDrawingGridEvery>
+  <w:DisplayVerticalDrawingGridEvery>0</w:DisplayVerticalDrawingGridEvery>
+  <w:UseMarginsForDrawingGridOrigin/>
+  <w:Compatibility>
+   <w:UsePrinterMetrics/>
+   <w:WW6BorderRules/>
+   <w:FootnoteLayoutLikeWW8/>
+   <w:ShapeLayoutLikeWW8/>
+   <w:AlignTablesRowByRow/>
+   <w:ForgetLastTabAlignment/>
+   <w:LayoutRawTableWidth/>
+   <w:LayoutTableRowsApart/>
+   <w:UseWord97LineBreakingRules/>
+  </w:Compatibility>
+  <w:BrowserLevel>MicrosoftInternetExplorer4</w:BrowserLevel>
+ </w:WordDocument>
+</xml><![endif]-->
+<style>
+<!--
+ /* Font Definitions */
+ @font-face
+	{font-family:Wingdings;
+	panose-1:5 0 0 0 0 0 0 0 0 0;
+	mso-font-charset:2;
+	mso-generic-font-family:auto;
+	mso-font-pitch:variable;
+	mso-font-signature:0 268435456 0 0 -2147483648 0;}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{mso-style-parent:"";
+	margin:0cm;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";
+	mso-ansi-language:ES-TRAD;
+	font-style:italic;
+	mso-bidi-font-style:normal;}
+h1
+	{mso-style-next:Normal;
+	margin-top:6.0pt;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:0cm;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	mso-pagination:widow-orphan;
+	page-break-after:avoid;
+	mso-outline-level:1;
+	font-size:12.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:"Times New Roman";
+	mso-font-kerning:14.0pt;
+	mso-ansi-language:ES-TRAD;
+	font-weight:normal;}
+h2
+	{mso-style-next:Normal;
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:72.0pt;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-indent:-18.15pt;
+	mso-pagination:widow-orphan;
+	page-break-after:avoid;
+	mso-outline-level:2;
+	mso-list:l14 level2 lfo166;
+	tab-stops:list 72.0pt;
+	font-size:12.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:"Times New Roman";
+	mso-ansi-language:ES-TRAD;
+	font-weight:normal;}
+h3
+	{mso-style-next:Normal;
+	margin-top:12.0pt;
+	margin-right:0cm;
+	margin-bottom:3.0pt;
+	margin-left:0cm;
+	text-align:justify;
+	mso-pagination:widow-orphan;
+	page-break-after:avoid;
+	mso-outline-level:3;
+	font-size:12.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:"Times New Roman";
+	mso-ansi-language:ES-TRAD;
+	font-weight:bold;
+	mso-bidi-font-weight:normal;
+	font-style:italic;
+	mso-bidi-font-style:normal;}
+h4
+	{mso-style-next:Normal;
+	margin-top:12.0pt;
+	margin-right:0cm;
+	margin-bottom:3.0pt;
+	margin-left:0cm;
+	text-align:justify;
+	mso-pagination:widow-orphan;
+	page-break-after:avoid;
+	mso-outline-level:4;
+	font-size:12.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:"Times New Roman";
+	mso-ansi-language:ES-TRAD;
+	font-weight:bold;
+	mso-bidi-font-weight:normal;}
+h5
+	{mso-style-next:Normal;
+	margin-top:12.0pt;
+	margin-right:0cm;
+	margin-bottom:3.0pt;
+	margin-left:0cm;
+	text-align:justify;
+	mso-pagination:widow-orphan;
+	mso-outline-level:5;
+	font-size:11.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:Arial;
+	mso-bidi-font-family:"Times New Roman";
+	mso-ansi-language:ES-TRAD;
+	font-weight:normal;
+	font-style:italic;
+	mso-bidi-font-style:normal;}
+h6
+	{mso-style-next:Normal;
+	margin-top:12.0pt;
+	margin-right:0cm;
+	margin-bottom:3.0pt;
+	margin-left:0cm;
+	text-align:justify;
+	mso-pagination:widow-orphan;
+	mso-outline-level:6;
+	font-size:11.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:Arial;
+	mso-bidi-font-family:"Times New Roman";
+	mso-ansi-language:ES-TRAD;
+	font-weight:normal;}
+p.MsoHeading7, li.MsoHeading7, div.MsoHeading7
+	{mso-style-next:Normal;
+	margin-top:12.0pt;
+	margin-right:0cm;
+	margin-bottom:3.0pt;
+	margin-left:0cm;
+	text-align:justify;
+	mso-pagination:widow-orphan;
+	mso-outline-level:7;
+	font-size:10.0pt;
+	font-family:Arial;
+	mso-fareast-font-family:"Times New Roman";
+	mso-bidi-font-family:"Times New Roman";
+	mso-ansi-language:ES-TRAD;
+	font-style:italic;
+	mso-bidi-font-style:normal;}
+p.MsoHeading8, li.MsoHeading8, div.MsoHeading8
+	{mso-style-next:Normal;
+	margin-top:12.0pt;
+	margin-right:0cm;
+	margin-bottom:3.0pt;
+	margin-left:0cm;
+	text-align:justify;
+	mso-pagination:widow-orphan;
+	mso-outline-level:8;
+	font-size:10.0pt;
+	font-family:Arial;
+	mso-fareast-font-family:"Times New Roman";
+	mso-bidi-font-family:"Times New Roman";
+	mso-ansi-language:ES-TRAD;}
+p.MsoHeading9, li.MsoHeading9, div.MsoHeading9
+	{mso-style-next:Normal;
+	margin-top:12.0pt;
+	margin-right:0cm;
+	margin-bottom:3.0pt;
+	margin-left:0cm;
+	text-align:justify;
+	mso-pagination:widow-orphan;
+	mso-outline-level:9;
+	font-size:9.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:Arial;
+	mso-fareast-font-family:"Times New Roman";
+	mso-bidi-font-family:"Times New Roman";
+	mso-ansi-language:ES-TRAD;}
+p.MsoHeader, li.MsoHeader, div.MsoHeader
+	{margin:0cm;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	mso-pagination:widow-orphan;
+	tab-stops:center 212.6pt right 425.2pt;
+	font-size:12.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";
+	mso-ansi-language:ES-TRAD;
+	font-style:italic;
+	mso-bidi-font-style:normal;}
+p.MsoFooter, li.MsoFooter, div.MsoFooter
+	{margin:0cm;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	mso-pagination:widow-orphan;
+	tab-stops:center 212.6pt right 425.2pt;
+	font-size:12.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";
+	mso-ansi-language:ES-TRAD;
+	font-style:italic;
+	mso-bidi-font-style:normal;}
+p.MsoBodyTextIndent, li.MsoBodyTextIndent, div.MsoBodyTextIndent
+	{margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:18.0pt;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	page-break-after:avoid;
+	font-size:12.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+p.MsoPlainText, li.MsoPlainText, div.MsoPlainText
+	{margin:0cm;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:10.0pt;
+	font-family:"Courier New";
+	mso-fareast-font-family:"Times New Roman";
+	mso-bidi-font-family:"Times New Roman";}
+p
+	{mso-margin-top-alt:auto;
+	margin-right:0cm;
+	mso-margin-bottom-alt:auto;
+	margin-left:0cm;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+p.Cdigo, li.Cdigo, div.Cdigo
+	{mso-style-name:C�digo;
+	margin:0cm;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:10.0pt;
+	font-family:"Courier New";
+	mso-fareast-font-family:"Times New Roman";
+	mso-bidi-font-family:"Times New Roman";
+	mso-ansi-language:ES-TRAD;
+	font-style:italic;
+	mso-bidi-font-style:normal;}
+p.Respuesta, li.Respuesta, div.Respuesta
+	{mso-style-name:Respuesta;
+	margin:0cm;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";
+	mso-ansi-language:ES-TRAD;
+	font-style:italic;
+	mso-bidi-font-style:normal;}
+@page Section1
+	{size:21.0cm 842.0pt;
+	margin:39.7pt 2.0cm 39.7pt 2.0cm;
+	mso-header-margin:36.0pt;
+	mso-footer-margin:36.0pt;
+	mso-header:url("p2-26-5-04_archivos/header.htm") h1;
+	mso-paper-source:0;}
+div.Section1
+	{page:Section1;}
+ /* List Definitions */
+ @list l0
+	{mso-list-id:-5;
+	mso-list-template-ids:-1798963104;}
+@list l0:level1
+	{mso-level-text:"%1\.- ";
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	mso-level-legacy:yes;
+	mso-level-legacy-indent:14.2pt;
+	mso-level-legacy-space:0cm;
+	margin-left:14.2pt;
+	text-indent:-14.2pt;}
+@list l0:level2
+	{mso-level-number-format:alpha-lower;
+	mso-level-text:"%2\) ";
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	mso-level-legacy:yes;
+	mso-level-legacy-indent:14.2pt;
+	mso-level-legacy-space:0cm;
+	margin-left:28.4pt;
+	text-indent:-14.2pt;
+	mso-ansi-font-style:normal;}
+@list l0:level3
+	{mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	mso-level-legacy:yes;
+	mso-level-legacy-indent:35.4pt;
+	mso-level-legacy-space:0cm;
+	margin-left:63.8pt;
+	text-indent:-35.4pt;}
+@list l0:level4
+	{mso-level-number-format:alpha-lower;
+	mso-level-text:"%4\)";
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	mso-level-legacy:yes;
+	mso-level-legacy-indent:35.4pt;
+	mso-level-legacy-space:0cm;
+	margin-left:99.2pt;
+	text-indent:-35.4pt;}
+@list l0:level5
+	{mso-level-text:"\(%5\)";
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	mso-level-legacy:yes;
+	mso-level-legacy-indent:35.4pt;
+	mso-level-legacy-space:0cm;
+	margin-left:134.6pt;
+	text-indent:-35.4pt;}
+@list l0:level6
+	{mso-level-number-format:alpha-lower;
+	mso-level-text:"\(%6\)";
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	mso-level-legacy:yes;
+	mso-level-legacy-indent:35.4pt;
+	mso-level-legacy-space:0cm;
+	margin-left:170.0pt;
+	text-indent:-35.4pt;}
+@list l0:level7
+	{mso-level-number-format:roman-lower;
+	mso-level-text:"\(%7\)";
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	mso-level-legacy:yes;
+	mso-level-legacy-indent:35.4pt;
+	mso-level-legacy-space:0cm;
+	margin-left:205.4pt;
+	text-indent:-35.4pt;}
+@list l0:level8
+	{mso-level-number-format:alpha-lower;
+	mso-level-text:"\(%8\)";
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	mso-level-legacy:yes;
+	mso-level-legacy-indent:35.4pt;
+	mso-level-legacy-space:0cm;
+	margin-left:240.8pt;
+	text-indent:-35.4pt;}
+@list l0:level9
+	{mso-level-number-format:roman-lower;
+	mso-level-text:"\(%9\)";
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	mso-level-legacy:yes;
+	mso-level-legacy-indent:35.4pt;
+	mso-level-legacy-space:0cm;
+	margin-left:276.2pt;
+	text-indent:-35.4pt;}
+@list l1
+	{mso-list-id:-2;
+	mso-list-type:simple;
+	mso-list-template-ids:-1;}
+@list l1:level1
+	{mso-level-start-at:0;
+	mso-level-text:*;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	margin-left:0cm;
+	text-indent:0cm;}
+@list l2
+	{mso-list-id:51084506;
+	mso-list-type:hybrid;
+	mso-list-template-ids:-1533490320 201981975 620653712 201981979 201981967 201981977 201981979 201981967 201981977 201981979;}
+@list l2:level1
+	{mso-level-number-format:alpha-lower;
+	mso-level-text:"%1\)";
+	mso-level-tab-stop:36.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l2:level2
+	{mso-level-start-at:2;
+	mso-level-text:%2;
+	mso-level-tab-stop:72.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l3
+	{mso-list-id:177473392;
+	mso-list-template-ids:1462392860;}
+@list l3:level1
+	{mso-level-tab-stop:90.0pt;
+	mso-level-number-position:left;
+	margin-left:72.0pt;
+	text-indent:0cm;}
+@list l3:level2
+	{mso-level-number-format:alpha-lower;
+	mso-level-text:"%2\) ";
+	mso-level-tab-stop:126.0pt;
+	mso-level-number-position:left;
+	margin-left:108.0pt;
+	text-indent:0cm;}
+@list l3:level3
+	{mso-level-tab-stop:162.0pt;
+	mso-level-number-position:left;
+	margin-left:144.0pt;
+	text-indent:0cm;}
+@list l3:level4
+	{mso-level-number-format:alpha-lower;
+	mso-level-text:"%4\)";
+	mso-level-tab-stop:198.0pt;
+	mso-level-number-position:left;
+	margin-left:180.0pt;
+	text-indent:0cm;}
+@list l3:level5
+	{mso-level-text:"\(%5\)";
+	mso-level-tab-stop:234.0pt;
+	mso-level-number-position:left;
+	margin-left:216.0pt;
+	text-indent:0cm;}
+@list l3:level6
+	{mso-level-number-format:alpha-lower;
+	mso-level-text:"\(%6\)";
+	mso-level-tab-stop:270.0pt;
+	mso-level-number-position:left;
+	margin-left:252.0pt;
+	text-indent:0cm;}
+@list l3:level7
+	{mso-level-number-format:roman-lower;
+	mso-level-text:"\(%7\)";
+	mso-level-tab-stop:306.0pt;
+	mso-level-number-position:left;
+	margin-left:288.0pt;
+	text-indent:0cm;}
+@list l3:level8
+	{mso-level-number-format:alpha-lower;
+	mso-level-text:"\(%8\)";
+	mso-level-tab-stop:342.0pt;
+	mso-level-number-position:left;
+	margin-left:324.0pt;
+	text-indent:0cm;}
+@list l3:level9
+	{mso-level-number-format:roman-lower;
+	mso-level-text:"\(%9\)";
+	mso-level-tab-stop:378.0pt;
+	mso-level-number-position:left;
+	margin-left:360.0pt;
+	text-indent:0cm;}
+@list l4
+	{mso-list-id:193617609;
+	mso-list-template-ids:-255435556;}
+@list l4:level1
+	{mso-level-number-format:alpha-lower;
+	mso-level-text:"%1\)";
+	mso-level-tab-stop:36.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l4:level2
+	{mso-level-number-format:alpha-lower;
+	mso-level-tab-stop:72.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l4:level3
+	{mso-level-number-format:roman-lower;
+	mso-level-tab-stop:108.0pt;
+	mso-level-number-position:right;
+	text-indent:-9.0pt;}
+@list l4:level4
+	{mso-level-tab-stop:144.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l4:level5
+	{mso-level-number-format:alpha-lower;
+	mso-level-tab-stop:180.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l4:level6
+	{mso-level-number-format:roman-lower;
+	mso-level-tab-stop:216.0pt;
+	mso-level-number-position:right;
+	text-indent:-9.0pt;}
+@list l4:level7
+	{mso-level-tab-stop:252.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l4:level8
+	{mso-level-number-format:alpha-lower;
+	mso-level-tab-stop:288.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l4:level9
+	{mso-level-number-format:roman-lower;
+	mso-level-tab-stop:324.0pt;
+	mso-level-number-position:right;
+	text-indent:-9.0pt;}
+@list l5
+	{mso-list-id:194998965;
+	mso-list-template-ids:350391792;}
+@list l5:level1
+	{mso-level-number-format:alpha-lower;
+	mso-level-reset-level:level1;
+	mso-level-text:"%1\)";
+	mso-level-tab-stop:36.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.15pt;
+	mso-ansi-font-style:normal;}
+@list l5:level2
+	{mso-level-number-format:alpha-lower;
+	mso-level-tab-stop:72.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.15pt;
+	mso-ansi-font-size:12.0pt;}
+@list l5:level3
+	{mso-level-number-format:roman-lower;
+	mso-level-tab-stop:108.0pt;
+	mso-level-number-position:right;
+	text-indent:-9.05pt;}
+@list l5:level4
+	{mso-level-tab-stop:144.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.15pt;}
+@list l5:level5
+	{mso-level-number-format:alpha-lower;
+	mso-level-tab-stop:180.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.15pt;}
+@list l5:level6
+	{mso-level-number-format:roman-lower;
+	mso-level-tab-stop:216.0pt;
+	mso-level-number-position:right;
+	text-indent:-9.05pt;}
+@list l5:level7
+	{mso-level-tab-stop:252.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.15pt;}
+@list l5:level8
+	{mso-level-number-format:alpha-lower;
+	mso-level-tab-stop:288.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.15pt;}
+@list l5:level9
+	{mso-level-number-format:roman-lower;
+	mso-level-tab-stop:324.0pt;
+	mso-level-number-position:right;
+	text-indent:-9.05pt;}
+@list l6
+	{mso-list-id:218175431;
+	mso-list-template-ids:-255435556;}
+@list l6:level1
+	{mso-level-number-format:alpha-lower;
+	mso-level-text:"%1\)";
+	mso-level-tab-stop:36.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l6:level2
+	{mso-level-number-format:alpha-lower;
+	mso-level-tab-stop:72.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l6:level3
+	{mso-level-number-format:roman-lower;
+	mso-level-tab-stop:108.0pt;
+	mso-level-number-position:right;
+	text-indent:-9.0pt;}
+@list l6:level4
+	{mso-level-tab-stop:144.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l6:level5
+	{mso-level-number-format:alpha-lower;
+	mso-level-tab-stop:180.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l6:level6
+	{mso-level-number-format:roman-lower;
+	mso-level-tab-stop:216.0pt;
+	mso-level-number-position:right;
+	text-indent:-9.0pt;}
+@list l6:level7
+	{mso-level-tab-stop:252.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l6:level8
+	{mso-level-number-format:alpha-lower;
+	mso-level-tab-stop:288.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l6:level9
+	{mso-level-number-format:roman-lower;
+	mso-level-tab-stop:324.0pt;
+	mso-level-number-position:right;
+	text-indent:-9.0pt;}
+@list l7
+	{mso-list-id:269316308;
+	mso-list-template-ids:350391792;}
+@list l7:level1
+	{mso-level-number-format:alpha-lower;
+	mso-level-reset-level:level1;
+	mso-level-text:"%1\)";
+	mso-level-tab-stop:36.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.15pt;
+	mso-ansi-font-style:normal;}
+@list l7:level2
+	{mso-level-number-format:alpha-lower;
+	mso-level-tab-stop:72.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.15pt;
+	mso-ansi-font-size:12.0pt;}
+@list l7:level3
+	{mso-level-number-format:roman-lower;
+	mso-level-tab-stop:108.0pt;
+	mso-level-number-position:right;
+	text-indent:-9.05pt;}
+@list l7:level4
+	{mso-level-tab-stop:144.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.15pt;}
+@list l7:level5
+	{mso-level-number-format:alpha-lower;
+	mso-level-tab-stop:180.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.15pt;}
+@list l7:level6
+	{mso-level-number-format:roman-lower;
+	mso-level-tab-stop:216.0pt;
+	mso-level-number-position:right;
+	text-indent:-9.05pt;}
+@list l7:level7
+	{mso-level-tab-stop:252.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.15pt;}
+@list l7:level8
+	{mso-level-number-format:alpha-lower;
+	mso-level-tab-stop:288.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.15pt;}
+@list l7:level9
+	{mso-level-number-format:roman-lower;
+	mso-level-tab-stop:324.0pt;
+	mso-level-number-position:right;
+	text-indent:-9.05pt;}
+@list l8
+	{mso-list-id:324557899;
+	mso-list-type:simple;
+	mso-list-template-ids:201981975;}
+@list l8:level1
+	{mso-level-number-format:alpha-lower;
+	mso-level-text:"%1\)";
+	mso-level-tab-stop:18.0pt;
+	mso-level-number-position:left;
+	margin-left:18.0pt;
+	text-indent:-18.0pt;}
+@list l9
+	{mso-list-id:349063298;
+	mso-list-type:hybrid;
+	mso-list-template-ids:-1124835232 201981975 201981977 201981979 201981967 201981977 201981979 201981967 201981977 201981979;}
+@list l9:level1
+	{mso-level-number-format:alpha-lower;
+	mso-level-text:"%1\)";
+	mso-level-tab-stop:36.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l10
+	{mso-list-id:361977340;
+	mso-list-type:simple;
+	mso-list-template-ids:201981975;}
+@list l10:level1
+	{mso-level-number-format:alpha-lower;
+	mso-level-text:"%1\)";
+	mso-level-tab-stop:18.0pt;
+	mso-level-number-position:left;
+	margin-left:18.0pt;
+	text-indent:-18.0pt;}
+@list l11
+	{mso-list-id:400761094;
+	mso-list-type:hybrid;
+	mso-list-template-ids:-1662750530 201981975 201981977 201981979 201981967 201981977 201981979 201981967 201981977 201981979;}
+@list l11:level1
+	{mso-level-number-format:alpha-lower;
+	mso-level-text:"%1\)";
+	mso-level-tab-stop:36.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l12
+	{mso-list-id:407270290;
+	mso-list-template-ids:-707637036;}
+@list l12:level1
+	{mso-level-number-format:alpha-lower;
+	mso-level-text:"%1\)";
+	mso-level-tab-stop:36.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;
+	mso-ansi-font-style:normal;}
+@list l12:level2
+	{mso-level-number-format:alpha-lower;
+	mso-level-tab-stop:72.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;
+	mso-ansi-font-size:12.0pt;}
+@list l12:level3
+	{mso-level-number-format:roman-lower;
+	mso-level-tab-stop:108.0pt;
+	mso-level-number-position:right;
+	text-indent:-9.0pt;}
+@list l12:level4
+	{mso-level-tab-stop:144.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l12:level5
+	{mso-level-number-format:alpha-lower;
+	mso-level-tab-stop:180.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l12:level6
+	{mso-level-number-format:roman-lower;
+	mso-level-tab-stop:216.0pt;
+	mso-level-number-position:right;
+	text-indent:-9.0pt;}
+@list l12:level7
+	{mso-level-tab-stop:252.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l12:level8
+	{mso-level-number-format:alpha-lower;
+	mso-level-tab-stop:288.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l12:level9
+	{mso-level-number-format:roman-lower;
+	mso-level-tab-stop:324.0pt;
+	mso-level-number-position:right;
+	text-indent:-9.0pt;}
+@list l13
+	{mso-list-id:459691318;
+	mso-list-template-ids:-1029943154;}
+@list l13:level1
+	{mso-level-number-format:alpha-lower;
+	mso-level-text:"%1\)";
+	mso-level-tab-stop:36.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l13:level2
+	{mso-level-number-format:alpha-lower;
+	mso-level-tab-stop:72.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l13:level3
+	{mso-level-number-format:roman-lower;
+	mso-level-tab-stop:108.0pt;
+	mso-level-number-position:right;
+	text-indent:-9.0pt;}
+@list l13:level4
+	{mso-level-tab-stop:144.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l13:level5
+	{mso-level-number-format:alpha-lower;
+	mso-level-tab-stop:180.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l13:level6
+	{mso-level-number-format:roman-lower;
+	mso-level-tab-stop:216.0pt;
+	mso-level-number-position:right;
+	text-indent:-9.0pt;}
+@list l13:level7
+	{mso-level-tab-stop:252.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l13:level8
+	{mso-level-number-format:alpha-lower;
+	mso-level-tab-stop:288.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l13:level9
+	{mso-level-number-format:roman-lower;
+	mso-level-tab-stop:324.0pt;
+	mso-level-number-position:right;
+	text-indent:-9.0pt;}
+@list l14
+	{mso-list-id:512189208;
+	mso-list-template-ids:350391792;}
+@list l14:level1
+	{mso-level-number-format:alpha-lower;
+	mso-level-reset-level:level1;
+	mso-level-text:"%1\)";
+	mso-level-tab-stop:36.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.15pt;
+	mso-ansi-font-style:normal;}
+@list l14:level2
+	{mso-level-number-format:alpha-lower;
+	mso-level-style-link:"T�tulo 2";
+	mso-level-tab-stop:72.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.15pt;
+	mso-ansi-font-size:12.0pt;}
+@list l14:level3
+	{mso-level-number-format:roman-lower;
+	mso-level-tab-stop:108.0pt;
+	mso-level-number-position:right;
+	text-indent:-9.05pt;}
+@list l14:level4
+	{mso-level-tab-stop:144.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.15pt;}
+@list l14:level5
+	{mso-level-number-format:alpha-lower;
+	mso-level-tab-stop:180.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.15pt;}
+@list l14:level6
+	{mso-level-number-format:roman-lower;
+	mso-level-tab-stop:216.0pt;
+	mso-level-number-position:right;
+	text-indent:-9.05pt;}
+@list l14:level7
+	{mso-level-tab-stop:252.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.15pt;}
+@list l14:level8
+	{mso-level-number-format:alpha-lower;
+	mso-level-tab-stop:288.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.15pt;}
+@list l14:level9
+	{mso-level-number-format:roman-lower;
+	mso-level-tab-stop:324.0pt;
+	mso-level-number-position:right;
+	text-indent:-9.05pt;}
+@list l15
+	{mso-list-id:525288292;
+	mso-list-type:hybrid;
+	mso-list-template-ids:-968043564 201981975 201981977 201981979 201981967 201981977 201981979 201981967 201981977 201981979;}
+@list l15:level1
+	{mso-level-number-format:alpha-lower;
+	mso-level-text:"%1\)";
+	mso-level-tab-stop:36.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l16
+	{mso-list-id:529999630;
+	mso-list-template-ids:-1029943154;}
+@list l16:level1
+	{mso-level-number-format:alpha-lower;
+	mso-level-text:"%1\)";
+	mso-level-tab-stop:36.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l16:level2
+	{mso-level-number-format:alpha-lower;
+	mso-level-tab-stop:72.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l16:level3
+	{mso-level-number-format:roman-lower;
+	mso-level-tab-stop:108.0pt;
+	mso-level-number-position:right;
+	text-indent:-9.0pt;}
+@list l16:level4
+	{mso-level-tab-stop:144.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l16:level5
+	{mso-level-number-format:alpha-lower;
+	mso-level-tab-stop:180.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l16:level6
+	{mso-level-number-format:roman-lower;
+	mso-level-tab-stop:216.0pt;
+	mso-level-number-position:right;
+	text-indent:-9.0pt;}
+@list l16:level7
+	{mso-level-tab-stop:252.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l16:level8
+	{mso-level-number-format:alpha-lower;
+	mso-level-tab-stop:288.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l16:level9
+	{mso-level-number-format:roman-lower;
+	mso-level-tab-stop:324.0pt;
+	mso-level-number-position:right;
+	text-indent:-9.0pt;}
+@list l17
+	{mso-list-id:542837121;
+	mso-list-type:hybrid;
+	mso-list-template-ids:1949982526 201981975 201981977 201981979 201981967 201981977 201981979 201981967 201981977 201981979;}
+@list l17:level1
+	{mso-level-number-format:alpha-lower;
+	mso-level-text:"%1\)";
+	mso-level-tab-stop:36.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l18
+	{mso-list-id:602373159;
+	mso-list-template-ids:-1029943154;}
+@list l18:level1
+	{mso-level-number-format:alpha-lower;
+	mso-level-text:"%1\)";
+	mso-level-tab-stop:36.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l18:level2
+	{mso-level-number-format:alpha-lower;
+	mso-level-tab-stop:72.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l18:level3
+	{mso-level-number-format:roman-lower;
+	mso-level-tab-stop:108.0pt;
+	mso-level-number-position:right;
+	text-indent:-9.0pt;}
+@list l18:level4
+	{mso-level-tab-stop:144.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l18:level5
+	{mso-level-number-format:alpha-lower;
+	mso-level-tab-stop:180.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l18:level6
+	{mso-level-number-format:roman-lower;
+	mso-level-tab-stop:216.0pt;
+	mso-level-number-position:right;
+	text-indent:-9.0pt;}
+@list l18:level7
+	{mso-level-tab-stop:252.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l18:level8
+	{mso-level-number-format:alpha-lower;
+	mso-level-tab-stop:288.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l18:level9
+	{mso-level-number-format:roman-lower;
+	mso-level-tab-stop:324.0pt;
+	mso-level-number-position:right;
+	text-indent:-9.0pt;}
+@list l19
+	{mso-list-id:784347445;
+	mso-list-template-ids:350391792;}
+@list l19:level1
+	{mso-level-number-format:alpha-lower;
+	mso-level-reset-level:level1;
+	mso-level-text:"%1\)";
+	mso-level-tab-stop:36.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.15pt;
+	mso-ansi-font-style:normal;}
+@list l19:level2
+	{mso-level-number-format:alpha-lower;
+	mso-level-tab-stop:72.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.15pt;
+	mso-ansi-font-size:12.0pt;}
+@list l19:level3
+	{mso-level-number-format:roman-lower;
+	mso-level-tab-stop:108.0pt;
+	mso-level-number-position:right;
+	text-indent:-9.05pt;}
+@list l19:level4
+	{mso-level-tab-stop:144.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.15pt;}
+@list l19:level5
+	{mso-level-number-format:alpha-lower;
+	mso-level-tab-stop:180.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.15pt;}
+@list l19:level6
+	{mso-level-number-format:roman-lower;
+	mso-level-tab-stop:216.0pt;
+	mso-level-number-position:right;
+	text-indent:-9.05pt;}
+@list l19:level7
+	{mso-level-tab-stop:252.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.15pt;}
+@list l19:level8
+	{mso-level-number-format:alpha-lower;
+	mso-level-tab-stop:288.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.15pt;}
+@list l19:level9
+	{mso-level-number-format:roman-lower;
+	mso-level-tab-stop:324.0pt;
+	mso-level-number-position:right;
+	text-indent:-9.05pt;}
+@list l20
+	{mso-list-id:800465846;
+	mso-list-type:simple;
+	mso-list-template-ids:1416289492;}
+@list l20:level1
+	{mso-level-start-at:0;
+	mso-level-text:%1-;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	mso-level-legacy:yes;
+	mso-level-legacy-indent:18.0pt;
+	mso-level-legacy-space:0cm;
+	margin-left:18.0pt;
+	text-indent:-18.0pt;}
+@list l21
+	{mso-list-id:807892707;
+	mso-list-template-ids:-707637036;}
+@list l21:level1
+	{mso-level-number-format:alpha-lower;
+	mso-level-text:"%1\)";
+	mso-level-tab-stop:54.0pt;
+	mso-level-number-position:left;
+	margin-left:54.0pt;
+	text-indent:-18.0pt;}
+@list l21:level2
+	{mso-level-number-format:alpha-lower;
+	mso-level-tab-stop:90.0pt;
+	mso-level-number-position:left;
+	margin-left:90.0pt;
+	text-indent:-18.0pt;}
+@list l21:level3
+	{mso-level-number-format:roman-lower;
+	mso-level-tab-stop:126.0pt;
+	mso-level-number-position:right;
+	margin-left:126.0pt;
+	text-indent:-9.0pt;}
+@list l21:level4
+	{mso-level-tab-stop:162.0pt;
+	mso-level-number-position:left;
+	margin-left:162.0pt;
+	text-indent:-18.0pt;}
+@list l21:level5
+	{mso-level-number-format:alpha-lower;
+	mso-level-tab-stop:198.0pt;
+	mso-level-number-position:left;
+	margin-left:198.0pt;
+	text-indent:-18.0pt;}
+@list l21:level6
+	{mso-level-number-format:roman-lower;
+	mso-level-tab-stop:234.0pt;
+	mso-level-number-position:right;
+	margin-left:234.0pt;
+	text-indent:-9.0pt;}
+@list l21:level7
+	{mso-level-tab-stop:270.0pt;
+	mso-level-number-position:left;
+	margin-left:270.0pt;
+	text-indent:-18.0pt;}
+@list l21:level8
+	{mso-level-number-format:alpha-lower;
+	mso-level-tab-stop:306.0pt;
+	mso-level-number-position:left;
+	margin-left:306.0pt;
+	text-indent:-18.0pt;}
+@list l21:level9
+	{mso-level-number-format:roman-lower;
+	mso-level-tab-stop:342.0pt;
+	mso-level-number-position:right;
+	margin-left:342.0pt;
+	text-indent:-9.0pt;}
+@list l22
+	{mso-list-id:858347515;
+	mso-list-type:hybrid;
+	mso-list-template-ids:-1371211350 916909332 201981977 201981979 201981967 201981977 201981979 201981967 201981977 201981979;}
+@list l22:level1
+	{mso-level-number-format:alpha-lower;
+	mso-level-text:"%1\)";
+	mso-level-tab-stop:36.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l23
+	{mso-list-id:866791506;
+	mso-list-type:simple;
+	mso-list-template-ids:201981967;}
+@list l23:level1
+	{mso-level-tab-stop:18.0pt;
+	mso-level-number-position:left;
+	margin-left:18.0pt;
+	text-indent:-18.0pt;}
+@list l24
+	{mso-list-id:908536911;
+	mso-list-template-ids:-1029943154;}
+@list l24:level1
+	{mso-level-number-format:alpha-lower;
+	mso-level-text:"%1\)";
+	mso-level-tab-stop:36.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l24:level2
+	{mso-level-number-format:alpha-lower;
+	mso-level-tab-stop:72.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l24:level3
+	{mso-level-number-format:roman-lower;
+	mso-level-tab-stop:108.0pt;
+	mso-level-number-position:right;
+	text-indent:-9.0pt;}
+@list l24:level4
+	{mso-level-tab-stop:144.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l24:level5
+	{mso-level-number-format:alpha-lower;
+	mso-level-tab-stop:180.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l24:level6
+	{mso-level-number-format:roman-lower;
+	mso-level-tab-stop:216.0pt;
+	mso-level-number-position:right;
+	text-indent:-9.0pt;}
+@list l24:level7
+	{mso-level-tab-stop:252.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l24:level8
+	{mso-level-number-format:alpha-lower;
+	mso-level-tab-stop:288.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l24:level9
+	{mso-level-number-format:roman-lower;
+	mso-level-tab-stop:324.0pt;
+	mso-level-number-position:right;
+	text-indent:-9.0pt;}
+@list l25
+	{mso-list-id:930315533;
+	mso-list-template-ids:-427265724;}
+@list l25:level1
+	{mso-level-text:"%1\.- ";
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	mso-level-legacy:yes;
+	mso-level-legacy-indent:14.2pt;
+	mso-level-legacy-space:0cm;
+	margin-left:14.2pt;
+	text-indent:-14.2pt;}
+@list l25:level2
+	{mso-level-number-format:alpha-lower;
+	mso-level-text:"%2\) ";
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	mso-level-legacy:yes;
+	mso-level-legacy-indent:14.2pt;
+	mso-level-legacy-space:0cm;
+	margin-left:28.4pt;
+	text-indent:-14.2pt;}
+@list l25:level3
+	{mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	mso-level-legacy:yes;
+	mso-level-legacy-indent:35.4pt;
+	mso-level-legacy-space:0cm;
+	margin-left:63.8pt;
+	text-indent:-35.4pt;}
+@list l25:level4
+	{mso-level-number-format:alpha-lower;
+	mso-level-text:"%4\)";
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	mso-level-legacy:yes;
+	mso-level-legacy-indent:35.4pt;
+	mso-level-legacy-space:0cm;
+	margin-left:99.2pt;
+	text-indent:-35.4pt;}
+@list l25:level5
+	{mso-level-text:"\(%5\)";
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	mso-level-legacy:yes;
+	mso-level-legacy-indent:35.4pt;
+	mso-level-legacy-space:0cm;
+	margin-left:134.6pt;
+	text-indent:-35.4pt;}
+@list l25:level6
+	{mso-level-number-format:alpha-lower;
+	mso-level-text:"\(%6\)";
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	mso-level-legacy:yes;
+	mso-level-legacy-indent:35.4pt;
+	mso-level-legacy-space:0cm;
+	margin-left:170.0pt;
+	text-indent:-35.4pt;}
+@list l25:level7
+	{mso-level-number-format:roman-lower;
+	mso-level-text:"\(%7\)";
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	mso-level-legacy:yes;
+	mso-level-legacy-indent:35.4pt;
+	mso-level-legacy-space:0cm;
+	margin-left:205.4pt;
+	text-indent:-35.4pt;}
+@list l25:level8
+	{mso-level-number-format:alpha-lower;
+	mso-level-text:"\(%8\)";
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	mso-level-legacy:yes;
+	mso-level-legacy-indent:35.4pt;
+	mso-level-legacy-space:0cm;
+	margin-left:240.8pt;
+	text-indent:-35.4pt;}
+@list l25:level9
+	{mso-level-number-format:roman-lower;
+	mso-level-text:"\(%9\)";
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	mso-level-legacy:yes;
+	mso-level-legacy-indent:35.4pt;
+	mso-level-legacy-space:0cm;
+	margin-left:276.2pt;
+	text-indent:-35.4pt;}
+@list l26
+	{mso-list-id:931471638;
+	mso-list-type:simple;
+	mso-list-template-ids:1416289492;}
+@list l26:level1
+	{mso-level-start-at:10;
+	mso-level-text:%1-;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	mso-level-legacy:yes;
+	mso-level-legacy-indent:18.0pt;
+	mso-level-legacy-space:0cm;
+	margin-left:18.0pt;
+	text-indent:-18.0pt;}
+@list l27
+	{mso-list-id:946162638;
+	mso-list-template-ids:-637402882;}
+@list l27:level1
+	{mso-level-text:"%1\.- ";
+	mso-level-tab-stop:18.0pt;
+	mso-level-number-position:left;
+	margin-left:18.0pt;
+	text-indent:-18.0pt;}
+@list l27:level2
+	{mso-level-number-format:alpha-lower;
+	mso-level-text:"%2\)";
+	mso-level-tab-stop:36.0pt;
+	mso-level-number-position:left;
+	margin-left:36.0pt;
+	text-indent:-18.0pt;}
+@list l27:level3
+	{mso-level-number-format:roman-lower;
+	mso-level-text:"%3\)";
+	mso-level-tab-stop:54.0pt;
+	mso-level-number-position:left;
+	margin-left:54.0pt;
+	text-indent:-18.0pt;}
+@list l27:level4
+	{mso-level-text:"\(%4\)";
+	mso-level-tab-stop:72.0pt;
+	mso-level-number-position:left;
+	margin-left:72.0pt;
+	text-indent:-18.0pt;}
+@list l27:level5
+	{mso-level-number-format:alpha-lower;
+	mso-level-text:"\(%5\)";
+	mso-level-tab-stop:90.0pt;
+	mso-level-number-position:left;
+	margin-left:90.0pt;
+	text-indent:-18.0pt;}
+@list l27:level6
+	{mso-level-number-format:roman-lower;
+	mso-level-text:"\(%6\)";
+	mso-level-tab-stop:108.0pt;
+	mso-level-number-position:left;
+	margin-left:108.0pt;
+	text-indent:-18.0pt;}
+@list l27:level7
+	{mso-level-tab-stop:126.0pt;
+	mso-level-number-position:left;
+	margin-left:126.0pt;
+	text-indent:-18.0pt;}
+@list l27:level8
+	{mso-level-number-format:alpha-lower;
+	mso-level-tab-stop:144.0pt;
+	mso-level-number-position:left;
+	margin-left:144.0pt;
+	text-indent:-18.0pt;}
+@list l27:level9
+	{mso-level-number-format:roman-lower;
+	mso-level-tab-stop:162.0pt;
+	mso-level-number-position:left;
+	margin-left:162.0pt;
+	text-indent:-18.0pt;}
+@list l28
+	{mso-list-id:950476813;
+	mso-list-type:hybrid;
+	mso-list-template-ids:-1533242954 201981975 201981977 201981979 201981967 201981977 201981979 201981967 201981977 201981979;}
+@list l28:level1
+	{mso-level-number-format:alpha-lower;
+	mso-level-text:"%1\)";
+	mso-level-tab-stop:36.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l29
+	{mso-list-id:964045380;
+	mso-list-type:simple;
+	mso-list-template-ids:201981975;}
+@list l29:level1
+	{mso-level-number-format:alpha-lower;
+	mso-level-text:"%1\)";
+	mso-level-tab-stop:18.0pt;
+	mso-level-number-position:left;
+	margin-left:18.0pt;
+	text-indent:-18.0pt;}
+@list l30
+	{mso-list-id:971591676;
+	mso-list-template-ids:-1029943154;}
+@list l30:level1
+	{mso-level-number-format:alpha-lower;
+	mso-level-text:"%1\)";
+	mso-level-tab-stop:36.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l30:level2
+	{mso-level-number-format:alpha-lower;
+	mso-level-tab-stop:72.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l30:level3
+	{mso-level-number-format:roman-lower;
+	mso-level-tab-stop:108.0pt;
+	mso-level-number-position:right;
+	text-indent:-9.0pt;}
+@list l30:level4
+	{mso-level-tab-stop:144.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l30:level5
+	{mso-level-number-format:alpha-lower;
+	mso-level-tab-stop:180.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l30:level6
+	{mso-level-number-format:roman-lower;
+	mso-level-tab-stop:216.0pt;
+	mso-level-number-position:right;
+	text-indent:-9.0pt;}
+@list l30:level7
+	{mso-level-tab-stop:252.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l30:level8
+	{mso-level-number-format:alpha-lower;
+	mso-level-tab-stop:288.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l30:level9
+	{mso-level-number-format:roman-lower;
+	mso-level-tab-stop:324.0pt;
+	mso-level-number-position:right;
+	text-indent:-9.0pt;}
+@list l31
+	{mso-list-id:978219599;
+	mso-list-template-ids:-1029943154;}
+@list l31:level1
+	{mso-level-number-format:alpha-lower;
+	mso-level-text:"%1\)";
+	mso-level-tab-stop:36.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l31:level2
+	{mso-level-number-format:alpha-lower;
+	mso-level-tab-stop:72.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l31:level3
+	{mso-level-number-format:roman-lower;
+	mso-level-tab-stop:108.0pt;
+	mso-level-number-position:right;
+	text-indent:-9.0pt;}
+@list l31:level4
+	{mso-level-tab-stop:144.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l31:level5
+	{mso-level-number-format:alpha-lower;
+	mso-level-tab-stop:180.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l31:level6
+	{mso-level-number-format:roman-lower;
+	mso-level-tab-stop:216.0pt;
+	mso-level-number-position:right;
+	text-indent:-9.0pt;}
+@list l31:level7
+	{mso-level-tab-stop:252.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l31:level8
+	{mso-level-number-format:alpha-lower;
+	mso-level-tab-stop:288.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l31:level9
+	{mso-level-number-format:roman-lower;
+	mso-level-tab-stop:324.0pt;
+	mso-level-number-position:right;
+	text-indent:-9.0pt;}
+@list l32
+	{mso-list-id:1052196360;
+	mso-list-type:hybrid;
+	mso-list-template-ids:354326410 704296282 -689666044 -1787251824 819623356 529696654 -102961590 780163660 -1695664744 -2068407454;}
+@list l32:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:�;
+	mso-level-tab-stop:18.0pt;
+	mso-level-number-position:left;
+	margin-left:18.0pt;
+	text-indent:-18.0pt;
+	font-family:"Times New Roman";}
+@list l32:level2
+	{mso-level-number-format:bullet;
+	mso-level-text:�;
+	mso-level-tab-stop:54.0pt;
+	mso-level-number-position:left;
+	margin-left:54.0pt;
+	text-indent:-18.0pt;
+	font-family:"Times New Roman";}
+@list l33
+	{mso-list-id:1054890144;
+	mso-list-template-ids:-255435556;}
+@list l33:level1
+	{mso-level-number-format:alpha-lower;
+	mso-level-text:"%1\)";
+	mso-level-tab-stop:36.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l33:level2
+	{mso-level-number-format:alpha-lower;
+	mso-level-tab-stop:72.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l33:level3
+	{mso-level-number-format:roman-lower;
+	mso-level-tab-stop:108.0pt;
+	mso-level-number-position:right;
+	text-indent:-9.0pt;}
+@list l33:level4
+	{mso-level-tab-stop:144.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l33:level5
+	{mso-level-number-format:alpha-lower;
+	mso-level-tab-stop:180.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l33:level6
+	{mso-level-number-format:roman-lower;
+	mso-level-tab-stop:216.0pt;
+	mso-level-number-position:right;
+	text-indent:-9.0pt;}
+@list l33:level7
+	{mso-level-tab-stop:252.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l33:level8
+	{mso-level-number-format:alpha-lower;
+	mso-level-tab-stop:288.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l33:level9
+	{mso-level-number-format:roman-lower;
+	mso-level-tab-stop:324.0pt;
+	mso-level-number-position:right;
+	text-indent:-9.0pt;}
+@list l34
+	{mso-list-id:1057244075;
+	mso-list-type:simple;
+	mso-list-template-ids:201981975;}
+@list l34:level1
+	{mso-level-number-format:alpha-lower;
+	mso-level-text:"%1\)";
+	mso-level-tab-stop:18.0pt;
+	mso-level-number-position:left;
+	margin-left:18.0pt;
+	text-indent:-18.0pt;}
+@list l35
+	{mso-list-id:1069230168;
+	mso-list-template-ids:350391792;}
+@list l35:level1
+	{mso-level-number-format:alpha-lower;
+	mso-level-reset-level:level1;
+	mso-level-text:"%1\)";
+	mso-level-tab-stop:36.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.15pt;
+	mso-ansi-font-style:normal;}
+@list l35:level2
+	{mso-level-number-format:alpha-lower;
+	mso-level-tab-stop:72.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.15pt;
+	mso-ansi-font-size:12.0pt;}
+@list l35:level3
+	{mso-level-number-format:roman-lower;
+	mso-level-tab-stop:108.0pt;
+	mso-level-number-position:right;
+	text-indent:-9.05pt;}
+@list l35:level4
+	{mso-level-tab-stop:144.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.15pt;}
+@list l35:level5
+	{mso-level-number-format:alpha-lower;
+	mso-level-tab-stop:180.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.15pt;}
+@list l35:level6
+	{mso-level-number-format:roman-lower;
+	mso-level-tab-stop:216.0pt;
+	mso-level-number-position:right;
+	text-indent:-9.05pt;}
+@list l35:level7
+	{mso-level-tab-stop:252.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.15pt;}
+@list l35:level8
+	{mso-level-number-format:alpha-lower;
+	mso-level-tab-stop:288.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.15pt;}
+@list l35:level9
+	{mso-level-number-format:roman-lower;
+	mso-level-tab-stop:324.0pt;
+	mso-level-number-position:right;
+	text-indent:-9.05pt;}
+@list l36
+	{mso-list-id:1104498629;
+	mso-list-type:simple;
+	mso-list-template-ids:201981975;}
+@list l36:level1
+	{mso-level-number-format:alpha-lower;
+	mso-level-text:"%1\)";
+	mso-level-tab-stop:18.0pt;
+	mso-level-number-position:left;
+	margin-left:18.0pt;
+	text-indent:-18.0pt;}
+@list l37
+	{mso-list-id:1172913981;
+	mso-list-type:simple;
+	mso-list-template-ids:201981975;}
+@list l37:level1
+	{mso-level-number-format:alpha-lower;
+	mso-level-text:"%1\)";
+	mso-level-tab-stop:18.0pt;
+	mso-level-number-position:left;
+	margin-left:18.0pt;
+	text-indent:-18.0pt;}
+@list l38
+	{mso-list-id:1265575617;
+	mso-list-type:hybrid;
+	mso-list-template-ids:-204845580 201981975 201981977 201981979 201981967 201981977 201981979 201981967 201981977 201981979;}
+@list l38:level1
+	{mso-level-number-format:alpha-lower;
+	mso-level-text:"%1\)";
+	mso-level-tab-stop:36.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l39
+	{mso-list-id:1277366580;
+	mso-list-type:hybrid;
+	mso-list-template-ids:1082417100 1818920904 -1419084402 231134794 1632523038 384853940 -132774812 -958769948 803357624 1047275590;}
+@list l39:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:�;
+	mso-level-tab-stop:36.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;
+	font-family:"Times New Roman";}
+@list l40
+	{mso-list-id:1291400164;
+	mso-list-template-ids:-427265724;}
+@list l40:level1
+	{mso-level-text:"%1\.- ";
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	mso-level-legacy:yes;
+	mso-level-legacy-indent:14.2pt;
+	mso-level-legacy-space:0cm;
+	margin-left:14.2pt;
+	text-indent:-14.2pt;}
+@list l40:level2
+	{mso-level-number-format:alpha-lower;
+	mso-level-text:"%2\) ";
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	mso-level-legacy:yes;
+	mso-level-legacy-indent:14.2pt;
+	mso-level-legacy-space:0cm;
+	margin-left:28.4pt;
+	text-indent:-14.2pt;}
+@list l40:level3
+	{mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	mso-level-legacy:yes;
+	mso-level-legacy-indent:35.4pt;
+	mso-level-legacy-space:0cm;
+	margin-left:63.8pt;
+	text-indent:-35.4pt;}
+@list l40:level4
+	{mso-level-number-format:alpha-lower;
+	mso-level-text:"%4\)";
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	mso-level-legacy:yes;
+	mso-level-legacy-indent:35.4pt;
+	mso-level-legacy-space:0cm;
+	margin-left:99.2pt;
+	text-indent:-35.4pt;}
+@list l40:level5
+	{mso-level-text:"\(%5\)";
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	mso-level-legacy:yes;
+	mso-level-legacy-indent:35.4pt;
+	mso-level-legacy-space:0cm;
+	margin-left:134.6pt;
+	text-indent:-35.4pt;}
+@list l40:level6
+	{mso-level-number-format:alpha-lower;
+	mso-level-text:"\(%6\)";
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	mso-level-legacy:yes;
+	mso-level-legacy-indent:35.4pt;
+	mso-level-legacy-space:0cm;
+	margin-left:170.0pt;
+	text-indent:-35.4pt;}
+@list l40:level7
+	{mso-level-number-format:roman-lower;
+	mso-level-text:"\(%7\)";
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	mso-level-legacy:yes;
+	mso-level-legacy-indent:35.4pt;
+	mso-level-legacy-space:0cm;
+	margin-left:205.4pt;
+	text-indent:-35.4pt;}
+@list l40:level8
+	{mso-level-number-format:alpha-lower;
+	mso-level-text:"\(%8\)";
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	mso-level-legacy:yes;
+	mso-level-legacy-indent:35.4pt;
+	mso-level-legacy-space:0cm;
+	margin-left:240.8pt;
+	text-indent:-35.4pt;}
+@list l40:level9
+	{mso-level-number-format:roman-lower;
+	mso-level-text:"\(%9\)";
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	mso-level-legacy:yes;
+	mso-level-legacy-indent:35.4pt;
+	mso-level-legacy-space:0cm;
+	margin-left:276.2pt;
+	text-indent:-35.4pt;}
+@list l41
+	{mso-list-id:1358849977;
+	mso-list-type:hybrid;
+	mso-list-template-ids:-80737488 1791789078 344907866 1458850700 -1210400762 1184020060 1414682884 1503565416 -1234133058 -337753062;}
+@list l41:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:�;
+	mso-level-tab-stop:36.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;
+	font-family:"Times New Roman";}
+@list l41:level2
+	{mso-level-number-format:bullet;
+	mso-level-text:�;
+	mso-level-tab-stop:72.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;
+	font-family:"Times New Roman";}
+@list l42
+	{mso-list-id:1396464021;
+	mso-list-template-ids:201981991;}
+@list l42:level1
+	{mso-level-number-format:roman-upper;
+	mso-level-tab-stop:18.0pt;
+	mso-level-number-position:left;
+	margin-left:0cm;
+	text-indent:0cm;}
+@list l42:level2
+	{mso-level-number-format:alpha-upper;
+	mso-level-tab-stop:54.0pt;
+	mso-level-number-position:left;
+	margin-left:36.0pt;
+	text-indent:0cm;}
+@list l42:level3
+	{mso-level-tab-stop:90.0pt;
+	mso-level-number-position:left;
+	margin-left:72.0pt;
+	text-indent:0cm;}
+@list l42:level4
+	{mso-level-number-format:alpha-lower;
+	mso-level-text:"%4\)";
+	mso-level-tab-stop:126.0pt;
+	mso-level-number-position:left;
+	margin-left:108.0pt;
+	text-indent:0cm;}
+@list l42:level5
+	{mso-level-text:"\(%5\)";
+	mso-level-tab-stop:162.0pt;
+	mso-level-number-position:left;
+	margin-left:144.0pt;
+	text-indent:0cm;}
+@list l42:level6
+	{mso-level-number-format:alpha-lower;
+	mso-level-text:"\(%6\)";
+	mso-level-tab-stop:198.0pt;
+	mso-level-number-position:left;
+	margin-left:180.0pt;
+	text-indent:0cm;}
+@list l42:level7
+	{mso-level-number-format:roman-lower;
+	mso-level-text:"\(%7\)";
+	mso-level-tab-stop:234.0pt;
+	mso-level-number-position:left;
+	margin-left:216.0pt;
+	text-indent:0cm;}
+@list l42:level8
+	{mso-level-number-format:alpha-lower;
+	mso-level-text:"\(%8\)";
+	mso-level-tab-stop:270.0pt;
+	mso-level-number-position:left;
+	margin-left:252.0pt;
+	text-indent:0cm;}
+@list l42:level9
+	{mso-level-number-format:roman-lower;
+	mso-level-text:"\(%9\)";
+	mso-level-tab-stop:306.0pt;
+	mso-level-number-position:left;
+	margin-left:288.0pt;
+	text-indent:0cm;}
+@list l43
+	{mso-list-id:1414745778;
+	mso-list-template-ids:-431723646;}
+@list l43:level1
+	{mso-level-text:"%1\.- ";
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	mso-level-legacy:yes;
+	mso-level-legacy-indent:14.2pt;
+	mso-level-legacy-space:0cm;
+	margin-left:49.6pt;
+	text-indent:-14.2pt;
+	mso-ansi-font-style:normal;}
+@list l43:level2
+	{mso-level-number-format:alpha-lower;
+	mso-level-text:"%2\) ";
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	mso-level-legacy:yes;
+	mso-level-legacy-indent:14.2pt;
+	mso-level-legacy-space:0cm;
+	margin-left:63.8pt;
+	text-indent:-14.2pt;
+	mso-ansi-font-size:12.0pt;}
+@list l43:level3
+	{mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	mso-level-legacy:yes;
+	mso-level-legacy-indent:35.4pt;
+	mso-level-legacy-space:0cm;
+	margin-left:99.2pt;
+	text-indent:-35.4pt;}
+@list l43:level4
+	{mso-level-number-format:alpha-lower;
+	mso-level-text:"%4\)";
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	mso-level-legacy:yes;
+	mso-level-legacy-indent:35.4pt;
+	mso-level-legacy-space:0cm;
+	margin-left:134.6pt;
+	text-indent:-35.4pt;}
+@list l43:level5
+	{mso-level-text:"\(%5\)";
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	mso-level-legacy:yes;
+	mso-level-legacy-indent:35.4pt;
+	mso-level-legacy-space:0cm;
+	margin-left:170.0pt;
+	text-indent:-35.4pt;}
+@list l43:level6
+	{mso-level-number-format:alpha-lower;
+	mso-level-text:"\(%6\)";
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	mso-level-legacy:yes;
+	mso-level-legacy-indent:35.4pt;
+	mso-level-legacy-space:0cm;
+	margin-left:205.4pt;
+	text-indent:-35.4pt;}
+@list l43:level7
+	{mso-level-number-format:roman-lower;
+	mso-level-text:"\(%7\)";
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	mso-level-legacy:yes;
+	mso-level-legacy-indent:35.4pt;
+	mso-level-legacy-space:0cm;
+	margin-left:240.8pt;
+	text-indent:-35.4pt;}
+@list l43:level8
+	{mso-level-number-format:alpha-lower;
+	mso-level-text:"\(%8\)";
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	mso-level-legacy:yes;
+	mso-level-legacy-indent:35.4pt;
+	mso-level-legacy-space:0cm;
+	margin-left:276.2pt;
+	text-indent:-35.4pt;}
+@list l43:level9
+	{mso-level-number-format:roman-lower;
+	mso-level-text:"\(%9\)";
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	mso-level-legacy:yes;
+	mso-level-legacy-indent:35.4pt;
+	mso-level-legacy-space:0cm;
+	margin-left:311.6pt;
+	text-indent:-35.4pt;}
+@list l44
+	{mso-list-id:1485850657;
+	mso-list-type:hybrid;
+	mso-list-template-ids:1651030260 201981975 201981977 201981979 201981967 201981977 201981979 201981967 201981977 201981979;}
+@list l44:level1
+	{mso-level-number-format:alpha-lower;
+	mso-level-text:"%1\)";
+	mso-level-tab-stop:36.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l45
+	{mso-list-id:1494371341;
+	mso-list-type:hybrid;
+	mso-list-template-ids:-197379086 201981975 201981977 201981979 201981967 201981977 201981979 201981967 201981977 201981979;}
+@list l45:level1
+	{mso-level-number-format:alpha-lower;
+	mso-level-text:"%1\)";
+	mso-level-tab-stop:36.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l46
+	{mso-list-id:1494830201;
+	mso-list-template-ids:-707637036;}
+@list l46:level1
+	{mso-level-number-format:alpha-lower;
+	mso-level-text:"%1\)";
+	mso-level-tab-stop:36.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;
+	mso-ansi-font-style:normal;}
+@list l46:level2
+	{mso-level-number-format:alpha-lower;
+	mso-level-tab-stop:72.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;
+	mso-ansi-font-size:12.0pt;}
+@list l46:level3
+	{mso-level-number-format:roman-lower;
+	mso-level-tab-stop:108.0pt;
+	mso-level-number-position:right;
+	text-indent:-9.0pt;}
+@list l46:level4
+	{mso-level-tab-stop:144.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l46:level5
+	{mso-level-number-format:alpha-lower;
+	mso-level-tab-stop:180.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l46:level6
+	{mso-level-number-format:roman-lower;
+	mso-level-tab-stop:216.0pt;
+	mso-level-number-position:right;
+	text-indent:-9.0pt;}
+@list l46:level7
+	{mso-level-tab-stop:252.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l46:level8
+	{mso-level-number-format:alpha-lower;
+	mso-level-tab-stop:288.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l46:level9
+	{mso-level-number-format:roman-lower;
+	mso-level-tab-stop:324.0pt;
+	mso-level-number-position:right;
+	text-indent:-9.0pt;}
+@list l47
+	{mso-list-id:1495948693;
+	mso-list-type:hybrid;
+	mso-list-template-ids:-302367942 2018824190 -140478796 1051214906 -565396436 1481814506 157732426 -2077041454 -583907518 465568506;}
+@list l47:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:�;
+	mso-level-tab-stop:36.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;
+	font-family:"Times New Roman";}
+@list l48
+	{mso-list-id:1509908443;
+	mso-list-template-ids:350391792;}
+@list l48:level1
+	{mso-level-number-format:alpha-lower;
+	mso-level-reset-level:level1;
+	mso-level-text:"%1\)";
+	mso-level-tab-stop:36.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.15pt;
+	mso-ansi-font-style:normal;}
+@list l48:level2
+	{mso-level-number-format:alpha-lower;
+	mso-level-tab-stop:72.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.15pt;
+	mso-ansi-font-size:12.0pt;}
+@list l48:level3
+	{mso-level-number-format:roman-lower;
+	mso-level-tab-stop:108.0pt;
+	mso-level-number-position:right;
+	text-indent:-9.05pt;}
+@list l48:level4
+	{mso-level-tab-stop:144.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.15pt;}
+@list l48:level5
+	{mso-level-number-format:alpha-lower;
+	mso-level-tab-stop:180.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.15pt;}
+@list l48:level6
+	{mso-level-number-format:roman-lower;
+	mso-level-tab-stop:216.0pt;
+	mso-level-number-position:right;
+	text-indent:-9.05pt;}
+@list l48:level7
+	{mso-level-tab-stop:252.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.15pt;}
+@list l48:level8
+	{mso-level-number-format:alpha-lower;
+	mso-level-tab-stop:288.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.15pt;}
+@list l48:level9
+	{mso-level-number-format:roman-lower;
+	mso-level-tab-stop:324.0pt;
+	mso-level-number-position:right;
+	text-indent:-9.05pt;}
+@list l49
+	{mso-list-id:1575893893;
+	mso-list-template-ids:-255435556;}
+@list l49:level1
+	{mso-level-number-format:alpha-lower;
+	mso-level-text:"%1\)";
+	mso-level-tab-stop:36.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l49:level2
+	{mso-level-number-format:alpha-lower;
+	mso-level-tab-stop:72.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l49:level3
+	{mso-level-number-format:roman-lower;
+	mso-level-tab-stop:108.0pt;
+	mso-level-number-position:right;
+	text-indent:-9.0pt;}
+@list l49:level4
+	{mso-level-tab-stop:144.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l49:level5
+	{mso-level-number-format:alpha-lower;
+	mso-level-tab-stop:180.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l49:level6
+	{mso-level-number-format:roman-lower;
+	mso-level-tab-stop:216.0pt;
+	mso-level-number-position:right;
+	text-indent:-9.0pt;}
+@list l49:level7
+	{mso-level-tab-stop:252.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l49:level8
+	{mso-level-number-format:alpha-lower;
+	mso-level-tab-stop:288.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l49:level9
+	{mso-level-number-format:roman-lower;
+	mso-level-tab-stop:324.0pt;
+	mso-level-number-position:right;
+	text-indent:-9.0pt;}
+@list l50
+	{mso-list-id:1607225427;
+	mso-list-template-ids:-1029943154;}
+@list l50:level1
+	{mso-level-number-format:alpha-lower;
+	mso-level-text:"%1\)";
+	mso-level-tab-stop:36.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l50:level2
+	{mso-level-number-format:alpha-lower;
+	mso-level-tab-stop:72.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l50:level3
+	{mso-level-number-format:roman-lower;
+	mso-level-tab-stop:108.0pt;
+	mso-level-number-position:right;
+	text-indent:-9.0pt;}
+@list l50:level4
+	{mso-level-tab-stop:144.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l50:level5
+	{mso-level-number-format:alpha-lower;
+	mso-level-tab-stop:180.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l50:level6
+	{mso-level-number-format:roman-lower;
+	mso-level-tab-stop:216.0pt;
+	mso-level-number-position:right;
+	text-indent:-9.0pt;}
+@list l50:level7
+	{mso-level-tab-stop:252.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l50:level8
+	{mso-level-number-format:alpha-lower;
+	mso-level-tab-stop:288.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l50:level9
+	{mso-level-number-format:roman-lower;
+	mso-level-tab-stop:324.0pt;
+	mso-level-number-position:right;
+	text-indent:-9.0pt;}
+@list l51
+	{mso-list-id:1609698222;
+	mso-list-template-ids:-427265724;}
+@list l51:level1
+	{mso-level-text:"%1\.- ";
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	mso-level-legacy:yes;
+	mso-level-legacy-indent:14.2pt;
+	mso-level-legacy-space:0cm;
+	margin-left:14.2pt;
+	text-indent:-14.2pt;}
+@list l51:level2
+	{mso-level-number-format:alpha-lower;
+	mso-level-text:"%2\) ";
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	mso-level-legacy:yes;
+	mso-level-legacy-indent:14.2pt;
+	mso-level-legacy-space:0cm;
+	margin-left:28.4pt;
+	text-indent:-14.2pt;}
+@list l51:level3
+	{mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	mso-level-legacy:yes;
+	mso-level-legacy-indent:35.4pt;
+	mso-level-legacy-space:0cm;
+	margin-left:63.8pt;
+	text-indent:-35.4pt;}
+@list l51:level4
+	{mso-level-number-format:alpha-lower;
+	mso-level-text:"%4\)";
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	mso-level-legacy:yes;
+	mso-level-legacy-indent:35.4pt;
+	mso-level-legacy-space:0cm;
+	margin-left:99.2pt;
+	text-indent:-35.4pt;}
+@list l51:level5
+	{mso-level-text:"\(%5\)";
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	mso-level-legacy:yes;
+	mso-level-legacy-indent:35.4pt;
+	mso-level-legacy-space:0cm;
+	margin-left:134.6pt;
+	text-indent:-35.4pt;}
+@list l51:level6
+	{mso-level-number-format:alpha-lower;
+	mso-level-text:"\(%6\)";
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	mso-level-legacy:yes;
+	mso-level-legacy-indent:35.4pt;
+	mso-level-legacy-space:0cm;
+	margin-left:170.0pt;
+	text-indent:-35.4pt;}
+@list l51:level7
+	{mso-level-number-format:roman-lower;
+	mso-level-text:"\(%7\)";
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	mso-level-legacy:yes;
+	mso-level-legacy-indent:35.4pt;
+	mso-level-legacy-space:0cm;
+	margin-left:205.4pt;
+	text-indent:-35.4pt;}
+@list l51:level8
+	{mso-level-number-format:alpha-lower;
+	mso-level-text:"\(%8\)";
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	mso-level-legacy:yes;
+	mso-level-legacy-indent:35.4pt;
+	mso-level-legacy-space:0cm;
+	margin-left:240.8pt;
+	text-indent:-35.4pt;}
+@list l51:level9
+	{mso-level-number-format:roman-lower;
+	mso-level-text:"\(%9\)";
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	mso-level-legacy:yes;
+	mso-level-legacy-indent:35.4pt;
+	mso-level-legacy-space:0cm;
+	margin-left:276.2pt;
+	text-indent:-35.4pt;}
+@list l52
+	{mso-list-id:1637687729;
+	mso-list-template-ids:-255435556;}
+@list l52:level1
+	{mso-level-number-format:alpha-lower;
+	mso-level-text:"%1\)";
+	mso-level-tab-stop:36.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l52:level2
+	{mso-level-number-format:alpha-lower;
+	mso-level-tab-stop:72.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l52:level3
+	{mso-level-number-format:roman-lower;
+	mso-level-tab-stop:108.0pt;
+	mso-level-number-position:right;
+	text-indent:-9.0pt;}
+@list l52:level4
+	{mso-level-tab-stop:144.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l52:level5
+	{mso-level-number-format:alpha-lower;
+	mso-level-tab-stop:180.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l52:level6
+	{mso-level-number-format:roman-lower;
+	mso-level-tab-stop:216.0pt;
+	mso-level-number-position:right;
+	text-indent:-9.0pt;}
+@list l52:level7
+	{mso-level-tab-stop:252.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l52:level8
+	{mso-level-number-format:alpha-lower;
+	mso-level-tab-stop:288.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l52:level9
+	{mso-level-number-format:roman-lower;
+	mso-level-tab-stop:324.0pt;
+	mso-level-number-position:right;
+	text-indent:-9.0pt;}
+@list l53
+	{mso-list-id:1658411704;
+	mso-list-template-ids:1879211466;}
+@list l53:level1
+	{mso-level-text:"%1\.- ";
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	mso-level-legacy:yes;
+	mso-level-legacy-indent:14.2pt;
+	mso-level-legacy-space:0cm;
+	margin-left:63.8pt;
+	text-indent:-14.2pt;
+	mso-ansi-font-style:normal;}
+@list l53:level2
+	{mso-level-number-format:alpha-lower;
+	mso-level-text:"%2\) ";
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	mso-level-legacy:yes;
+	mso-level-legacy-indent:14.2pt;
+	mso-level-legacy-space:0cm;
+	margin-left:78.0pt;
+	text-indent:-14.2pt;
+	mso-ansi-font-size:12.0pt;}
+@list l53:level3
+	{mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	mso-level-legacy:yes;
+	mso-level-legacy-indent:35.4pt;
+	mso-level-legacy-space:0cm;
+	margin-left:4.0cm;
+	text-indent:-35.4pt;}
+@list l53:level4
+	{mso-level-number-format:alpha-lower;
+	mso-level-text:"%4\)";
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	mso-level-legacy:yes;
+	mso-level-legacy-indent:35.4pt;
+	mso-level-legacy-space:0cm;
+	margin-left:148.8pt;
+	text-indent:-35.4pt;}
+@list l53:level5
+	{mso-level-text:"\(%5\)";
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	mso-level-legacy:yes;
+	mso-level-legacy-indent:35.4pt;
+	mso-level-legacy-space:0cm;
+	margin-left:184.2pt;
+	text-indent:-35.4pt;}
+@list l53:level6
+	{mso-level-number-format:alpha-lower;
+	mso-level-text:"\(%6\)";
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	mso-level-legacy:yes;
+	mso-level-legacy-indent:35.4pt;
+	mso-level-legacy-space:0cm;
+	margin-left:219.6pt;
+	text-indent:-35.4pt;}
+@list l53:level7
+	{mso-level-number-format:roman-lower;
+	mso-level-text:"\(%7\)";
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	mso-level-legacy:yes;
+	mso-level-legacy-indent:35.4pt;
+	mso-level-legacy-space:0cm;
+	margin-left:255.0pt;
+	text-indent:-35.4pt;}
+@list l53:level8
+	{mso-level-number-format:alpha-lower;
+	mso-level-text:"\(%8\)";
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	mso-level-legacy:yes;
+	mso-level-legacy-indent:35.4pt;
+	mso-level-legacy-space:0cm;
+	margin-left:290.4pt;
+	text-indent:-35.4pt;}
+@list l53:level9
+	{mso-level-number-format:roman-lower;
+	mso-level-text:"\(%9\)";
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	mso-level-legacy:yes;
+	mso-level-legacy-indent:35.4pt;
+	mso-level-legacy-space:0cm;
+	margin-left:325.8pt;
+	text-indent:-35.4pt;}
+@list l54
+	{mso-list-id:1665351942;
+	mso-list-template-ids:-1029943154;}
+@list l54:level1
+	{mso-level-number-format:alpha-lower;
+	mso-level-text:"%1\)";
+	mso-level-tab-stop:36.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l54:level2
+	{mso-level-number-format:alpha-lower;
+	mso-level-tab-stop:72.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l54:level3
+	{mso-level-number-format:roman-lower;
+	mso-level-tab-stop:108.0pt;
+	mso-level-number-position:right;
+	text-indent:-9.0pt;}
+@list l54:level4
+	{mso-level-tab-stop:144.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l54:level5
+	{mso-level-number-format:alpha-lower;
+	mso-level-tab-stop:180.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l54:level6
+	{mso-level-number-format:roman-lower;
+	mso-level-tab-stop:216.0pt;
+	mso-level-number-position:right;
+	text-indent:-9.0pt;}
+@list l54:level7
+	{mso-level-tab-stop:252.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l54:level8
+	{mso-level-number-format:alpha-lower;
+	mso-level-tab-stop:288.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l54:level9
+	{mso-level-number-format:roman-lower;
+	mso-level-tab-stop:324.0pt;
+	mso-level-number-position:right;
+	text-indent:-9.0pt;}
+@list l55
+	{mso-list-id:1675956717;
+	mso-list-template-ids:-1029943154;}
+@list l55:level1
+	{mso-level-number-format:alpha-lower;
+	mso-level-text:"%1\)";
+	mso-level-tab-stop:36.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l55:level2
+	{mso-level-number-format:alpha-lower;
+	mso-level-tab-stop:72.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l55:level3
+	{mso-level-number-format:roman-lower;
+	mso-level-tab-stop:108.0pt;
+	mso-level-number-position:right;
+	text-indent:-9.0pt;}
+@list l55:level4
+	{mso-level-tab-stop:144.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l55:level5
+	{mso-level-number-format:alpha-lower;
+	mso-level-tab-stop:180.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l55:level6
+	{mso-level-number-format:roman-lower;
+	mso-level-tab-stop:216.0pt;
+	mso-level-number-position:right;
+	text-indent:-9.0pt;}
+@list l55:level7
+	{mso-level-tab-stop:252.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l55:level8
+	{mso-level-number-format:alpha-lower;
+	mso-level-tab-stop:288.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l55:level9
+	{mso-level-number-format:roman-lower;
+	mso-level-tab-stop:324.0pt;
+	mso-level-number-position:right;
+	text-indent:-9.0pt;}
+@list l56
+	{mso-list-id:1683898767;
+	mso-list-type:simple;
+	mso-list-template-ids:201981975;}
+@list l56:level1
+	{mso-level-number-format:alpha-lower;
+	mso-level-text:"%1\)";
+	mso-level-tab-stop:18.0pt;
+	mso-level-number-position:left;
+	margin-left:18.0pt;
+	text-indent:-18.0pt;}
+@list l57
+	{mso-list-id:1696273198;
+	mso-list-type:hybrid;
+	mso-list-template-ids:2010261894 201981975 201981977 201981979 201981967 201981977 201981979 201981967 201981977 201981979;}
+@list l57:level1
+	{mso-level-number-format:alpha-lower;
+	mso-level-text:"%1\)";
+	mso-level-tab-stop:36.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l58
+	{mso-list-id:1768841160;
+	mso-list-template-ids:-1029943154;}
+@list l58:level1
+	{mso-level-number-format:alpha-lower;
+	mso-level-text:"%1\)";
+	mso-level-tab-stop:36.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l58:level2
+	{mso-level-number-format:alpha-lower;
+	mso-level-tab-stop:72.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l58:level3
+	{mso-level-number-format:roman-lower;
+	mso-level-tab-stop:108.0pt;
+	mso-level-number-position:right;
+	text-indent:-9.0pt;}
+@list l58:level4
+	{mso-level-tab-stop:144.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l58:level5
+	{mso-level-number-format:alpha-lower;
+	mso-level-tab-stop:180.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l58:level6
+	{mso-level-number-format:roman-lower;
+	mso-level-tab-stop:216.0pt;
+	mso-level-number-position:right;
+	text-indent:-9.0pt;}
+@list l58:level7
+	{mso-level-tab-stop:252.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l58:level8
+	{mso-level-number-format:alpha-lower;
+	mso-level-tab-stop:288.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l58:level9
+	{mso-level-number-format:roman-lower;
+	mso-level-tab-stop:324.0pt;
+	mso-level-number-position:right;
+	text-indent:-9.0pt;}
+@list l59
+	{mso-list-id:1807507077;
+	mso-list-type:hybrid;
+	mso-list-template-ids:-155531196 201981975 201981977 201981979 201981967 201981977 201981979 201981967 201981977 201981979;}
+@list l59:level1
+	{mso-level-number-format:alpha-lower;
+	mso-level-text:"%1\)";
+	mso-level-tab-stop:36.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l60
+	{mso-list-id:1867254971;
+	mso-list-template-ids:350391792;}
+@list l60:level1
+	{mso-level-number-format:alpha-lower;
+	mso-level-reset-level:level1;
+	mso-level-text:"%1\)";
+	mso-level-tab-stop:36.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.15pt;
+	mso-ansi-font-style:normal;}
+@list l60:level2
+	{mso-level-number-format:alpha-lower;
+	mso-level-tab-stop:72.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.15pt;
+	mso-ansi-font-size:12.0pt;}
+@list l60:level3
+	{mso-level-number-format:roman-lower;
+	mso-level-tab-stop:108.0pt;
+	mso-level-number-position:right;
+	text-indent:-9.05pt;}
+@list l60:level4
+	{mso-level-tab-stop:144.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.15pt;}
+@list l60:level5
+	{mso-level-number-format:alpha-lower;
+	mso-level-tab-stop:180.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.15pt;}
+@list l60:level6
+	{mso-level-number-format:roman-lower;
+	mso-level-tab-stop:216.0pt;
+	mso-level-number-position:right;
+	text-indent:-9.05pt;}
+@list l60:level7
+	{mso-level-tab-stop:252.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.15pt;}
+@list l60:level8
+	{mso-level-number-format:alpha-lower;
+	mso-level-tab-stop:288.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.15pt;}
+@list l60:level9
+	{mso-level-number-format:roman-lower;
+	mso-level-tab-stop:324.0pt;
+	mso-level-number-position:right;
+	text-indent:-9.05pt;}
+@list l61
+	{mso-list-id:1879928110;
+	mso-list-template-ids:-1029943154;}
+@list l61:level1
+	{mso-level-number-format:alpha-lower;
+	mso-level-text:"%1\)";
+	mso-level-tab-stop:36.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l61:level2
+	{mso-level-number-format:alpha-lower;
+	mso-level-tab-stop:72.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l61:level3
+	{mso-level-number-format:roman-lower;
+	mso-level-tab-stop:108.0pt;
+	mso-level-number-position:right;
+	text-indent:-9.0pt;}
+@list l61:level4
+	{mso-level-tab-stop:144.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l61:level5
+	{mso-level-number-format:alpha-lower;
+	mso-level-tab-stop:180.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l61:level6
+	{mso-level-number-format:roman-lower;
+	mso-level-tab-stop:216.0pt;
+	mso-level-number-position:right;
+	text-indent:-9.0pt;}
+@list l61:level7
+	{mso-level-tab-stop:252.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l61:level8
+	{mso-level-number-format:alpha-lower;
+	mso-level-tab-stop:288.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l61:level9
+	{mso-level-number-format:roman-lower;
+	mso-level-tab-stop:324.0pt;
+	mso-level-number-position:right;
+	text-indent:-9.0pt;}
+@list l62
+	{mso-list-id:1883397387;
+	mso-list-template-ids:-1029943154;}
+@list l62:level1
+	{mso-level-number-format:alpha-lower;
+	mso-level-text:"%1\)";
+	mso-level-tab-stop:36.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l62:level2
+	{mso-level-number-format:alpha-lower;
+	mso-level-tab-stop:72.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l62:level3
+	{mso-level-number-format:roman-lower;
+	mso-level-tab-stop:108.0pt;
+	mso-level-number-position:right;
+	text-indent:-9.0pt;}
+@list l62:level4
+	{mso-level-tab-stop:144.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l62:level5
+	{mso-level-number-format:alpha-lower;
+	mso-level-tab-stop:180.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l62:level6
+	{mso-level-number-format:roman-lower;
+	mso-level-tab-stop:216.0pt;
+	mso-level-number-position:right;
+	text-indent:-9.0pt;}
+@list l62:level7
+	{mso-level-tab-stop:252.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l62:level8
+	{mso-level-number-format:alpha-lower;
+	mso-level-tab-stop:288.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l62:level9
+	{mso-level-number-format:roman-lower;
+	mso-level-tab-stop:324.0pt;
+	mso-level-number-position:right;
+	text-indent:-9.0pt;}
+@list l63
+	{mso-list-id:1898783525;
+	mso-list-type:hybrid;
+	mso-list-template-ids:-154758312 201981975 201981977 201981979 201981967 201981977 201981979 201981967 201981977 201981979;}
+@list l63:level1
+	{mso-level-number-format:alpha-lower;
+	mso-level-text:"%1\)";
+	mso-level-tab-stop:36.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l64
+	{mso-list-id:1927377459;
+	mso-list-template-ids:-1029943154;}
+@list l64:level1
+	{mso-level-number-format:alpha-lower;
+	mso-level-text:"%1\)";
+	mso-level-tab-stop:36.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l64:level2
+	{mso-level-number-format:alpha-lower;
+	mso-level-tab-stop:72.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l64:level3
+	{mso-level-number-format:roman-lower;
+	mso-level-tab-stop:108.0pt;
+	mso-level-number-position:right;
+	text-indent:-9.0pt;}
+@list l64:level4
+	{mso-level-tab-stop:144.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l64:level5
+	{mso-level-number-format:alpha-lower;
+	mso-level-tab-stop:180.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l64:level6
+	{mso-level-number-format:roman-lower;
+	mso-level-tab-stop:216.0pt;
+	mso-level-number-position:right;
+	text-indent:-9.0pt;}
+@list l64:level7
+	{mso-level-tab-stop:252.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l64:level8
+	{mso-level-number-format:alpha-lower;
+	mso-level-tab-stop:288.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l64:level9
+	{mso-level-number-format:roman-lower;
+	mso-level-tab-stop:324.0pt;
+	mso-level-number-position:right;
+	text-indent:-9.0pt;}
+@list l65
+	{mso-list-id:1956062377;
+	mso-list-template-ids:350391792;}
+@list l65:level1
+	{mso-level-number-format:alpha-lower;
+	mso-level-reset-level:level1;
+	mso-level-text:"%1\)";
+	mso-level-tab-stop:36.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.15pt;
+	mso-ansi-font-style:normal;}
+@list l65:level2
+	{mso-level-number-format:alpha-lower;
+	mso-level-tab-stop:72.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.15pt;
+	mso-ansi-font-size:12.0pt;}
+@list l65:level3
+	{mso-level-number-format:roman-lower;
+	mso-level-tab-stop:108.0pt;
+	mso-level-number-position:right;
+	text-indent:-9.05pt;}
+@list l65:level4
+	{mso-level-tab-stop:144.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.15pt;}
+@list l65:level5
+	{mso-level-number-format:alpha-lower;
+	mso-level-tab-stop:180.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.15pt;}
+@list l65:level6
+	{mso-level-number-format:roman-lower;
+	mso-level-tab-stop:216.0pt;
+	mso-level-number-position:right;
+	text-indent:-9.05pt;}
+@list l65:level7
+	{mso-level-tab-stop:252.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.15pt;}
+@list l65:level8
+	{mso-level-number-format:alpha-lower;
+	mso-level-tab-stop:288.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.15pt;}
+@list l65:level9
+	{mso-level-number-format:roman-lower;
+	mso-level-tab-stop:324.0pt;
+	mso-level-number-position:right;
+	text-indent:-9.05pt;}
+@list l66
+	{mso-list-id:1961523406;
+	mso-list-template-ids:-1029943154;}
+@list l66:level1
+	{mso-level-number-format:alpha-lower;
+	mso-level-text:"%1\)";
+	mso-level-tab-stop:36.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l66:level2
+	{mso-level-number-format:alpha-lower;
+	mso-level-tab-stop:72.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l66:level3
+	{mso-level-number-format:roman-lower;
+	mso-level-tab-stop:108.0pt;
+	mso-level-number-position:right;
+	text-indent:-9.0pt;}
+@list l66:level4
+	{mso-level-tab-stop:144.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l66:level5
+	{mso-level-number-format:alpha-lower;
+	mso-level-tab-stop:180.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l66:level6
+	{mso-level-number-format:roman-lower;
+	mso-level-tab-stop:216.0pt;
+	mso-level-number-position:right;
+	text-indent:-9.0pt;}
+@list l66:level7
+	{mso-level-tab-stop:252.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l66:level8
+	{mso-level-number-format:alpha-lower;
+	mso-level-tab-stop:288.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l66:level9
+	{mso-level-number-format:roman-lower;
+	mso-level-tab-stop:324.0pt;
+	mso-level-number-position:right;
+	text-indent:-9.0pt;}
+@list l67
+	{mso-list-id:1982811489;
+	mso-list-type:simple;
+	mso-list-template-ids:201981975;}
+@list l67:level1
+	{mso-level-number-format:alpha-lower;
+	mso-level-text:"%1\)";
+	mso-level-tab-stop:18.0pt;
+	mso-level-number-position:left;
+	margin-left:18.0pt;
+	text-indent:-18.0pt;}
+@list l68
+	{mso-list-id:2095323579;
+	mso-list-type:hybrid;
+	mso-list-template-ids:-1280255542 201981975 201981977 201981979 201981967 201981977 201981979 201981967 201981977 201981979;}
+@list l68:level1
+	{mso-level-number-format:alpha-lower;
+	mso-level-text:"%1\)";
+	mso-level-tab-stop:36.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l69
+	{mso-list-id:2096394380;
+	mso-list-template-ids:-1029943154;}
+@list l69:level1
+	{mso-level-number-format:alpha-lower;
+	mso-level-text:"%1\)";
+	mso-level-tab-stop:36.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l69:level2
+	{mso-level-number-format:alpha-lower;
+	mso-level-tab-stop:72.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l69:level3
+	{mso-level-number-format:roman-lower;
+	mso-level-tab-stop:108.0pt;
+	mso-level-number-position:right;
+	text-indent:-9.0pt;}
+@list l69:level4
+	{mso-level-tab-stop:144.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l69:level5
+	{mso-level-number-format:alpha-lower;
+	mso-level-tab-stop:180.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l69:level6
+	{mso-level-number-format:roman-lower;
+	mso-level-tab-stop:216.0pt;
+	mso-level-number-position:right;
+	text-indent:-9.0pt;}
+@list l69:level7
+	{mso-level-tab-stop:252.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l69:level8
+	{mso-level-number-format:alpha-lower;
+	mso-level-tab-stop:288.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l69:level9
+	{mso-level-number-format:roman-lower;
+	mso-level-tab-stop:324.0pt;
+	mso-level-number-position:right;
+	text-indent:-9.0pt;}
+@list l70
+	{mso-list-id:2141611447;
+	mso-list-template-ids:350391792;}
+@list l70:level1
+	{mso-level-number-format:alpha-lower;
+	mso-level-reset-level:level1;
+	mso-level-text:"%1\)";
+	mso-level-tab-stop:36.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.15pt;
+	mso-ansi-font-style:normal;}
+@list l70:level2
+	{mso-level-number-format:alpha-lower;
+	mso-level-tab-stop:72.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.15pt;
+	mso-ansi-font-size:12.0pt;}
+@list l70:level3
+	{mso-level-number-format:roman-lower;
+	mso-level-tab-stop:108.0pt;
+	mso-level-number-position:right;
+	text-indent:-9.05pt;}
+@list l70:level4
+	{mso-level-tab-stop:144.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.15pt;}
+@list l70:level5
+	{mso-level-number-format:alpha-lower;
+	mso-level-tab-stop:180.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.15pt;}
+@list l70:level6
+	{mso-level-number-format:roman-lower;
+	mso-level-tab-stop:216.0pt;
+	mso-level-number-position:right;
+	text-indent:-9.05pt;}
+@list l70:level7
+	{mso-level-tab-stop:252.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.15pt;}
+@list l70:level8
+	{mso-level-number-format:alpha-lower;
+	mso-level-tab-stop:288.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.15pt;}
+@list l70:level9
+	{mso-level-number-format:roman-lower;
+	mso-level-tab-stop:324.0pt;
+	mso-level-number-position:right;
+	text-indent:-9.05pt;}
+@list l20:level1 lfo3
+	{mso-level-start-at:10;
+	mso-level-numbering:continue;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	mso-level-legacy:yes;
+	mso-level-legacy-indent:18.0pt;
+	mso-level-legacy-space:0cm;
+	margin-left:18.0pt;
+	text-indent:-18.0pt;}
+@list l26:level1 lfo5
+	{mso-level-start-at:0;
+	mso-level-numbering:continue;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	mso-level-legacy:yes;
+	mso-level-legacy-indent:18.0pt;
+	mso-level-legacy-space:0cm;
+	margin-left:18.0pt;
+	text-indent:-18.0pt;}
+@list l1:level1 lfo6
+	{mso-level-start-at:4;
+	mso-level-number-format:bullet;
+	mso-level-numbering:continue;
+	mso-level-text:\F0D8;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	mso-level-legacy:yes;
+	mso-level-legacy-indent:18.0pt;
+	mso-level-legacy-space:0cm;
+	margin-left:53.4pt;
+	text-indent:-18.0pt;
+	font-family:Wingdings;}
+@list l1:level1 lfo7
+	{mso-level-start-at:1;
+	mso-level-number-format:bullet;
+	mso-level-numbering:continue;
+	mso-level-text:\F0D8;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	mso-level-legacy:yes;
+	mso-level-legacy-indent:18.0pt;
+	mso-level-legacy-space:0cm;
+	margin-left:53.4pt;
+	text-indent:-18.0pt;
+	font-family:Wingdings;}
+@list l0:level2 lfo16
+	{mso-level-start-at:2;}
+@list l0:level2 lfo17
+	{mso-level-start-at:2;}
+@list l0:level2 lfo18
+	{mso-level-start-at:2;}
+@list l0:level2 lfo20
+	{mso-level-start-at:3;}
+@list l0:level2 lfo21
+	{mso-level-start-at:2;}
+@list l0:level2 lfo22
+	{mso-level-start-at:2;}
+@list l0:level2 lfo23
+	{mso-level-start-at:2;}
+@list l0:level2 lfo24
+	{mso-level-start-at:2;}
+@list l0:level2 lfo26
+	{mso-level-start-at:2;}
+@list l0:level3 lfo26
+	{mso-level-start-at:0;}
+@list l0:level4 lfo26
+	{mso-level-start-at:0;}
+@list l0:level5 lfo26
+	{mso-level-start-at:12;}
+@list l0:level6 lfo26
+	{mso-level-start-at:6;}
+@list l0:level7 lfo26
+	{mso-level-start-at:18;}
+@list l0:level8 lfo26
+	{mso-level-start-at:3569;}
+@list l0:level9 lfo26
+	{mso-level-start-at:8521240;}
+@list l0:level1 lfo246
+	{mso-level-numbering:continue;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	mso-level-legacy:yes;
+	mso-level-legacy-indent:14.2pt;
+	mso-level-legacy-space:0cm;
+	margin-left:14.2pt;
+	text-indent:-14.2pt;
+	mso-ansi-font-style:normal;}
+@list l0:level2 lfo246
+	{mso-level-numbering:continue;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	mso-level-legacy:yes;
+	mso-level-legacy-indent:14.2pt;
+	mso-level-legacy-space:0cm;
+	margin-left:28.4pt;
+	text-indent:-14.2pt;
+	mso-ansi-font-size:12.0pt;}
+@list l0:level3 lfo246
+	{mso-level-numbering:continue;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	mso-level-legacy:yes;
+	mso-level-legacy-indent:35.4pt;
+	mso-level-legacy-space:0cm;
+	margin-left:63.8pt;
+	text-indent:-35.4pt;}
+@list l0:level4 lfo246
+	{mso-level-numbering:continue;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	mso-level-legacy:yes;
+	mso-level-legacy-indent:35.4pt;
+	mso-level-legacy-space:0cm;
+	margin-left:99.2pt;
+	text-indent:-35.4pt;}
+@list l0:level5 lfo246
+	{mso-level-numbering:continue;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	mso-level-legacy:yes;
+	mso-level-legacy-indent:35.4pt;
+	mso-level-legacy-space:0cm;
+	margin-left:134.6pt;
+	text-indent:-35.4pt;}
+@list l0:level6 lfo246
+	{mso-level-numbering:continue;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	mso-level-legacy:yes;
+	mso-level-legacy-indent:35.4pt;
+	mso-level-legacy-space:0cm;
+	margin-left:170.0pt;
+	text-indent:-35.4pt;}
+@list l0:level7 lfo246
+	{mso-level-numbering:continue;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	mso-level-legacy:yes;
+	mso-level-legacy-indent:35.4pt;
+	mso-level-legacy-space:0cm;
+	margin-left:205.4pt;
+	text-indent:-35.4pt;}
+@list l0:level8 lfo246
+	{mso-level-numbering:continue;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	mso-level-legacy:yes;
+	mso-level-legacy-indent:35.4pt;
+	mso-level-legacy-space:0cm;
+	margin-left:240.8pt;
+	text-indent:-35.4pt;}
+@list l0:level9 lfo246
+	{mso-level-numbering:continue;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	mso-level-legacy:yes;
+	mso-level-legacy-indent:35.4pt;
+	mso-level-legacy-space:0cm;
+	margin-left:276.2pt;
+	text-indent:-35.4pt;}
+ol
+	{margin-bottom:0cm;}
+ul
+	{margin-bottom:0cm;}
+-->
+</style>
+<!--[if gte mso 10]>
+<style>
+ /* Style Definitions */
+ table.MsoNormalTable
+	{mso-style-name:"Tabla normal";
+	mso-tstyle-rowband-size:0;
+	mso-tstyle-colband-size:0;
+	mso-style-noshow:yes;
+	mso-style-parent:"";
+	mso-padding-alt:0cm 5.4pt 0cm 5.4pt;
+	mso-para-margin:0cm;
+	mso-para-margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:10.0pt;
+	font-family:"Times New Roman";}
+table.MsoTableGrid
+	{mso-style-name:"Tabla con cuadr�cula";
+	mso-tstyle-rowband-size:0;
+	mso-tstyle-colband-size:0;
+	border:solid windowtext 1.0pt;
+	mso-border-alt:solid windowtext .5pt;
+	mso-padding-alt:0cm 5.4pt 0cm 5.4pt;
+	mso-border-insideh:.5pt solid windowtext;
+	mso-border-insidev:.5pt solid windowtext;
+	mso-para-margin:0cm;
+	mso-para-margin-bottom:.0001pt;
+	text-align:justify;
+	mso-pagination:widow-orphan;
+	font-size:10.0pt;
+	font-family:"Times New Roman";}
+</style>
+<![endif]--><!--[if gte mso 9]><xml>
+ <o:shapedefaults v:ext="edit" spidmax="2050"/>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <o:shapelayout v:ext="edit">
+  <o:idmap v:ext="edit" data="1"/>
+ </o:shapelayout></xml><![endif]-->
+<style type="text/css"></style></head>
+
+<body lang="ES" style="tab-interval:35.4pt">
+
+<div class="Section1">
+
+<table class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0" width="657" style="width:492.6pt;border-collapse:collapse;border:none;mso-border-alt:solid windowtext .75pt;
+ mso-padding-alt:0cm 3.55pt 0cm 3.55pt;mso-border-insideh:.75pt solid windowtext;
+ mso-border-insidev:.75pt solid windowtext">
+ <tbody><tr style="mso-yfti-irow:0;mso-yfti-lastrow:yes">
+  <td width="553" valign="top" style="width:414.65pt;border:solid windowtext 1.0pt;
+  mso-border-alt:solid windowtext .75pt;padding:0cm 3.55pt 0cm 3.55pt">
+  <p class="Respuesta"><span lang="ES-TRAD">Escuela Universitaria de Ingenier�a
+  T�cnica en Inform�tica de Oviedo</span></p>
+  <p class="MsoNormal" style="page-break-after:avoid"><span lang="ES-TRAD">Sistemas
+  Operativos. Segundo curso.<b style="mso-bidi-font-weight:normal"><o:p></o:p></b></span></p>
+  <p class="MsoNormal" style="page-break-after:avoid"><span lang="ES-TRAD">Examen Segundo
+  Parcial. 26 de Mayo de 2004<b style="mso-bidi-font-weight:normal"><o:p></o:p></b></span></p>
+  </td>
+  <td width="104" valign="top" style="width:77.95pt;border:solid windowtext 1.0pt;
+  border-left:none;mso-border-left-alt:solid windowtext .75pt;mso-border-alt:
+  solid windowtext .75pt;padding:0cm 3.55pt 0cm 3.55pt">
+  <p class="MsoNormal" style="page-break-after:avoid"><span lang="ES-TRAD">Modelo</span></p>
+  <p class="MsoNormal" align="center" style="text-align:center;page-break-after:
+  avoid"><b style="mso-bidi-font-weight:normal"><span lang="ES-TRAD">1<o:p></o:p></span></b></p>
+  </td>
+ </tr>
+</tbody></table>
+
+<p class="MsoNormal" style="page-break-after:avoid"><span lang="ES-TRAD"><o:p>&nbsp;</o:p></span></p>
+
+<div style="border:solid windowtext 1.0pt;mso-border-alt:solid windowtext .5pt;
+padding:1.0pt 4.0pt 1.0pt 4.0pt">
+
+<p class="MsoNormal" style="page-break-after:avoid;border:none;mso-border-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:1.0pt 4.0pt 1.0pt 4.0pt"><span lang="ES-TRAD">Puntuaci�n: <span style="mso-tab-count:1">�� </span>Acierto: + 3<span style="mso-tab-count:2">��������������� </span>Fallo: -1<span style="mso-tab-count:
+2">�������������������� </span>En Blanco: 0</span></p>
+
+<p class="MsoNormal" style="page-break-after:avoid;border:none;mso-border-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:1.0pt 4.0pt 1.0pt 4.0pt"><span lang="ES-TRAD">Puntuaci�n m�nima para aprobar: 39 puntos<span style="mso-tab-count:
+2">��������������������� </span>Nota sobre 10 = (puntos - 39)/27</span></p>
+
+<p class="MsoNormal" style="page-break-after:avoid;border:none;mso-border-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:1.0pt 4.0pt 1.0pt 4.0pt"><span lang="ES-TRAD">Tiempo de realizaci�n del examen: 60 minutos</span></p>
+
+</div>
+
+<p class="MsoPlainText" style="page-break-after:avoid"><span style="font-size:
+12.0pt;mso-bidi-font-size:10.0pt;font-family:&quot;Times New Roman&quot;"><o:p>&nbsp;</o:p></span></p>
+
+<div style="border:solid windowtext 1.0pt;mso-border-alt:solid windowtext .5pt;
+padding:1.0pt 4.0pt 1.0pt 4.0pt">
+
+<h1 style="border:none;mso-border-alt:solid windowtext .5pt;padding:0cm;
+mso-padding-alt:1.0pt 4.0pt 1.0pt 4.0pt"><span lang="ES-TRAD"><o:p>&nbsp;</o:p></span></h1>
+
+<h1 style="border:none;mso-border-alt:solid windowtext .5pt;padding:0cm;
+mso-padding-alt:1.0pt 4.0pt 1.0pt 4.0pt"><span lang="ES-TRAD">Nombre
+���������������.............................................................................</span></h1>
+
+<h1 style="border:none;mso-border-alt:solid windowtext .5pt;padding:0cm;
+mso-padding-alt:1.0pt 4.0pt 1.0pt 4.0pt"><span lang="ES-TRAD">DNI
+���������������������<o:p></o:p></span></h1>
+
+</div>
+
+<h1 style="margin-left:14.2pt;text-indent:-14.2pt;mso-list:l0 level1 lfo1"><!--[if !supportLists]--><span lang="ES-TRAD"><span style="mso-list:Ignore">1.- </span></span><!--[endif]--><span lang="ES-TRAD">�Cu�l de las siguientes afirmaciones es correcta?</span></h1>
+
+<h2 style="margin-left:28.4pt;text-indent:-14.2pt;mso-list:l0 level2 lfo1;
+tab-stops:35.4pt"><!--[if !supportLists]--><span style="mso-ansi-language:ES"><span style="mso-list:Ignore">a) <span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp; </span></span></span><!--[endif]--><span style="mso-ansi-language:ES">La t�cnica de memoria virtual traslada
+temporalmente a procesos completos a memoria secundaria durante la ejecuci�n de
+los mismos<o:p></o:p></span></h2>
+
+<p class="Respuesta"><span style="mso-ansi-language:ES">Falso, a esta t�cnica se
+le denomina intercambio<o:p></o:p></span></p>
+
+<h2 style="margin-left:28.4pt;text-indent:-14.2pt;mso-list:l0 level2 lfo1;
+tab-stops:35.4pt"><!--[if !supportLists]--><span style="mso-ansi-language:ES"><span style="mso-list:Ignore">b) <span style="font:7.0pt &quot;Times New Roman&quot;"><span style="mso-spacerun:yes">�</span></span></span></span><!--[endif]--><span style="mso-ansi-language:ES">En un sistema con gesti�n de memoria virtual todo
+el espacio de direcciones de un proceso<span style="mso-spacerun:yes">�
+</span>se carga en memoria para poder ser ejecutado, pero no necesariamente en
+posiciones f�sicamente consecutivas <o:p></o:p></span></h2>
+
+<p class="Respuesta"><span style="mso-ansi-language:ES">Falso, no es necesario
+cargar todo el proceso simult�neamente<o:p></o:p></span></p>
+
+<h2 style="margin-left:28.4pt;text-indent:-14.2pt;mso-list:l0 level2 lfo1;
+tab-stops:35.4pt"><!--[if !supportLists]--><span style="mso-ansi-language:ES"><span style="mso-list:Ignore">c) <span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp; </span></span></span><!--[endif]--><span style="mso-ansi-language:ES">En un sistema de gesti�n de memoria virtual, para
+que se ejecute una instrucci�n de un proceso no es necesario que se encuentre
+cargada en memoria principal.<o:p></o:p></span></h2>
+
+<p class="Respuesta"><span style="mso-ansi-language:ES">Falso, si es preciso que
+est� en MP cuando se intente ejecutar<o:p></o:p></span></p>
+
+<h2 style="margin-left:28.4pt;text-indent:-14.2pt;mso-list:l0 level2 lfo1;
+tab-stops:35.4pt"><!--[if !supportLists]--><span style="mso-ansi-language:ES"><span style="mso-list:Ignore">d) <span style="font:7.0pt &quot;Times New Roman&quot;"><span style="mso-spacerun:yes">�</span></span></span></span><!--[endif]--><span style="mso-ansi-language:ES">Ninguna de las opciones restantes es correcta<o:p></o:p></span></h2>
+
+<p class="Respuesta"><span style="mso-ansi-language:ES">Cierto<o:p></o:p></span></p>
+
+<h1 style="margin-left:14.2pt;text-indent:-14.2pt;mso-list:l0 level1 lfo1"><!--[if !supportLists]--><span lang="ES-TRAD"><span style="mso-list:Ignore">2.- </span></span><!--[endif]--><span style="mso-ansi-language:ES"><span style="mso-spacerun:yes">���</span></span><span lang="ES-TRAD">�Cu�l de las siguientes afirmaciones es correcta?</span></h1>
+
+<h2 style="margin-left:28.4pt;text-indent:-14.2pt;mso-list:l0 level2 lfo1;
+tab-stops:35.4pt"><!--[if !supportLists]--><span style="mso-ansi-language:ES"><span style="mso-list:Ignore">a) <span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp; </span></span></span><!--[endif]--><span style="mso-ansi-language:ES">El sistema operativo UNIX no cumple el principio
+de m�nimo privilegio respecto al control de acceso a ficheros pero s� el de
+mediaci�n total<o:p></o:p></span></h2>
+
+<p class="Respuesta"><span style="mso-ansi-language:ES">Falso, el control de
+acceso s�lo se hace en la apertura de un fichero pero no en cada operaci�n de
+lectura/escritura<o:p></o:p></span></p>
+
+<h2 style="margin-left:28.4pt;text-indent:-14.2pt;mso-list:l0 level2 lfo1;
+tab-stops:35.4pt"><!--[if !supportLists]--><span style="mso-ansi-language:ES"><span style="mso-list:Ignore">b) <span style="font:7.0pt &quot;Times New Roman&quot;"><span style="mso-spacerun:yes">�</span></span></span></span><!--[endif]--><span style="mso-ansi-language:ES">En el modelo de control de acceso basado en
+capacidades, el mecanismo de control no necesita conocer la identidad del
+cliente para poder permitir o denegar su acceso<o:p></o:p></span></h2>
+
+<p class="Respuesta"><span style="mso-ansi-language:ES">Cierto, el funcionamiento
+es an�logo al control de acceso a un cine, basta con la entrada.<o:p></o:p></span></p>
+
+<h2 style="margin-left:28.4pt;text-indent:-14.2pt;mso-list:l0 level2 lfo1;
+tab-stops:35.4pt"><!--[if !supportLists]--><span style="mso-ansi-language:ES"><span style="mso-list:Ignore">c) <span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp; </span></span></span><!--[endif]--><span style="mso-ansi-language:ES">Los sistemas operativos actuales usan listas de
+control de acceso para proteger sus ficheros porque este mecanismo es m�s
+adecuado para las arquitecturas actuales, tipo cliente-servidor que el
+mecanismo basado en capacidades<o:p></o:p></span></h2>
+
+<p class="Respuesta"><span style="mso-ansi-language:ES">Falso, las capacidades se
+adaptan mejor a las arquitecturas cliente-servidor<o:p></o:p></span></p>
+
+<h2 style="margin-left:28.4pt;text-indent:-14.2pt;mso-list:l0 level2 lfo1;
+tab-stops:35.4pt"><!--[if !supportLists]--><span style="mso-ansi-language:ES"><span style="mso-list:Ignore">d) <span style="font:7.0pt &quot;Times New Roman&quot;"><span style="mso-spacerun:yes">�</span></span></span></span><!--[endif]--><span style="mso-ansi-language:ES">Ninguna de las restantes es correcta<o:p></o:p></span></h2>
+
+<p class="Respuesta"><span style="mso-ansi-language:ES">Falso <o:p></o:p></span></p>
+
+<h1 style="margin-left:14.2pt;text-indent:-14.2pt;mso-list:l0 level1 lfo1"><!--[if !supportLists]--><span lang="ES-TRAD"><span style="mso-list:Ignore">3.- </span></span><!--[endif]--><span lang="ES-TRAD">�Cu�l de las siguientes afirmaciones es correcta?</span></h1>
+
+<h2 style="margin-left:28.4pt;text-indent:-14.2pt;mso-list:l0 level2 lfo1;
+tab-stops:35.4pt"><!--[if !supportLists]--><span style="mso-ansi-language:ES"><span style="mso-list:Ignore">a) <span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp; </span></span></span><!--[endif]--><span style="mso-ansi-language:ES">En un esquema gesti�n de memoria virtual con
+paginaci�n cuando la p�gina no est� cargada en memoria la direcci�n a la que se
+desea acceder tendr� ceros en los bits m�s significativos, correspondientes al
+n�mero de p�gina<o:p></o:p></span></h2>
+
+<p class="Respuesta"><span style="mso-ansi-language:ES">Falso, no existir� marco
+asociado, pero el n�mero de p�gina si existir�, porque corresponde al espacio
+de direcciones del proceso y es una direcci�n l�gica<o:p></o:p></span></p>
+
+<h2 style="margin-left:28.4pt;text-indent:-14.2pt;mso-list:l0 level2 lfo1;
+tab-stops:35.4pt"><!--[if !supportLists]--><span style="mso-ansi-language:ES"><span style="mso-list:Ignore">b) <span style="font:7.0pt &quot;Times New Roman&quot;"><span style="mso-spacerun:yes">�</span></span></span></span><!--[endif]--><span style="mso-ansi-language:ES"><span style="mso-spacerun:yes">�</span>En un
+esquema gesti�n de memoria virtual siempre que se reemplaza una p�gina por otra
+ser� necesario guardar el contenido de la vieja en memoria secundaria antes de
+ser reemplazada<o:p></o:p></span></h2>
+
+<p class="Respuesta"><span style="mso-ansi-language:ES">Falso. Esto s�lo es
+necesario si la p�gina ha sido modificada durante su estancia en memoria
+principal.<o:p></o:p></span></p>
+
+<h2 style="margin-left:28.4pt;text-indent:-14.2pt;mso-list:l0 level2 lfo1;
+tab-stops:35.4pt"><!--[if !supportLists]--><span style="mso-ansi-language:ES"><span style="mso-list:Ignore">c) <span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp; </span></span></span><!--[endif]--><span style="mso-ansi-language:ES">Cuando la tabla de p�ginas se almacena en memoria
+principal se localiza dentro del espacio de direcciones del proceso<o:p></o:p></span></h2>
+
+<p class="Respuesta"><span style="mso-ansi-language:ES">Falso, estar� en el
+espacio de direcciones del sistema operativo, puesto que es una estructura
+definida por �ste.<o:p></o:p></span></p>
+
+<h2 style="margin-left:28.4pt;text-indent:-14.2pt;mso-list:l0 level2 lfo1;
+tab-stops:35.4pt"><!--[if !supportLists]--><span style="mso-ansi-language:ES"><span style="mso-list:Ignore">d) <span style="font:7.0pt &quot;Times New Roman&quot;"><span style="mso-spacerun:yes">�</span></span></span></span><!--[endif]--><span style="mso-ansi-language:ES">Ninguna de las opciones restantes es correcta<o:p></o:p></span></h2>
+
+<p class="Respuesta"><span style="mso-ansi-language:ES">Cierto<o:p></o:p></span></p>
+
+<h1 style="margin-left:14.2pt;text-indent:-14.2pt;mso-list:l0 level1 lfo1"><!--[if !supportLists]--><span lang="ES-TRAD"><span style="mso-list:Ignore">4.- </span></span><!--[endif]--><span lang="ES-TRAD">Respecto al sistema de gesti�n de memoria. �Cu�l de las siguientes
+afirmaciones es correcta?</span></h1>
+
+<h2 style="margin-left:28.4pt;text-indent:-14.2pt;mso-list:l0 level2 lfo1;
+tab-stops:35.4pt"><!--[if !supportLists]--><span style="mso-ansi-language:ES"><span style="mso-list:Ignore">a) <span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp; </span></span></span><!--[endif]--><span style="mso-ansi-language:ES">En los esquemas que usan tablas de p�ginas
+multinivel, cada tabla de p�ginas de segundo nivel ocupa un marco en memoria<o:p></o:p></span></h2>
+
+<p class="Respuesta"><span style="mso-ansi-language:ES">Cierto, la tabla de
+p�ginas se pagina y cada p�gina se almacena en un marco.<o:p></o:p></span></p>
+
+<h2 style="margin-left:28.4pt;text-indent:-14.2pt;mso-list:l0 level2 lfo1;
+tab-stops:35.4pt"><!--[if !supportLists]--><span style="mso-ansi-language:ES"><span style="mso-list:Ignore">b) <span style="font:7.0pt &quot;Times New Roman&quot;"><span style="mso-spacerun:yes">�</span></span></span></span><!--[endif]--><span style="mso-ansi-language:ES">En los esquemas de gesti�n de memoria virtual con
+segmentaci�n con paginaci�n, la memoria f�sica de la m�quina se divide en
+segmentos y �stos a su vez en marcos.<o:p></o:p></span></h2>
+
+<p class="Respuesta"><span style="mso-ansi-language:ES">Falso, la memoria f�sica
+se divide en marcos <o:p></o:p></span></p>
+
+<h2 style="margin-left:28.4pt;text-indent:-14.2pt;mso-list:l0 level2 lfo1;
+tab-stops:35.4pt"><!--[if !supportLists]--><span style="mso-ansi-language:ES"><span style="mso-list:Ignore">c) <span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp; </span></span></span><!--[endif]--><span style="mso-ansi-language:ES">Las pol�ticas de lectura y ubicaci�n dependen del
+hardware existente, mientras que las de asignaci�n y reemplazo dependen del
+sistema operativo<o:p></o:p></span></h2>
+
+<p class="Respuesta"><span style="mso-ansi-language:ES">Falso, todas ellas
+dependen del SO.<o:p></o:p></span></p>
+
+<h2 style="margin-left:28.4pt;text-indent:-14.2pt;mso-list:l0 level2 lfo1;
+tab-stops:35.4pt"><!--[if !supportLists]--><span style="mso-ansi-language:ES"><span style="mso-list:Ignore">d) <span style="font:7.0pt &quot;Times New Roman&quot;"><span style="mso-spacerun:yes">�</span></span></span></span><!--[endif]--><span style="mso-ansi-language:ES">Ninguna de las opciones restantes es correcta<o:p></o:p></span></h2>
+
+<p class="Respuesta"><span style="mso-ansi-language:ES">Falso<o:p></o:p></span></p>
+
+<h1 style="margin-left:14.2pt;text-indent:-14.2pt;mso-list:l0 level1 lfo1"><!--[if !supportLists]--><span lang="ES-TRAD"><span style="mso-list:Ignore">5.- </span></span><!--[endif]--><span lang="ES-TRAD">Cu�l de las siguientes afirmaciones es correcta</span></h1>
+
+<h2 style="margin-left:28.4pt;text-indent:-14.2pt;mso-list:l0 level2 lfo1;
+tab-stops:35.4pt"><!--[if !supportLists]--><span style="mso-ansi-language:ES"><span style="mso-list:Ignore">a) <span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp; </span></span></span><!--[endif]--><span style="mso-ansi-language:ES">El algoritmo �ptimo de reemplazo de p�ginas
+reemplaza aquella p�gina que haga m�s tiempo que no se usa<o:p></o:p></span></h2>
+
+<p class="Respuesta"><span style="mso-ansi-language:ES">Falso, ese es el LRU<o:p></o:p></span></p>
+
+<h2 style="margin-left:28.4pt;text-indent:-14.2pt;mso-list:l0 level2 lfo1;
+tab-stops:35.4pt"><!--[if !supportLists]--><span style="mso-ansi-language:ES"><span style="mso-list:Ignore">b) <span style="font:7.0pt &quot;Times New Roman&quot;"><span style="mso-spacerun:yes">�</span></span></span></span><!--[endif]--><span style="mso-ansi-language:ES">El algoritmo del reloj intenta mejorar el FIFO intentando
+evitar que se expulsen p�ginas que son muy referenciadas en la ejecuci�n del
+proceso.<o:p></o:p></span></h2>
+
+<p class="Respuesta"><span style="mso-ansi-language:ES">Cierto. Al elegir una
+p�gina a expulsar les da la segunda oportunidad a aquellas que han sido
+utilizadas poniendo su bit a 0, si se vuelve a usar la p�gina se colocar� el
+bit a 1, por lo que cuando le toque nuevamente ser expulsada se le volver� a
+dar segunda oportunidad, y as� sucesivamente.<o:p></o:p></span></p>
+
+<h2 style="margin-left:28.4pt;text-indent:-14.2pt;mso-list:l0 level2 lfo1;
+tab-stops:35.4pt"><!--[if !supportLists]--><span style="mso-ansi-language:ES"><span style="mso-list:Ignore">c) <span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp; </span></span></span><!--[endif]--><span style="mso-ansi-language:ES">En WindowsNT se utiliza el algoritmo del reloj
+como pol�tica de planificaci�n<o:p></o:p></span></h2>
+
+<p class="Respuesta"><span style="mso-ansi-language:ES">Falso, se usa una
+implementaci�n que consigue aproximarse al LRU<o:p></o:p></span></p>
+
+<h2 style="margin-left:28.4pt;text-indent:-14.2pt;mso-list:l0 level2 lfo1;
+tab-stops:35.4pt"><!--[if !supportLists]--><span style="mso-ansi-language:ES"><span style="mso-list:Ignore">d) <span style="font:7.0pt &quot;Times New Roman&quot;"><span style="mso-spacerun:yes">�</span></span></span></span><!--[endif]--><span style="mso-ansi-language:ES">Ninguna de las opciones restantes es correcta<o:p></o:p></span></h2>
+
+<p class="Respuesta"><span style="mso-ansi-language:ES">Falso<o:p></o:p></span></p>
+
+<h1 style="margin-left:14.2pt;text-indent:-14.2pt;mso-list:l0 level1 lfo1"><!--[if !supportLists]--><span lang="ES-TRAD"><span style="mso-list:Ignore">6.- </span></span><!--[endif]--><span lang="ES-TRAD">Cu�l de las siguientes es una ventaja con el uso de p�ginas
+multinivel</span></h1>
+
+<h2 style="margin-left:28.4pt;text-indent:-14.2pt;mso-list:l0 level2 lfo1;
+tab-stops:35.4pt"><!--[if !supportLists]--><span style="mso-ansi-language:ES"><span style="mso-list:Ignore">a) <span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp; </span></span></span><!--[endif]--><span style="mso-ansi-language:ES">No existen ventajas, puesto que su utilizaci�n es
+m�s compleja<o:p></o:p></span></h2>
+
+<p class="Respuesta"><span style="mso-ansi-language:ES">Falso, existen ventajas<o:p></o:p></span></p>
+
+<h2 style="margin-left:28.4pt;text-indent:-14.2pt;mso-list:l0 level2 lfo1;
+tab-stops:35.4pt"><!--[if !supportLists]--><span style="mso-ansi-language:ES"><span style="mso-list:Ignore">b) <span style="font:7.0pt &quot;Times New Roman&quot;"><span style="mso-spacerun:yes">�</span></span></span></span><!--[endif]--><span style="mso-ansi-language:ES">Ahorro de memoria, puesto que s�lo se crean las
+tablas de p�ginas que apuntan a p�ginas usadas dentro del espacio de
+direcciones del proceso<o:p></o:p></span></h2>
+
+<p class="Respuesta"><span style="mso-ansi-language:ES">Cierto.<o:p></o:p></span></p>
+
+<h2 style="margin-left:28.4pt;text-indent:-14.2pt;mso-list:l0 level2 lfo1;
+tab-stops:35.4pt"><!--[if !supportLists]--><span style="mso-ansi-language:ES"><span style="mso-list:Ignore">c) <span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp; </span></span></span><!--[endif]--><span style="mso-ansi-language:ES">La traducci�n de p�ginas es m�s sencilla<o:p></o:p></span></h2>
+
+<p class="Respuesta"><span style="mso-ansi-language:ES">Falso, es m�s compleja<o:p></o:p></span></p>
+
+<h2 style="margin-left:28.4pt;text-indent:-14.2pt;mso-list:l0 level2 lfo1;
+tab-stops:35.4pt"><!--[if !supportLists]--><span style="mso-ansi-language:ES"><span style="mso-list:Ignore">d) <span style="font:7.0pt &quot;Times New Roman&quot;"><span style="mso-spacerun:yes">�</span></span></span></span><!--[endif]--><span style="mso-ansi-language:ES">Ninguna de las opciones restantes es correcta<o:p></o:p></span></h2>
+
+<p class="Respuesta"><span style="mso-ansi-language:ES">Falso<o:p></o:p></span></p>
+
+<h1 style="margin-left:14.2pt;text-indent:-14.2pt;mso-list:l0 level1 lfo1"><!--[if !supportLists]--><span lang="ES-TRAD"><span style="mso-list:Ignore">7.- </span></span><!--[endif]--><span lang="ES-TRAD">Se dispone de una lista de p�ginas como la que sigue: 1 2 3 1 5 4
+3 3 2 1 4 3. �Cu�ntos fallos de p�gina se producen si utilizamos diferentes
+algoritmos de planificaci�n si el proceso dispone de 3 marcos y el reemplazo es
+local (teniendo en cuenta que inicialmente los marcos est�n vac�os)?</span></h1>
+
+<h2 style="margin-left:28.4pt;text-indent:-14.2pt;mso-list:l0 level2 lfo1;
+tab-stops:35.4pt"><!--[if !supportLists]--><span style="mso-ansi-language:ES"><span style="mso-list:Ignore">a) <span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp; </span></span></span><!--[endif]--><span style="mso-ansi-language:ES">Se producen 9 fallos utilizando el algoritmo LRU<o:p></o:p></span></h2>
+
+<p class="Respuesta"><span style="mso-ansi-language:ES">Falso, se producen 10<o:p></o:p></span></p>
+
+<h2 style="margin-left:28.4pt;text-indent:-14.2pt;mso-list:l0 level2 lfo1;
+tab-stops:35.4pt"><!--[if !supportLists]--><span style="mso-ansi-language:ES"><span style="mso-list:Ignore">b) <span style="font:7.0pt &quot;Times New Roman&quot;"><span style="mso-spacerun:yes">�</span></span></span></span><!--[endif]--><span style="mso-ansi-language:ES">Se producen 9 fallos con el algoritmo del reloj<o:p></o:p></span></h2>
+
+<p class="Respuesta"><span style="mso-ansi-language:ES">Falso. Se producen nueve.<o:p></o:p></span></p>
+
+<h2 style="margin-left:28.4pt;text-indent:-14.2pt;mso-list:l0 level2 lfo1;
+tab-stops:35.4pt"><!--[if !supportLists]--><span style="mso-ansi-language:ES"><span style="mso-list:Ignore">c) <span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp; </span></span></span><!--[endif]--><span style="mso-ansi-language:ES">Se producen 9<span style="mso-spacerun:yes">�
+</span>fallos con el algoritmo FIFO<o:p></o:p></span></h2>
+
+<p class="Respuesta"><span style="mso-ansi-language:ES">Falso, se producen 8<o:p></o:p></span></p>
+
+<h2 style="margin-left:28.4pt;text-indent:-14.2pt;mso-list:l0 level2 lfo1;
+tab-stops:35.4pt"><!--[if !supportLists]--><span style="mso-ansi-language:ES"><span style="mso-list:Ignore">d) <span style="font:7.0pt &quot;Times New Roman&quot;"><span style="mso-spacerun:yes">�</span></span></span></span><!--[endif]--><span style="mso-ansi-language:ES">Ninguna de las opciones restantes es correcta<o:p></o:p></span></h2>
+
+<p class="Respuesta"><span style="mso-ansi-language:ES">Cierto<o:p></o:p></span></p>
+
+<h1 style="margin-left:14.2pt;text-indent:-14.2pt;mso-list:l0 level1 lfo1"><!--[if !supportLists]--><span lang="ES-TRAD"><span style="mso-list:Ignore">8.- </span></span><!--[endif]--><span lang="ES-TRAD">Respecto a la gesti�n de memoria de Windows NT. �Cu�l de las
+siguientes afirmaciones es correcta?</span></h1>
+
+<h2 style="margin-left:28.4pt;text-indent:-14.2pt;mso-list:l0 level2 lfo1;
+tab-stops:35.4pt"><!--[if !supportLists]--><span style="mso-ansi-language:ES"><span style="mso-list:Ignore">a) <span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp; </span></span></span><!--[endif]--><span style="mso-ansi-language:ES">Cuando se produce un fallo de p�gina, se elige una
+p�gina a expulsar y en su marco se carga la p�gina que produjo el fallo,
+procedente del disco.<o:p></o:p></span></h2>
+
+<p class="Respuesta"><span style="mso-ansi-language:ES">Falso, la p�gina a
+expulsar no se sustituye inmediatamente.<o:p></o:p></span></p>
+
+<h2 style="margin-left:28.4pt;text-indent:-14.2pt;mso-list:l0 level2 lfo1;
+tab-stops:35.4pt"><!--[if !supportLists]--><span style="mso-ansi-language:ES"><span style="mso-list:Ignore">b) <span style="font:7.0pt &quot;Times New Roman&quot;"><span style="mso-spacerun:yes">�</span></span></span></span><!--[endif]--><span style="mso-ansi-language:ES">Cuando finaliza un proceso, sus p�ginas van a la
+lista de p�ginas en espera<o:p></o:p></span></h2>
+
+<p class="Respuesta"><span style="mso-ansi-language:ES">Falso, van a la lista de
+p�ginas libres<o:p></o:p></span></p>
+
+<h2 style="margin-left:28.4pt;text-indent:-14.2pt;mso-list:l0 level2 lfo1;
+tab-stops:35.4pt"><!--[if !supportLists]--><span style="mso-ansi-language:ES"><span style="mso-list:Ignore">c) <span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp; </span></span></span><!--[endif]--><span style="mso-ansi-language:ES">Cuando se produce un fallo de p�gina es porque la
+p�gina no se encuentra cargada en memoria principal<o:p></o:p></span></h2>
+
+<p class="Respuesta"><span style="mso-ansi-language:ES">Falso, puede estar en
+memoria en alguna lista, pero no estar en el conjunto de trabajo del proceso<o:p></o:p></span></p>
+
+<h2 style="margin-left:28.4pt;text-indent:-14.2pt;mso-list:l0 level2 lfo1;
+tab-stops:35.4pt"><!--[if !supportLists]--><span style="mso-ansi-language:ES"><span style="mso-list:Ignore">d) <span style="font:7.0pt &quot;Times New Roman&quot;"><span style="mso-spacerun:yes">�</span></span></span></span><!--[endif]--><span style="mso-ansi-language:ES">Ninguna de las opciones restantes es correcta<o:p></o:p></span></h2>
+
+<p class="Respuesta"><span style="mso-ansi-language:ES">Cierto<o:p></o:p></span></p>
+
+<h1 style="margin-left:14.2pt;text-indent:-14.2pt;mso-list:l0 level1 lfo1"><!--[if !supportLists]--><span lang="ES-TRAD"><span style="mso-list:Ignore">9.- </span></span><!--[endif]--><span lang="ES-TRAD">Respecto a la gesti�n de ficheros. �Cu�l de las siguientes
+afirmaciones es correcta?</span></h1>
+
+<h2 style="margin-left:28.4pt;text-indent:-14.2pt;mso-list:l0 level2 lfo1;
+tab-stops:35.4pt"><!--[if !supportLists]--><span style="mso-ansi-language:ES"><span style="mso-list:Ignore">a) <span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp; </span></span></span><!--[endif]--><span style="mso-ansi-language:ES">El sistema de gesti�n de ficheros recibe una
+petici�n del usuario sobre ficheros o directorios y se comunica con el disco
+para realizar la operaci�n<o:p></o:p></span></h2>
+
+<p class="Respuesta"><span style="mso-ansi-language:ES">Falso, la comunicaci�n
+con el disco corre a cargo del sistema de e/s<o:p></o:p></span></p>
+
+<h2 style="margin-left:28.4pt;text-indent:-14.2pt;mso-list:l0 level2 lfo1;
+tab-stops:35.4pt"><!--[if !supportLists]--><span style="mso-ansi-language:ES"><span style="mso-list:Ignore">b) <span style="font:7.0pt &quot;Times New Roman&quot;"><span style="mso-spacerun:yes">�</span></span></span></span><!--[endif]--><span style="mso-ansi-language:ES">En UNIX, los directorios almacenan los inodos, que
+contienen la informaci�n relativa a cada fichero<o:p></o:p></span></h2>
+
+<p class="Respuesta"><span style="mso-ansi-language:ES"><span style="mso-spacerun:yes">�</span><span style="mso-spacerun:yes">�</span><span style="mso-spacerun:yes">�</span>Falso, se almacena el n�mero de inodo, no el
+contenido<o:p></o:p></span></p>
+
+<h2 style="margin-left:28.4pt;text-indent:-14.2pt;mso-list:l0 level2 lfo1;
+tab-stops:35.4pt"><!--[if !supportLists]--><span style="mso-ansi-language:ES"><span style="mso-list:Ignore">c) <span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp; </span></span></span><!--[endif]--><span style="mso-ansi-language:ES">El acceso secuencial indexado utiliza una lista
+donde almacena las posiciones de todos los<span style="mso-spacerun:yes">�
+</span>registros del fichero<o:p></o:p></span></h2>
+
+<p class="Respuesta"><span style="mso-ansi-language:ES">Falso, s�lo almacena las
+posiciones de algunos de ellos, el resto deber�n ser accedidos secuencialmente<o:p></o:p></span></p>
+
+<h2 style="margin-left:28.4pt;text-indent:-14.2pt;mso-list:l0 level2 lfo1;
+tab-stops:35.4pt"><!--[if !supportLists]--><span style="mso-ansi-language:ES"><span style="mso-list:Ignore">d) <span style="font:7.0pt &quot;Times New Roman&quot;"><span style="mso-spacerun:yes">�</span></span></span></span><!--[endif]--><span style="mso-ansi-language:ES">Ninguna de las opciones restantes es correcta<o:p></o:p></span></h2>
+
+<p class="Respuesta"><span style="mso-ansi-language:ES">Cierto<o:p></o:p></span></p>
+
+<h1 style="margin-left:14.2pt;text-indent:-14.2pt;mso-list:l0 level1 lfo1"><!--[if !supportLists]--><span lang="ES-TRAD"><span style="mso-list:Ignore">10.- </span></span><!--[endif]--><span lang="ES-TRAD">Sea un sistema de ficheros con bloques de 1Kbye, y un fichero que
+ocupa 5000 Kbytes, donde cada tabla de implantaci�n cuenta con 512 entradas.
+�Cu�ntos bloques debe asignar el sistema operativo UNIX a dicho fichero? (no se
+tenga en cuenta el espacio de almacenamiento del inodo)<o:p></o:p></span></h1>
+
+<h2 style="margin-left:28.4pt;text-indent:-14.2pt;mso-list:l0 level2 lfo1;
+tab-stops:35.4pt"><!--[if !supportLists]--><span style="mso-ansi-language:ES"><span style="mso-list:Ignore">a) <span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp; </span></span></span><!--[endif]--><span style="mso-ansi-language:ES">5000 bloques<o:p></o:p></span></h2>
+
+<p class="Respuesta"><span style="mso-ansi-language:ES">Falso, hay que a�adir los
+bloques para tablas<o:p></o:p></span></p>
+
+<h2 style="margin-left:28.4pt;text-indent:-14.2pt;mso-list:l0 level2 lfo1;
+tab-stops:35.4pt"><!--[if !supportLists]--><span style="mso-ansi-language:ES"><span style="mso-list:Ignore">b) <span style="font:7.0pt &quot;Times New Roman&quot;"><span style="mso-spacerun:yes">�</span></span></span></span><!--[endif]--><span style="mso-ansi-language:ES">5011 bloques<o:p></o:p></span></h2>
+
+<p class="Respuesta"><span style="mso-ansi-language:ES">Cierto, 5000 de datos + 1
+bloque para la tabla de un nivel + ( 1+9) para la tabla de dos niveles <o:p></o:p></span></p>
+
+<h2 style="margin-left:28.4pt;text-indent:-14.2pt;mso-list:l0 level2 lfo1;
+tab-stops:35.4pt"><!--[if !supportLists]--><span style="mso-ansi-language:ES"><span style="mso-list:Ignore">c) <span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp; </span></span></span><!--[endif]--><span style="mso-ansi-language:ES">5023 de bloques<o:p></o:p></span></h2>
+
+<p class="Respuesta"><span style="mso-ansi-language:ES">Falso<o:p></o:p></span></p>
+
+<h2 style="margin-left:28.4pt;text-indent:-14.2pt;mso-list:l0 level2 lfo1;
+tab-stops:35.4pt"><!--[if !supportLists]--><span style="mso-ansi-language:ES"><span style="mso-list:Ignore">d) <span style="font:7.0pt &quot;Times New Roman&quot;"><span style="mso-spacerun:yes">�</span></span></span></span><!--[endif]--><span style="mso-ansi-language:ES">Ninguna de las opciones restantes es correcta<o:p></o:p></span></h2>
+
+<p class="Respuesta"><span style="mso-ansi-language:ES">Falso<o:p></o:p></span></p>
+
+<h1 style="margin-left:14.2pt;text-indent:-14.2pt;mso-list:l0 level1 lfo1"><!--[if !supportLists]--><span lang="ES-TRAD"><span style="mso-list:Ignore">11.- </span></span><!--[endif]--><span style="mso-ansi-language:ES"><span style="mso-spacerun:yes">��</span><span style="mso-spacerun:yes">�</span></span><span lang="ES-TRAD">Respecto a la
+gesti�n de ficheros de Unix. �Cu�l de las siguientes afirmaciones es correcta?</span></h1>
+
+<h2 style="margin-left:28.4pt;text-indent:-14.2pt;mso-list:l0 level2 lfo1;
+tab-stops:35.4pt"><!--[if !supportLists]--><span style="mso-ansi-language:ES"><span style="mso-list:Ignore">a) <span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp; </span></span></span><!--[endif]--><span style="mso-ansi-language:ES">En memoria existe una lista con todos los n�meros
+de bloques que est�n libres en el disco<o:p></o:p></span></h2>
+
+<p class="Respuesta"><span style="mso-ansi-language:ES">Falso, s�lo con algunos<o:p></o:p></span></p>
+
+<h2 style="margin-left:28.4pt;text-indent:-14.2pt;mso-list:l0 level2 lfo1;
+tab-stops:35.4pt"><!--[if !supportLists]--><span style="mso-ansi-language:ES"><span style="mso-list:Ignore">b) <span style="font:7.0pt &quot;Times New Roman&quot;"><span style="mso-spacerun:yes">�</span></span></span></span><!--[endif]--><span style="mso-ansi-language:ES">En memoria existe una lista con todos los inodos
+de los ficheros existentes en el sistema de ficheros<o:p></o:p></span></h2>
+
+<p class="Respuesta"><span style="mso-ansi-language:ES">Falso, s�lo con los que
+se est�n utilizando y algunos que se han utilizado<o:p></o:p></span></p>
+
+<h2 style="margin-left:28.4pt;text-indent:-14.2pt;mso-list:l0 level2 lfo1;
+tab-stops:35.4pt"><!--[if !supportLists]--><span style="mso-ansi-language:ES"><span style="mso-list:Ignore">c) <span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp; </span></span></span><!--[endif]--><span style="mso-ansi-language:ES">En memoria existe una lista con todos los n�meros
+de inodos que est�n libres y pueden usarse para nuevos ficheros<o:p></o:p></span></h2>
+
+<p class="Respuesta"><span style="mso-ansi-language:ES">Falso, s�lo con algunos
+de ellos.<o:p></o:p></span></p>
+
+<h2 style="margin-left:28.4pt;text-indent:-14.2pt;mso-list:l0 level2 lfo1;
+tab-stops:35.4pt"><!--[if !supportLists]--><span style="mso-ansi-language:ES"><span style="mso-list:Ignore">d) <span style="font:7.0pt &quot;Times New Roman&quot;"><span style="mso-spacerun:yes">�</span></span></span></span><!--[endif]--><span style="mso-ansi-language:ES">Ninguna de las opciones restantes es correcta<o:p></o:p></span></h2>
+
+<p class="Respuesta"><span style="mso-ansi-language:ES">Cierto<o:p></o:p></span></p>
+
+<h1 style="margin-left:14.2pt;text-indent:-14.2pt;mso-list:l0 level1 lfo1"><!--[if !supportLists]--><span lang="ES-TRAD"><span style="mso-list:Ignore">12.- </span></span><!--[endif]--><span style="mso-ansi-language:ES"><span style="mso-spacerun:yes">���</span><span style="mso-spacerun:yes">�</span></span><span lang="ES-TRAD">�Cu�l de las
+siguientes afirmaciones es correcta?</span></h1>
+
+<h2 style="margin-left:28.4pt;text-indent:-14.2pt;mso-list:l0 level2 lfo1;
+tab-stops:35.4pt"><!--[if !supportLists]--><span style="mso-ansi-language:ES"><span style="mso-list:Ignore">a) <span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp; </span></span></span><!--[endif]--><span style="mso-ansi-language:ES">En Windows NT la capa de abstracci�n hardware
+(HAL) contiene aquellas funciones del sistema operativo que deben comunicarse
+con el hardware<o:p></o:p></span></h2>
+
+<p class="Respuesta"><span style="mso-ansi-language:ES">Falso, no contiene
+funcionalidad del sistema operativo, sino que ofrece al sistema operativo un
+hardware virtual con el que se comunica el n�cleo del NT<o:p></o:p></span></p>
+
+<h2 style="margin-left:28.4pt;text-indent:-14.2pt;mso-list:l0 level2 lfo1;
+tab-stops:35.4pt"><!--[if !supportLists]--><span style="mso-ansi-language:ES"><span style="mso-list:Ignore">b) <span style="font:7.0pt &quot;Times New Roman&quot;"><span style="mso-spacerun:yes">�</span></span></span></span><!--[endif]--><span style="mso-ansi-language:ES">Los Sistemas Operativos distribuidos tienen como
+inconveniente la necesidad de incorporar el mismo sistema operativo en todas
+las m�quinas de la red<o:p></o:p></span></h2>
+
+<p class="Respuesta"><span style="mso-ansi-language:ES">Cierto, esto ha hecho que
+su desarrollo sea menor desde la explosi�n de Internet<o:p></o:p></span></p>
+
+<h2 style="margin-left:28.4pt;text-indent:-14.2pt;mso-list:l0 level2 lfo1;
+tab-stops:35.4pt"><!--[if !supportLists]--><span style="mso-ansi-language:ES"><span style="mso-list:Ignore">c) <span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp; </span></span></span><!--[endif]--><span style="mso-ansi-language:ES">Las capas de software intermedio ofrecen al
+usuario una visi�n de la red como una �nica m�quina con m�ltiples recursos a su
+disposici�n <o:p></o:p></span></h2>
+
+<p class="Respuesta"><span style="mso-ansi-language:ES">Falso, esa es la funci�n
+de los sistemas operativos distribuidos<o:p></o:p></span></p>
+
+<h2 style="margin-left:28.4pt;text-indent:-14.2pt;mso-list:l0 level2 lfo1;
+tab-stops:35.4pt"><!--[if !supportLists]--><span style="mso-ansi-language:ES"><span style="mso-list:Ignore">d) <span style="font:7.0pt &quot;Times New Roman&quot;"><span style="mso-spacerun:yes">�</span></span></span></span><!--[endif]--><span style="mso-ansi-language:ES">Ninguna de las restantes es correcta<o:p></o:p></span></h2>
+
+<p class="Respuesta"><span style="mso-ansi-language:ES">Falso <o:p></o:p></span></p>
+
+<h1 style="margin-left:14.2pt;text-indent:-14.2pt;mso-list:l0 level1 lfo1"><!--[if !supportLists]--><span lang="ES-TRAD"><span style="mso-list:Ignore">13.- </span></span><!--[endif]--><span lang="ES-TRAD">Respecto a la gesti�n de ficheros de Unix. �Cu�l de las siguientes
+afirmaciones es correcta?</span></h1>
+
+<h2 style="margin-left:28.4pt;text-indent:-14.2pt;mso-list:l0 level2 lfo1;
+tab-stops:35.4pt"><!--[if !supportLists]--><span style="mso-ansi-language:ES"><span style="mso-list:Ignore">a) <span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp; </span></span></span><!--[endif]--><span style="mso-ansi-language:ES">En el sistema de ficheros FFS existen dos copias
+del Superbloque por razones de seguridad<o:p></o:p></span></h2>
+
+<p class="Respuesta"><span style="mso-ansi-language:ES">Falso, existe un
+superbloque por cada �rea del sistema<o:p></o:p></span></p>
+
+<h2 style="margin-left:28.4pt;text-indent:-14.2pt;mso-list:l0 level2 lfo1;
+tab-stops:35.4pt"><!--[if !supportLists]--><span style="mso-ansi-language:ES"><span style="mso-list:Ignore">b) <span style="font:7.0pt &quot;Times New Roman&quot;"><span style="mso-spacerun:yes">�</span></span></span></span><!--[endif]--><span style="mso-ansi-language:ES">En el sistema de ficheros NTFS los ficheros de
+peque�o tama�o se almacenan dentro de la propia Tabla de Ficheros Maestra MFT<o:p></o:p></span></h2>
+
+<p class="Respuesta"><span style="mso-ansi-language:ES">Cierto<o:p></o:p></span></p>
+
+<h2 style="margin-left:28.4pt;text-indent:-14.2pt;mso-list:l0 level2 lfo1;
+tab-stops:35.4pt"><!--[if !supportLists]--><span style="mso-ansi-language:ES"><span style="mso-list:Ignore">c) <span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp; </span></span></span><!--[endif]--><span style="mso-ansi-language:ES">El sistema de ficheros FAT est� ligado a la
+aparici�n del sistema operativos Linux<o:p></o:p></span></h2>
+
+<p class="Respuesta"><span style="mso-ansi-language:ES">Falso<o:p></o:p></span></p>
+
+<h2 style="margin-left:28.4pt;text-indent:-14.2pt;mso-list:l0 level2 lfo1;
+tab-stops:35.4pt"><!--[if !supportLists]--><span style="mso-ansi-language:ES"><span style="mso-list:Ignore">d) <span style="font:7.0pt &quot;Times New Roman&quot;"><span style="mso-spacerun:yes">�</span></span></span></span><!--[endif]--><span style="mso-ansi-language:ES">Ninguna de las opciones restantes es correcta<o:p></o:p></span></h2>
+
+<p class="Respuesta"><span style="mso-ansi-language:ES">Falso.<o:p></o:p></span></p>
+
+<h1 style="margin-left:14.2pt;text-indent:-14.2pt;mso-list:l0 level1 lfo1"><!--[if !supportLists]--><span lang="ES-TRAD"><span style="mso-list:Ignore">14.- </span></span><!--[endif]--><span style="mso-ansi-language:ES"><span style="mso-spacerun:yes">���</span></span><span lang="ES-TRAD">�Cu�l de las siguientes afirmaciones es correcta?</span></h1>
+
+<h2 style="margin-left:28.4pt;text-indent:-14.2pt;mso-list:l0 level2 lfo1;
+tab-stops:35.4pt"><!--[if !supportLists]--><span style="mso-ansi-language:ES"><span style="mso-list:Ignore">a) <span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp; </span></span></span><!--[endif]--><span style="mso-ansi-language:ES">En la t�cnica de entrada/salida programada no se
+utilizan interrupciones, por lo que este mecanismo est� anticuado y ya no se
+utiliza<o:p></o:p></span></h2>
+
+<p class="Respuesta"><span style="mso-ansi-language:ES">Falso, se utiliza con
+algunos dispositivos como el caso de la pantalla<o:p></o:p></span></p>
+
+<h2 style="margin-left:28.4pt;text-indent:-14.2pt;mso-list:l0 level2 lfo1;
+tab-stops:35.4pt"><!--[if !supportLists]--><span style="mso-ansi-language:ES"><span style="mso-list:Ignore">b) <span style="font:7.0pt &quot;Times New Roman&quot;"><span style="mso-spacerun:yes">�</span></span></span></span><!--[endif]--><span style="mso-ansi-language:ES"><span style="mso-spacerun:yes">�</span>El uso de
+la t�cnica de DMA implica que el controlador del dispositivo se encargue de
+guardar<span style="mso-spacerun:yes">� </span>en memoria principal los datos
+procedentes del disco, sin embargo, en el caso de la escritura, es el sistema
+operativo el que pasa los datos de memoria principal al controlador antes de
+ser escritos al disco.<o:p></o:p></span></h2>
+
+<p class="Respuesta"><span style="mso-ansi-language:ES">Falso, el controlador
+hace tanto la transferencia de entrada como la de salida<o:p></o:p></span></p>
+
+<h2 style="margin-left:28.4pt;text-indent:-14.2pt;mso-list:l0 level2 lfo1;
+tab-stops:35.4pt"><!--[if !supportLists]--><span style="mso-ansi-language:ES"><span style="mso-list:Ignore">c) <span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp; </span></span></span><!--[endif]--><span style="mso-ansi-language:ES"><span style="mso-spacerun:yes">�</span>En la e/s
+por interrupciones interviene el manejador de interrupciones, sin embargo no es
+as� en la e/s con DMA<o:p></o:p></span></h2>
+
+<p class="Respuesta"><span style="mso-ansi-language:ES">Falso, tambi�n se manejan
+interrupciones con la t�cnica del DMA<o:p></o:p></span></p>
+
+<h2 style="margin-left:28.4pt;text-indent:-14.2pt;mso-list:l0 level2 lfo1;
+tab-stops:35.4pt"><!--[if !supportLists]--><span style="mso-ansi-language:ES"><span style="mso-list:Ignore">d) <span style="font:7.0pt &quot;Times New Roman&quot;"><span style="mso-spacerun:yes">�</span></span></span></span><!--[endif]--><span style="mso-ansi-language:ES">Ninguna de las opciones restantes es correcta<o:p></o:p></span></h2>
+
+<p class="Respuesta"><span style="mso-ansi-language:ES">Cierto<o:p></o:p></span></p>
+
+<h1 style="margin-left:14.2pt;text-indent:-14.2pt;mso-list:l0 level1 lfo1"><!--[if !supportLists]--><span lang="ES-TRAD"><span style="mso-list:Ignore">15.- </span></span><!--[endif]--><span style="mso-ansi-language:ES"><span style="mso-spacerun:yes">���</span>En el
+siguiente esquema general del proceso de e/s </span><span lang="ES-TRAD">�Cu�l de
+las siguientes afirmaciones es correcta?</span></h1>
+
+<h2 style="margin-left:14.2pt;text-indent:0cm;mso-list:none;tab-stops:35.4pt"><!--[if mso & !supportInlineShapes & supportFields]><span
+style='mso-ansi-language:ES'><span style='mso-element:field-begin;mso-field-lock:
+yes'></span><span style='mso-spacerun:yes'>�</span>SHAPE<span
+style='mso-spacerun:yes'>� </span>\* MERGEFORMAT <span style='mso-element:field-separator'></span></span><![endif]--><span style="mso-ansi-language:ES"><!--[if gte vml 1]><v:group id="_x0000_s1097"
+ editas="canvas" style='width:481.95pt;height:94.9pt;
+ mso-position-horizontal-relative:char;mso-position-vertical-relative:line'
+ coordorigin="2272,10346" coordsize="9415,1842">
+ <o:lock v:ext="edit" aspectratio="t"/>
+ <v:shapetype id="_x0000_t75" coordsize="21600,21600" o:spt="75"
+  o:preferrelative="t" path="m@4@5l@4@11@9@11@9@5xe" filled="f" stroked="f">
+  <v:stroke joinstyle="miter"/>
+  <v:formulas>
+   <v:f eqn="if lineDrawn pixelLineWidth 0"/>
+   <v:f eqn="sum @0 1 0"/>
+   <v:f eqn="sum 0 0 @1"/>
+   <v:f eqn="prod @2 1 2"/>
+   <v:f eqn="prod @3 21600 pixelWidth"/>
+   <v:f eqn="prod @3 21600 pixelHeight"/>
+   <v:f eqn="sum @0 0 1"/>
+   <v:f eqn="prod @6 1 2"/>
+   <v:f eqn="prod @7 21600 pixelWidth"/>
+   <v:f eqn="sum @8 21600 0"/>
+   <v:f eqn="prod @7 21600 pixelHeight"/>
+   <v:f eqn="sum @10 21600 0"/>
+  </v:formulas>
+  <v:path o:extrusionok="f" gradientshapeok="t" o:connecttype="rect"/>
+  <o:lock v:ext="edit" aspectratio="t"/>
+ </v:shapetype><v:shape id="_x0000_s1098" type="#_x0000_t75" style='position:absolute;
+  left:2272;top:10346;width:9415;height:1842' o:preferrelative="f">
+  <v:fill o:detectmouseclick="t"/>
+  <v:path o:extrusionok="t" o:connecttype="none"/>
+  <o:lock v:ext="edit" text="t"/>
+ </v:shape><v:shapetype id="_x0000_t202" coordsize="21600,21600" o:spt="202"
+  path="m,l,21600r21600,l21600,xe">
+  <v:stroke joinstyle="miter"/>
+  <v:path gradientshapeok="t" o:connecttype="rect"/>
+ </v:shapetype><v:shape id="_x0000_s1099" type="#_x0000_t202" style='position:absolute;
+  left:2272;top:10346;width:2110;height:1461' filled="f" stroked="f">
+  <v:textbox style='mso-next-textbox:#_x0000_s1099;mso-fit-shape-to-text:t'
+   inset="1.95581mm,.97789mm,1.95581mm,.97789mm">
+   <![if !mso]>
+   <table cellpadding=0 cellspacing=0 width="100%">
+    <tr>
+     <td><![endif]>
+     <div>
+     <p class=MsoNormal align=center style='text-align:center;mso-layout-grid-align:
+     none;text-autospace:none'><u><span lang=ES-TRAD style='mso-bidi-font-size:
+     12.0pt;color:black'>Proceso<o:p></o:p></span></u></p>
+     <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+     lang=ES-TRAD style='font-size:10.0pt;color:black'>PeticionE/S<o:p></o:p></span></p>
+     <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+     lang=ES-TRAD style='font-size:10.0pt;color:black'><o:p>&nbsp;</o:p></span></p>
+     <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+     lang=ES-TRAD style='font-size:10.0pt;color:black'>(Vuelta de la rutina)<o:p></o:p></span></p>
+     <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><u><span
+     lang=ES-TRAD style='font-size:18.5pt;mso-bidi-font-size:24.0pt;color:black'><o:p><span
+      style='text-decoration:none'>&nbsp;</span></o:p></span></u></p>
+     </div>
+     <![if !mso]></td>
+    </tr>
+   </table>
+   <![endif]></v:textbox>
+ </v:shape><v:shape id="_x0000_s1100" type="#_x0000_t202" style='position:absolute;
+  left:4206;top:10346;width:1934;height:1781' filled="f" stroked="f">
+  <v:textbox style='mso-next-textbox:#_x0000_s1100;mso-fit-shape-to-text:t'
+   inset="1.95581mm,.97789mm,1.95581mm,.97789mm">
+   <![if !mso]>
+   <table cellpadding=0 cellspacing=0 width="100%">
+    <tr>
+     <td><![endif]>
+     <div>
+     <p class=MsoNormal align=center style='text-align:center;mso-layout-grid-align:
+     none;text-autospace:none'><u><span lang=ES-TRAD style='mso-bidi-font-size:
+     12.0pt;color:black'>PeticionE/S<o:p></o:p></span></u></p>
+     <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+     lang=ES-TRAD style='font-size:10.0pt;color:black'>Comprobar par.<o:p></o:p></span></p>
+     <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+     lang=ES-TRAD style='font-size:10.0pt;color:black'>Crear IORB<o:p></o:p></span></p>
+     <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+     lang=FR style='font-size:10.0pt;color:black;mso-ansi-language:FR'>Signal (Pet.Pendiente)<o:p></o:p></span></p>
+     <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+     lang=FR style='font-size:10.0pt;color:black;mso-ansi-language:FR'>Wait
+     (Pet. </span><span lang=ES-TRAD style='font-size:10.0pt;color:black'>Servida)<o:p></o:p></span></p>
+     <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+     lang=ES-TRAD style='font-size:14.0pt;mso-bidi-font-size:18.0pt;color:black'><o:p>&nbsp;</o:p></span></p>
+     </div>
+     <![if !mso]></td>
+    </tr>
+   </table>
+   <![endif]></v:textbox>
+ </v:shape><v:shape id="_x0000_s1101" type="#_x0000_t202" style='position:absolute;
+  left:5964;top:10346;width:1978;height:1781' filled="f" stroked="f">
+  <v:textbox style='mso-next-textbox:#_x0000_s1101;mso-fit-shape-to-text:t'
+   inset="1.95581mm,.97789mm,1.95581mm,.97789mm">
+   <![if !mso]>
+   <table cellpadding=0 cellspacing=0 width="100%">
+    <tr>
+     <td><![endif]>
+     <div>
+     <p class=MsoNormal align=center style='text-align:center;mso-layout-grid-align:
+     none;text-autospace:none'><u><span lang=ES-TRAD style='mso-bidi-font-size:
+     12.0pt;color:black'>Manejador disp<o:p></o:p></span></u></p>
+     <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+     lang=ES-TRAD style='font-size:10.0pt;color:black'>Wait(Pet.Pendiente)<o:p></o:p></span></p>
+     <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+     lang=ES-TRAD style='font-size:10.0pt;color:black'>Sacar IORB<o:p></o:p></span></p>
+     <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+     lang=ES-TRAD style='font-size:10.0pt;color:black'>Iniciar operaci�n;<o:p></o:p></span></p>
+     <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+     lang=ES-TRAD style='font-size:10.0pt;color:black'>Wait(finOperacion)<o:p></o:p></span></p>
+     <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+     lang=ES-TRAD style='font-size:10.0pt;color:black'>Signal(Pet. Servida)<o:p></o:p></span></p>
+     <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+     lang=ES-TRAD style='font-size:14.0pt;mso-bidi-font-size:18.0pt;color:black'><o:p>&nbsp;</o:p></span></p>
+     </div>
+     <![if !mso]></td>
+    </tr>
+   </table>
+   <![endif]></v:textbox>
+ </v:shape><v:shape id="_x0000_s1102" type="#_x0000_t202" style='position:absolute;
+  left:8074;top:10346;width:1699;height:820' filled="f" stroked="f">
+  <v:textbox style='mso-next-textbox:#_x0000_s1102;mso-fit-shape-to-text:t'
+   inset="1.95581mm,.97789mm,1.95581mm,.97789mm">
+   <![if !mso]>
+   <table cellpadding=0 cellspacing=0 width="100%">
+    <tr>
+     <td><![endif]>
+     <div>
+     <p class=MsoNormal align=center style='text-align:center;mso-layout-grid-align:
+     none;text-autospace:none'><u><span lang=ES-TRAD style='mso-bidi-font-size:
+     12.0pt;color:black'>Man. Intr.<o:p></o:p></span></u></p>
+     <p class=MsoNormal align=center style='text-align:center;mso-layout-grid-align:
+     none;text-autospace:none'><span lang=ES-TRAD style='font-size:10.0pt;
+     color:black'>Signal(fin_<o:p></o:p></span></p>
+     <p class=MsoNormal align=center style='text-align:center;mso-layout-grid-align:
+     none;text-autospace:none'><span lang=ES-TRAD style='font-size:10.0pt;
+     color:black'>Operacion)<o:p></o:p></span></p>
+     </div>
+     <![if !mso]></td>
+    </tr>
+   </table>
+   <![endif]></v:textbox>
+ </v:shape><v:shape id="_x0000_s1103" type="#_x0000_t202" style='position:absolute;
+  left:9480;top:10346;width:1936;height:1572' filled="f" stroked="f">
+  <v:textbox>
+   <![if !mso]>
+   <table cellpadding=0 cellspacing=0 width="100%">
+    <tr>
+     <td><![endif]>
+     <div>
+     <p class=MsoNormal align=center style='text-align:center;mso-layout-grid-align:
+     none;text-autospace:none'><u><span lang=ES-TRAD style='mso-bidi-font-size:
+     12.0pt;color:black'>Dispositivo<o:p></o:p></span></u></p>
+     <p class=MsoNormal align=center style='text-align:center;mso-layout-grid-align:
+     none;text-autospace:none'><u><span lang=ES-TRAD style='font-size:10.0pt;
+     color:black'><o:p><span style='text-decoration:none'>&nbsp;</span></o:p></span></u></p>
+     <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+     lang=ES-TRAD style='font-size:10.0pt;color:black'>Hacer E/S<o:p></o:p></span></p>
+     <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+     lang=ES-TRAD style='font-size:10.0pt;color:black'>Interrupci�n Fin e/s<o:p></o:p></span></p>
+     <p class=MsoNormal align=center style='text-align:center;mso-layout-grid-align:
+     none;text-autospace:none'><u><span lang=ES-TRAD style='font-size:16.0pt;
+     color:black'><o:p><span style='text-decoration:none'>&nbsp;</span></o:p></span></u></p>
+     </div>
+     <![if !mso]></td>
+    </tr>
+   </table>
+   <![endif]></v:textbox>
+ </v:shape><w:wrap type="none"/>
+ <w:anchorlock/>
+</v:group><![endif]--><!--[if !vml]--><img width="645" height="129" src="./03-04 Segundo Parcial_files/image001.gif" v:shapes="_x0000_s1097 _x0000_s1098 _x0000_s1099 _x0000_s1100 _x0000_s1101 _x0000_s1102 _x0000_s1103"><!--[endif]--></span><!--[if mso & !supportInlineShapes & supportFields]><span
+style='mso-ansi-language:ES'><v:shape id="_x0000_i1025" type="#_x0000_t75"
+ style='width:481.95pt;height:94.9pt'>
+ <v:imagedata croptop="-65520f" cropbottom="65520f"/>
+</v:shape><span style='mso-element:field-end'></span></span><![endif]--><span style="mso-ansi-language:ES"><o:p></o:p></span></h2>
+
+<h2 style="margin-left:28.4pt;text-indent:-14.2pt;mso-list:l0 level2 lfo1;
+tab-stops:35.4pt"><!--[if !supportLists]--><span style="mso-ansi-language:ES"><span style="mso-list:Ignore">a) <span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp; </span></span></span><!--[endif]--><span style="mso-ansi-language:ES">Para que la petici�n de e/s fuera as�ncrona habr�a
+que eliminar el sem�foro de <i style="mso-bidi-font-style:normal">Pet.Pendiente</i><o:p></o:p></span></h2>
+
+<p class="Respuesta"><span style="mso-ansi-language:ES">Falso<o:p></o:p></span></p>
+
+<h2 style="margin-left:28.4pt;text-indent:-14.2pt;mso-list:l0 level2 lfo1;
+tab-stops:35.4pt"><!--[if !supportLists]--><span style="mso-ansi-language:ES"><span style="mso-list:Ignore">b) <span style="font:7.0pt &quot;Times New Roman&quot;"><span style="mso-spacerun:yes">�</span></span></span></span><!--[endif]--><span style="mso-ansi-language:ES">Para que la petici�n de e/s fuera as�ncrona habr�a
+que eliminar el sem�foro de <i style="mso-bidi-font-style:normal">Pet.Servida<o:p></o:p></i></span></h2>
+
+<p class="Respuesta"><span style="mso-ansi-language:ES">Cierto<o:p></o:p></span></p>
+
+<h2 style="margin-left:28.4pt;text-indent:-14.2pt;mso-list:l0 level2 lfo1;
+tab-stops:35.4pt"><!--[if !supportLists]--><span style="mso-ansi-language:ES"><span style="mso-list:Ignore">c) <span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp; </span></span></span><!--[endif]--><span style="mso-ansi-language:ES">Para que la petici�n de e/s fuera as�ncrona habr�a
+que eliminar el sem�foro de <i style="mso-bidi-font-style:normal">finOperaci�n<o:p></o:p></i></span></h2>
+
+<p class="Respuesta"><span style="mso-ansi-language:ES">Falso<o:p></o:p></span></p>
+
+<h2 style="margin-left:28.4pt;text-indent:-14.2pt;mso-list:l0 level2 lfo1;
+tab-stops:35.4pt"><!--[if !supportLists]--><span style="mso-ansi-language:ES"><span style="mso-list:Ignore">d) <span style="font:7.0pt &quot;Times New Roman&quot;"><span style="mso-spacerun:yes">�</span></span></span></span><!--[endif]--><span style="mso-ansi-language:ES">M�S DE UNA de las opciones restantes es correcta<o:p></o:p></span></h2>
+
+<i>Falso</i>
+
+<h1 style="margin-left:14.2pt;text-indent:-14.2pt;mso-list:l0 level1 lfo1"><!--[if !supportLists]--><span lang="ES-TRAD"><span style="mso-list:Ignore">16.- </span></span><!--[endif]--><span lang="ES-TRAD">Respecto a la gesti�n de ficheros. �Cu�l de las siguientes
+afirmaciones es correcta?</span></h1>
+
+<h2 style="margin-left:28.4pt;text-indent:-14.2pt;mso-list:l0 level2 lfo1;
+tab-stops:35.4pt"><!--[if !supportLists]--><span style="mso-ansi-language:ES"><span style="mso-list:Ignore">a) <span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp; </span></span></span><!--[endif]--><span style="mso-ansi-language:ES">El sistema de ficheros que usa FAT se basa en una
+lista encadenada formada por punteros a los bloques en la que cada bloque de
+datos contiene el n�mero del siguiente bloque.<o:p></o:p></span></h2>
+
+<i>Falso, es una lista encadenada en la que se usa una tabla donde en cada entrada se almacena el n�mero del siguiente bloque</i>
+
+<h2 style="margin-left:28.4pt;text-indent:-14.2pt;mso-list:l0 level2 lfo1;
+tab-stops:35.4pt"><!--[if !supportLists]--><span style="mso-ansi-language:ES"><span style="mso-list:Ignore">b) <span style="font:7.0pt &quot;Times New Roman&quot;"><span style="mso-spacerun:yes">�</span></span></span></span><!--[endif]--><span style="mso-ansi-language:ES">En un esquema de asignaci�n no contigua con tabla
+�nica de implantaci�n, para leer datos de un fichero, el n�mero de accesos a
+disco depende del bloque del fichero al que se desee acceder<o:p></o:p></span></h2>
+<i>
+Falso. Al haber una �nica tabla tan s�lo es necesario que la tabla est� en memoria</i>
+
+<h2 style="margin-left:28.4pt;text-indent:-14.2pt;mso-list:l0 level2 lfo1;
+tab-stops:35.4pt"><!--[if !supportLists]--><span style="mso-ansi-language:ES"><span style="mso-list:Ignore">c) <span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp; </span></span></span><!--[endif]--><span style="mso-ansi-language:ES">El esquema de asignaci�n de bloques de un fichero
+en el sistema operativo UNIX tan s�lo es necesario un acceso al disco para leer
+ficheros de menos de 10 bloques<o:p></o:p></span></h2>
+
+<i>Cierto, la tabla de 13 entradas se encuentra dentro del
+inodo</i>
+
+<h2 style="margin-left:28.4pt;text-indent:-14.2pt;mso-list:l0 level2 lfo1;
+tab-stops:35.4pt"><!--[if !supportLists]--><span style="mso-ansi-language:ES"><span style="mso-list:Ignore">d) <span style="font:7.0pt &quot;Times New Roman&quot;"><span style="mso-spacerun:yes">�</span></span></span></span><!--[endif]--><span style="mso-ansi-language:ES">Ninguna de las opciones restantes es correcta<o:p></o:p></span></h2>
+
+<p class="Respuesta"><span style="mso-ansi-language:ES">Falso<o:p></o:p></span></p>
+
+<h1 style="margin-left:14.2pt;text-indent:-14.2pt;mso-list:l0 level1 lfo1"><!--[if !supportLists]--><span lang="ES-TRAD"><span style="mso-list:Ignore">17.- </span></span><!--[endif]--><span style="mso-ansi-language:ES"><span style="mso-spacerun:yes">���</span></span><span lang="ES-TRAD">�Cu�l de las siguientes afirmaciones es correcta?</span></h1>
+
+<h2 style="margin-left:28.4pt;text-indent:-14.2pt;mso-list:l0 level2 lfo1;
+tab-stops:35.4pt"><!--[if !supportLists]--><span style="mso-ansi-language:ES"><span style="mso-list:Ignore">a) <span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp; </span></span></span><!--[endif]--><span style="mso-ansi-language:ES">Dentro de las funciones que realiza el sistema
+operativo sobre el manejo del reloj temporizador �ste lleva la cuenta del
+tiempo real (fecha y hora) almacenando en un registro el n�mero de instantes
+(segundos, nanosegundos,..) transcurridos desde una fecha dada<o:p></o:p></span></h2>
+
+<p class="Respuesta"><span style="mso-ansi-language:ES">Cierto<o:p></o:p></span></p>
+
+<h2 style="margin-left:28.4pt;text-indent:-14.2pt;mso-list:l0 level2 lfo1;
+tab-stops:35.4pt"><!--[if !supportLists]--><span style="mso-ansi-language:ES"><span style="mso-list:Ignore">b) <span style="font:7.0pt &quot;Times New Roman&quot;"><span style="mso-spacerun:yes">�</span></span></span></span><!--[endif]--><span style="mso-ansi-language:ES">Cada vez que se produce una interrupci�n de reloj
+esto indica la finalizaci�n del cu�nto de tiempo del proceso en ejecuci�n y el
+sistema operativo debe realizar el cambio de contexto<o:p></o:p></span></h2>
+
+<p class="Respuesta"><span style="mso-ansi-language:ES">Falso<o:p></o:p></span></p>
+
+<h2 style="margin-left:28.4pt;text-indent:-14.2pt;mso-list:l0 level2 lfo1;
+tab-stops:35.4pt"><!--[if !supportLists]--><span style="mso-ansi-language:ES"><span style="mso-list:Ignore">c) <span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp; </span></span></span><!--[endif]--><span style="mso-ansi-language:ES">Si el reloj temporizador oscila a raz�n de 50MHz
+esto significa que se producen 50Millones de interrupciones por segundo <o:p></o:p></span></h2>
+
+<p class="Respuesta"><span style="mso-ansi-language:ES">Falso<o:p></o:p></span></p>
+
+<h2 style="margin-left:28.4pt;text-indent:-14.2pt;mso-list:l0 level2 lfo1;
+tab-stops:35.4pt"><!--[if !supportLists]--><span style="mso-ansi-language:ES"><span style="mso-list:Ignore">d) <span style="font:7.0pt &quot;Times New Roman&quot;"><span style="mso-spacerun:yes">�</span></span></span></span><!--[endif]--><span style="mso-ansi-language:ES">Ninguna de las restantes respuestas es correcta <o:p></o:p></span></h2>
+
+<p class="Respuesta"><span style="mso-ansi-language:ES">Falso<o:p></o:p></span></p>
+
+<h1 style="margin-left:14.2pt;text-indent:-14.2pt;mso-list:l0 level1 lfo1"><!--[if !supportLists]--><span lang="ES-TRAD"><span style="mso-list:Ignore">18.- </span></span><!--[endif]--><span style="mso-ansi-language:ES"><span style="mso-spacerun:yes">���</span></span><span lang="ES-TRAD">En un sistema de gesti�n de e/s que utilice una pol�tica de
+planificaci�n de disco tipo Scan de n pasos y circular. �Cu�l de las siguientes
+afirmaciones es correcta?</span></h1>
+
+<h2 style="margin-left:28.4pt;text-indent:-14.2pt;mso-list:l0 level2 lfo1;
+tab-stops:35.4pt"><!--[if !supportLists]--><span style="mso-ansi-language:ES"><span style="mso-list:Ignore">a) <span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp; </span></span></span><!--[endif]--><span style="mso-ansi-language:ES">Mejora el tiempo medio de acceso optimizando el
+tiempo de latencia<o:p></o:p></span></h2>
+
+<p class="Respuesta"><span style="mso-ansi-language:ES">Falso, optimiza el tiempo
+de b�squeda, pero no el de latencia<o:p></o:p></span></p>
+
+<h2 style="margin-left:28.4pt;text-indent:-14.2pt;mso-list:l0 level2 lfo1;
+tab-stops:35.4pt"><!--[if !supportLists]--><span style="mso-ansi-language:ES"><span style="mso-list:Ignore">b) <span style="font:7.0pt &quot;Times New Roman&quot;"><span style="mso-spacerun:yes">�</span></span></span></span><!--[endif]--><span style="mso-ansi-language:ES">Evita inanici�n de peticiones aunque obtiene
+varianza alta<o:p></o:p></span></h2>
+
+<p class="Respuesta"><span style="mso-ansi-language:ES">Falso, evita inanici�n y
+no obtiene varianza alta<o:p></o:p></span></p>
+
+<h2 style="margin-left:28.4pt;text-indent:-14.2pt;mso-list:l0 level2 lfo1;
+tab-stops:35.4pt"><!--[if !supportLists]--><span style="mso-ansi-language:ES"><span style="mso-list:Ignore">c) <span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp; </span></span></span><!--[endif]--><span style="mso-ansi-language:ES">Discrimina pistas extremas al ser de tipo circular<o:p></o:p></span></h2>
+
+<p class="Respuesta"><span style="mso-ansi-language:ES">Falso, evita esta
+discriminaci�n<o:p></o:p></span></p>
+
+<h2 style="margin-left:28.4pt;text-indent:-14.2pt;mso-list:l0 level2 lfo1;
+tab-stops:35.4pt"><!--[if !supportLists]--><span style="mso-ansi-language:ES"><span style="mso-list:Ignore">d) <span style="font:7.0pt &quot;Times New Roman&quot;"><span style="mso-spacerun:yes">�</span></span></span></span><!--[endif]--><span style="mso-ansi-language:ES">Ninguna de las restantes es correcta<o:p></o:p></span></h2>
+
+<p class="Respuesta"><span style="mso-ansi-language:ES">Cierto<o:p></o:p></span></p>
+
+<h1 style="margin-left:14.2pt;text-indent:-14.2pt;mso-list:l0 level1 lfo1"><!--[if !supportLists]--><span lang="ES-TRAD"><span style="mso-list:Ignore">19.- </span></span><!--[endif]--><span style="mso-ansi-language:ES"><span style="mso-spacerun:yes">��</span></span><span lang="ES-TRAD">En un sistema de gesti�n de e/s �Cu�l de las siguientes afirmaciones
+es correcta?</span></h1>
+
+<h2 style="margin-left:28.4pt;text-indent:-14.2pt;mso-list:l0 level2 lfo1;
+tab-stops:35.4pt"><!--[if !supportLists]--><span style="mso-ansi-language:ES"><span style="mso-list:Ignore">a) <span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp; </span></span></span><!--[endif]--><span style="mso-ansi-language:ES">En una pol�tica de planificaci�n tipo scan existe
+peligro de inanici�n por tratarse de un sistema din�mico en el que las
+peticiones pueden estar llegando de forma indefinida<o:p></o:p></span></h2>
+
+<p class="Respuesta"><span style="mso-ansi-language:ES">Cierto <o:p></o:p></span></p>
+
+<h2 style="margin-left:28.4pt;text-indent:-14.2pt;mso-list:l0 level2 lfo1;
+tab-stops:35.4pt"><!--[if !supportLists]--><span style="mso-ansi-language:ES"><span style="mso-list:Ignore">b) <span style="font:7.0pt &quot;Times New Roman&quot;"><span style="mso-spacerun:yes">�</span></span></span></span><!--[endif]--><span style="mso-ansi-language:ES">La pol�tica de planificaci�n de disco tipo SSTF
+(La b�squeda m�s corta primero) discrimina las pistas localizadas en la parte
+exterior del disco frente a las cercanas al centro del mismo, con per�metro por
+tanto menor<o:p></o:p></span></h2>
+
+<p class="Respuesta"><span style="mso-ansi-language:ES">Falso, las que se
+discriminan son las del medio frente a las de los extremos, tanto el interno
+como el externo<o:p></o:p></span></p>
+
+<h2 style="margin-left:28.4pt;text-indent:-14.2pt;mso-list:l0 level2 lfo1;
+tab-stops:35.4pt"><!--[if !supportLists]--><span style="mso-ansi-language:ES"><span style="mso-list:Ignore">c) <span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp; </span></span></span><!--[endif]--><span style="mso-ansi-language:ES">El algoritmo FCFS se diferencia del FIFO en que en
+el primero es posible la inanici�n de ciertas peticiones<o:p></o:p></span></h2>
+
+<p class="Respuesta"><span style="mso-ansi-language:ES">Falso<o:p></o:p></span></p>
+
+<h2 style="margin-left:28.4pt;text-indent:-14.2pt;mso-list:l0 level2 lfo1;
+tab-stops:35.4pt"><!--[if !supportLists]--><span style="mso-ansi-language:ES"><span style="mso-list:Ignore">d) <span style="font:7.0pt &quot;Times New Roman&quot;"><span style="mso-spacerun:yes">�</span></span></span></span><!--[endif]--><span style="mso-ansi-language:ES">Ninguna de las restantes es correcta<o:p></o:p></span></h2>
+
+<p class="Respuesta"><span style="mso-ansi-language:ES">Falso <o:p></o:p></span></p>
+
+<h1 style="margin-left:14.2pt;text-indent:-14.2pt;mso-list:l0 level1 lfo1"><!--[if !supportLists]--><span lang="ES-TRAD"><span style="mso-list:Ignore">20.- </span></span><!--[endif]--><span style="mso-ansi-language:ES"><span style="mso-spacerun:yes">���</span></span><span lang="ES-TRAD">�Cu�l de las siguientes afirmaciones es correcta?</span></h1>
+
+<h2 style="margin-left:28.4pt;text-indent:-14.2pt;mso-list:l0 level2 lfo1;
+tab-stops:35.4pt"><!--[if !supportLists]--><span style="mso-ansi-language:ES"><span style="mso-list:Ignore">a) <span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp; </span></span></span><!--[endif]--><span style="mso-ansi-language:ES">Para evitar el acceso al disco por parte de c�digo
+remoto procedente de la red, como el caso de las applets en Java, la plataforma
+Java proporciona un mecanismo de protecci�n que se activa en las operaciones
+peligrosas de acceso a disco<o:p></o:p></span></h2>
+
+<p class="Respuesta"><span style="mso-ansi-language:ES">Cierto<o:p></o:p></span></p>
+
+<h2 style="margin-left:28.4pt;text-indent:-14.2pt;mso-list:l0 level2 lfo1;
+tab-stops:35.4pt"><!--[if !supportLists]--><span style="mso-ansi-language:ES"><span style="mso-list:Ignore">b) <span style="font:7.0pt &quot;Times New Roman&quot;"><span style="mso-spacerun:yes">�</span></span></span></span><!--[endif]--><span style="mso-ansi-language:ES">En los sistemas operativos m�s populares (Windows,
+Unix) el sistema asigna permisos a los procesos en funci�n del tipo de proceso
+del que se trate<o:p></o:p></span></h2>
+
+<p class="Respuesta"><span style="mso-ansi-language:ES">Falso, los permisos se
+asignan a los usuarios. Los procesos usan los permisos del usuario que los
+ejecuta<o:p></o:p></span></p>
+
+<h2 style="margin-left:28.4pt;text-indent:-14.2pt;mso-list:l0 level2 lfo1;
+tab-stops:35.4pt"><!--[if !supportLists]--><span style="mso-ansi-language:ES"><span style="mso-list:Ignore">c) <span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp; </span></span></span><!--[endif]--><span style="mso-ansi-language:ES"><span style="mso-spacerun:yes">�</span>Los virus
+inform�ticos pueden producir da�os de car�cter leve en la salud del personal
+encargado de su limpieza <o:p></o:p></span></h2>
+
+<p class="Respuesta"><span style="mso-ansi-language:ES">Falso<o:p></o:p></span></p>
+
+<h2 style="margin-left:28.4pt;text-indent:-14.2pt;mso-list:l0 level2 lfo1;
+tab-stops:35.4pt"><!--[if !supportLists]--><span style="mso-ansi-language:ES"><span style="mso-list:Ignore">d) <span style="font:7.0pt &quot;Times New Roman&quot;"><span style="mso-spacerun:yes">�</span></span></span></span><!--[endif]--><span style="mso-ansi-language:ES">Ninguna de las restantes es correcta<o:p></o:p></span></h2>
+
+<p class="Respuesta"><span style="mso-ansi-language:ES">Falso <o:p></o:p></span></p>
+
+<h1 style="margin-left:14.2pt;text-indent:-14.2pt;mso-list:l0 level1 lfo1"><!--[if !supportLists]--><span lang="ES-TRAD"><span style="mso-list:Ignore">21.- </span></span><!--[endif]--><span style="mso-ansi-language:ES"><span style="mso-spacerun:yes">���</span></span><span lang="ES-TRAD">Respecto a la gesti�n de ficheros de Unix. �Cu�l de las siguientes
+afirmaciones es correcta?</span></h1>
+
+<h2 style="margin-left:28.4pt;text-indent:-14.2pt;mso-list:l0 level2 lfo1;
+tab-stops:35.4pt"><!--[if !supportLists]--><span style="mso-ansi-language:ES"><span style="mso-list:Ignore">a) <span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp; </span></span></span><!--[endif]--><span style="mso-ansi-language:ES">La estructura de datos que gestiona la cach� de
+bloques en Unix est� formada por una �nica lista donde se guardan todos los
+n�meros de bloques que est�n en la cach�<o:p></o:p></span></h2>
+
+<p class="Respuesta"><span style="mso-ansi-language:ES">Falso, est� formada por
+un conjunto de listas a las que se accede a trav�s de una tabla hash <o:p></o:p></span></p>
+
+<h2 style="margin-left:28.4pt;text-indent:-14.2pt;mso-list:l0 level2 lfo1;
+tab-stops:35.4pt"><!--[if !supportLists]--><span style="mso-ansi-language:ES"><span style="mso-list:Ignore">b) <span style="font:7.0pt &quot;Times New Roman&quot;"><span style="mso-spacerun:yes">�</span></span></span></span><!--[endif]--><span style="mso-ansi-language:ES">Para saber si un bloque de datos est� en la cach�
+se recorre la lista de bloques libres hasta encontrarla<o:p></o:p></span></h2>
+
+<p class="Respuesta"><span style="mso-ansi-language:ES">Falso, se utiliza la
+funci�n hash y se recorre la lista accesible a trav�s de la entrada
+correspondiente en la tabla hash.<o:p></o:p></span></p>
+
+<h2 style="margin-left:28.4pt;text-indent:-14.2pt;mso-list:l0 level2 lfo1;
+tab-stops:35.4pt"><!--[if !supportLists]--><span style="mso-ansi-language:ES"><span style="mso-list:Ignore">c) <span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp; </span></span></span><!--[endif]--><span style="mso-ansi-language:ES">Cualquier inodo que haya sido utilizado en el
+sistema, permanecer� en memoria al menos hasta que se cierre el fichero al que
+pertenece el inodo por parte de todos los procesos que lo est�n usando<o:p></o:p></span></h2>
+
+<p class="Respuesta"><span style="mso-ansi-language:ES">Cierto, se carga en
+memoria con la primera apertura del fichero y permanece hasta el �ltimo cierre.<o:p></o:p></span></p>
+
+<h2 style="margin-left:28.4pt;text-indent:-14.2pt;mso-list:l0 level2 lfo1;
+tab-stops:35.4pt"><!--[if !supportLists]--><span style="mso-ansi-language:ES"><span style="mso-list:Ignore">d) <span style="font:7.0pt &quot;Times New Roman&quot;"><span style="mso-spacerun:yes">�</span></span></span></span><!--[endif]--><span style="mso-ansi-language:ES">Ninguna de las opciones restantes es correcta<o:p></o:p></span></h2>
+
+<p class="Respuesta"><span style="mso-ansi-language:ES">Falso.<o:p></o:p></span></p>
+
+<h1 style="margin-left:14.2pt;text-indent:-14.2pt;mso-list:l0 level1 lfo1"><!--[if !supportLists]--><span lang="ES-TRAD"><span style="mso-list:Ignore">22.- </span></span><!--[endif]--><span lang="ES-TRAD">�Cu�l de las siguientes afirmaciones es correcta?</span></h1>
+
+<h2 style="margin-left:28.4pt;text-indent:-14.2pt;mso-list:l0 level2 lfo1;
+tab-stops:35.4pt"><!--[if !supportLists]--><span style="mso-ansi-language:ES"><span style="mso-list:Ignore">a) <span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp; </span></span></span><!--[endif]--><span style="mso-ansi-language:ES">Un algoritmo de cifrado de clave p�blica permite
+generar diferentes mensajes cifrados para un mismo mensaje original, mientras
+que esto no ocurre en un algoritmo de cifrado de clave privada.<o:p></o:p></span></h2>
+
+<p class="Respuesta"><span style="mso-ansi-language:ES">Falso, en ambos casos, en
+funci�n de la clave obtendremos diferentes mensajes cifrados<o:p></o:p></span></p>
+
+<h2 style="margin-left:28.4pt;text-indent:-14.2pt;mso-list:l0 level2 lfo1;
+tab-stops:35.4pt"><!--[if !supportLists]--><span style="mso-ansi-language:ES"><span style="mso-list:Ignore">b) <span style="font:7.0pt &quot;Times New Roman&quot;"><span style="mso-spacerun:yes">�</span></span></span></span><!--[endif]--><span style="mso-ansi-language:ES">El cifrado de clave p�blica permite que el
+receptor de un mensaje descifre el mismo a trav�s de la clave p�blica<o:p></o:p></span></h2>
+
+<p class="Respuesta"><span style="mso-ansi-language:ES">Falso, la clave p�blica
+sirve para cifrar el mensaje, no para descifrarlo<o:p></o:p></span></p>
+
+<h2 style="margin-left:28.4pt;text-indent:-14.2pt;mso-list:l0 level2 lfo1;
+tab-stops:35.4pt"><!--[if !supportLists]--><span style="mso-ansi-language:ES"><span style="mso-list:Ignore">c) <span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp; </span></span></span><!--[endif]--><span style="mso-ansi-language:ES">El algoritmo de cifrado PGP cifra el mensaje con
+un algoritmo de clave privada y la clave privada con un algoritmo de clave
+p�blica.<o:p></o:p></span></h2>
+
+<p class="Respuesta"><span style="mso-ansi-language:ES">Cierto, estos dos
+elementos los env�a al receptor, el cual descifra la clave privada con la
+p�blica y el mensaje con la clave privada<o:p></o:p></span></p>
+
+<h2 style="margin-left:28.4pt;text-indent:-14.2pt;mso-list:l0 level2 lfo1;
+tab-stops:35.4pt"><!--[if !supportLists]--><span style="mso-ansi-language:ES"><span style="mso-list:Ignore">d) <span style="font:7.0pt &quot;Times New Roman&quot;"><span style="mso-spacerun:yes">�</span></span></span></span><!--[endif]--><span style="mso-ansi-language:ES">Ninguna de las restantes es correcta<o:p></o:p></span></h2>
+
+<p class="Respuesta"><span style="mso-ansi-language:ES">Falso<o:p></o:p></span></p>
+
+<p class="MsoNormal"><span lang="ES-TRAD"><o:p>&nbsp;</o:p></span></p>
+
+<h2 style="mso-list:none;tab-stops:35.4pt"><span style="mso-ansi-language:ES"><o:p>&nbsp;</o:p></span></h2>
+
+<h2 style="mso-list:none;tab-stops:35.4pt"><span style="mso-ansi-language:ES"><span style="mso-spacerun:yes">�</span><o:p></o:p></span></h2>
+
+<p class="MsoNormal"><span style="mso-ansi-language:ES"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal"><span style="mso-ansi-language:ES"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal"><span lang="ES-TRAD"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal"><span style="mso-ansi-language:ES"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal"><span lang="ES-TRAD"><o:p>&nbsp;</o:p></span></p>
+
+<h2 style="margin-left:14.2pt;text-indent:0cm;mso-list:none;tab-stops:35.4pt"><span style="mso-ansi-language:ES"><o:p>&nbsp;</o:p></span></h2>
+
+</div>
+
+
+
+
+</body></html>

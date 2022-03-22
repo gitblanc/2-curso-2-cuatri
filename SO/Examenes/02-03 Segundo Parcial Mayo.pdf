@@ -1,0 +1,668 @@
+
+<!-- saved from url=(0083)file:///C:/Users/Liliana/Desktop/Examenes%20SO/02-03%20Segundo%20Parcial%20Mayo.htm -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<meta name="Generator" content="Microsoft Word 10 (filtered)">
+<title>1.-  En el Algoritmo de Lamport aparece una condici�n como la siguiente:</title>
+
+<style>
+<!--
+ /* Font Definitions */
+ @font-face
+	{font-family:Wingdings;
+	panose-1:5 0 0 0 0 0 0 0 0 0;}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{margin:0cm;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	font-style:italic;}
+h1
+	{margin-top:6.0pt;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:14.2pt;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-indent:-14.2pt;
+	page-break-after:avoid;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	font-weight:normal;}
+h2
+	{margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:28.4pt;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-indent:-14.2pt;
+	page-break-after:avoid;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	font-weight:normal;}
+h3
+	{margin-top:12.0pt;
+	margin-right:0cm;
+	margin-bottom:3.0pt;
+	margin-left:63.8pt;
+	text-align:justify;
+	text-indent:-35.4pt;
+	page-break-after:avoid;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	font-style:italic;}
+h4
+	{margin-top:12.0pt;
+	margin-right:0cm;
+	margin-bottom:3.0pt;
+	margin-left:99.2pt;
+	text-align:justify;
+	text-indent:-35.4pt;
+	page-break-after:avoid;
+	font-size:12.0pt;
+	font-family:"Times New Roman";}
+h5
+	{margin-top:12.0pt;
+	margin-right:0cm;
+	margin-bottom:3.0pt;
+	margin-left:134.6pt;
+	text-align:justify;
+	text-indent:-35.4pt;
+	font-size:11.0pt;
+	font-family:Arial;
+	font-weight:normal;
+	font-style:italic;}
+h6
+	{margin-top:12.0pt;
+	margin-right:0cm;
+	margin-bottom:3.0pt;
+	margin-left:170.0pt;
+	text-align:justify;
+	text-indent:-35.4pt;
+	font-size:11.0pt;
+	font-family:Arial;
+	font-weight:normal;}
+p.MsoHeading7, li.MsoHeading7, div.MsoHeading7
+	{margin-top:12.0pt;
+	margin-right:0cm;
+	margin-bottom:3.0pt;
+	margin-left:205.4pt;
+	text-align:justify;
+	text-indent:-35.4pt;
+	font-size:10.0pt;
+	font-family:Arial;
+	font-style:italic;}
+p.MsoHeading8, li.MsoHeading8, div.MsoHeading8
+	{margin-top:12.0pt;
+	margin-right:0cm;
+	margin-bottom:3.0pt;
+	margin-left:240.8pt;
+	text-align:justify;
+	text-indent:-35.4pt;
+	font-size:10.0pt;
+	font-family:Arial;}
+p.MsoHeading9, li.MsoHeading9, div.MsoHeading9
+	{margin-top:12.0pt;
+	margin-right:0cm;
+	margin-bottom:3.0pt;
+	margin-left:276.2pt;
+	text-align:justify;
+	text-indent:-35.4pt;
+	font-size:9.0pt;
+	font-family:Arial;}
+p.MsoHeader, li.MsoHeader, div.MsoHeader
+	{margin:0cm;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	font-style:italic;}
+p.MsoFooter, li.MsoFooter, div.MsoFooter
+	{margin:0cm;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	font-style:italic;}
+p.Cdigo, li.Cdigo, div.Cdigo
+	{margin:0cm;
+	margin-bottom:.0001pt;
+	font-size:10.0pt;
+	font-family:"Courier New";
+	font-style:italic;}
+p.Respuesta, li.Respuesta, div.Respuesta
+	{margin:0cm;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	display:none;
+	font-style:italic;}
+@page Section1
+	{size:21.0cm 842.0pt;
+	margin:2.0cm 2.0cm 2.0cm 2.0cm;}
+div.Section1
+	{page:Section1;}
+ /* List Definitions */
+ ol
+	{margin-bottom:0cm;}
+ul
+	{margin-bottom:0cm;}
+-->
+</style>
+
+<style type="text/css"></style></head>
+
+<body lang="ES">
+
+<div class="Section1">
+
+<table class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0" style="border-collapse:collapse;border:none">
+ <tbody><tr>
+  <td width="553" valign="top" style="width:414.65pt;border:solid windowtext 1.0pt;
+  padding:0cm 3.55pt 0cm 3.55pt">
+  <p class="MsoNormal" style="page-break-after:avoid"><b><span lang="ES-TRAD">Escuela
+  Universitaria de Ingenier�a T�cnica en Inform�tica de Oviedo</span></b></p>
+  <p class="MsoNormal" style="page-break-after:avoid"><span lang="ES-TRAD">Sistemas
+  Operativos. Segundo curso.</span></p>
+  <p class="MsoNormal" style="page-break-after:avoid"><span lang="ES-TRAD">Segundo
+  Parcial. 21 de Mayo de 2003</span></p>
+  </td>
+  <td width="66" valign="top" style="width:49.6pt;border:solid windowtext 1.0pt;
+  border-left:none;padding:0cm 3.55pt 0cm 3.55pt">
+  <p class="MsoNormal" style="page-break-after:avoid"><span lang="ES-TRAD">Modelo</span></p>
+  <p class="MsoNormal" align="center" style="text-align:center;page-break-after:
+  avoid"><b><span lang="ES-TRAD" style="font-size:18.0pt">3</span></b></p>
+  </td>
+ </tr>
+</tbody></table>
+
+<p class="MsoNormal" style="page-break-after:avoid"><span lang="ES-TRAD">&nbsp;</span></p>
+
+<div style="border:solid windowtext 1.0pt;padding:1.0pt 4.0pt 1.0pt 4.0pt">
+
+<p class="MsoNormal" style="page-break-after:avoid;border:none;padding:0cm"><span lang="ES-TRAD">Puntuaci�n: �� Acierto: + 3��������������� Fallo: -1�������������������� En
+Blanco: 0</span></p>
+
+<p class="MsoNormal" style="page-break-after:avoid;border:none;padding:0cm"><span lang="ES-TRAD">Puntuaci�n m�nima para aprobar: 35 puntos��������������������� Nota
+sobre 10 = (puntos - 35)/31*5 +5</span></p>
+
+<p class="MsoNormal" style="page-break-after:avoid;border:none;padding:0cm"><span lang="ES-TRAD">Tiempo de realizaci�n del examen: 75 minutos</span></p>
+
+</div>
+
+<p class="MsoNormal" style="page-break-after:avoid"><span lang="ES-TRAD">&nbsp;</span></p>
+
+<div style="border:solid windowtext 1.0pt;padding:0cm 4.0pt 0cm 4.0pt">
+
+<p class="MsoNormal" style="page-break-after:avoid;border:none;padding:0cm"><span lang="ES-TRAD">Nombre��������������������������������������������������������������������������������������������������������������
+DNI���������  </span></p>
+
+</div>
+
+<h1 style="margin-top:3.0pt;margin-right:0cm;margin-bottom:0cm;margin-left:
+0cm;margin-bottom:.0001pt;text-indent:0cm"><span lang="ES-TRAD" style="color:
+red">Se marcan en rojo las respuestas correctas</span></h1>
+
+<h1 style="margin-top:3.0pt"><span lang="ES-TRAD">1.- </span><span lang="ES-TRAD">Indica
+cu�l de las siguientes es correcta:</span></h1>
+
+<h2><span lang="ES-TRAD">a) <span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp; </span></span><span lang="ES-TRAD">Ninguna de las restantes respuestas es correcta</span></h2>
+
+<h2><span lang="ES-TRAD">b) <span style="font:7.0pt &quot;Times New Roman&quot;">�</span></span><span lang="ES-TRAD">Existe un �nico manejador de dispositivos para todos los
+dispositivos existentes en el sistema</span></h2>
+
+<h2><span lang="ES-TRAD" style="color:red">c) <span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;
+</span></span><span lang="ES-TRAD" style="color:red">Una de las funciones del
+manejador del reloj temporizador es gestionar el cuanto de tiempo para la
+gesti�n de procesos. </span></h2>
+
+<h2><span lang="ES-TRAD">d) <span style="font:7.0pt &quot;Times New Roman&quot;">�</span></span><span lang="ES-TRAD">Para hacer escritura en una pantalla, en el caso de terminales
+proyectados en memoria, se utilizan instrucciones especiales de acceso al
+puerto al que est� conectado el terminal.</span></h2>
+
+<h1 style="margin-top:3.0pt"><span lang="ES-TRAD">2.- </span><span lang="ES-TRAD">Cu�l
+de las siguientes afirmaciones es correcta</span></h1>
+
+<h2><span lang="ES-TRAD">a) <span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp; </span></span><span lang="ES-TRAD">En Unix es posible realizar acceso secuencial indexado en un
+fichero</span></h2>
+
+<h2><span lang="ES-TRAD">b) <span style="font:7.0pt &quot;Times New Roman&quot;">�</span></span><span lang="ES-TRAD">El usuario puede ver el contenido de un directorio porque se trata
+de un fichero de texto</span></h2>
+
+<h2><span lang="ES-TRAD">c) <span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp; </span></span><span lang="ES-TRAD">Para el sistema operativo Windows un fichero puede ser una
+secuencia de bytes o bien una secuencia de registros</span></h2>
+
+<h2><span lang="ES-TRAD" style="color:red">d) <span style="font:7.0pt &quot;Times New Roman&quot;">�</span></span><span lang="ES-TRAD" style="color:red">Ninguna de las restantes respuestas es correcta</span></h2>
+
+<h1 style="margin-top:3.0pt"><span lang="ES-TRAD">3.- </span><span lang="ES-TRAD">En
+un ordenador con Sistema Operativo Unix, �d�nde se almacena el <i>inodo</i> de
+un fichero abierto por un proceso?</span></h1>
+
+<h2><span lang="ES-TRAD" style="color:red">a) <span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;
+</span></span><span lang="ES-TRAD" style="color:red">En el espacio de direcciones
+del sistema operativo</span></h2>
+
+<h2><span lang="ES-TRAD">b) <span style="font:7.0pt &quot;Times New Roman&quot;">�</span></span><span lang="ES-TRAD">En el espacio de direcciones del proceso</span></h2>
+
+<h2><span lang="ES-TRAD">c) <span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp; </span></span><span lang="ES-TRAD">En el directorio donde se almacena el fichero ejecutable</span></h2>
+
+<h2><span lang="ES-TRAD">d) <span style="font:7.0pt &quot;Times New Roman&quot;">�</span></span><span lang="ES-TRAD">Ninguna de las restantes respuestas es correcta</span></h2>
+
+<h1 style="margin-top:3.0pt"><span lang="ES-TRAD">4.- </span><span lang="ES-TRAD">En
+el sistema operativo Unix, �Cu�ntos bloques del disco son necesarios para
+almacenar un fichero cuyo tama�o es de 614400 bytes, si su sistema de ficheros
+contiene bloques de 1024 bytes cada uno? (nota: no se incluya el espacio que
+ocupa el <i>inodo</i> del fichero)</span></h1>
+
+<h2><span lang="ES-TRAD">a) <span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp; </span></span><span lang="ES-TRAD">Ninguna de las restantes respuestas es correcta</span></h2>
+
+<h2><span lang="ES-TRAD">b) <span style="font:7.0pt &quot;Times New Roman&quot;">�</span></span><span lang="ES-TRAD">600 bloques</span></h2>
+
+<h2><span lang="ES-TRAD">c) <span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp; </span></span><span lang="ES-TRAD">603 bloques</span></h2>
+
+<h2><span lang="ES-TRAD" style="color:red">d) <span style="font:7.0pt &quot;Times New Roman&quot;">�</span></span><span lang="ES-TRAD" style="color:red">604 bloques</span></h2>
+
+<h1 style="margin-top:3.0pt"><span lang="ES-TRAD">5.- </span><span lang="ES-TRAD">En
+el sistema operativo MS-DOS, �Cu�ntos bloques del disco son necesarios para
+almacenar un fichero cuyo tama�o es de 614400 bytes, si su sistema de ficheros
+contiene bloques de 1024 bytes cada uno?</span></h1>
+
+<h2><span lang="ES-TRAD">a) <span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp; </span></span><span lang="ES-TRAD">604 bloques</span></h2>
+
+<h2><span lang="ES-TRAD" style="color:red">b) <span style="font:7.0pt &quot;Times New Roman&quot;">�</span></span><span lang="ES-TRAD" style="color:red">600 bloques</span></h2>
+
+<h2><span lang="ES-TRAD">c) <span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp; </span></span><span lang="ES-TRAD">603 bloques</span></h2>
+
+<h2><span lang="ES-TRAD">d) <span style="font:7.0pt &quot;Times New Roman&quot;">�</span></span><span lang="ES-TRAD">Ninguna de las restantes respuestas es correcta</span></h2>
+
+<h1 style="margin-top:3.0pt"><span lang="ES-TRAD">6.- </span><span lang="ES-TRAD">�Cu�l
+de las siguientes afirmaciones es correcta?</span></h1>
+
+<h2><span lang="ES-TRAD">a) <span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp; </span></span><span lang="ES-TRAD">CORBA es un sistema operativo distribuido</span></h2>
+
+<h2><span lang="ES-TRAD">b) <span style="font:7.0pt &quot;Times New Roman&quot;">�</span></span><span lang="ES-TRAD">En un sistema distribuido que utilice un sistema operativo
+distribuido para gestionar los recursos, el usuario tiene la visi�n de un
+conjunto de m�quinas independientes y tiene mecanismos espec�ficos para acceder
+a sus recursos de forma remota</span></h2>
+
+<p class="Respuesta"><span lang="ES-TRAD">Falso. El sistema operativo distribuido
+ofrece transparencia, lo que implica que el usuario tiene la visi�n de �nico
+sistema con un conjunto de recursos, sin hacer diferencia entre los que son locales
+y los que son remotos</span></p>
+
+<p class="Respuesta"><span lang="ES-TRAD">Falso. CORBA es un entorno que ofrece
+servicios y protocolos estandarizados para el desarrollo de aplicaciones
+distribuidas</span></p>
+
+<h2><span lang="ES-TRAD">c) <span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp; </span></span><span lang="ES-TRAD">La tendencia actual en el dise�o arquitect�nico de sistemas
+operativos se dirige hacia el uso de arquitecturas micron�cleo por ser �stas
+m�s r�pidas que los sistemas monol�ticos tradicionales</span></h2>
+
+<p class="Respuesta"><span lang="ES-TRAD" style="color:red">Falso, si bien se
+tiende a la implementaci�n de arquitecturas micron�cleo la raz�n no es
+precisamente la mayor rapidez de las mismas, sino otras como facilidad de
+distribuci�n,</span></p>
+
+<h2><span lang="ES-TRAD" style="color:red">d) <span style="font:7.0pt &quot;Times New Roman&quot;">�</span></span><span lang="ES-TRAD" style="color:red">Ninguna de las restantes respuestas es correcta</span></h2>
+
+<h1 style="margin-top:3.0pt"><span lang="ES-TRAD">7.- </span><span lang="ES-TRAD">En
+el sistema de gesti�n de memoria de Windows NT, �Cu�l de las siguientes
+afirmaciones es correcta?</span></h1>
+
+<h2><span lang="ES-TRAD">a) <span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp; </span></span><span lang="ES-TRAD">Cuando se expulsa una p�gina del conjunto de trabajo de un
+proceso, su marco se utiliza para almacenar la p�gina que se pretende
+introducir en el conjunto de trabajo</span></h2>
+
+<p class="Respuesta"><span lang="ES-TRAD" style="color:red">Falso, en principio se
+reserva en una lista de p�ginas en espera o de p�ginas modificadas, por si se
+vuelve a necesitar en un periodo corto de tiempo</span></p>
+
+<h2><span lang="ES-TRAD" style="color:red">b) <span style="font:7.0pt &quot;Times New Roman&quot;">�</span></span><span lang="ES-TRAD" style="color:red">Es posible que se produzca un fallo de p�gina
+que no implique operaciones de e/s</span></h2>
+
+<p class="Respuesta"><span lang="ES-TRAD">Cierto, en el caso de que la p�gina que
+se expulsa del conjunto de trabajo no haya sido modificada y la que se carga
+est� en alguna de las listas de p�ginas en espera, modificadas o libres</span></p>
+
+<h2><span lang="ES-TRAD">c) <span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp; </span></span><span lang="ES-TRAD">Si se expulsa una p�gina del conjunto de trabajo, pasar� siempre a
+la lista de p�ginas modificadas</span></h2>
+
+<p class="Respuesta"><span lang="ES-TRAD">Falso, s�lo en el caso que haya sido
+modificada desde que se ha cargado en memoria</span></p>
+
+<h2><span lang="ES-TRAD">d) <span style="font:7.0pt &quot;Times New Roman&quot;">�</span></span><span lang="ES-TRAD">Ninguna de las restantes respuestas es correcta</span></h2>
+
+<p class="Respuesta"><span lang="ES-TRAD">Falso</span></p>
+
+<h1 style="margin-top:3.0pt"><span lang="ES-TRAD">8.- </span><span lang="ES-TRAD">Respecto
+al control de acceso a recursos y servicios de un sistema. �Cu�l de las
+siguientes afirmaciones es correcta?</span></h1>
+
+<h2><span lang="ES-TRAD" style="color:red">a) <span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;
+</span></span><span lang="ES-TRAD" style="color:red">Ninguna de las restantes
+respuestas es correcta</span></h2>
+
+<h2><span lang="ES-TRAD">b) <span style="font:7.0pt &quot;Times New Roman&quot;">�</span></span><span lang="ES-TRAD">En los sistemas operativos m�s comerciales, el control de acceso a
+recursos� se realiza de igual forma para cualquier recurso del sistema</span></h2>
+
+<p class="Respuesta"><span lang="ES-TRAD">Falso, cada recurso tiene su propio
+mecanismo de control</span></p>
+
+<h2><span lang="ES-TRAD">c) <span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp; </span></span><span lang="ES-TRAD">La pol�tica de seguridad para el acceso al sistema de ficheros de
+Unix sigue el principio de m�nimo privilegio</span></h2>
+
+<p class="Respuesta"><span lang="ES-TRAD">Falso, los usuarios se agrupan y los
+permisos se asignan a todo el grupo, independientemente de que el usuario
+concreto los necesite</span></p>
+
+<h2><span lang="ES-TRAD">d) <span style="font:7.0pt &quot;Times New Roman&quot;">�</span></span><span lang="ES-TRAD">El control de acceso de un sistema que usa Listas de Control de
+acceso mantiene un funcionamiento an�logo al control de acceso que efect�a el
+portero de un cine</span></h2>
+
+<p class="Respuesta"><span lang="ES-TRAD">Falso, ese funcionamiento se refiere al
+control de acceso que usa capacidades</span></p>
+
+<p class="Respuesta"><span lang="ES-TRAD">Cierto</span></p>
+
+<h1 style="margin-top:3.0pt"><span lang="ES-TRAD">9.- </span><span lang="ES-TRAD">�Cu�l
+de las siguientes afirmaciones es correcta?</span></h1>
+
+<h2><span lang="ES-TRAD">a) <span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp; </span></span><span lang="ES-TRAD">Windows utiliza un mecanismo de control de acceso basado en
+capacidades</span></h2>
+
+<p class="Respuesta"><span lang="ES-TRAD">Falso, utiliza un mecanismo basado en
+Listas de Control de Acceso</span></p>
+
+<p class="Respuesta"><span lang="ES-TRAD">Cierto.</span></p>
+
+<h2><span lang="ES-TRAD">b) <span style="font:7.0pt &quot;Times New Roman&quot;">�</span></span><span lang="ES-TRAD">Los algoritmos de cifrado de clave p�blica permiten que el
+receptor pueda descifrar el mensaje del emisor mediante la clave p�blica
+obtenida</span></h2>
+
+<h2><span lang="ES-TRAD" style="color:red">c) <span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;
+</span></span><span lang="ES-TRAD" style="color:red">En sistemas como Unix o
+Windows, los <i>cabayos de troya</i> pueden afectar tanto a la integridad como
+a la disponibilidad y a la confidencialidad de los datos� del sistema de
+ficheros</span></h2>
+
+<p class="Respuesta"><span lang="ES-TRAD">Falso, la clave p�blica se usa para
+cifrar el mensaje, no para descifrarlo</span></p>
+
+<h2><span lang="ES-TRAD">d) <span style="font:7.0pt &quot;Times New Roman&quot;">�</span></span><span lang="ES-TRAD">Ninguna de las restantes respuestas es correcta</span></h2>
+
+<p class="Respuesta"><span lang="ES-TRAD">Cierto</span></p>
+
+<h1 style="margin-top:3.0pt"><span lang="ES-TRAD">10.- </span><span lang="ES-TRAD">El
+esquema de funcionamiento general de e/s presentado en clase constituye un
+esquema en el que se resuelven operaciones s�ncronas. �Qu� habr�a que modificar
+para resolver operaciones as�ncronas?</span></h1>
+
+<h2><span lang="ES-TRAD">a) <span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp; </span></span><span lang="ES-TRAD">Quitar el sem�foro (fin operaci�n)</span></h2>
+
+<h2><span lang="ES-TRAD">b) <span style="font:7.0pt &quot;Times New Roman&quot;">�</span></span><span lang="ES-TRAD">Ninguna de las restantes respuestas es correcta</span></h2>
+
+<p class="Respuesta"><span lang="ES-TRAD" style="color:red">Falso. Esto provocar�a
+que se sirvieran varias peticiones a la vez sobre un mismo dispositivo, lo cual
+s�lo es adecuado si el dispositivo lo soporta</span></p>
+
+<h2><span lang="ES-TRAD" style="color:red">c) <span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;
+</span></span><span lang="ES-TRAD" style="color:red">Quitar el sem�foro (petici�n
+servida)</span></h2>
+
+<p class="MsoNormal"><span lang="ES-TRAD" style="display:none">Cierto. Este
+sem�foro hace que la rutina independiente del sistema que se ejecuta al
+efectuar una operaci�n de e/s, espere a su finalizaci�n y por tanto no devuelve
+el control al usuario hasta que la petici�n no est� servida</span></p>
+
+<h2><span lang="ES-TRAD">d) <span style="font:7.0pt &quot;Times New Roman&quot;">�</span></span><span lang="ES-TRAD">Quitar el sem�foro (petici�n pendiente)</span></h2>
+
+<p class="MsoNormal"><span lang="ES-TRAD" style="display:none">Falso. La rutina
+debe esperar a que un proceso efect�e una petici�n</span></p>
+
+<h1 style="margin-top:3.0pt"><span lang="ES-TRAD">11.- </span><span lang="ES-TRAD">Respecto
+a las pol�ticas de planificaci�n del disco del Sistema de Gesti�n de
+entrada/salida</span></h1>
+
+<h2><span lang="ES-TRAD">a) <span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp; </span></span><span lang="ES-TRAD">El algoritmo � scan en n pasos� tiene el inconveniente de que
+puede provocar inanici�n</span></h2>
+
+<h2><span lang="ES-TRAD">b) <span style="font:7.0pt &quot;Times New Roman&quot;">�</span></span><span lang="ES-TRAD">El algoritmo �scan circular� no puede provocar inanici�n</span></h2>
+
+<h2><span lang="ES-TRAD" style="color:red">c) <span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;
+</span></span><span lang="ES-TRAD" style="color:red">El algoritmo scan discrimina
+las pistas extremas porque las peticiones que se generan despu�s de realizar el
+barrido por la pista deben esperar a que el barrido vuelva a pasar por la
+pista, y esto supone m�s tiempo en pistas extremas que en las m�s interiores</span></h2>
+
+<h2><span lang="ES-TRAD" style="color:red">d) <span style="font:7.0pt &quot;Times New Roman&quot;">�</span></span><span lang="ES-TRAD" style="color:red">Ninguna de las restantes respuestas es correcta</span></h2>
+
+<h1 style="margin-top:3.0pt"><span lang="ES-TRAD">12.- </span><span lang="ES-TRAD">Belady
+enunci�...</span></h1>
+
+<h2><span lang="ES-TRAD">a) <span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp; </span></span><span lang="ES-TRAD">Durante la ejecuci�n de un programa, las referencias a memoria
+tienden a estar agrupadas en posiciones� de memoria muy pr�ximas</span></h2>
+
+<h2><span lang="ES-TRAD">b) <span style="font:7.0pt &quot;Times New Roman&quot;">�</span></span><span lang="ES-TRAD">Siempre se cumple que al asignar a un proceso marcos de mayor
+tama�o, el n�mero de fallos de p�gina disminuye</span></h2>
+
+<h2><span lang="ES-TRAD" style="color:red">c) <span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;
+</span></span><span lang="ES-TRAD" style="color:red">Existen algoritmos para los
+que, en algunas ocasiones, al asignar m�s marcos a un proceso, aumenta el
+n�mero de fallos de p�gina</span></h2>
+
+<h2><span lang="ES-TRAD">d) <span style="font:7.0pt &quot;Times New Roman&quot;">�</span></span><span lang="ES-TRAD">Ninguna de las restantes respuestas es correcta</span></h2>
+
+<h1><span lang="ES-TRAD">13.- </span><span lang="ES-TRAD">�Cu�l de las siguientes
+afirmaciones es correcta?</span></h1>
+
+<h2><span lang="ES-TRAD" style="color:red">a) <span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;
+</span></span><span lang="ES-TRAD" style="color:red">La TLB es una cach� que
+almacena las n �ltimas p�ginas guardadas en memoria principal que han sido
+referenciadas </span></h2>
+
+<h2><span lang="ES-TRAD">b) <span style="font:7.0pt &quot;Times New Roman&quot;">�</span></span><span lang="ES-TRAD">La TLB participa en el proceso de resoluci�n de fallos de p�gina.</span></h2>
+
+<h2><span lang="ES-TRAD">c) <span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp; </span></span><span lang="ES-TRAD">La TLB es una tabla hash implementada por hardware</span></h2>
+
+<h2><span lang="ES-TRAD" style="color:red">d) <span style="font:7.0pt &quot;Times New Roman&quot;">�</span></span><span lang="ES-TRAD" style="color:red">Ninguna de las restantes respuestas es correcta</span></h2>
+
+<h1><span lang="ES-TRAD">14.- </span><span lang="ES-TRAD">�Cu�l de las siguientes
+afirmaciones es correcta?</span></h1>
+
+<h2><span lang="ES-TRAD" style="color:red">a) <span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;
+</span></span><span lang="ES-TRAD" style="color:red">En un sistema de gesti�n de
+memoria que use Tabla de P�ginas Invertida, en el proceso de traducci�n de
+direcciones es necesario hacer una b�squeda dentro de la tabla en la que
+interviene el PID del proceso y el n�mero de p�gina en la que se encuentra la
+direcci�n que se pretende traducir.</span></h2>
+
+<h2><span lang="ES-TRAD">b) <span style="font:7.0pt &quot;Times New Roman&quot;">�</span></span><span lang="ES-TRAD">En un sistema de gesti�n de memoria con segmentaci�n la memoria se
+aprovecha mejor que en un sistema con paginaci�n porque los segmentos se
+almacenan exactamente en el hueco que necesitan para ellos.</span></h2>
+
+<h2><span lang="ES-TRAD">c) <span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp; </span></span><span lang="ES-TRAD">La Tabla de p�ginas de un proceso se encuentra almacenada en el
+espacio de direcciones de ese proceso</span></h2>
+
+<h2><span lang="ES-TRAD">d) <span style="font:7.0pt &quot;Times New Roman&quot;">�</span></span><span lang="ES-TRAD">Ninguna de las restantes respuestas es correcta</span></h2>
+
+<h1><span lang="ES-TRAD">15.- </span><span lang="ES-TRAD">�Cu�l de las siguientes
+afirmaciones es correcta?</span></h1>
+
+<h2><span lang="ES-TRAD">a) <span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp; </span></span><span lang="ES-TRAD">En un sistema de gesti�n de memoria con paginaci�n, la asignaci�n
+de un marco libre para alojar una p�gina en memoria debe tener en cuenta la
+pol�tica� del mejor ajuste</span></h2>
+
+<h2><span lang="ES-TRAD" style="color:red">b) <span style="font:7.0pt &quot;Times New Roman&quot;">�</span></span><span lang="ES-TRAD" style="color:red">En una pol�tica de asignaci�n fija se usa m�s
+memoria para cada proceso que en una de asignaci�n variable, si pretendemos en
+ambos casos que no se produzca hiperpaginaci�n</span></h2>
+
+<h2><span lang="ES-TRAD">c) <span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp; </span></span><span lang="ES-TRAD">La estrategia del conjunto de trabajo permite llevar a cabo una
+asignaci�n fija de memoria</span></h2>
+
+<h2><span lang="ES-TRAD">d) <span style="font:7.0pt &quot;Times New Roman&quot;">�</span></span><span lang="ES-TRAD">Ninguna de las restantes respuestas es correcta</span></h2>
+
+<h1><span lang="ES-TRAD">16.- </span><span lang="ES-TRAD">�Cu�l de las siguientes
+afirmaciones es correcta?</span></h1>
+
+<h2><span lang="ES-TRAD">a) <span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp; </span></span><span lang="ES-TRAD">Respecto al c�digo de los procesos siguiente; suponiendo que
+inicialmente todos los sem�foros toman valor 1, si estos dos procesos se
+ejecutan en paralelo, existe posibilidad de interbloqueo</span></h2>
+
+<p class="MsoNormal" style="margin-left:36.0pt;page-break-after:avoid"><u><span lang="ES-TRAD" style="color:black;layout-grid-mode:line">PROCESO 1</span></u><span lang="ES-TRAD" style="color:black;layout-grid-mode:line">������������������������������������������������������������� <u>PROCESO
+2</u></span></p>
+
+<p class="MsoNormal" style="margin-left:36.0pt;page-break-after:avoid"><span lang="ES-TRAD" style="color:black;layout-grid-mode:line">Wait(mutex)������������������������������������������������������������� Wait
+(mutex)</span></p>
+
+<p class="MsoNormal" style="margin-left:36.0pt;page-break-after:avoid"><span lang="ES-TRAD" style="color:black;layout-grid-mode:line">Wait (Disco)������������������������������������������������������������� Wait
+(Cinta)</span></p>
+
+<p class="MsoNormal" style="margin-left:36.0pt;page-break-after:avoid"><span lang="ES-TRAD" style="color:black;layout-grid-mode:line">Wait (Cinta)�������������������������������������� ����������������������� Wait
+(Disco)</span></p>
+
+<p class="MsoNormal" style="margin-left:36.0pt;page-break-after:avoid"><span lang="ES-TRAD" style="color:black;layout-grid-mode:line">����������� Usar������������������������������������������������������������������������� usar</span></p>
+
+<p class="MsoNormal" style="margin-left:36.0pt;page-break-after:avoid"><span lang="ES-TRAD" style="color:black;layout-grid-mode:line">Signal(Cinta) ����������������������������������������������������������� Signal(Disco)
+</span></p>
+
+<p class="MsoNormal" style="margin-left:36.0pt;page-break-after:avoid"><span lang="ES-TRAD" style="color:black;layout-grid-mode:line">Signal (Disco)����������������������������������������������������������� Signal
+(Cinta)</span></p>
+
+<p class="MsoNormal" style="text-indent:35.4pt;page-break-after:avoid"><span lang="ES-TRAD" style="color:black;layout-grid-mode:line">Signal (mutex)���������������������������������������������������������������������� Signal(mutex)</span></p>
+
+<h2 style="margin-left:14.2pt;text-indent:0cm"><span lang="ES-TRAD">&nbsp;</span></h2>
+
+<h2><span lang="ES-TRAD" style="color:red">b) <span style="font:7.0pt &quot;Times New Roman&quot;">�</span></span><span lang="ES-TRAD" style="color:red">Ninguna de las restantes respuestas es correcta</span></h2>
+
+<h2><span lang="ES-TRAD">c) <span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp; </span></span><span lang="ES-TRAD">La ventaja del algoritmo del banquero es que no produce demasiada
+sobrecarga en el sistema. El inconveniente es que es necesario conocer a priori
+los recursos que va a necesitar cada proceso</span></h2>
+
+<h2><span lang="ES-TRAD">d) <span style="font:7.0pt &quot;Times New Roman&quot;">�</span></span><span lang="ES-TRAD">La detecci�n de interbloqueo produce m�s sobrecarga que la
+evitaci�n del mismo</span></h2>
+
+<h1><span lang="ES-TRAD">17.- </span><span lang="ES-TRAD">�Cu�l de las siguientes
+afirmaciones es correcta?</span></h1>
+
+<h2><span lang="ES-TRAD">a) <span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp; </span></span><span lang="ES-TRAD">El empleo de la tasa de fallos de constituye un algoritmo de
+reemplazo de p�ginas</span></h2>
+
+<h2><span lang="ES-TRAD" style="color:red">b) <span style="font:7.0pt &quot;Times New Roman&quot;">�</span></span><span lang="ES-TRAD" style="color:red">El algoritmo del reloj constituye una mejora al
+FIFO en el que se pretende evitar que p�ginas que se usan muy a menudo sean
+reemplazadas por el hecho de llevar mucho tiempo en memoria</span></h2>
+
+<h2><span lang="ES-TRAD">c) <span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp; </span></span><span lang="ES-TRAD">Siempre que en un sistema se produce un reemplazo de una p�gina
+por otra, la p�gina expulsada deber� guardarse en disco antes de cargar la
+nueva p�gina</span></h2>
+
+<h2><span lang="ES-TRAD">d) <span style="font:7.0pt &quot;Times New Roman&quot;">�</span></span><span lang="ES-TRAD">Ninguna de las restantes respuestas es correcta</span></h2>
+
+<h1 style="margin-top:3.0pt"><span lang="ES-TRAD">18.- </span><span lang="ES-TRAD">�Cu�l
+ser�a el espacio gastado en la tabla de p�ginas si �sta fuese de un �nico
+nivel?</span></h1>
+
+<p class="MsoNormal"><span lang="ES-TRAD" style="font-style:normal">Supongamos las
+siguientes condiciones:</span><span style="font-style:normal"> </span></p>
+
+<p class="MsoNormal" style="margin-left:36.0pt;text-indent:-18.0pt"><span style="font-style:normal">�<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style="font-style:normal">Procesador con direcci�n l�gica
+de 32 bits</span></p>
+
+<p class="MsoNormal" style="margin-left:36.0pt;text-indent:-18.0pt"><span style="font-style:normal">�<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style="font-style:normal">Tama�o de p�gina de 4KB</span></p>
+
+<p class="MsoNormal" style="margin-left:36.0pt;text-indent:-18.0pt"><span style="font-style:normal">�<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style="font-style:normal">Cada entrada en la tabla de
+p�ginas ocupa 4 bytes</span></p>
+
+<p class="MsoNormal" style="margin-left:36.0pt;text-indent:-18.0pt"><span style="font-style:normal">�<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style="font-style:normal">Un proceso que utiliza s�lo 12 MB
+de las direcciones m�s bajas y 4MB de las m�s altas. </span></p>
+
+<h2><span lang="ES-TRAD" style="color:red">a) <span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;
+</span></span><span lang="ES-TRAD" style="color:red">4MB</span></h2>
+
+<h2><span lang="ES-TRAD">b) <span style="font:7.0pt &quot;Times New Roman&quot;">�</span></span><span lang="ES-TRAD">1MB</span></h2>
+
+<h2><span lang="ES-TRAD">c) <span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp; </span></span><span lang="ES-TRAD">20 KB</span></h2>
+
+<h2><span lang="ES-TRAD">d) <span style="font:7.0pt &quot;Times New Roman&quot;">�</span></span><span lang="ES-TRAD">Ninguna de las restantes respuestas es correcta</span></h2>
+
+<h1 style="margin-top:3.0pt"><span lang="ES-TRAD">19.- </span><span lang="ES-TRAD">�Cu�l
+de las siguientes afirmaciones es correcta?</span></h1>
+
+<h2><span lang="ES-TRAD" style="color:red">a) <span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;
+</span></span><span lang="ES-TRAD" style="color:red">Los pipes o tuber�as en Unix
+son ficheros cuyo funcionamiento puede aprovecharse para la sincronizaci�n de
+procesos</span></h2>
+
+<h2><span lang="ES-TRAD">b) <span style="font:7.0pt &quot;Times New Roman&quot;">�</span></span><span lang="ES-TRAD">El superbloque es un bloque especial del sistema de ficheros cuyo
+tama�o es el doble que el del resto de los bloques del sistema</span></h2>
+
+<h2><span lang="ES-TRAD">c) <span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp; </span></span><span lang="ES-TRAD">En la tabla hash usada para gestionar los inodos en memoria se
+encuentran los inodos de los� ficheros existentes en el sistema de ficheros</span></h2>
+
+<h2><span lang="ES-TRAD">d) <span style="font:7.0pt &quot;Times New Roman&quot;">�</span></span><span lang="ES-TRAD">Ninguna de las restantes respuestas es correcta</span></h2>
+
+<h1 style="margin-top:3.0pt"><span lang="ES-TRAD">20.- </span><span lang="ES-TRAD">�Cu�l
+de las siguientes afirmaciones es correcta?</span></h1>
+
+<h2><span lang="ES-TRAD" style="color:red">a) <span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;
+</span></span><span lang="ES-TRAD" style="color:red">Para localizar el descriptor
+de un fichero en el disco, en un sistema de ficheros que cuente con un �rbol de
+directorios es preciso recorrer la ruta (path) de acceso dentro de la
+jerarqu�a, y por tanto hay que acceder primero a los descriptores de los
+directorios que aparecen en la ruta.</span></h2>
+
+<h2><span lang="ES-TRAD">b) <span style="font:7.0pt &quot;Times New Roman&quot;">�</span></span><span lang="ES-TRAD">En un sistema de ficheros donde la asignaci�n del espacio en disco
+es una asignaci�n contigua no es necesaria la gesti�n del espacio libre</span></h2>
+
+<h2><span lang="ES-TRAD">c) <span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp; </span></span><span lang="ES-TRAD">El respaldo peri�dico constituye el mecanismo de control de acceso
+de los sistemas que usan Listas de control de acceso</span></h2>
+
+<h2><span lang="ES-TRAD">d) <span style="font:7.0pt &quot;Times New Roman&quot;">�</span></span><span lang="ES-TRAD">Ninguna de las restantes respuestas es correcta</span></h2>
+
+<h1 style="margin-top:3.0pt"><span lang="ES-TRAD">21.- </span><span lang="ES-TRAD">Sea
+un disco con 63 sectores por pista, intercalado DOBLE de sectores, tama�o de
+sector de 512 bytes y una velocidad de rotaci�n de 3.000 rpm �Cu�nto tiempo
+costar� leer una pista completa? Tener en cuenta el tiempo medio de latencia,
+suponer que la cabeza de lectura est� sobre la pista a leer, y suponer
+despreciable el tiempo de lectura y transferencia de informaci�n</span></h1>
+
+<h2><span lang="ES-TRAD" style="color:red">a) <span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;
+</span></span><span lang="ES-TRAD" style="color:red">0,07</span></h2>
+
+<h2><span lang="ES-TRAD">b) <span style="font:7.0pt &quot;Times New Roman&quot;">�</span></span><span lang="ES-TRAD">Ninguna de las restantes respuestas es correcta</span></h2>
+
+<h2><span lang="ES-TRAD">c) <span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp; </span></span><span lang="ES-TRAD">0,03</span></h2>
+
+<h2><span lang="ES-TRAD">d) <span style="font:7.0pt &quot;Times New Roman&quot;">�</span></span><span lang="ES-TRAD">0,05</span></h2>
+
+<h1 style="margin-top:3.0pt"><span lang="ES-TRAD">22.- </span><span lang="ES-TRAD">�Cu�l
+de las siguientes afirmaciones es correcta?</span></h1>
+
+<h2><span lang="ES-TRAD">a) <span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp; </span></span><span lang="ES-TRAD">Si en un sistema de varios procesos se cumplen las 4 condiciones
+de exclusi�n mutua, retenci�n y espera, no apropiaci�n y espera circular
+entonces se produce interbloqueo </span></h2>
+
+<h2><span lang="ES-TRAD">b) <span style="font:7.0pt &quot;Times New Roman&quot;">�</span></span><span lang="ES-TRAD">Ninguna de las restantes respuestas es correcta</span></h2>
+
+<h2><span lang="ES-TRAD" style="color:red">c) <span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;
+</span></span><span lang="ES-TRAD" style="color:red">Si en un sistema de varios
+procesos se produce interbloqueo, entonces se cumplen las cuatro condiciones de
+exclusi�n mutua, retenci�n y espera, no apropiaci�n y espera circular</span></h2>
+
+<h2><span lang="ES-TRAD">d) <span style="font:7.0pt &quot;Times New Roman&quot;">�</span></span><span lang="ES-TRAD">Basta con que se cumpla una de las cuatro condiciones de exclusi�n
+mutua, retenci�n y espera, no apropiaci�n y espera circular para que se
+produzca interbloqueo</span></h2>
+
+</div>
+
+
+
+
+</body></html>

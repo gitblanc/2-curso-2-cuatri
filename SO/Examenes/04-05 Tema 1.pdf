@@ -1,0 +1,462 @@
+
+<!-- saved from url=(0070)http://156.35.81.1/ssoo/otra/exam/curso04-05/tema1/tema1c.3.11.04.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><title>Examen tema 1 con comentarios</title><style type="text/css"></style></head><body>
+<h1>E.U.I.T. Informática de Oviedo</h1>
+<h2>Sistemas Operativos</h2>
+<h3>Examen tema 1 con comentarios</h3>
+<ol>
+<hr>
+<li>
+�Cu�l de las siguientes afirmaciones es correcta?
+<ul type="a">
+<li>
+Existen dos posibles razones para la activaci�n del sistema operativo: llamada desde un programa o interrupci�n de un dispositivo.  
+<br><i>Cierto, tanto llamadas desde un programa como interrupciones son dos posibles razones(tambi�n se dar� por buena la respuesta como falsa, dado que puede entenderse que s�lo hay dos razones, cuando en realidad hay otra tercera).
+</i><br>
+<ul>
+</ul>
+</li><li>
+Las bibliotecas de funciones de los lenguajes usan las llamadas al sistema para llamar al sistema operativo cuando lo necesitan
+<br><i>Cierto
+</i><br>
+<ul>
+</ul>
+</li><li>
+Las APIs son bibliotecas de funciones de que proporciona el sistema operativo y en ellas se usan las interrupciones software  tema="TRAP" para comunicarse con el sistema operativo
+<br><i>Cierto
+</i><br>
+<ul>
+</ul>
+</li><li>
+Ninguna de las afirmaciones restantes es correcta
+<br><i>
+
+</i><br>
+<ul>
+</ul>
+</li></ul>
+<hr>
+</li><li>
+�Cu�l de las siguientes afirmaciones es correcta?
+<ul type="a">
+<li>
+Los sistemas operativos con arquitectura monol�tica, son m�s portables que los de arquitectura de micron�cleo 
+<br><i>Falso, los micron�cleo son m�s portables porque s�lo tiene que rehacerse el micron�cleo para portarlo a otro hardware
+</i><br>
+<ul>
+</ul>
+</li><li>
+Los sistemas operativos con arquitectura monol�tica proporcionan menos servicios que los de arquitectura de micron�cleo 
+<br><i>Falso, no tiene nada que ver 
+</i><br>
+<ul>
+</ul>
+</li><li>
+Los sistemas operativos con arquitectura monol�tica, son m�s r�pidos que los de arquitectura de micron�cleo 
+<br><i>Cierto puesto que no se necesita comunicaci�n entre procesos sino llamadas a rutinas dentro del mismo espacio de direcciones, lo cual es m�s r�pido.
+</i><br>
+<ul>
+</ul>
+</li><li>
+Ninguna de las respuestas restantes es correcta
+<br><i>
+
+</i><br>
+<ul>
+</ul>
+</li></ul>
+<hr>
+</li><li>
+�Cu�l de las siguientes afirmaciones es correcta?
+<ul type="a">
+<li>
+En los noventa se consolida desarrollo de sistemas operativos empotrados para dispositivos m�viles   
+<br><i>Falso, actualmente a�n es un mercado en su inicio y sin consolidar 
+</i><br>
+<ul>
+</ul>
+</li><li>
+Los sistemas operativos distribuidos y las capas de software intermedio aparecen en los a�os ochenta 
+<br><i>Falso, en los 80 aparecen los sistemas distribuidos pero las capas de software intermedio son de los 90
+</i><br>
+<ul>
+</ul>
+</li><li>
+La ejecuci�n de trabajos por lotes surge en los a�os sesenta  
+<br><i>Falso, surge en los a�os cincuenta
+</i><br>
+<ul>
+</ul>
+</li><li>
+La compartici�n de una misma m�quina por parte de m�ltiples usuarios es un logro de los a�os sesenta
+<br><i>Cierto
+
+</i><br>
+<ul>
+</ul>
+</li></ul>
+<hr>
+</li><li>
+�Cu�l de las siguientes afirmaciones es correcta?
+<ul type="a">
+<li>
+Los programas que usan una API que sigue el est�ndar POSIX pueden ser ejecutados tambi�n en sistemas operativos cuya API sea Win32
+<br><i>Falso, podr�n ser ejecutados en SO que cuenten con una API que siga el est�ndar POSIX
+</i><br>
+<ul>
+</ul>
+</li><li>
+El uso de una API que sigue el est�ndar POSIX permite portar los programas del usuario entre m�quinas con distintos sistemas operativos que cuenten con soporte para esta API.
+<br><i>Cierto.
+</i><br>
+<ul>
+</ul>
+</li><li>
+Ninguna de las afirmaciones restantes es correcta
+<br><i>
+</i><br>
+<ul>
+</ul>
+</li><li>
+El est�ndar POSIX es una interfaz de programas de aplicaci�n implementada por IEEE
+<br><i>. IEEE es una organizaci�n que defini� la interfaz, luego se realizar�n implementaciones de ella.
+ 
+
+</i><br>
+<ul>
+</ul>
+</li></ul>
+<hr>
+</li><li>
+�Cu�l de las siguientes afirmaciones es correcta?
+<ul type="a">
+<li>
+Win32 es la API establecida por Microsoft para el acceso a los servicios de su sistema operativo
+<br><i>Cierto.
+</i><br>
+<ul>
+</ul>
+</li><li>
+El est�ndar POSIX es una interfaz de programas de aplicaci�n implementada por IEEE
+<br><i>. IEEE es una organizaci�n que defini� la interfaz, luego se realizar�n implementaciones de ella.
+</i><br>
+<ul>
+</ul>
+</li><li>
+El uso de una API que sigue el est�ndar POSIX permite portar los programas del usuario entre m�quinas con distintos sistemas operativos que cuenten con soporte para esta API.
+<br><i>Cierto.
+</i><br>
+<ul>
+</ul>
+</li><li>
+Ninguna de las afirmaciones restantes es correcta
+<br><i>Falso. Hay otra respuesta correcta.
+</i><br>
+<ul>
+</ul>
+</li></ul>
+<hr>
+</li><li>
+�Cu�l de las siguientes afirmaciones es correcta?
+<ul type="a">
+<li>
+Ninguna de las afirmaciones restantes es correcta
+<br><i>Cierto
+</i><br>
+<ul>
+</ul>
+</li><li>
+El sistema operativo se comunica con el usuario final a trav�s de una interfaz de programaci�n, llamada com�nmente API
+<br><i>Falso, se comunica a trav�s de un interfaz de usuario, bien de �rdenes o gr�fica
+</i><br>
+<ul>
+</ul>
+</li><li>
+La gesti�n de memoria se encarga de administrar tanto la memoria principal como la secundaria
+<br><i>Falso, se encarga de la administraci�n de la memoria principal
+</i><br>
+<ul>
+</ul>
+</li><li>
+Si en un programa utilizamos una llamada al sistema que ofrece la API del sistema operativo no podremos ejecutar ese programa en otro sistema operativo diferente
+<br><i>Falso, no podremos ejecutarlo si no tiene la misma API pero si que podremos si el nuevo sistema operativo ofrece la misma interfaz de comunicaci�n
+
+</i><br>
+<ul>
+</ul>
+</li></ul>
+<hr>
+</li><li>
+�Cu�l de las siguientes afirmaciones es correcta?
+<ul type="a">
+<li>
+Ninguna de las afirmaciones restantes es correcta
+<br><i>
+</i><br>
+<ul>
+</ul>
+</li><li>
+El int�rprete de �rdenes es un programa del sistema que facilita la comunicaci�n interactiva del usuario con el sistema
+<br><i>Cierto
+</i><br>
+<ul>
+</ul>
+</li><li>
+El espacio de direcciones de un proceso es el conjunto de direcciones del sistema operativo a las que puede acceder el proceso
+<br><i>Falso, es el conjunto de direcciones que puede utilizar un proceso cuando se ejecuta.
+</i><br>
+<ul>
+</ul>
+</li><li>
+Proceso y sesi�n son conceptos equivalentes
+<br><i>
+
+</i><br>
+<ul>
+</ul>
+</li></ul>
+<hr>
+</li><li>
+�Cu�l de las siguientes afirmaciones es correcta?
+ 
+<ul type="a">
+<li>
+Las APIs son bibliotecas de funciones de que proporciona el sistema operativo y en ellas se usan las interrupciones software  tema="TRAP" para comunicarse con el sistema operativo
+<br><i>Cierto
+</i><br>
+<ul>
+</ul>
+</li><li>
+Ninguna de las afirmaciones restantes es correcta
+<br><i>
+</i><br>
+<ul>
+</ul>
+</li><li>
+Las funciones o m�todos que ofrecen los lenguajes de programaci�n para lectura y escritura de archivos forman parte de la API del sistema operativo
+<br><i>Falso, son funciones de biblioteca que a su vez llaman a la API del operativo, pero no forman parte de ella
+</i><br>
+<ul>
+</ul>
+</li><li>
+Las bibliotecas de funciones de los lenguajes usan las llamadas al sistema para llamar al sistema operativo cuando lo necesitan
+<br><i>Cierto
+
+</i><br>
+<ul>
+</ul>
+</li></ul>
+<hr>
+</li><li>
+Cu�l de las siguientes afirmaciones es correcta 
+<ul type="a">
+<li>
+Los sistemas Windows cuentan con una capa de abstracci�n hardware que evita que el n�cleo del sistema se comunique directamente con el hardware de la m�quina.
+<br><i>Cierto, act�a de m�quina virtual y aisla el n�cleo del hardware subyacente
+</i><br>
+<ul>
+</ul>
+</li><li>
+Los servicios que implementa el sistema operativo Windows se ejecutan en modo usuario
+<br><i>Falso, se ejecutan en modo supervisor
+</i><br>
+<ul>
+</ul>
+</li><li>
+Unix cuenta con una Capa de Abstracci�n Hardware que act�a como m�quina virtual
+<br><i>Cierto. 
+</i><br>
+<ul>
+</ul>
+</li><li>
+Ninguna de las restantes respuestas es correcta
+<br><i>. 
+
+</i><br>
+<ul>
+</ul>
+</li></ul>
+<hr>
+</li><li>
+�Cu�l de las siguientes afirmaciones es correcta?
+<ul type="a">
+<li>
+En la arquitectura Windows tan s�lo hay que cambiar el n�cleo para portar el sistema a otras plataformas
+<br><i>Falso, hay que cambiar la capa de abstracci�n hardware y los servicios de ficheros y dispositivos
+</i><br>
+<ul>
+</ul>
+</li><li>
+Ninguna de las respuestas restantes es correcta
+<br><i>
+</i><br>
+<ul>
+</ul>
+</li><li>
+En el sistema operativo WindowsNT tanto el n�cleo como los servicios se ejecutan en modo usuario
+<br><i>Falso, tanto el n�cleo como los servicios se ejecutan en modo supervisor
+</i><br>
+<ul>
+</ul>
+</li><li>
+La arquitectura de los sistemas Unix es una arquitectura tipo monol�tico
+<br><i>Cierto
+ 
+
+</i><br>
+<ul>
+</ul>
+</li></ul>
+<hr>
+</li><li>
+�Cu�l de las siguientes afirmaciones es correcta?
+<ul type="a">
+<li>
+La memoria ROM contiene el cargador del sistema operativo
+<br><i>Falso, contiene un programa que carga al cargador
+</i><br>
+<ul>
+</ul>
+</li><li>
+Cuando se enciende el ordenador, se comienza a ejecutar el programa cargador que se encuentra al comienzo del disco duro
+<br><i>Falso, se comienza a ejecutar el iniciador que est� en ROM y �ste carga al cargador
+</i><br>
+<ul>
+</ul>
+</li><li>
+Ninguna de las afirmaciones restantes es correcta
+<br><i>Cierto
+</i><br>
+<ul>
+<li>
+Falso, puesto que la opcion "d" es correcta.
+</li></ul>
+</li><li>
+El iniciador ROM es independiente del sistema operativo que luego se cargue
+<br><i>Cierto, esto permite la carga de cualquier sistema operativo
+
+</i><br>
+<ul>
+</ul>
+</li></ul>
+<hr>
+</li><li>
+Cu�l de las siguientes afirmaciones son correctas: 
+<ul type="a">
+<li>
+El iniciador ROM es parte del sistema operativo.
+<br><i>Falso, es independiente para mayor flexibilidad y permitir la existencia de varios sistemas operativos. 
+</i><br>
+<ul>
+</ul>
+</li><li>
+Los programas de usuario se ejecutan en modo usuario para evitar que puedan comunicarse directamente con los dispositivos, entre otras cosas.
+<br><i>Cierto. 
+</i><br>
+<ul>
+</ul>
+</li><li>
+La capa SHELL suele ejecutarse en modo n�cleo.
+<br><i>Falso, se ejecuta siempre en modo usuario. 
+</i><br>
+<ul>
+</ul>
+</li><li>
+Las memorias ROM de los PCs solo contienen parte del sistema operativo
+<br><i>Falso, el sistema operativo se almacena en el disco y se carga en memoria RAM 
+
+</i><br>
+<ul>
+</ul>
+</li></ul>
+<hr>
+</li><li>
+Se�alar cu�l o cu�les son funciones del sistema operativo. 
+<ul type="a">
+<li>
+Gesti�n de los recursos de la computadora.
+<br><i>Cierto, es una funci�n. 
+</i><br>
+<ul>
+</ul>
+</li><li>
+Interacci�n con el usuario.
+<br><i>Cierto, es una funci�n. 
+</i><br>
+<ul>
+</ul>
+</li><li>
+Ejecuci�n de los servicios para los programas.
+<br><i>Cierto, es una funci�n. 
+</i><br>
+<ul>
+</ul>
+</li><li>
+Visualizaci�n de documentos con formato pdf
+<br><i>Falso, no es tarea del sistema operativo. 
+
+</i><br>
+<ul>
+</ul>
+</li></ul>
+<hr>
+</li><li>
+�Cu�l es la principal ventaja de los sistemas operativos con estructura de capas? 
+<ul type="a">
+<li>
+La facilidad de programaci�n de los distintos m�dulos que lo componen.
+<br><i>Falso. Es de elevada dificultad. 
+</i><br>
+<ul>
+</ul>
+</li><li>
+Evitar que un programa monopolice el uso de la computadora y pueda hacer que entren a ejecutarse programas en determinados instantes de tiempo.
+<br><i>Falso. Esto es parte de la gesti�n de procesos. 
+</i><br>
+<ul>
+</ul>
+</li><li>
+La modularidad y la ocultaci�n de la informaci�n.
+<br><i>Verdadera 
+</i><br>
+<ul>
+</ul>
+</li><li>
+Ninguna de las anteriores.
+<br><i>Falso.
+</i><br>
+<ul>
+</ul>
+</li></ul>
+<hr>
+</li><li>
+Cu�l de las siguientes afirmaciones es correcta
+<ul type="a">
+<li>
+El programa iniciador que se almacena en ROM depende del sistema operativo que se instale en la m�quina
+<br><i>Falso, es independiente de cualquier sistema operativo
+</i><br>
+<ul>
+</ul>
+</li><li>
+El cargador est� situado en una zona predefinida del disco del Sistema Operativo y tiene un tama�o prefijado con el fin de que el iniciador lo localice
+<br><i>Cierto, cargador e iniciador deben seguir un convenio para que se pueda cargar cualquier SO 
+</i><br>
+<ul>
+</ul>
+</li><li>
+El iniciador incluye una contrase�a  tema="palabra m�gica" para acceder al cargador
+<br><i>Falso, es el cargador el que incluye la contrase�a. El iniciador verifica con ella que se trata del cargador
+</i><br>
+<ul>
+</ul>
+</li><li>
+Ninguna de las afirmaciones anteriores es correcta
+<br><i>Falso. Hay otra respuesta correcta.
+</i><br>
+<ul>
+</ul>
+</li></ul>
+
+
+</li></ol></body></html>
