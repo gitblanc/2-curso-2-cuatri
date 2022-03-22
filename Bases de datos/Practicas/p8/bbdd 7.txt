@@ -1,0 +1,165 @@
+--10 parámetros de entrada y de salida
+create or replace procedure procedure10
+    (co in concesionarios.cifc%type, nv out number)as
+begin
+    select count(*) into nv from ventas where cifc = co;
+end;
+
+--hay que poner obligatoriamente un bloque de código en los procedimientos de salida
+declare nv number;
+begin
+    procedure10('1', nv);
+    dbms_output.put_line('NV: ' || NV);
+end;
+
+
+create or replace function funcion10(con in concesionarios.cifc%type)
+return number as
+    nv number;
+begin
+    select count(*) into nv from ventas where cifc = con;
+    return nv;
+end;
+
+declare
+nv number;
+begin
+    nv:=funcion10('1');
+    dbms_output.put_line('NV: ' || NV);
+end;
+
+--11
+--funcion
+create or replace function funcion11(city in clientes.ciudad%type)
+return number as
+    clientes number;
+begin
+    select count(*) into clientes from clientes where ciudad=city;
+    return clientes;
+end;
+
+declare
+nc number;
+begin
+    nc:=funcion11('madrid');
+    dbms_output.put_line('NC: ' || NC);
+end;
+
+--procedimiento
+create or replace procedure procedure11
+    (city in clientes.ciudad%type, nc out number)as
+begin
+    select count(*) into nc from clientes where ciudad = city;
+end;
+
+declare nc number;
+begin
+    procedure11('madrid', nc);
+    dbms_output.put_line('NC: ' || NC);
+end;
+
+
+--12
+create or replace procedure ListarCochesPorCliente as
+    cursor cliente is select * from clientes;
+    cursor cars (undni ventas.dni%type) is select c.codcoche, nombrech, modelo, color from coches c, ventas v where c.codcoche=v.codcoche 
+        and v.dni=undni;--para los cursores hay que poner un parámetro
+    nc number;--num de coches
+    nco number;--num de concesionarios
+begin
+    for i in cliente loop
+        select count(*) into nc from ventas where dni = i.dni;
+        select count(distinct cifc) into nco from ventas where dni = i.dni;
+        dbms_output.put_line('- Cliente: ' || i.nombre || ' ' || i.apellido || ' ' || nc || ' ' || nco);
+        for k in cars(i.dni)loop 
+            dbms_output.put_line('---> Coche: ' || k.codcoche ||' ' || k.nombrech ||' ' || k.modelo ||' ' || k.color);
+        end loop;
+    end loop;
+end;
+
+
+begin
+    ListarCochesPorCliente();
+    
+end;
+
+--13
+create or replace procedure ListarCochesUnCliente(cliente clientes.dni%type) as
+    cli clientes%rowtype;
+    cursor cars is select c.codcoche, nombrech, modelo, color from coches c, ventas v where c.codcoche=v.codcoche 
+        and v.dni=cliente;--para los cursores hay que poner un parámetro
+    nc number;--num de coches
+    nco number;--num de concesionarios
+begin
+        select * into cli from clientes where dni = cliente;
+        select count(*) into nc from ventas where dni = cliente;
+        select count(distinct cifc) into nco from ventas where dni = cliente;
+        dbms_output.put_line('- Cliente: ' || cli.nombre || ' ' || cli.apellido || ' ' || nc || ' ' || nco);
+        for k in cars loop 
+            dbms_output.put_line('---> Coche: ' || k.codcoche ||' ' || k.nombrech ||' ' || k.modelo ||' ' || k.color);
+        end loop;
+    
+exception--hay que manejar que no exista el cliente
+    when no_data_found then
+        raise_application_error(-20001, 'Datos incorrectos del cliente');
+    when others then
+        raise_application_error(-20002, 'Error desconocido');
+end;
+
+begin
+    ListarCochesUnCliente('ieft87');
+    
+end;
+
+
+--14
+create or replace package practicaPL8 as
+    procedure ListarCochesPorCliente;
+    procedure ListarCochesUnCliente (cliente clientes.dni%type);
+end practicaPL8;
+
+create or replace package body practicaPL8 as
+        --12
+        procedure ListarCochesPorCliente as
+            cursor cliente is select * from clientes;
+            cursor cars (undni ventas.dni%type) is select c.codcoche, nombrech, modelo, color from coches c, ventas v where c.codcoche=v.codcoche 
+                and v.dni=undni;--para los cursores hay que poner un parámetro
+            nc number;--num de coches
+            nco number;--num de concesionarios
+        begin
+            for i in cliente loop
+                select count(*) into nc from ventas where dni = i.dni;
+                select count(distinct cifc) into nco from ventas where dni = i.dni;
+                dbms_output.put_line('- Cliente: ' || i.nombre || ' ' || i.apellido || ' ' || nc || ' ' || nco);
+                for k in cars(i.dni)loop 
+                    dbms_output.put_line('---> Coche: ' || k.codcoche ||' ' || k.nombrech ||' ' || k.modelo ||' ' || k.color);
+                end loop;
+            end loop;
+        end ListarCochesPorCliente;
+        
+        --13
+        procedure ListarCochesUnCliente(cliente clientes.dni%type) as
+        cli clientes%rowtype;
+        cursor cars is select c.codcoche, nombrech, modelo, color from coches c, ventas v where c.codcoche=v.codcoche 
+            and v.dni=cliente;--para los cursores hay que poner un parámetro
+        nc number;--num de coches
+        nco number;--num de concesionarios
+        begin
+            select * into cli from clientes where dni = cliente;
+            select count(*) into nc from ventas where dni = cliente;
+            select count(distinct cifc) into nco from ventas where dni = cliente;
+            dbms_output.put_line('- Cliente: ' || cli.nombre || ' ' || cli.apellido || ' ' || nc || ' ' || nco);
+            for k in cars loop 
+                dbms_output.put_line('---> Coche: ' || k.codcoche ||' ' || k.nombrech ||' ' || k.modelo ||' ' || k.color);
+            end loop;
+        
+         exception--hay que manejar que no exista el cliente
+        when no_data_found then
+            raise_application_error(-20001, 'Datos incorrectos del cliente');
+        when others then
+            raise_application_error(-20002, 'Error desconocido');
+    end ListarCochesUnCliente;
+end practicaPL8;
+
+CALL practicapl8.listarcochesuncliente('1');--se llama
+call practicapl8.listarcochesporcliente();
