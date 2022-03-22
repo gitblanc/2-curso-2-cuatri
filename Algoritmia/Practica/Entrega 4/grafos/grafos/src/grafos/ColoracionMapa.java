@@ -5,7 +5,6 @@ package grafos;
 
 import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.List;
 
 /**
  * @author UO285176
@@ -19,6 +18,18 @@ public class ColoracionMapa {
 	public ColoracionMapa() {
 		sacarColores();
 		sacarPaisesYFronteras();
+		colorear();
+	}
+
+	public void imprimirSolucion() {
+
+		for (String pais : solucion.keySet()) {
+			System.out.println(pais + "(" + solucion.get(pais) + ")\n");
+			for (String adyacente : paises.get(pais)) {
+				System.out.println("\t" + adyacente + "(" + solucion.get(adyacente) + ")\n");
+			}
+		}
+
 	}
 
 	private void sacarPaisesYFronteras() {
@@ -30,21 +41,25 @@ public class ColoracionMapa {
 		FileUtil.readColors("datos/colores.txt", this.colores);
 	}
 
-	public void colorear() {
-		int i = 0;
-		ArrayList<String> adyacentes;
-		for (String key : paises.keySet()) {
-			adyacentes = paises.get(key);
-			for (String adyacente : adyacentes) {
-				if (adyacente == "NO") {
-					solucion.put(key, colores.get(i));
+	private void colorear() {
+		for (String pais : paises.keySet()) {//O(n)
+			for (String color : colores) {//O(1)
+				if (paises.get(pais).equals("NO")) {
+					solucion.put(pais, color);
+					break;
+				} else if (colorUsado(pais, color)) {//O(1)
+					solucion.put(pais, color);
+					break;
 				}
-				buscarColorNodo();
 			}
 		}
 	}
 
-	public int buscarColorNodo(int i) {
-		colores[i] = colores[i]+1;
+	private boolean colorUsado(String pais, String color) {//O(1)
+		for (String adyacente : paises.get(pais)) {
+			if (solucion.get(adyacente) != null && solucion.get(adyacente).equals(color))
+				return false;
+		}
+		return true;
 	}
 }

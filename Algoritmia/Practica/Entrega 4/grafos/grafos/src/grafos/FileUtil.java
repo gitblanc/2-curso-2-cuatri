@@ -35,7 +35,7 @@ public class FileUtil {
 			new RuntimeException("Error de entrada/salida.");
 		}
 	}
-	
+
 	public static void readCountries(String nombreFicheroEntrada, HashMap<String, ArrayList<String>> paises) {
 
 		String linea;
@@ -50,10 +50,10 @@ public class FileUtil {
 				datosPaises = linea.split(": ");
 				fronteras = datosPaises[1].split(", ");
 				paisesVecinos = new ArrayList<>();
-				for(String f : fronteras) {
+				for (String f : fronteras) {
 					paisesVecinos.add(f);
 				}
-				
+
 				paises.put(datosPaises[0], paisesVecinos);
 			}
 			fichero.close();
