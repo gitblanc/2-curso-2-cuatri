@@ -1,0 +1,19 @@
+CONTROL UNIX SSOO
+
+16-17
+
+1. ls *[!.ch]
+2. rm -r dirName
+3. kill -19 PID
+4. command help 
+5. directorio-> execute y write
+	fichero-> write 
+	
+
+17-18
+1. con la flecha, !-1
+2. ls -dl */
+3. &
+4. [?.?]
+5. directorio-> execute y read
+	fichero -> read

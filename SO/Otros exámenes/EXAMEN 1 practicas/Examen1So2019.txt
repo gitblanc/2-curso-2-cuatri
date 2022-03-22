@@ -1,0 +1,7 @@
+1. Indique que expresion debo utilizar para hacer referencia a todos los ficheros cuyo nombre comience por una letra y contengan al menos dos digitos en su nombre
+2. Indique que orden debo utilizar para borrar todos los ficheros y directorios que esten en el directorio "d" que pertenece al directorio actual
+3. Indique en que orden debo usar para ver todas las ordenes que ejecutado en el pasado que contengan el string ls
+4. indique como puedo conocer que ordenes he introducido ultimamente en el sistema
+5. Indique los permisos estrictamente imprescindibles que necesito tener para crear un fichero
+6. "soy el usuario pepe del grupo users" Puedo ver el contenido del fichero Documento. PERMISOS: ---xr-xr-x
+7 ndique que pasos tengo que seguir para eliminar un proceso que he lanzado en primer plano y que no responde al "^C". 
