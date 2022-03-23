@@ -1,0 +1,20 @@
+13
+a) Hace falta salvar los valores para hacer un cambio de 
+contexto y salvar el estado del procesador previo a cambiar de proceso.
+b) Sí, el registerAccumulator_CPU para guardar los resultados de las operaciones 
+aritmético lógicas que serán tratadas por la ALU.
+c) Sí, habría que cargar la copia del registro acumulador previamente guardada.
+d) No, únicamente modificaría las funciones saveContext() y restoreContext().
+
+14 
+-Esta función comprueba si el proceso actual es un proceso de usuario. 
+ Si lo es, decrementa el número de procesos de usuario no terminados.
+-Si no quedan procesos de usuario por ejecutar y si además el proceso que se está
+ ejecutando es el Idle process se llama a la instrucción halt y se muestra el mensaje The system
+ will shut down now, y si o si termina la ejecución.
+-Si el apartado anterior no se cumple (no queden procesos no terminados de usuario)
+ se selecciona el siguiente proceso a ejecutar (Idle si no hay más de usuario)
+-Se asigna el procesador a ese proceso.
+
+16 El OS se ejecuta correctamente, sin embargo, el iRET genera un bucle infinito
+b) Se activa cuando el bit PSW está activo y se desactiva cuando no lo está.

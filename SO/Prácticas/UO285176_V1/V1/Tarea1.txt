@@ -1,0 +1,12 @@
+EJ 3
+No, sólo se ejecuta una vez, debido a que la instrucción HALT llama a la función powerOff().
+
+EJ 4
+Hay dos posibilidades:
+Si el 3 proceso es el programVerySimple(no llama a la instruccion TRAP 3), para en este.
+En otro caso(otro programa que llame a TRAP 3) se genera un bucle infinito y no para nunca.
+
+
+EJ 5 HECHO
+EJ 6 HECHO
+EJ 7 NO ME DIO TIEMPO :-(

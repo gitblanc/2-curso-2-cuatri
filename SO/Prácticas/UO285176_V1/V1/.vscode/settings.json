@@ -1,0 +1,9 @@
+{
+    "debug.inlineValues": true,
+    "files.associations": {
+        "*.def": "c",
+        "wrappers.h": "c"
+    },
+    "git.ignoreLimitWarning": true,
+
+}
