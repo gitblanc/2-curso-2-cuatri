@@ -69,7 +69,7 @@ char DAEMONS_PROGRAMS_FILE[MAXIMUMLENGTH] = "teachersDaemons";
 void OperatingSystem_Initialize(int daemonsIndex)
 {
 
-	int i, selectedProcess, processesCreated;
+	int i, selectedProcess, processCreated;
 	FILE *programFile; // For load Operating System Code
 	programFile = fopen("OperatingSystemCode", "r");
 	if (programFile == NULL)
@@ -98,8 +98,9 @@ void OperatingSystem_Initialize(int daemonsIndex)
 
 	//Ej 15 begin
 	// Create all user processes from the information given in the command line, PLP
-	processesCreated = OperatingSystem_LongTermScheduler();
-	if(processesCreated <= 1){
+	processCreated = OperatingSystem_LongTermScheduler();
+	
+	if(processCreated <= 1){
 		OperatingSystem_ReadyToShutdown();
 	}
 	//EJ 15 end
@@ -139,18 +140,19 @@ int OperatingSystem_LongTermScheduler()
 		// EJ 4 V1
 		case NOFREEENTRY:
 			ComputerSystem_DebugMessage(103, ERROR, programList[i]->executableName);
+			break;
 
 		// EJ5 V1
 		case PROGRAMDOESNOTEXIST:
 			ComputerSystem_DebugMessage(104, ERROR, programList[i]->executableName, "it does not exists");
-
+			break;
 		case PROGRAMNOTVALID:
 			ComputerSystem_DebugMessage(104, ERROR, programList[i]->executableName, "invalid priority or size");
-
+			break;
 		// EJ 6 V1
 		case TOOBIGPROCESS:
 			ComputerSystem_DebugMessage(105, ERROR, programList[i]->executableName);
-
+			break;
 		default:
 			numberOfSuccessfullyCreatedProcesses++;
 			if (programList[i]->type == USERPROGRAM)
@@ -285,9 +287,9 @@ int OperatingSystem_ShortTermScheduler()
 {
 
 	int selectedProcess = NOPROCESS; // EJ 11 BUG
-	int i = 0;
+	int i;
 	// EJ11 V1 begin
-	for (i; i < NUMBEROFQUEUES && selectedProcess == NOPROCESS; i++)
+	for (i = 0; i < NUMBEROFQUEUES && selectedProcess == NOPROCESS; i++)
 	{
 		selectedProcess = OperatingSystem_ExtractFromReadyToRun(i);
 	}
@@ -478,18 +480,18 @@ void OperatingSystem_InterruptLogic(int entryPoint)
 // EJ 11 V1
 void OperatingSystem_PrintReadyToRunQueue()
 {
-	int i = 0;
+	int i;
 	ComputerSystem_DebugMessage(106, SHORTTERMSCHEDULE);
 	ComputerSystem_DebugMessage(112, SHORTTERMSCHEDULE);
-	for (i; i < numberOfReadyToRunProcesses[0] - 1; i++)
+	for (i = 0; i < numberOfReadyToRunProcesses[0] - 1; i++)
 	{
 		// readytorunqueue[i] -> es el pid del proceso
 		ComputerSystem_DebugMessage(107, SHORTTERMSCHEDULE, readyToRunQueue[0][i].info, processTable[readyToRunQueue[0][i].info].priority);
 	}
 	ComputerSystem_DebugMessage(114, SHORTTERMSCHEDULE, readyToRunQueue[0][i].info, processTable[readyToRunQueue[0][i].info].priority);
-	i = 0;
+	
 	ComputerSystem_DebugMessage(113, SHORTTERMSCHEDULE);
-	for (i; i < numberOfReadyToRunProcesses[1] - 1; i++)
+	for (i = 0; i < numberOfReadyToRunProcesses[1] - 1; i++)
 	{
 		// readytorunqueue[i] -> es el pid del proceso
 		ComputerSystem_DebugMessage(107, SHORTTERMSCHEDULE, readyToRunQueue[0][i].info, processTable[readyToRunQueue[0][i].info].priority);
