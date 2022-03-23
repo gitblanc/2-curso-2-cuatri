@@ -100,7 +100,7 @@ void OperatingSystem_Initialize(int daemonsIndex)
 	// Create all user processes from the information given in the command line, PLP
 	processesCreated = OperatingSystem_LongTermScheduler();
 	if(processesCreated <= 1){
-		OperatingSystem_TerminateProcess();
+		OperatingSystem_ReadyToShutdown();
 	}
 	//EJ 15 end
 
