@@ -10,7 +10,12 @@
       "ProjectGuid": "56fa5fd9-0615-4b08-96e1-4a7e866d67f9",
       "DisplayName": "model",
       "ColorIndex": 1
+    },
+    "7b36befc-e52c-4e1e-b86f-6686bcbca4ef": {
+      "ProjectGuid": "7b36befc-e52c-4e1e-b86f-6686bcbca4ef",
+      "DisplayName": "queries_exam",
+      "ColorIndex": 2
     }
   },
-  "NextColorIndex": 2
+  "NextColorIndex": 3
 }

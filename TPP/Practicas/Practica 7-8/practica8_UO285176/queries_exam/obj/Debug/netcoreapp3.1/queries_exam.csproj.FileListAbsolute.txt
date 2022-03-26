@@ -1,0 +1,17 @@
+C:\Users\blanc\OneDrive\Documentos\2-curso-2-cuatri\TPP\Practicas\Practica 7-8\practica8_UO285176\queries_exam\obj\Debug\netcoreapp3.1\queries_exam.csproj.AssemblyReference.cache
+C:\Users\blanc\OneDrive\Documentos\2-curso-2-cuatri\TPP\Practicas\Practica 7-8\practica8_UO285176\queries_exam\obj\Debug\netcoreapp3.1\queries_exam.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\blanc\OneDrive\Documentos\2-curso-2-cuatri\TPP\Practicas\Practica 7-8\practica8_UO285176\queries_exam\obj\Debug\netcoreapp3.1\queries_exam.AssemblyInfoInputs.cache
+C:\Users\blanc\OneDrive\Documentos\2-curso-2-cuatri\TPP\Practicas\Practica 7-8\practica8_UO285176\queries_exam\obj\Debug\netcoreapp3.1\queries_exam.AssemblyInfo.cs
+C:\Users\blanc\OneDrive\Documentos\2-curso-2-cuatri\TPP\Practicas\Practica 7-8\practica8_UO285176\queries_exam\obj\Debug\netcoreapp3.1\queries_exam.csproj.CoreCompileInputs.cache
+C:\Users\blanc\OneDrive\Documentos\2-curso-2-cuatri\TPP\Practicas\Practica 7-8\practica8_UO285176\queries_exam\bin\Debug\netcoreapp3.1\queries_exam.exe
+C:\Users\blanc\OneDrive\Documentos\2-curso-2-cuatri\TPP\Practicas\Practica 7-8\practica8_UO285176\queries_exam\bin\Debug\netcoreapp3.1\queries_exam.deps.json
+C:\Users\blanc\OneDrive\Documentos\2-curso-2-cuatri\TPP\Practicas\Practica 7-8\practica8_UO285176\queries_exam\bin\Debug\netcoreapp3.1\queries_exam.runtimeconfig.json
+C:\Users\blanc\OneDrive\Documentos\2-curso-2-cuatri\TPP\Practicas\Practica 7-8\practica8_UO285176\queries_exam\bin\Debug\netcoreapp3.1\queries_exam.runtimeconfig.dev.json
+C:\Users\blanc\OneDrive\Documentos\2-curso-2-cuatri\TPP\Practicas\Practica 7-8\practica8_UO285176\queries_exam\bin\Debug\netcoreapp3.1\queries_exam.dll
+C:\Users\blanc\OneDrive\Documentos\2-curso-2-cuatri\TPP\Practicas\Practica 7-8\practica8_UO285176\queries_exam\bin\Debug\netcoreapp3.1\queries_exam.pdb
+C:\Users\blanc\OneDrive\Documentos\2-curso-2-cuatri\TPP\Practicas\Practica 7-8\practica8_UO285176\queries_exam\bin\Debug\netcoreapp3.1\model.dll
+C:\Users\blanc\OneDrive\Documentos\2-curso-2-cuatri\TPP\Practicas\Practica 7-8\practica8_UO285176\queries_exam\bin\Debug\netcoreapp3.1\model.pdb
+C:\Users\blanc\OneDrive\Documentos\2-curso-2-cuatri\TPP\Practicas\Practica 7-8\practica8_UO285176\queries_exam\obj\Debug\netcoreapp3.1\queries_exam.csproj.CopyComplete
+C:\Users\blanc\OneDrive\Documentos\2-curso-2-cuatri\TPP\Practicas\Practica 7-8\practica8_UO285176\queries_exam\obj\Debug\netcoreapp3.1\queries_exam.dll
+C:\Users\blanc\OneDrive\Documentos\2-curso-2-cuatri\TPP\Practicas\Practica 7-8\practica8_UO285176\queries_exam\obj\Debug\netcoreapp3.1\queries_exam.pdb
+C:\Users\blanc\OneDrive\Documentos\2-curso-2-cuatri\TPP\Practicas\Practica 7-8\practica8_UO285176\queries_exam\obj\Debug\netcoreapp3.1\queries_exam.genruntimeconfig.cache
