@@ -15,7 +15,12 @@
       "ProjectGuid": "306e5034-63ea-4f12-9170-4c450c3213df",
       "DisplayName": "generators",
       "ColorIndex": 2
+    },
+    "c7a89459-54f0-40cd-9c0b-55e01ab45d21": {
+      "ProjectGuid": "c7a89459-54f0-40cd-9c0b-55e01ab45d21",
+      "DisplayName": "currying",
+      "ColorIndex": 3
     }
   },
-  "NextColorIndex": 3
+  "NextColorIndex": 4
 }

@@ -1,12 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "DncNyim0rf+touVtEHpFIicDZChrhqrjGzdr6pWcXsbv4O7oviLJ5I8m5avSMUj/GsrPWXPKK6cjb09opHkPAw==",
+  "dgSpecHash": "gEbOoQwDRZaRaob4JvkHbTjlSPHFhb4T+ZQInrV1B5DA9xWl3ieywViUH0dD0+Px6wcdyxElUBnEyIu8BbP9Zg==",
   "success": true,
-  "projectFilePath": "/Users/blanc/Documents/2-curso-2cuatri/TPP/Practicas/Practica 2/practica2/default.argument.values/default.argument.values.csproj",
+  "projectFilePath": "C:\\Users\\blanc\\OneDrive\\Documentos\\2-curso-2-cuatri\\TPP\\Practicas\\Practica 2\\practica2\\default.argument.values\\default.argument.values.csproj",
   "expectedPackageFiles": [
-    "/Users/blanc/.nuget/packages/microsoft.csharp/4.7.0/microsoft.csharp.4.7.0.nupkg.sha512",
-    "/Users/blanc/.nuget/packages/system.data.datasetextensions/4.5.0/system.data.datasetextensions.4.5.0.nupkg.sha512",
-    "/Users/blanc/.nuget/packages/microsoft.netcore.app.host.osx-x64/3.1.22/microsoft.netcore.app.host.osx-x64.3.1.22.nupkg.sha512"
+    "C:\\Users\\blanc\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
+    "C:\\Users\\blanc\\.nuget\\packages\\system.data.datasetextensions\\4.5.0\\system.data.datasetextensions.4.5.0.nupkg.sha512",
+    "C:\\Users\\blanc\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\3.1.22\\microsoft.netcore.app.host.win-x64.3.1.22.nupkg.sha512"
   ],
   "logs": []
 }

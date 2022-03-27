@@ -32,6 +32,7 @@ namespace queries_exam
             query.Consulta6();
             query.Consulta7();
             query.Homework5();
+            query.Homework4();
         }
 
         private void Query1()
@@ -229,7 +230,14 @@ namespace queries_exam
             // Show the departments with the youngest employee, 
             // together with the name of the youngest employee and his/her age 
             // (more than one youngest employee may exist)
-
+            var deps = model.Employees.GroupBy(e => e.Department.Name,
+                (dep, empl) => new
+                {
+                    DepName = dep,
+                    Empleados = empl,
+                    MinAge = empl.Select(e => e.Age).Min()
+                }).Select(d => $"Department = {d.DepName}, Empleado = {d.Empleados.First(e => e.Age.Equals(d.MinAge)).Name}, Edad = {d.MinAge}");
+            Show(deps);
         }
 
         private void Homework5()
@@ -246,9 +254,9 @@ namespace queries_exam
                     Department = e.Department,
                     Duration = c.Seconds
                 }).GroupBy(e => e.Department, (a, b) => new
-                { 
+                {
                     name = a.Name,
-                    duration = b.Aggregate(0, (a,c) => a + c.Duration)
+                    duration = b.Aggregate(0, (a, c) => a + c.Duration)
                 });
             Show(res);
 

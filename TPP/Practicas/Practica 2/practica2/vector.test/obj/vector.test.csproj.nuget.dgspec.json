@@ -1,33 +1,39 @@
 {
   "format": 1,
   "restore": {
-    "/Users/blanc/Documents/2-curso-2cuatri/TPP/Practicas/Practica 2/practica2/vector.test/vector.test.csproj": {}
+    "C:\\Users\\blanc\\OneDrive\\Documentos\\2-curso-2-cuatri\\TPP\\Practicas\\Practica 2\\practica2\\vector.test\\vector.test.csproj": {}
   },
   "projects": {
-    "/Users/blanc/Documents/2-curso-2cuatri/TPP/Practicas/Practica 2/practica2/vector.test/vector.test.csproj": {
+    "C:\\Users\\blanc\\OneDrive\\Documentos\\2-curso-2-cuatri\\TPP\\Practicas\\Practica 2\\practica2\\vector.test\\vector.test.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/blanc/Documents/2-curso-2cuatri/TPP/Practicas/Practica 2/practica2/vector.test/vector.test.csproj",
+        "projectUniqueName": "C:\\Users\\blanc\\OneDrive\\Documentos\\2-curso-2-cuatri\\TPP\\Practicas\\Practica 2\\practica2\\vector.test\\vector.test.csproj",
         "projectName": "vector.test",
-        "projectPath": "/Users/blanc/Documents/2-curso-2cuatri/TPP/Practicas/Practica 2/practica2/vector.test/vector.test.csproj",
-        "packagesPath": "/Users/blanc/.nuget/packages/",
-        "outputPath": "/Users/blanc/Documents/2-curso-2cuatri/TPP/Practicas/Practica 2/practica2/vector.test/obj/",
+        "projectPath": "C:\\Users\\blanc\\OneDrive\\Documentos\\2-curso-2-cuatri\\TPP\\Practicas\\Practica 2\\practica2\\vector.test\\vector.test.csproj",
+        "packagesPath": "C:\\Users\\blanc\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\blanc\\OneDrive\\Documentos\\2-curso-2-cuatri\\TPP\\Practicas\\Practica 2\\practica2\\vector.test\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "/Users/blanc/.config/NuGet/NuGet.Config"
+          "C:\\Users\\blanc\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp3.1"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "netcoreapp3.1": {
             "targetAlias": "netcoreapp3.1",
             "projectReferences": {
-              "/Users/blanc/Documents/2-curso-2cuatri/TPP/Practicas/Practica 2/practica2/vector/vector.csproj": {
-                "projectPath": "/Users/blanc/Documents/2-curso-2cuatri/TPP/Practicas/Practica 2/practica2/vector/vector.csproj"
+              "C:\\Users\\blanc\\OneDrive\\Documentos\\2-curso-2-cuatri\\TPP\\Practicas\\Practica 2\\practica2\\vector\\vector.csproj": {
+                "projectPath": "C:\\Users\\blanc\\OneDrive\\Documentos\\2-curso-2-cuatri\\TPP\\Practicas\\Practica 2\\practica2\\vector\\vector.csproj"
               }
             }
           }
@@ -74,26 +80,32 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/6.0.101/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.101\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "/Users/blanc/Documents/2-curso-2cuatri/TPP/Practicas/Practica 2/practica2/vector/vector.csproj": {
+    "C:\\Users\\blanc\\OneDrive\\Documentos\\2-curso-2-cuatri\\TPP\\Practicas\\Practica 2\\practica2\\vector\\vector.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/blanc/Documents/2-curso-2cuatri/TPP/Practicas/Practica 2/practica2/vector/vector.csproj",
+        "projectUniqueName": "C:\\Users\\blanc\\OneDrive\\Documentos\\2-curso-2-cuatri\\TPP\\Practicas\\Practica 2\\practica2\\vector\\vector.csproj",
         "projectName": "vector",
-        "projectPath": "/Users/blanc/Documents/2-curso-2cuatri/TPP/Practicas/Practica 2/practica2/vector/vector.csproj",
-        "packagesPath": "/Users/blanc/.nuget/packages/",
-        "outputPath": "/Users/blanc/Documents/2-curso-2cuatri/TPP/Practicas/Practica 2/practica2/vector/obj/",
+        "projectPath": "C:\\Users\\blanc\\OneDrive\\Documentos\\2-curso-2-cuatri\\TPP\\Practicas\\Practica 2\\practica2\\vector\\vector.csproj",
+        "packagesPath": "C:\\Users\\blanc\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\blanc\\OneDrive\\Documentos\\2-curso-2-cuatri\\TPP\\Practicas\\Practica 2\\practica2\\vector\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "/Users/blanc/.config/NuGet/NuGet.Config"
+          "C:\\Users\\blanc\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp3.1"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -126,7 +138,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/6.0.101/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.101\\RuntimeIdentifierGraph.json"
         }
       }
     }
