@@ -1,0 +1,127 @@
+--1
+create table compras(
+    dni varchar(9),
+    nombre varchar(40),
+    apellido varchar(40),
+    numcochescomprados number(3)
+    );
+    
+create or replace procedure procedure9 as
+begin
+    insert into compras(dni, nombre, apellido,numcochescomprados)
+        select cl.dni, nombre, apellido, count(*) as numcoches
+        from ventas v, clientes cl
+        where v.dni=cl.dni
+        group by cl.dni, nombre, apellido;
+    commit;
+end procedure9;
+
+execute procedure9();
+
+alter table compras add datosmayus varchar2(100);
+
+create or replace trigger MantenerDatosMayus
+    before insert or update of nombre, apellido on compras
+    for each row
+begin
+:new.datosmayus:=upper(concat(:new.nombre, :new.apellido));
+end;
+
+insert into compras(dni, nombre, apellido) values('10','Paco','Fernández');
+
+--ej 2
+create or replace trigger IncrementaCompras
+    before insert on ventas
+    for each row
+begin
+    update compras set numcochescomprados=numcochescomprados+1
+        where dni=:new.dni;
+end;
+    
+insert into ventas values('1','2','1','verde');
+alter trigger incrementacompras disable;
+
+--ej 3
+create or replace trigger DecrementaCompras
+    after insert or delete on ventas
+    for each row
+begin
+    if inserting then
+     update compras set numcochescomprados=numcochescomprados+1
+        where dni=:new.dni;
+    elsif deleting then
+        update compras set numcochescomprados=numcochescomprados-1
+            where dni=:old.dni;
+    end if;
+end;
+    
+delete from ventas where dni=1;
+--ej 4
+drop table auditoria_clientes;
+create table auditoria_clientes(
+    dniant varchar(9),
+    nombreant varchar(40),
+    apellidoant varchar(40),
+    ciudadant varchar(25),
+    dniact varchar(9),
+    nombreact varchar(40),
+    apellidoact varchar(40),
+    ciudadact varchar(25),
+    fechahora date
+    );
+
+create or replace trigger cambioclientes
+ before insert or delete or update on clientes
+    for each row
+begin
+    if inserting then
+        insert into auditoria_clientes values(
+            null, null, null, null,
+            :new.dni, :new.nombre, :new.apellido, :new.ciudad,
+            sysdate);
+    elsif deleting then
+         insert into auditoria_clientes values(
+            :old.dni, :old.dni, :old.dni, :old.dni,
+            null, null, null, null,
+            sysdate);
+    else
+         insert into auditoria_clientes values(
+            :old.dni, :old.dni, :old.dni, :old.dni,
+            :new.dni, :new.nombre, :new.apellido, :new.ciudad,
+            sysdate);
+    end if;
+end;
+
+update clientes set nombre = 'CAMBIO' where dni='6';
+
+--ej 5
+create or replace trigger compruebastockcoches
+    before insert or update of cifc,codcoche on ventas
+    for each row
+declare n cantidad%type;
+begin
+    select cantidad into n from distribucion 
+        where cifc=:new.cifc and codcoche=:new.codcoche;
+    if n < 1 then
+        raise_application_error(-20001, 'No quedan coches de tipo ' || :new.codcoche
+        || ' en el concesionario ' || :new.cifc);
+    end if;
+exception--si no existe el concesionario o el tipo de coche
+when no_data_found then 
+    raise_application_error(-20002, 'No existen coches de este tipo en el concesionario');
+end;
+
+create  or replace trigger mantenstockcoches
+    after insert or delete or update of cifc, codcoche on ventas
+    for each row
+begin
+    if inserting or updating then
+        update distribucion set cantidad=cantidad-1
+            where cifc=:new.cifc and codcoche=:new.codcoche;
+    end if;
+    
+    if deleting or updating then
+        update distribucion set cantidad=cantidad-1
+            where cifc=:old.cifc and codcoche=:old.codcoche;
+    end if;
+end;
