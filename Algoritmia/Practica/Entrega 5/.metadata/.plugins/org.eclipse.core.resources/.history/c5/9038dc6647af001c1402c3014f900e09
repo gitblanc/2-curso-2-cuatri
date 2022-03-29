@@ -1,0 +1,19 @@
+package levenshtein;
+
+import java.util.Random;
+public class Main {
+
+	public static void main(String[] args) {
+		Levenshtein l = new Levenshtein();
+		System.out.println("Distancia: " + l.distanciaLevenshtein(args[0], args[1]));
+		l.print();
+
+	}
+	
+	public String generateRandomString() {
+		int a = 97;
+		int z = 122;
+		int longitudCadena = Random
+	}
+
+}

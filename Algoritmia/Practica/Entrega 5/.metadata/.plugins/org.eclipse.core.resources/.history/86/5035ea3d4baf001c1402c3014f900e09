@@ -1,0 +1,15 @@
+package levenshtein;
+
+public class Main {
+
+	public static void main(String[] args) {
+		Levenshtein l = new Levenshtein();
+		System.out.println("Distancia: " + l.distanciaLevenshtein(args[0], args[1]));
+		l.print();
+		for (int i = 100; i < 100000; i *= 2) {
+			String x = l.generateRandomString(i);
+			System.out.println(x);
+		}
+	}
+
+}

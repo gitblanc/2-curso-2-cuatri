@@ -3,6 +3,8 @@
  */
 package levenshtein;
 
+import java.util.Random;
+
 /**
  * @author UO285176
  *
@@ -12,15 +14,17 @@ public class Levenshtein {
 	String[] cad1;
 	String[] cad2;
 
+	Random r = new Random();
+
 	public int distanciaLevenshtein(String cad1, String cad2) {
 		int n = cad1.length();
 		int m = cad2.length();
-		if(n == 0 && m == 0) {
+		if (n == 0 && m == 0) {
 			return 0;
 		}
-		if(n == 0)
+		if (n == 0)
 			return m;
-		if(m == 0)
+		if (m == 0)
 			return n;
 		d = new int[n + 1][m + 1];
 		this.cad1 = new String[cad1.length() + 1];
@@ -28,24 +32,24 @@ public class Levenshtein {
 		this.cad1[0] = "";
 		this.cad2[0] = "";
 		int z = 1;
-		for (String letra : cad1.split("")) {
+		for (String letra : cad1.split("")) {// O(n)
 			this.cad1[z] = letra;
 			z++;
 		}
 		z = 1;
-		for (String letra : cad2.split("")) {
+		for (String letra : cad2.split("")) {// O(n)
 			this.cad2[z] = letra;
 			z++;
 		}
 		// Peor caso -> tener que insertar todas
-		for (int x = 0; x <= n; x++)
+		for (int x = 0; x <= n; x++)// O(n)
 			d[x][0] = x;
 
-		for (int k = 0; k <= m; k++)
+		for (int k = 0; k <= m; k++)// O(n)
 			d[0][k] = k;
 
-		for (int i = 1; i <= n; i++) {
-			for (int j = 1; j <= m; j++) {
+		for (int i = 1; i <= n; i++) {// O(n)
+			for (int j = 1; j <= m; j++) {// O(n)
 				if (this.cad1[i].equals(this.cad2[j])) {
 					d[i][j] = d[i - 1][j - 1];
 				} else {
@@ -55,12 +59,12 @@ public class Levenshtein {
 
 			}
 		}
-		return d[n - 1][m - 1];
+		return d[n][m];// O(n^2)-> complejidad final del algoritmo
 	}
 
 	public void print() {
 		System.out.print("\t");
-		for(String s : this.cad2)
+		for (String s : this.cad2)
 			System.out.print(s.toUpperCase() + "\t");
 		System.out.println("\n");
 		for (int i = 0; i < d.length; i++) {
@@ -70,5 +74,19 @@ public class Levenshtein {
 			}
 			System.out.println("\n");
 		}
+	}
+
+	public String generateRandomString() {
+		// Se buscan los carácteres ascii
+		int a = 97;
+		int z = 122;
+		int longitudCadenas = 10;// n==m
+		StringBuilder buffer = new StringBuilder(longitudCadenas);
+		for (int i = 0; i < longitudCadenas; i++) {
+
+			int randomchar = r.nextInt(z - a) + a;// se busca un carácter entre la z y la z
+			buffer.append((char) randomchar);// se añade a la cadena
+		}
+		return buffer.toString();
 	}
 }
