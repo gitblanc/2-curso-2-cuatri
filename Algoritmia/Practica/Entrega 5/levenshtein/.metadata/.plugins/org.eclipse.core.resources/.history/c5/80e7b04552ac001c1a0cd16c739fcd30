@@ -1,0 +1,14 @@
+package levenshtein;
+
+public class Main {
+
+	public static void main(String[] args) {
+		Levenshtein l = new Levenshtein();
+		int n = l.distanciaLevenshtein(args[0], args[1]);
+		System.out.println();
+		if (n > 0)
+			l.print();
+
+	}
+
+}

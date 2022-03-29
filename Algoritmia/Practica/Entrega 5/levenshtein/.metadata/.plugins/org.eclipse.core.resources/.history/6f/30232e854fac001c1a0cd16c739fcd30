@@ -1,0 +1,60 @@
+/**
+ * 
+ */
+package levenshtein;
+
+/**
+ * @author UO285176
+ *
+ */
+public class Levenshtein {
+	int[][] d;
+	String[] cad1;
+	String[] cad2;
+
+	public int distanciaLevenshtein(String cad1, String cad2) {
+
+		int n = cad1.length();
+		int m = cad2.length();
+		d = new int[n + 1][m + 1];
+		this.cad1 = cad1.split("");
+		this.cad2 = cad2.split("");
+
+		// Comprobamos que ninguna de las dos cadenas esté vacía
+		if (n == 0) {
+			return m;
+		}
+		if (m == 0) {
+			return n;
+		}
+
+		// Peor caso -> tener que insertar todas
+		for (int x = 0; x < n; x++)
+			d[x][0] = x;
+
+		for (int k = 0; k < m; k++)
+			d[0][k] = k;
+
+		for (int i = 1; i < n; i++) {
+			for (int j = 1; j < m; j++) {
+				if (this.cad1[i - 1] == this.cad2[j - 1]) {
+					d[i][j] = d[i - 1][j - 1];
+				} else {
+					int aux = Math.min(d[i - 1][j - 1], d[i][j - 1]);
+					d[i][j] = 1 + Math.min(aux, d[i - 1][j]);
+				}
+
+			}
+		}
+		return d[n - 1][m - 1];
+	}
+
+	public void print() {
+		for (int i = 0; i < d.length; i++) {
+			for (int j = 0; j < d.length; j++) {
+				System.out.print(d[i][j] + "\t");
+			}
+			System.out.println("\n");
+		}
+	}
+}

@@ -1,0 +1,4 @@
+INDEX VERSION 1.131+C:\Users\omenp\Documents\2-curso-2-cuatri\Algoritmia\Practica\Entrega 5\levenshtein\.metadata\.plugins\org.eclipse.jdt.core
+1865797976.index
+2132793411.index
+95052901.index

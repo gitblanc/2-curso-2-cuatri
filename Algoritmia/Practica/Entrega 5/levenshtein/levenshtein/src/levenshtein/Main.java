@@ -1,0 +1,21 @@
+package levenshtein;
+
+public class Main {
+
+	public static void main(String[] args) {
+		Levenshtein l = new Levenshtein();
+		System.out.println("Distancia: " + l.distanciaLevenshtein(args[0], args[1]));
+		l.print();
+		for (int k = 100; k < 100000000; k *= 2) {
+			String n = l.generateRandomString(k);// se le pasa el tamaño que tendrá la cadena n
+			String m = l.generateRandomString(k);// se le pasa el tamaño que tendrá la cadena m
+			long tinicio = System.currentTimeMillis();
+			for (int i = 1; i < 1000; i++) {
+				l.distanciaLevenshtein(n, m);
+			}
+			long tfinal = System.currentTimeMillis();
+			System.out.println("TAMAÑO= " + k + " , TIEMPO = " + (tfinal - tinicio));
+		}
+	}
+
+}
