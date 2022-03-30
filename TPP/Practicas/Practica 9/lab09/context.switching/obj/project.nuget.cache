@@ -1,11 +1,15 @@
 {
   "version": 2,
-  "dgSpecHash": "DR7nGPe1pYG9u3+0WmFQ32drUZSEXcXGIcnwnKlgpH1uOMgsnD5VmQQPFGBTNSAgWX0B5pEEZ16k4QgQ4rKJbA==",
+  "dgSpecHash": "E1ejQkxQuf9/eSBL2xgVr4C/2dCVLpkCeEVNBn1T+Fj/Vs7KAnd3KKe9eknBuGoHjsKeXJtPPJ+TlmN5DNY31g==",
   "success": true,
-  "projectFilePath": "C:\\Users\\UO285176\\Desktop\\practica9\\context.switching\\context.switching.csproj",
+  "projectFilePath": "C:\\Users\\omenp\\Documents\\2-curso-2-cuatri\\TPP\\Practicas\\Practica 9\\lab09\\context.switching\\context.switching.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\UO285176\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
-    "C:\\Users\\UO285176\\.nuget\\packages\\system.data.datasetextensions\\4.5.0\\system.data.datasetextensions.4.5.0.nupkg.sha512"
+    "C:\\Users\\omenp\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
+    "C:\\Users\\omenp\\.nuget\\packages\\system.data.datasetextensions\\4.5.0\\system.data.datasetextensions.4.5.0.nupkg.sha512",
+    "C:\\Users\\omenp\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\3.1.23\\microsoft.netcore.app.host.win-x64.3.1.23.nupkg.sha512",
+    "C:\\Users\\omenp\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\3.1.10\\microsoft.aspnetcore.app.ref.3.1.10.nupkg.sha512",
+    "C:\\Users\\omenp\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\3.1.0\\microsoft.windowsdesktop.app.ref.3.1.0.nupkg.sha512",
+    "C:\\Users\\omenp\\.nuget\\packages\\microsoft.netcore.app.ref\\3.1.0\\microsoft.netcore.app.ref.3.1.0.nupkg.sha512"
   ],
   "logs": []
 }
