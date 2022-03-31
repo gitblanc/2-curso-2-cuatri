@@ -15,6 +15,9 @@ void OperatingSystem_ReadyToShutdown();
 void OperatingSystem_TerminatingSIP();
 void OperatingSystem_PrepareDaemons(int);
 int OperatingSystem_PrepareTeachersDaemons(int, char *);
+void OperatingSystem_ShowTime(char);
+void OperatingSystem_PrintStatus();
+void OperatingSystem_PrintReadyToRunQueue();
 
 // These "extern" declaration enables other source code files to gain access
 // to the variable listed
@@ -22,5 +25,10 @@ extern PCB processTable[];
 extern int OS_address_base;
 extern int sipID;
 extern char DAEMONS_PROGRAMS_FILE[];
+
+#ifdef SLEEPINGQUEUE
+extern heapItem sleepingProcessesQueue[];
+extern int numberOfSleepingProcesses; 
+#endif
 
 #endif

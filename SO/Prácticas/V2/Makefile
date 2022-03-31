@@ -17,7 +17,7 @@ WRAP = -Wl,-wrap,OperatingSystem_InterruptLogic,-wrap,Processor_FetchInstruction
 ${PROGRAM}: Simulator.o Asserts.o Buses.o Clock.o ComputerSystem.o ComputerSystemBase.o Heap.o MainMemory.o Messages.o MMU.o OperatingSystem.o OperatingSystemBase.o Processor.o ProcessorBase.o Wrappers.o
 	$(CC) -o ${PROGRAM} Simulator.o Asserts.o Buses.o Clock.o ComputerSystem.o ComputerSystemBase.o Heap.o MainMemory.o Messages.o MMU.o OperatingSystem.o OperatingSystemBase.o Processor.o ProcessorBase.o Wrappers.o $(LIBRERIAS) $(WRAP)
 
-Simulator.o: Simulator.c Simulator.h ComputerSystem.h ComputerSystemBase.h Asserts.h
+Simulator.o: Simulator.c Simulator.h ComputerSystem.h ComputerSystemBase.h Asserts.h Options.def
 	$(CC) $(STDCFLAGS) $(INCLUDES) Simulator.c
 
 Asserts.o: Asserts.c Asserts.h MainMemory.h Simulator.h Clock.h ComputerSystemBase.h ComputerSystem.h MMU.h Heap.h Processor.h ProcessorBase.h Buses.h Instructions.def OperatingSystem.h

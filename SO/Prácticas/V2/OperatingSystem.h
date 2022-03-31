@@ -21,6 +21,7 @@
 //EJ 11 V1
 // In OperatingSystem.h
 #define NUMBEROFQUEUES 2
+#define SLEEPINGQUEUE //ej 5c V2
 enum TypeOfReadyToRunProcessQueues { USERPROCESSQUEUE, DAEMONSQUEUE};
 //EJ 11 V1
 
@@ -31,7 +32,7 @@ enum ProgramTypes { USERPROGRAM, DAEMONPROGRAM };
 enum ProcessStates { NEW, READY, EXECUTING, BLOCKED, EXIT};
 
 // Enumerated type containing the list of system calls and their numeric identifiers
-enum SystemCallIdentifiers { SYSCALL_END=3, SYSCALL_PRINTEXECPID=5, SYSCALL_YIELD=4};//EJ 12 V1
+enum SystemCallIdentifiers { SYSCALL_END=3, SYSCALL_PRINTEXECPID=5, SYSCALL_YIELD=4, SYSCALL_SLEEP=7};//EJ 12 V1, EJ 5d V2
 
 // A PCB contains all of the information about a process that is needed by the OS
 typedef struct {
@@ -44,6 +45,7 @@ typedef struct {
 	unsigned int copyOfPSWRegister;
 	int queueId;
 	int programListIndex;
+	int whenToWakeUp;//ej 5 V2
 } PCB;
 
 // These "extern" declaration enables other source code files to gain access

@@ -4,6 +4,7 @@
 // Functions prototypes
 int ComputerSystem_ObtainProgramList(int , char *[], int);
 void ComputerSystem_DebugMessage(int, char , ...);
+void ComputerSystem_ShowTime(char);
 
 // Sections in which we divide our simulator in terms of
 // debugging messages that show its internal working details
@@ -30,5 +31,8 @@ typedef struct ProgramData {
 
 // This "extern" declarations enables other source code files to gain access to the variables 
 extern char defaultDebugLevel[];
+extern int intervalBetweenInterrupts;
+
+#define DEFAULT_INTERVAL_BETWEEN_INTERRUPTS 5
 
 #endif

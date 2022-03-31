@@ -27,6 +27,8 @@ void OperatingSystem_HandleSystemCall();
 void OperatingSystem_PrintReadyToRunQueue(); // EJ 9 V1
 void OperatingSystem_HandleClockInterrupt();
 char *statesNames[5] = {"NEW", "READY", "EXECUTING", "BLOCKED", "EXIT"}; // EJ 10 V1
+void OperatingSystem_MoveToTheBLOCKEDState(int);						 //EJ 5d V2
+int OperatingSystem_ExtractFromBLOCKEDToRun();							 //EJ 6 V2
 
 // EJ 11 V1
 //  In OperatingSystem.c
@@ -66,6 +68,11 @@ int baseDaemonsInProgramList;
 int numberOfNotTerminatedUserProcesses = 0;
 
 char DAEMONS_PROGRAMS_FILE[MAXIMUMLENGTH] = "teachersDaemons";
+
+// In OperatingSystem.c Exercise 5b of V2
+// Heap with blocked processes sort by when to wakeup
+heapItem sleepingProcessesQueue[PROCESSTABLEMAXSIZE];
+int numberOfSleepingProcesses = 0;
 
 // Initial set of tasks of the OS
 //EJ 15 V1 begin
@@ -467,7 +474,26 @@ void OperatingSystem_HandleSystemCall()
 		}
 		break;
 		// EJ 12 V1 end
+	//Ej 5d V2 begin
+	case SYSCALL_SLEEP:
+		OperatingSystem_MoveToTheBLOCKEDState(executingProcessID);
+		break;
 	}
+}
+
+//EJ 5 d V2
+void OperatingSystem_MoveToTheBLOCKEDState(int PID)
+{
+
+	if (Heap_add(PID, sleepingProcessesQueue, QUEUE_WAKEUP, &numberOfSleepingProcesses, PROCESSTABLEMAXSIZE) >= 0)
+	{
+		OperatingSystem_ShowTime(SYSPROC);
+		ComputerSystem_DebugMessage(110, SYSPROC, PID, programList[processTable[PID].programListIndex]->executableName, statesNames[processTable[PID].state], statesNames[BLOCKED]);
+		processTable[PID].state = BLOCKED;
+		processTable[PID].whenToWakeUp = abs(Processor_GetAccumulator()) + abs(numberOfClockInterrupts) + 1;
+	}
+	OperatingSystem_PrintStatus();
+	//Ej 5d V2 end
 }
 
 //	Implement interrupt logic calling appropriate interrupt handle
@@ -539,9 +565,71 @@ void OperatingSystem_PrintReadyToRunQueue()
 }
 // EJ 11 V1
 
-// In OperatingSystem.c Exercise 2-b of V2
-void OperatingSystem_HandleClockInterrupt(){ 
+// // In OperatingSystem.c Exercise 2-b of V2
+// void OperatingSystem_HandleClockInterrupt()
+// {
+// 	numberOfClockInterrupts += 1;
+// 	OperatingSystem_ShowTime(INTERRUPT);
+// 	ComputerSystem_DebugMessage(120, INTERRUPT, numberOfClockInterrupts);
+// 	return;
+// }
+
+//EJ 6 a)
+int OperatingSystem_ExtractFromBLOCKEDToRun()
+{
+
+	int selectedProcess = NOPROCESS;
+
+	selectedProcess = Heap_poll(sleepingProcessesQueue, QUEUE_PRIORITY, &(numberOfSleepingProcesses));
+
+	// Return most priority process or NOPROCESS if empty queue
+	return selectedProcess;
+}
+
+// EJ 6 begin
+void OperatingSystem_HandleClockInterrupt()
+{
 	numberOfClockInterrupts += 1;
 	OperatingSystem_ShowTime(INTERRUPT);
 	ComputerSystem_DebugMessage(120, INTERRUPT, numberOfClockInterrupts);
-	return; }
+	int cont = 0; // va a contar los procesos desbloqueados
+	//apartado a) begin
+	for (int i = 0; i < numberOfSleepingProcesses; i++)
+	{
+		if (processTable[i].whenToWakeUp == numberOfClockInterrupts)
+		{
+			cont++;
+			int process = OperatingSystem_ExtractFromBLOCKEDToRun();
+			OperatingSystem_MoveToTheREADYState(process);
+			i--;//para no saltarnos p
+		}
+	}
+	if (cont > 0) //EJ 6 b) V2
+	{
+		OperatingSystem_PrintStatus();
+		//EJ 6 c) V2
+		int procesoPrioritario = checkPriorityOfExecutingProcess();//funcion que devuelve el proceso más prioritario
+		if (procesoPrioritario != executingProcessID)
+		{
+			ComputerSystem_DebugMessage(121, SHORTTERMSCHEDULE, executingProcessID, programList[processTable[executingProcessID].programListIndex]->executableName, procesoPrioritario, programList[processTable[procesoPrioritario].programListIndex]->executableName);
+			OperatingSystem_PreemptRunningProcess();//sustituir el proceso
+			OperatingSystem_Dispatch(OperatingSystem_ShortTermScheduler());
+			OperatingSystem_PrintStatus();
+		}
+	}
+	return;
+}
+//EJ 6 end
+
+int checkPriorityOfExecutingProcess()
+{
+	int prioritariouser = Heap_getFirst(readyToRunQueue[USERPROCESSQUEUE],numberOfReadyToRunProcesses[USERPROCESSQUEUE]);//devuelve el más prioritario USERS
+	int prioritariodaemons = Heap_getFirst(readyToRunQueue[DAEMONSQUEUE], numberOfReadyToRunProcesses[DAEMONSQUEUE]);//devuelve el más prioritario DAEMONS
+	if(executingProcessID < prioritariouser){
+		return prioritariouser;
+	}
+	if(executingProcessID < prioritariodaemons){
+		return prioritariodaemons;
+	}
+	return executingProcessID;
+}

@@ -28,3 +28,6 @@
 
 //EJ 3 V2
 120,@CClock interrupt number [%d] has occurred@@\n
+
+//EJ 6 V2
+121,Process [@%d - %s@@] will be thrown out of the processor by process [@%d - %s@@]\n
