@@ -33,7 +33,7 @@ namespace Practica9
         {
             this.result = 0;
             for (int i = this.fromIndex; i <= this.toIndex; i++)
-                if(this.vector[i].Value >= valorFijado)//si el valor supera la cifra establecida o es igual
+                if(this.vector[i].Value > valorFijado)//si el valor supera la cifra establecida o es igual
                     ++this.result;
         }
     }

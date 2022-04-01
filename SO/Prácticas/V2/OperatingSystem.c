@@ -27,8 +27,8 @@ void OperatingSystem_HandleSystemCall();
 void OperatingSystem_PrintReadyToRunQueue(); // EJ 9 V1
 void OperatingSystem_HandleClockInterrupt();
 char *statesNames[5] = {"NEW", "READY", "EXECUTING", "BLOCKED", "EXIT"}; // EJ 10 V1
-void OperatingSystem_MoveToTheBLOCKEDState(int);						 //EJ 5d V2
-int OperatingSystem_ExtractFromBLOCKEDToRun();							 //EJ 6 V2
+void OperatingSystem_MoveToTheBLOCKEDState(int);						 // EJ 5d V2
+int OperatingSystem_ExtractFromBLOCKEDToRun();							 // EJ 6 V2
 
 // EJ 11 V1
 //  In OperatingSystem.c
@@ -38,7 +38,7 @@ char *queueNames[NUMBEROFQUEUES] = {"USER", "DAEMONS"};
 
 // EJ 11 V1
 
-//EJ 4 V2
+// EJ 4 V2
 int numberOfClockInterrupts;
 // The process table
 PCB processTable[PROCESSTABLEMAXSIZE];
@@ -75,7 +75,7 @@ heapItem sleepingProcessesQueue[PROCESSTABLEMAXSIZE];
 int numberOfSleepingProcesses = 0;
 
 // Initial set of tasks of the OS
-//EJ 15 V1 begin
+// EJ 15 V1 begin
 void OperatingSystem_Initialize(int daemonsIndex)
 {
 
@@ -106,15 +106,15 @@ void OperatingSystem_Initialize(int daemonsIndex)
 	// Include in program list  all system daemon processes
 	OperatingSystem_PrepareDaemons(daemonsIndex);
 
-	//Ej 15 begin
-	// Create all user processes from the information given in the command line, PLP
+	// Ej 15 begin
+	//  Create all user processes from the information given in the command line, PLP
 	processCreated = OperatingSystem_LongTermScheduler();
 
 	if (processCreated <= 1)
 	{
 		OperatingSystem_ReadyToShutdown();
 	}
-	//EJ 15 end
+	// EJ 15 end
 
 	if (strcmp(programList[processTable[sipID].programListIndex]->executableName, "SystemIdleProcess"))
 	{
@@ -133,7 +133,7 @@ void OperatingSystem_Initialize(int daemonsIndex)
 	// Initial operation for Operating System
 	Processor_SetPC(OS_address_base);
 }
-//EJ 15 V1 end
+// EJ 15 V1 end
 
 // The LTS is responsible of the admission of new processes in the system.
 // Initially, it creates a process from each program specified in the
@@ -150,25 +150,25 @@ int OperatingSystem_LongTermScheduler()
 		{
 		// EJ 4 V1
 		case NOFREEENTRY:
-			//EJ 1 V2
+			// EJ 1 V2
 			OperatingSystem_ShowTime(ERROR);
 			ComputerSystem_DebugMessage(103, ERROR, programList[i]->executableName);
 			break;
 
 		// EJ5 V1
 		case PROGRAMDOESNOTEXIST:
-			//EJ 1 V2
+			// EJ 1 V2
 			OperatingSystem_ShowTime(ERROR);
 			ComputerSystem_DebugMessage(104, ERROR, programList[i]->executableName, "it does not exists");
 			break;
 		case PROGRAMNOTVALID:
-			//EJ 1 V2
+			// EJ 1 V2
 			OperatingSystem_ShowTime(ERROR);
 			ComputerSystem_DebugMessage(104, ERROR, programList[i]->executableName, "invalid priority or size");
 			break;
 		// EJ 6 V1
 		case TOOBIGPROCESS:
-			//EJ 1 V2
+			// EJ 1 V2
 			OperatingSystem_ShowTime(ERROR);
 			ComputerSystem_DebugMessage(105, ERROR, programList[i]->executableName);
 			break;
@@ -180,7 +180,7 @@ int OperatingSystem_LongTermScheduler()
 			OperatingSystem_MoveToTheREADYState(PID);
 		}
 	}
-
+	OperatingSystem_PrintStatus(); // EJ 7 V2
 	// Return the number of succesfully created processes
 	return numberOfSuccessfullyCreatedProcesses;
 }
@@ -266,7 +266,7 @@ void OperatingSystem_PCBInitialization(int PID, int initialPhysicalAddress, int 
 	processTable[PID].busy = 1;
 	processTable[PID].initialPhysicalAddress = initialPhysicalAddress;
 	processTable[PID].processSize = processSize;
-	//EJ 1 V2
+	// EJ 1 V2
 	OperatingSystem_ShowTime(SYSPROC);
 	// EJ10 V1
 	ComputerSystem_DebugMessage(111, SYSPROC, PID, programList[processTable[PID].programListIndex]->executableName, statesNames[NEW]);
@@ -295,12 +295,12 @@ void OperatingSystem_MoveToTheREADYState(int PID)
 
 	if (Heap_add(PID, readyToRunQueue[processTable[PID].queueId], QUEUE_PRIORITY, &(numberOfReadyToRunProcesses[processTable[PID].queueId]), PROCESSTABLEMAXSIZE) >= 0)
 	{
-		//EJ 1 V2
+		// EJ 1 V2
 		OperatingSystem_ShowTime(SYSPROC);
 		ComputerSystem_DebugMessage(110, SYSPROC, PID, programList[processTable[PID].programListIndex]->executableName, statesNames[processTable[PID].state], statesNames[READY]);
 		processTable[PID].state = READY;
 	}
-	OperatingSystem_PrintReadyToRunQueue();
+	// OperatingSystem_PrintReadyToRunQueue(); EJ 8 V2
 }
 
 // The STS is responsible of deciding which process to execute when specific events occur.
@@ -340,7 +340,7 @@ void OperatingSystem_Dispatch(int PID)
 
 	// The process identified by PID becomes the current executing process
 	executingProcessID = PID;
-	//EJ 1 V2
+	// EJ 1 V2
 	OperatingSystem_ShowTime(SYSPROC);
 	// EJ10 V1
 	ComputerSystem_DebugMessage(110, SYSPROC, PID, programList[processTable[PID].programListIndex]->executableName, statesNames[processTable[PID].state], statesNames[EXECUTING]);
@@ -394,31 +394,33 @@ void OperatingSystem_HandleException()
 	ComputerSystem_DebugMessage(71, SYSPROC, executingProcessID, programList[processTable[executingProcessID].programListIndex]->executableName);
 
 	OperatingSystem_TerminateProcess();
+	OperatingSystem_PrintStatus(); // EJ 7 V2
+	OperatingSystem_PrintStatus(); // EJ 7 V2
 }
 
 // All tasks regarding the removal of the process
-//regarding -> con respecto a la eliminacion del proceso
-//EJ 14 V1
+// regarding -> con respecto a la eliminacion del proceso
+// EJ 14 V1
 void OperatingSystem_TerminateProcess()
 {
 
 	int selectedProcess;
-	//EJ 1 V2
+	// EJ 1 V2
 	OperatingSystem_ShowTime(SYSPROC);
 	ComputerSystem_DebugMessage(110, SYSPROC, executingProcessID, programList[processTable[executingProcessID].programListIndex]->executableName, statesNames[processTable[executingProcessID].state], statesNames[EXIT]);
-	processTable[executingProcessID].state = EXIT; //se imprime un mensaje
+	processTable[executingProcessID].state = EXIT; // se imprime un mensaje
 
 	if (programList[processTable[executingProcessID].programListIndex]->type == USERPROGRAM)
 		// One more user process that has terminated
-		numberOfNotTerminatedUserProcesses--; //decrementa el número de procesos de usuario por terminar
+		numberOfNotTerminatedUserProcesses--; // decrementa el número de procesos de usuario por terminar
 
-	if (numberOfNotTerminatedUserProcesses == 0) //Si no quedan procesos de usuario
+	if (numberOfNotTerminatedUserProcesses == 0) // Si no quedan procesos de usuario
 	{
-		if (executingProcessID == sipID) //si el id del proceso es el del Idle process
+		if (executingProcessID == sipID) // si el id del proceso es el del Idle process
 		{
 			// finishing sipID, change PC to address of OS HALT instruction
-			OperatingSystem_TerminatingSIP();												 //se llama a la instruccion halt
-			ComputerSystem_DebugMessage(99, SHUTDOWN, "The system will shut down now...\n"); //se apaga el sistema
+			OperatingSystem_TerminatingSIP();												 // se llama a la instruccion halt
+			ComputerSystem_DebugMessage(99, SHUTDOWN, "The system will shut down now...\n"); // se apaga el sistema
 			return;																			 // Don't dispatch any process
 		}
 		// Simulation must finish, telling sipID to finish
@@ -430,7 +432,7 @@ void OperatingSystem_TerminateProcess()
 	// Assign the processor to that process
 	OperatingSystem_Dispatch(selectedProcess);
 }
-//EJ 14 end
+// EJ 14 end
 
 // System call management routine
 void OperatingSystem_HandleSystemCall()
@@ -454,34 +456,36 @@ void OperatingSystem_HandleSystemCall()
 		// Show message: "Process [executingProcessID] has requested to terminate\n"
 		ComputerSystem_DebugMessage(73, SYSPROC, executingProcessID, programList[processTable[executingProcessID].programListIndex]->executableName);
 		OperatingSystem_TerminateProcess();
+		OperatingSystem_PrintStatus(); // EJ 7 V2
 		break;
 	// EJ 12 V1 begin
 	case SYSCALL_YIELD:
-		//El anterior proceso le pasa el control al nuevo proceso
+		// El anterior proceso le pasa el control al nuevo proceso
 		actualQueue = processTable[executingProcessID].queueId;
 		actualPriority = processTable[executingProcessID].priority;
 		if (numberOfReadyToRunProcesses[actualQueue] > 0 && processTable[readyToRunQueue[actualQueue][0].info].priority == actualPriority)
 		{
-			newProcessId = readyToRunQueue[actualQueue][0].info;			//se asigna el nuevo
-			oldProcessId = executingProcessID;								//se guarda el antiguo
-			OperatingSystem_PreemptRunningProcess();						//paramos el proceso actual
-			OperatingSystem_Dispatch(OperatingSystem_ShortTermScheduler()); //se ejecuta el nuevo proceso pasandole ShortTerm...
-																			//EJ 1 V2
+			newProcessId = readyToRunQueue[actualQueue][0].info;			// se asigna el nuevo
+			oldProcessId = executingProcessID;								// se guarda el antiguo
+			OperatingSystem_PreemptRunningProcess();						// paramos el proceso actual
+			OperatingSystem_Dispatch(OperatingSystem_ShortTermScheduler()); // se ejecuta el nuevo proceso pasandole ShortTerm...
+																			// EJ 1 V2
 			OperatingSystem_ShowTime(SHORTTERMSCHEDULE);
 			ComputerSystem_DebugMessage(115, SHORTTERMSCHEDULE, oldProcessId,
 										programList[processTable[oldProcessId].programListIndex]->executableName,
 										newProcessId, programList[processTable[newProcessId].programListIndex]->executableName);
+			OperatingSystem_PrintStatus(); // EJ 7 V2
 		}
 		break;
 		// EJ 12 V1 end
-	//Ej 5d V2 begin
+	// Ej 5d V2 begin
 	case SYSCALL_SLEEP:
 		OperatingSystem_MoveToTheBLOCKEDState(executingProcessID);
 		break;
 	}
 }
 
-//EJ 5 d V2
+// EJ 5 d V2
 void OperatingSystem_MoveToTheBLOCKEDState(int PID)
 {
 
@@ -493,7 +497,7 @@ void OperatingSystem_MoveToTheBLOCKEDState(int PID)
 		processTable[PID].whenToWakeUp = abs(Processor_GetAccumulator()) + abs(numberOfClockInterrupts) + 1;
 	}
 	OperatingSystem_PrintStatus();
-	//Ej 5d V2 end
+	// Ej 5d V2 end
 }
 
 //	Implement interrupt logic calling appropriate interrupt handle
@@ -507,7 +511,7 @@ void OperatingSystem_InterruptLogic(int entryPoint)
 	case EXCEPTION_BIT: // EXCEPTION_BIT=6
 		OperatingSystem_HandleException();
 		break;
-	//EJ 2 V2
+	// EJ 2 V2
 	case CLOCKINT_BIT:
 		OperatingSystem_HandleClockInterrupt();
 		break;
@@ -532,34 +536,34 @@ void OperatingSystem_InterruptLogic(int entryPoint)
 void OperatingSystem_PrintReadyToRunQueue()
 {
 	int i;
-	//EJ 1 V2
+	// EJ 1 V2
 	OperatingSystem_ShowTime(SHORTTERMSCHEDULE);
 	ComputerSystem_DebugMessage(106, SHORTTERMSCHEDULE);
-	//EJ 1 V2
+	// EJ 1 V2
 	OperatingSystem_ShowTime(SHORTTERMSCHEDULE);
 	ComputerSystem_DebugMessage(112, SHORTTERMSCHEDULE);
 	for (i = 0; i < numberOfReadyToRunProcesses[0] - 1; i++)
 	{
-		//EJ 1 V2
+		// EJ 1 V2
 		OperatingSystem_ShowTime(SHORTTERMSCHEDULE);
 		// readytorunqueue[i] -> es el pid del proceso
 		ComputerSystem_DebugMessage(107, SHORTTERMSCHEDULE, readyToRunQueue[0][i].info, processTable[readyToRunQueue[0][i].info].priority);
 	}
-	//EJ 1 V2
+	// EJ 1 V2
 	OperatingSystem_ShowTime(SHORTTERMSCHEDULE);
 	ComputerSystem_DebugMessage(114, SHORTTERMSCHEDULE, readyToRunQueue[0][i].info, processTable[readyToRunQueue[0][i].info].priority);
 
-	//EJ 1 V2
+	// EJ 1 V2
 	OperatingSystem_ShowTime(SHORTTERMSCHEDULE);
 	ComputerSystem_DebugMessage(113, SHORTTERMSCHEDULE);
 	for (i = 0; i < numberOfReadyToRunProcesses[1] - 1; i++)
 	{
-		//EJ 1 V2
+		// EJ 1 V2
 		OperatingSystem_ShowTime(SHORTTERMSCHEDULE);
 		// readytorunqueue[i] -> es el pid del proceso
 		ComputerSystem_DebugMessage(107, SHORTTERMSCHEDULE, readyToRunQueue[0][i].info, processTable[readyToRunQueue[0][i].info].priority);
 	}
-	//EJ 1 V2
+	// EJ 1 V2
 	OperatingSystem_ShowTime(SHORTTERMSCHEDULE);
 	ComputerSystem_DebugMessage(108, SHORTTERMSCHEDULE, readyToRunQueue[0][i].info, processTable[readyToRunQueue[0][i].info].priority);
 }
@@ -574,7 +578,7 @@ void OperatingSystem_PrintReadyToRunQueue()
 // 	return;
 // }
 
-//EJ 6 a)
+// EJ 6 a)
 int OperatingSystem_ExtractFromBLOCKEDToRun()
 {
 
@@ -593,7 +597,7 @@ void OperatingSystem_HandleClockInterrupt()
 	OperatingSystem_ShowTime(INTERRUPT);
 	ComputerSystem_DebugMessage(120, INTERRUPT, numberOfClockInterrupts);
 	int cont = 0; // va a contar los procesos desbloqueados
-	//apartado a) begin
+	// apartado a) begin
 	for (int i = 0; i < numberOfSleepingProcesses; i++)
 	{
 		if (processTable[i].whenToWakeUp == numberOfClockInterrupts)
@@ -601,34 +605,36 @@ void OperatingSystem_HandleClockInterrupt()
 			cont++;
 			int process = OperatingSystem_ExtractFromBLOCKEDToRun();
 			OperatingSystem_MoveToTheREADYState(process);
-			i--;//para no saltarnos p
+			i--; // para no saltarnos p
 		}
 	}
-	if (cont > 0) //EJ 6 b) V2
+	if (cont > 0) // EJ 6 b) V2
 	{
 		OperatingSystem_PrintStatus();
-		//EJ 6 c) V2
-		int procesoPrioritario = checkPriorityOfExecutingProcess();//funcion que devuelve el proceso más prioritario
+		// EJ 6 c) V2
+		int procesoPrioritario = checkPriorityOfExecutingProcess(); // funcion que devuelve el proceso más prioritario
 		if (procesoPrioritario != executingProcessID)
 		{
 			ComputerSystem_DebugMessage(121, SHORTTERMSCHEDULE, executingProcessID, programList[processTable[executingProcessID].programListIndex]->executableName, procesoPrioritario, programList[processTable[procesoPrioritario].programListIndex]->executableName);
-			OperatingSystem_PreemptRunningProcess();//sustituir el proceso
+			OperatingSystem_PreemptRunningProcess(); // sustituir el proceso
 			OperatingSystem_Dispatch(OperatingSystem_ShortTermScheduler());
 			OperatingSystem_PrintStatus();
 		}
 	}
 	return;
 }
-//EJ 6 end
+// EJ 6 end
 
 int checkPriorityOfExecutingProcess()
 {
-	int prioritariouser = Heap_getFirst(readyToRunQueue[USERPROCESSQUEUE],numberOfReadyToRunProcesses[USERPROCESSQUEUE]);//devuelve el más prioritario USERS
-	int prioritariodaemons = Heap_getFirst(readyToRunQueue[DAEMONSQUEUE], numberOfReadyToRunProcesses[DAEMONSQUEUE]);//devuelve el más prioritario DAEMONS
-	if(executingProcessID < prioritariouser){
+	int prioritariouser = Heap_getFirst(readyToRunQueue[USERPROCESSQUEUE], numberOfReadyToRunProcesses[USERPROCESSQUEUE]); // devuelve el más prioritario USERS
+	int prioritariodaemons = Heap_getFirst(readyToRunQueue[DAEMONSQUEUE], numberOfReadyToRunProcesses[DAEMONSQUEUE]);	   // devuelve el más prioritario DAEMONS
+	if (executingProcessID < prioritariouser)
+	{
 		return prioritariouser;
 	}
-	if(executingProcessID < prioritariodaemons){
+	if (executingProcessID < prioritariodaemons)
+	{
 		return prioritariodaemons;
 	}
 	return executingProcessID;
