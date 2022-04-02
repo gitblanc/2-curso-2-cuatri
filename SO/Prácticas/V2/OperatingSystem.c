@@ -29,6 +29,7 @@ void OperatingSystem_HandleClockInterrupt();
 char *statesNames[5] = {"NEW", "READY", "EXECUTING", "BLOCKED", "EXIT"}; // EJ 10 V1
 void OperatingSystem_MoveToTheBLOCKEDState(int);						 // EJ 5d V2
 int OperatingSystem_ExtractFromBLOCKEDToRun();							 // EJ 6 V2
+int checkPriorityOfExecutingProcess();									 // EJ 6 V2
 
 // EJ 11 V1
 //  In OperatingSystem.c
@@ -384,6 +385,9 @@ void OperatingSystem_SaveContext(int PID)
 
 	// Load PSW saved for interrupt manager
 	processTable[PID].copyOfPSWRegister = Processor_CopyFromSystemStack(MAINMEMORYSIZE - 2);
+
+	// Ej 12 V1
+	processTable[PID].copyOfAccumulator = Processor_GetAccumulator(); // salvar el acumulador
 }
 
 // Exception management routine
@@ -488,13 +492,12 @@ void OperatingSystem_HandleSystemCall()
 // EJ 5 d V2
 void OperatingSystem_MoveToTheBLOCKEDState(int PID)
 {
-
+	processTable[PID].whenToWakeUp = abs(Processor_GetAccumulator()) + abs(numberOfClockInterrupts) + 1; // GUARDAR EL CONTEXTO
 	if (Heap_add(PID, sleepingProcessesQueue, QUEUE_WAKEUP, &numberOfSleepingProcesses, PROCESSTABLEMAXSIZE) >= 0)
 	{
 		OperatingSystem_ShowTime(SYSPROC);
 		ComputerSystem_DebugMessage(110, SYSPROC, PID, programList[processTable[PID].programListIndex]->executableName, statesNames[processTable[PID].state], statesNames[BLOCKED]);
 		processTable[PID].state = BLOCKED;
-		processTable[PID].whenToWakeUp = abs(Processor_GetAccumulator()) + abs(numberOfClockInterrupts) + 1;
 	}
 	OperatingSystem_PrintStatus();
 	// Ej 5d V2 end
@@ -578,37 +581,67 @@ void OperatingSystem_PrintReadyToRunQueue()
 // 	return;
 // }
 
-// EJ 6 a)
+// EJ 6 a) V2
 int OperatingSystem_ExtractFromBLOCKEDToRun()
 {
 
 	int selectedProcess = NOPROCESS;
 
-	selectedProcess = Heap_poll(sleepingProcessesQueue, QUEUE_PRIORITY, &(numberOfSleepingProcesses));
+	selectedProcess = Heap_poll(sleepingProcessesQueue, QUEUE_WAKEUP, &numberOfSleepingProcesses);
 
 	// Return most priority process or NOPROCESS if empty queue
 	return selectedProcess;
 }
 
-// EJ 6 begin
+// EJ 6 begin V2
 void OperatingSystem_HandleClockInterrupt()
 {
+	// numberOfClockInterrupts += 1;
+	// OperatingSystem_ShowTime(INTERRUPT);
+	// ComputerSystem_DebugMessage(120, INTERRUPT, numberOfClockInterrupts);
+	// int cont = 0; // va a contar los procesos desbloqueados
+	// int x = 0;
+	// // apartado a) begin
+	// for (int i = 0; i < numberOfSleepingProcesses; i++)
+	// {
+	// 	x = processTable[sleepingProcessesQueue[i].info].whenToWakeUp;
+	// 	if (x == numberOfClockInterrupts)
+	// 	{
+	// 		cont++;
+	// 		int process = OperatingSystem_ExtractFromBLOCKEDToRun();
+	// 		OperatingSystem_MoveToTheREADYState(process);
+	// 		i--; // para no saltarnos p
+	// 	}
+	// }
+	// if (cont > 0) // EJ 6 b) V2
+	// {
+	// 	OperatingSystem_PrintStatus();
+	// 	// EJ 6 c) V2
+	// 	int procesoPrioritario = checkPriorityOfExecutingProcess(); // funcion que devuelve el proceso más prioritario
+	// 	if (procesoPrioritario != executingProcessID)
+	// 	{
+	// 		ComputerSystem_DebugMessage(121, SHORTTERMSCHEDULE, executingProcessID, programList[processTable[executingProcessID].programListIndex]->executableName, procesoPrioritario, programList[processTable[procesoPrioritario].programListIndex]->executableName);
+	// 		OperatingSystem_PreemptRunningProcess(); // sustituir el proceso
+	// 		OperatingSystem_Dispatch(OperatingSystem_ShortTermScheduler());
+	// 		OperatingSystem_PrintStatus();
+	// 	}
+	// }
+	// 	return;
 	numberOfClockInterrupts += 1;
 	OperatingSystem_ShowTime(INTERRUPT);
 	ComputerSystem_DebugMessage(120, INTERRUPT, numberOfClockInterrupts);
-	int cont = 0; // va a contar los procesos desbloqueados
-	// apartado a) begin
-	for (int i = 0; i < numberOfSleepingProcesses; i++)
+	int desbloqueados = 0;
+	int process = NOPROCESS;
+	// Mientras haya procesos que necesiten ser desbloqueados/despertados y
+	//el whentoWakeUp sea igual al número de interrupciones
+	while (OperatingSystem_ExtractFromBLOCKEDToRun() != NOPROCESS && processTable[Heap_getFirst(sleepingProcessesQueue, numberOfSleepingProcesses)].whenToWakeUp == numberOfClockInterrupts)
 	{
-		if (processTable[i].whenToWakeUp == numberOfClockInterrupts)
-		{
-			cont++;
-			int process = OperatingSystem_ExtractFromBLOCKEDToRun();
-			OperatingSystem_MoveToTheREADYState(process);
-			i--; // para no saltarnos p
-		}
+		process = OperatingSystem_ExtractFromBLOCKEDToRun();
+		desbloqueados++;							  // se aumentan los desbloqueados
+		OperatingSystem_MoveToTheREADYState(process); // se mueve a READY
+		OperatingSystem_PrintStatus();
 	}
-	if (cont > 0) // EJ 6 b) V2
+	if (desbloqueados > 0) // EJ 6 b) V2
 	{
 		OperatingSystem_PrintStatus();
 		// EJ 6 c) V2
@@ -621,21 +654,21 @@ void OperatingSystem_HandleClockInterrupt()
 			OperatingSystem_PrintStatus();
 		}
 	}
-	return;
 }
 // EJ 6 end
 
 int checkPriorityOfExecutingProcess()
 {
+	int procesoactual = executingProcessID;
 	int prioritariouser = Heap_getFirst(readyToRunQueue[USERPROCESSQUEUE], numberOfReadyToRunProcesses[USERPROCESSQUEUE]); // devuelve el más prioritario USERS
 	int prioritariodaemons = Heap_getFirst(readyToRunQueue[DAEMONSQUEUE], numberOfReadyToRunProcesses[DAEMONSQUEUE]);	   // devuelve el más prioritario DAEMONS
-	if (executingProcessID < prioritariouser)
+	if (processTable[procesoactual].priority < processTable[prioritariouser].priority)
 	{
 		return prioritariouser;
 	}
-	if (executingProcessID < prioritariodaemons)
+	if (processTable[procesoactual].priority < processTable[prioritariodaemons].priority)
 	{
 		return prioritariodaemons;
 	}
-	return executingProcessID;
+	return procesoactual;
 }

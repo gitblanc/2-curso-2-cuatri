@@ -43,6 +43,7 @@ typedef struct {
 	int priority;
 	int copyOfPCRegister;
 	unsigned int copyOfPSWRegister;
+	int copyOfAccumulator;
 	int queueId;
 	int programListIndex;
 	int whenToWakeUp;//ej 5 V2
