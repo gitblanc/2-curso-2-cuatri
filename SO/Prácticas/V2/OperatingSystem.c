@@ -493,6 +493,7 @@ void OperatingSystem_HandleSystemCall()
 void OperatingSystem_MoveToTheBLOCKEDState(int PID)
 {
 	processTable[PID].whenToWakeUp = abs(Processor_GetAccumulator()) + abs(numberOfClockInterrupts) + 1; // GUARDAR EL CONTEXTO
+	OperatingSystem_SaveContext(PID);
 	if (Heap_add(PID, sleepingProcessesQueue, QUEUE_WAKEUP, &numberOfSleepingProcesses, PROCESSTABLEMAXSIZE) >= 0)
 	{
 		OperatingSystem_ShowTime(SYSPROC);
