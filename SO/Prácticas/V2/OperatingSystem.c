@@ -179,9 +179,10 @@ int OperatingSystem_LongTermScheduler()
 				numberOfNotTerminatedUserProcesses++;
 			// Move process to the ready state
 			OperatingSystem_MoveToTheREADYState(PID);
+			OperatingSystem_PrintStatus(); // EJ 7 V2
 		}
 	}
-	OperatingSystem_PrintStatus(); // EJ 7 V2
+	
 	// Return the number of succesfully created processes
 	return numberOfSuccessfullyCreatedProcesses;
 }
@@ -398,7 +399,6 @@ void OperatingSystem_HandleException()
 	ComputerSystem_DebugMessage(71, SYSPROC, executingProcessID, programList[processTable[executingProcessID].programListIndex]->executableName);
 
 	OperatingSystem_TerminateProcess();
-	OperatingSystem_PrintStatus(); // EJ 7 V2
 	OperatingSystem_PrintStatus(); // EJ 7 V2
 }
 
