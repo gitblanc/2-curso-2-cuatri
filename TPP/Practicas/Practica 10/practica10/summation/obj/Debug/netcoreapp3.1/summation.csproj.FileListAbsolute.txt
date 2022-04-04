@@ -1,0 +1,11 @@
+C:\Users\UO285176\Downloads\practica10\practica10\summation\bin\Debug\netcoreapp3.1\summation.exe
+C:\Users\UO285176\Downloads\practica10\practica10\summation\bin\Debug\netcoreapp3.1\summation.deps.json
+C:\Users\UO285176\Downloads\practica10\practica10\summation\bin\Debug\netcoreapp3.1\summation.runtimeconfig.json
+C:\Users\UO285176\Downloads\practica10\practica10\summation\bin\Debug\netcoreapp3.1\summation.runtimeconfig.dev.json
+C:\Users\UO285176\Downloads\practica10\practica10\summation\bin\Debug\netcoreapp3.1\summation.dll
+C:\Users\UO285176\Downloads\practica10\practica10\summation\bin\Debug\netcoreapp3.1\summation.pdb
+C:\Users\UO285176\Downloads\practica10\practica10\summation\obj\Debug\netcoreapp3.1\summation.csproj.AssemblyReference.cache
+C:\Users\UO285176\Downloads\practica10\practica10\summation\obj\Debug\netcoreapp3.1\summation.csproj.CoreCompileInputs.cache
+C:\Users\UO285176\Downloads\practica10\practica10\summation\obj\Debug\netcoreapp3.1\summation.dll
+C:\Users\UO285176\Downloads\practica10\practica10\summation\obj\Debug\netcoreapp3.1\summation.pdb
+C:\Users\UO285176\Downloads\practica10\practica10\summation\obj\Debug\netcoreapp3.1\summation.genruntimeconfig.cache

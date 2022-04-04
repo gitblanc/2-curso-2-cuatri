@@ -1,0 +1,11 @@
+C:\Users\UO285176\Downloads\practica10\practica10\colors\bin\Debug\netcoreapp3.1\colors.exe
+C:\Users\UO285176\Downloads\practica10\practica10\colors\bin\Debug\netcoreapp3.1\colors.deps.json
+C:\Users\UO285176\Downloads\practica10\practica10\colors\bin\Debug\netcoreapp3.1\colors.runtimeconfig.json
+C:\Users\UO285176\Downloads\practica10\practica10\colors\bin\Debug\netcoreapp3.1\colors.runtimeconfig.dev.json
+C:\Users\UO285176\Downloads\practica10\practica10\colors\bin\Debug\netcoreapp3.1\colors.dll
+C:\Users\UO285176\Downloads\practica10\practica10\colors\bin\Debug\netcoreapp3.1\colors.pdb
+C:\Users\UO285176\Downloads\practica10\practica10\colors\obj\Debug\netcoreapp3.1\colors.csproj.AssemblyReference.cache
+C:\Users\UO285176\Downloads\practica10\practica10\colors\obj\Debug\netcoreapp3.1\colors.csproj.CoreCompileInputs.cache
+C:\Users\UO285176\Downloads\practica10\practica10\colors\obj\Debug\netcoreapp3.1\colors.dll
+C:\Users\UO285176\Downloads\practica10\practica10\colors\obj\Debug\netcoreapp3.1\colors.pdb
+C:\Users\UO285176\Downloads\practica10\practica10\colors\obj\Debug\netcoreapp3.1\colors.genruntimeconfig.cache

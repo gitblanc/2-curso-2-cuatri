@@ -1,0 +1,12 @@
+C:\Users\UO285176\Downloads\practica10\practica10\producer.consumer\bin\Debug\netcoreapp3.1\producer.consumer.exe
+C:\Users\UO285176\Downloads\practica10\practica10\producer.consumer\bin\Debug\netcoreapp3.1\producer.consumer.dll.config
+C:\Users\UO285176\Downloads\practica10\practica10\producer.consumer\bin\Debug\netcoreapp3.1\producer.consumer.deps.json
+C:\Users\UO285176\Downloads\practica10\practica10\producer.consumer\bin\Debug\netcoreapp3.1\producer.consumer.runtimeconfig.json
+C:\Users\UO285176\Downloads\practica10\practica10\producer.consumer\bin\Debug\netcoreapp3.1\producer.consumer.runtimeconfig.dev.json
+C:\Users\UO285176\Downloads\practica10\practica10\producer.consumer\bin\Debug\netcoreapp3.1\producer.consumer.dll
+C:\Users\UO285176\Downloads\practica10\practica10\producer.consumer\bin\Debug\netcoreapp3.1\producer.consumer.pdb
+C:\Users\UO285176\Downloads\practica10\practica10\producer.consumer\obj\Debug\netcoreapp3.1\producer.consumer.csproj.AssemblyReference.cache
+C:\Users\UO285176\Downloads\practica10\practica10\producer.consumer\obj\Debug\netcoreapp3.1\producer.consumer.csproj.CoreCompileInputs.cache
+C:\Users\UO285176\Downloads\practica10\practica10\producer.consumer\obj\Debug\netcoreapp3.1\producer.consumer.dll
+C:\Users\UO285176\Downloads\practica10\practica10\producer.consumer\obj\Debug\netcoreapp3.1\producer.consumer.pdb
+C:\Users\UO285176\Downloads\practica10\practica10\producer.consumer\obj\Debug\netcoreapp3.1\producer.consumer.genruntimeconfig.cache
