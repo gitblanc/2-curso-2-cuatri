@@ -1,0 +1,98 @@
+--6 
+create or replace trigger borrarCompras
+    before delete on compras
+    --for each row no es necesario porque se va a lanzar antes de borrar cualquiera
+declare 
+    mindate varchar2(20);
+    maxdate varchar2(20);
+    propietario user_triggers.table_owner%type;
+begin
+    select table_owner into propietario from user_triggers
+        where trigger_name='BORRARCOMPRAS';--IMPORTANTE EN MAYUSCULA
+    if sys_context('USERNV', 'CURRENT_USER') <> propietario then
+        raise_application_error(-20001, 'El usuario no es el propietario');
+    end if;
+    mindate := '11:00';
+    maxdate := '13:00';
+    --usuario := sys_context('USERNV', 'CURRENT_USER');--PERMITE SACAR EL USUARIO ACTUAL
+    dbms_output.put_line('HORA ' || to_char(sysdate, 'HH24:MI'));
+    if to_char(sysdate, 'HH24:MI') < mindate or to_char(sysdate, 'HH24:MI') > maxdate then
+        raise_application_error(-20002, 'No está en una hora permitida');
+    end if; 
+end;
+
+delete from compras where dni='1';
+
+ --7
+ create table AUDITA_COMPRAS(
+    operacion varchar2(20),
+    fecha date,
+    usuario varchar2(20),
+    constraint ck_audita_compras_operacion check (operacion in ('insercion','borrado','actualizacion')) 
+    );
+ 
+ create or replace trigger ejercicio7
+ after insert or delete or update on compras
+ for each row--con for each porque si inserto 5 audito 5
+ declare
+    op audita_compras.operacion%type;
+    usuario varchar(20);
+ begin
+    if inserting then
+        op := 'insercion';
+    
+    elsif deleting then
+        op := 'borrado';
+    else --updating
+        op := 'actualizacion';
+    end if;
+    
+    usuario := sys_context('USERNV', 'CURRENT_USER');--PERMITE SACAR EL USUARIO ACTUAL
+    insert into audita_compras values(op,sysdate,usuario);
+ end;
+ --10
+ create or replace trigger ejercicio10
+ before insert or delete or update of cifc on ventas
+ for each row
+ begin
+    if :new.cifc ='1' then
+        raise_application_error(-20003, 'El concesionario 1 cerró sus puertas');
+    end if;
+ end;
+ 
+ insert into ventas values('1', '2', 32,'rojo');
+ --11
+ create table CONTROLA_ROJOS(
+    cifc varchar2(255),
+    nombrec varchar2(255),
+    dni varchar2(9),
+     nombre varchar2(40),
+    codcoche integer,
+     nombrech varchar2(255),
+    modelo varchar2(255),
+    fecha date
+);
+
+create or replace trigger ejercicio11
+    after insert or update of color on ventas
+    for each row--si inserto 5 coches todas las filas se han de ejecutar
+declare
+    
+    nomc concesionarios.nombrec%type;
+    nom clientes.nombre%type;
+    nomch coches.nombrech%type;
+    mdl coches.modelo%type;
+begin
+    if :new.color='rojo' then
+        select nombrec into nomc from concesionarios where cifc=:new.cifc;
+        select nombre into nom from clientes where dni=:new.dni;
+        select nombrech,modelo into nomch, mdl from coches where codcoche=:new.codcoche;
+        
+        insert into controla_rojos values(:new.cifc,nomc, :new.dni, nom, :new.codcoche, nomch, mdl, sysdate);--añado la auditoria
+    end if;
+    if updating and :old.color <> 'rojo' and :new.color<>'rojo' then
+        --El coche ya no es un problema
+        delete from controla_rojos where cifc=:new.cifc and
+            codcoche=:new.codcoche and dni=:new.dni;-- Se quita de la auditoría
+    end if;
+end;
