@@ -8,8 +8,8 @@
 66,@RDuplicated message [%d]!!!@@\n
 
 // Processor messages
-68,{%s}
-69, %s %d %d (PC: @R%d@@, Accumulator: @R%d@@, PSW: @R%x@@ [@R%s@@])\n
+68,\t{%s}
+69,\t\t\t%s %d %d (PC: @R%d@@, Accumulator: @R%d@@, PSW: @R%x@@ [@R%s@@])\n
 
 // OperatingSystem messages
 70,@GProcess [%d] created from program [%s]@@\n

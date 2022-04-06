@@ -4,30 +4,30 @@
 // numbers of messages greather than 100 for students
 //
 //V1-ex0
-101, User program list:\n
-102,\t Program [@C%s@@] with arrival time [@C%d@@]\n
-103,@RERROR: There are not free entries in the process table for the program [%s]@@\n
-104,@RERROR: Program [%s] is not valid [%s]@@\n
-105,@RERROR: Program [%s] is too big@@\n
+101,\tUser program list:\n
+102,\tProgram [@C%s@@] with arrival time [@C%d@@]\n
+103,\t@RERROR: There are not free entries in the process table for the program [%s]@@\n
+104,\t@RERROR: Program [%s] is not valid [%s]@@\n
+105,\t@RERROR: Program [%s] is too big@@\n
 //EJ9 V1
-106, Ready to run processes queue:\n\t
-107,[@G%d@@, %d],
-108,[@G%d@@, %d]\n 
+106,\tReady to run processes queue:\n\t
+107,\t\t  [@G%d@@, %d],
+108,\t\t  [@G%d@@, %d]\n 
 
 //EJ10 V1
-110, Process [@G%d - %s@@] moving from the [@G%s@@] state to the [@G%s@@] state\n
-111, New process [@G%d - %s@@] moving to the [@G%s@@] state\n
+110,\tProcess [@G%d - %s@@] moving from the [@G%s@@] state to the [@G%s@@] state\n
+111,\tNew process [@G%d - %s@@] moving to the [@G%s@@] state\n
 
 //EJ11 V1
-112, \tUSER:\t 
-113, DAEMONS:
-114,[@G%d@@, %d]\n\t 
+112,\tUSER:  
+113,\tDAEMONS:  
+114,\t\t[@G%d@@, %d]\n\t 
 
 //EJ12 V1
-115,Process [@G%d - %s@@] will transfer the control of the processor to process [@G%d - %s@@]\n
+115,\tProcess [@G%d - %s@@] will transfer the control of the processor to process [@G%d - %s@@]\n
 
 //EJ 3 V2
-120,@CClock interrupt number [%d] has occurred@@\n
+120,\t@CClock interrupt number [%d] has occurred@@\n
 
 //EJ 6 V2
-121,Process [@%d - %s@@] will be thrown out of the processor by process [@%d - %s@@]\n
+121,\tProcess [@%d - %s@@] will be thrown out of the processor by process [@%d - %s@@]\n
