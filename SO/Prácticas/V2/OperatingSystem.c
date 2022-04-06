@@ -359,6 +359,7 @@ void OperatingSystem_RestoreContext(int PID)
 	// New values for the CPU registers are obtained from the PCB
 	Processor_CopyInSystemStack(MAINMEMORYSIZE - 1, processTable[PID].copyOfPCRegister);
 	Processor_CopyInSystemStack(MAINMEMORYSIZE - 2, processTable[PID].copyOfPSWRegister);
+	Processor_CopyInSystemStack(MAINMEMORYSIZE - 3, processTable[PID].copyOfAccumulator);
 
 	// Same thing for the MMU registers
 	MMU_SetBase(processTable[PID].initialPhysicalAddress);
@@ -388,7 +389,7 @@ void OperatingSystem_SaveContext(int PID)
 	processTable[PID].copyOfPSWRegister = Processor_CopyFromSystemStack(MAINMEMORYSIZE - 2);
 
 	// Ej 12 V1
-	processTable[PID].copyOfAccumulator = Processor_GetAccumulator(); // salvar el acumulador
+	processTable[PID].copyOfAccumulator = Processor_CopyFromSystemStack(MAINMEMORYSIZE - 3); // salvar el acumulador
 }
 
 // Exception management routine
@@ -485,6 +486,8 @@ void OperatingSystem_HandleSystemCall()
 	// Ej 5d V2 begin
 	case SYSCALL_SLEEP:
 		OperatingSystem_MoveToTheBLOCKEDState(executingProcessID);
+		OperatingSystem_Dispatch(OperatingSystem_ShortTermScheduler());
+		OperatingSystem_PrintStatus();
 		break;
 	}
 }
@@ -500,7 +503,6 @@ void OperatingSystem_MoveToTheBLOCKEDState(int PID)
 		ComputerSystem_DebugMessage(110, SYSPROC, PID, programList[processTable[PID].programListIndex]->executableName, statesNames[processTable[PID].state], statesNames[BLOCKED]);
 		processTable[PID].state = BLOCKED;
 	}
-	OperatingSystem_PrintStatus();
 	// Ej 5d V2 end
 }
 
