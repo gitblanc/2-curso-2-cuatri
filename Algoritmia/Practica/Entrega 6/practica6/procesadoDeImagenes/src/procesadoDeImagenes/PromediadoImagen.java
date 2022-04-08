@@ -128,12 +128,14 @@ public class PromediadoImagen {
 	 * @n_tries numero de intentos aleatorios
 	 */
 	public void splitSubsetsGreedy(int n_tries) {
+		this.counter = 0;
 		this.max_zncc = -1;
 		Random r = new Random();
 		int[] x = new int[this.dataset.length];
 		Imagen group1_pd = new Imagen(this.width, this.height);
 		Imagen group2_pd = new Imagen(this.width, this.height);
-		for (int tries = 0; tries <= n_tries; tries++) {
+		for (int tries = 0; tries < n_tries; tries++) {
+			this.counter++;
 			group1_pd = new Imagen(this.width, this.height);
 			group2_pd = new Imagen(this.width, this.height);
 			for (int i = 0; i < x.length; i++) {
@@ -145,9 +147,9 @@ public class PromediadoImagen {
 			}
 			if (group1_pd.zncc(group2_pd) > this.max_zncc) {
 				this.max_zncc = group1_pd.zncc(group2_pd);// se actualiza el valor mejor de la correlación
-				this.half1_img = group1_pd;// se guardan los promedios mejores
-				this.half2_img = group2_pd;
-				this.bestSol = x;// se guarda el vector con la mejor solución
+				this.half1_img = group1_pd.copy();// se guardan los promedios mejores
+				this.half2_img = group2_pd.copy();
+				this.bestSol = x.clone();// se guarda el vector con la mejor solución
 			}
 		}
 		this.avg_img = new Imagen(this.width, this.height);
@@ -170,7 +172,47 @@ public class PromediadoImagen {
 	 * Algoritmo backtracking sin condición de balanceo.
 	 */
 	public void splitSubsetsBacktracking() {
-		// TODO
+		this.counter = 1;
+		this.max_zncc = 0;
+		int level = 3;
+		backtrackingAux(level);
+
 	}
 
+	private void backtrackingAux(int level) {
+		if (level == dataset.length) {
+			Random r = new Random();
+			Imagen group1_pd = new Imagen(width, height);
+			Imagen group2_pd = new Imagen(width, height);
+			for (int i = 0; i < sol.length; i++) {
+				sol[i] = r.nextInt(3);
+				if (sol[i] == 1)
+					group1_pd.addSignal(this.dataset[i]);
+				if (sol[i] == 2)
+					group2_pd.addSignal(this.dataset[i]);
+			}
+			if (group1_pd.zncc(group2_pd) > this.max_zncc) {
+				this.max_zncc = group1_pd.zncc(group2_pd);// se actualiza el valor mejor de la correlación
+				this.half1_img = group1_pd.copy();// se guardan los promedios mejores
+				this.half2_img = group2_pd.copy();
+				this.bestSol = sol.clone();// se guarda el vector con la mejor solución
+			}
+
+			this.avg_img = new Imagen(this.width, this.height);
+			this.avg_img.addSignal(half1_img);
+			this.avg_img.addSignal(half2_img);
+		} else {
+			// se van poniendo las soluciones
+			this.sol[level] = 0;
+			this.counter++;
+			backtrackingAux(level + 1);// los tres nodos de cada nivel
+			this.sol[level] = 1;
+			this.counter++;
+			backtrackingAux(level + 1);
+			this.sol[level] = 2;
+			this.counter++;
+			backtrackingAux(level + 1);
+			level++;
+		}
+	}
 }

@@ -1,7 +1,5 @@
 package procesadoDeImagenes;
 
-import java.nio.file.Paths;
-
 public class PromediadoImagenBench {
 
 	// Ajustes del banco de pruebas
@@ -11,7 +9,7 @@ public class PromediadoImagenBench {
 	private static String OUT_DIR_B = "out_bt";
 	private static int N_IMGS = 13;
 	private static double PORCENTAJE_BAD = 25; // %
-	private static double S_NOISE = 5.0;//PONER 5.0 // Nivel de ruido - desvici est疣dar de una distrubuci Gaussiana
+	private static double S_NOISE = 1.0;// PONER 5.0 // Nivel de ruido - desvici est疣dar de una distrubuci Gaussiana
 
 	public static void main(String[] args) {
 
@@ -24,13 +22,19 @@ public class PromediadoImagenBench {
 		img_avger = new PromediadoImagen(REAL_IMG, BAD_IMG, n_real, n_bad, S_NOISE);
 
 		System.out.print("TESTING VORAZ:\n");
-		img_avger.splitSubsetsGreedy(N_IMGS);//num intentos = num imágenes
+		img_avger.splitSubsetsGreedy(N_IMGS);// num intentos = num imágenes
 		System.out.printf("  -ZNCC: %f\n", img_avger.zncc());
 		System.out.printf("  -Contador: %d\n", img_avger.getCounter());
 		img_avger.saveResults(OUT_DIR_G);
 
-		System.out.print("TESTING BACKTRACKING CON BALANCEO:\n");
-		img_avger.splitSubsetsBacktracking(1);
+//		System.out.print("TESTING BACKTRACKING CON BALANCEO:\n");
+//		img_avger.splitSubsetsBacktracking(1);
+//		System.out.printf("  -ZNCC: %f\n", img_avger.zncc());
+//		System.out.printf("  -Contador: %d\n", img_avger.getCounter());
+//		img_avger.saveResults(OUT_DIR_B);
+		
+		System.out.print("TESTING BACKTRACKING SIN BALANCEO:\n");
+		img_avger.splitSubsetsBacktracking();
 		System.out.printf("  -ZNCC: %f\n", img_avger.zncc());
 		System.out.printf("  -Contador: %d\n", img_avger.getCounter());
 		img_avger.saveResults(OUT_DIR_B);
