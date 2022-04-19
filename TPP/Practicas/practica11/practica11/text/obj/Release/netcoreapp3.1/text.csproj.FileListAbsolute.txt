@@ -1,0 +1,11 @@
+C:\Users\UO285176\Downloads\practica11\practica11\text\bin\Release\netcoreapp3.1\text.exe
+C:\Users\UO285176\Downloads\practica11\practica11\text\bin\Release\netcoreapp3.1\text.deps.json
+C:\Users\UO285176\Downloads\practica11\practica11\text\bin\Release\netcoreapp3.1\text.runtimeconfig.json
+C:\Users\UO285176\Downloads\practica11\practica11\text\bin\Release\netcoreapp3.1\text.runtimeconfig.dev.json
+C:\Users\UO285176\Downloads\practica11\practica11\text\bin\Release\netcoreapp3.1\text.dll
+C:\Users\UO285176\Downloads\practica11\practica11\text\bin\Release\netcoreapp3.1\text.pdb
+C:\Users\UO285176\Downloads\practica11\practica11\text\obj\Release\netcoreapp3.1\text.csproj.AssemblyReference.cache
+C:\Users\UO285176\Downloads\practica11\practica11\text\obj\Release\netcoreapp3.1\text.csproj.CoreCompileInputs.cache
+C:\Users\UO285176\Downloads\practica11\practica11\text\obj\Release\netcoreapp3.1\text.dll
+C:\Users\UO285176\Downloads\practica11\practica11\text\obj\Release\netcoreapp3.1\text.pdb
+C:\Users\UO285176\Downloads\practica11\practica11\text\obj\Release\netcoreapp3.1\text.genruntimeconfig.cache

@@ -9,7 +9,7 @@ public class PromediadoImagenBench {
 	private static String OUT_DIR_B = "out_bt";
 	private static int N_IMGS = 13;
 	private static double PORCENTAJE_BAD = 25; // %
-	private static double S_NOISE = 1.0;// PONER 5.0 // Nivel de ruido - desvici est疣dar de una distrubuci Gaussiana
+	private static double S_NOISE = 5.0;// PONER 5.0 // Nivel de ruido - desvici est疣dar de una distrubuci Gaussiana
 
 	public static void main(String[] args) {
 

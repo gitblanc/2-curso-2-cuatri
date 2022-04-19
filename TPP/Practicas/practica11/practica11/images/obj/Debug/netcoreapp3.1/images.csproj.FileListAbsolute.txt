@@ -1,0 +1,17 @@
+C:\Users\UO285176\Downloads\practica11\practica11\images\bin\Debug\netcoreapp3.1\images.exe
+C:\Users\UO285176\Downloads\practica11\practica11\images\bin\Debug\netcoreapp3.1\images.deps.json
+C:\Users\UO285176\Downloads\practica11\practica11\images\bin\Debug\netcoreapp3.1\images.runtimeconfig.json
+C:\Users\UO285176\Downloads\practica11\practica11\images\bin\Debug\netcoreapp3.1\images.runtimeconfig.dev.json
+C:\Users\UO285176\Downloads\practica11\practica11\images\bin\Debug\netcoreapp3.1\images.dll
+C:\Users\UO285176\Downloads\practica11\practica11\images\bin\Debug\netcoreapp3.1\images.pdb
+C:\Users\UO285176\Downloads\practica11\practica11\images\bin\Debug\netcoreapp3.1\Microsoft.Win32.SystemEvents.dll
+C:\Users\UO285176\Downloads\practica11\practica11\images\bin\Debug\netcoreapp3.1\System.Drawing.Common.dll
+C:\Users\UO285176\Downloads\practica11\practica11\images\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp3.0\Microsoft.Win32.SystemEvents.dll
+C:\Users\UO285176\Downloads\practica11\practica11\images\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp3.0\System.Drawing.Common.dll
+C:\Users\UO285176\Downloads\practica11\practica11\images\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp3.0\System.Drawing.Common.dll
+C:\Users\UO285176\Downloads\practica11\practica11\images\obj\Debug\netcoreapp3.1\images.csproj.AssemblyReference.cache
+C:\Users\UO285176\Downloads\practica11\practica11\images\obj\Debug\netcoreapp3.1\images.csproj.CoreCompileInputs.cache
+C:\Users\UO285176\Downloads\practica11\practica11\images\obj\Debug\netcoreapp3.1\images.csproj.CopyComplete
+C:\Users\UO285176\Downloads\practica11\practica11\images\obj\Debug\netcoreapp3.1\images.dll
+C:\Users\UO285176\Downloads\practica11\practica11\images\obj\Debug\netcoreapp3.1\images.pdb
+C:\Users\UO285176\Downloads\practica11\practica11\images\obj\Debug\netcoreapp3.1\images.genruntimeconfig.cache

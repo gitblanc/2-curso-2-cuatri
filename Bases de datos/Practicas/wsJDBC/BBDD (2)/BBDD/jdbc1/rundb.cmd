@@ -1,0 +1,1 @@
+ java -cp ../tools/hsqldb/hsqldb.jar org.hsqldb.server.Server --database.0 file:data --dbname.0 labdb
