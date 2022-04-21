@@ -168,8 +168,8 @@ public class PromediadoImagen {
 	 */
 	public void splitSubsetsBacktracking(int max_unbalancing) {
 		this.counter = 1;
-		this.max_zncc = 0;
-		int level = 3;
+		this.max_zncc = -1;
+		int level = 0;
 		backtrackingPodaAux(level, max_unbalancing, 0, 0, 0);
 	}
 
@@ -180,6 +180,7 @@ public class PromediadoImagen {
 			Imagen group2_pd = new Imagen(width, height);
 			if (Math.abs(cont0 - cont1) < max_unbalancing && Math.abs(cont0 - cont2) < max_unbalancing
 					&& Math.abs(cont2 - cont1) < max_unbalancing) {
+				
 				for (int i = 0; i < sol.length; i++) {
 					sol[i] = r.nextInt(3);
 					if (sol[i] == 1)
@@ -188,6 +189,7 @@ public class PromediadoImagen {
 						group2_pd.addSignal(this.dataset[i]);
 				}
 				if (group1_pd.zncc(group2_pd) > this.max_zncc) {
+					this.counter++;//cuantas soluciones mejores hay
 					this.max_zncc = group1_pd.zncc(group2_pd);// se actualiza el valor mejor de la correlación
 					this.half1_img = group1_pd.copy();// se guardan los promedios mejores
 					this.half2_img = group2_pd.copy();
@@ -199,7 +201,6 @@ public class PromediadoImagen {
 				this.avg_img.addSignal(half2_img);
 			}
 		} else {
-			this.counter++;
 			if (Math.abs(cont0 - cont1) < max_unbalancing && Math.abs(cont0 - cont2) < max_unbalancing) {
 				// se van poniendo las soluciones
 				this.sol[level] = 0;
@@ -225,8 +226,8 @@ public class PromediadoImagen {
 	 */
 	public void splitSubsetsBacktracking() {
 		this.counter = 1;
-		this.max_zncc = 0;
-		int level = 3;
+		this.max_zncc = -1;
+		int level = 0;
 		backtrackingAux(level);
 
 	}
@@ -236,6 +237,7 @@ public class PromediadoImagen {
 			Random r = new Random();
 			Imagen group1_pd = new Imagen(width, height);
 			Imagen group2_pd = new Imagen(width, height);
+			
 			for (int i = 0; i < sol.length; i++) {
 				sol[i] = r.nextInt(3);
 				if (sol[i] == 1)
@@ -244,6 +246,7 @@ public class PromediadoImagen {
 					group2_pd.addSignal(this.dataset[i]);
 			}
 			if (group1_pd.zncc(group2_pd) > this.max_zncc) {
+				this.counter++;//cuantas mejores soluciones hay
 				this.max_zncc = group1_pd.zncc(group2_pd);// se actualiza el valor mejor de la correlación
 				this.half1_img = group1_pd.copy();// se guardan los promedios mejores
 				this.half2_img = group2_pd.copy();
@@ -256,13 +259,13 @@ public class PromediadoImagen {
 		} else {
 			// se van poniendo las soluciones
 			this.sol[level] = 0;
-			this.counter++;
+			//this.counter++;
 			backtrackingAux(level + 1);// los tres nodos de cada nivel
 			this.sol[level] = 1;
-			this.counter++;
+			//this.counter++;
 			backtrackingAux(level + 1);
 			this.sol[level] = 2;
-			this.counter++;
+			//this.counter++;
 			backtrackingAux(level + 1);
 			level++;
 		}
