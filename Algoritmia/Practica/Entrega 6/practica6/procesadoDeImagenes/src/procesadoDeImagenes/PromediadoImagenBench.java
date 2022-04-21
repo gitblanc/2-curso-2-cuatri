@@ -27,11 +27,11 @@ public class PromediadoImagenBench {
 		System.out.printf("  -Contador: %d\n", img_avger.getCounter());
 		img_avger.saveResults(OUT_DIR_G);
 
-//		System.out.print("TESTING BACKTRACKING CON BALANCEO:\n");
-//		img_avger.splitSubsetsBacktracking(1);
-//		System.out.printf("  -ZNCC: %f\n", img_avger.zncc());
-//		System.out.printf("  -Contador: %d\n", img_avger.getCounter());
-//		img_avger.saveResults(OUT_DIR_B);
+		System.out.print("TESTING BACKTRACKING CON BALANCEO:\n");
+		img_avger.splitSubsetsBacktracking(1);
+		System.out.printf("  -ZNCC: %f\n", img_avger.zncc());
+		System.out.printf("  -Contador: %d\n", img_avger.getCounter());
+		img_avger.saveResults(OUT_DIR_B);
 		
 		System.out.print("TESTING BACKTRACKING SIN BALANCEO:\n");
 		img_avger.splitSubsetsBacktracking();

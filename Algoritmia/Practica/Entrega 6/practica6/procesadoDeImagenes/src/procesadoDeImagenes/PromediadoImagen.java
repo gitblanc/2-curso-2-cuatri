@@ -18,6 +18,8 @@ public class PromediadoImagen {
 	private int counter; // contador de nodos en el arbol impl兤ito
 	private double max_zncc; // donde almacenar el ZNCC final
 
+	public final static int MAX_UNBALANCING = 1;
+
 	/**
 	 * Constructor
 	 * 
@@ -165,7 +167,57 @@ public class PromediadoImagen {
 	 *                   número de imágenes entre los dos subconjuntos
 	 */
 	public void splitSubsetsBacktracking(int max_unbalancing) {
-		// TODO
+		this.counter = 1;
+		this.max_zncc = 0;
+		int level = 3;
+		backtrackingPodaAux(level, max_unbalancing, 0, 0, 0);
+	}
+
+	private void backtrackingPodaAux(int level, int max_unbalancing, int cont0, int cont1, int cont2) {
+		if (level == dataset.length) {
+			Random r = new Random();
+			Imagen group1_pd = new Imagen(width, height);
+			Imagen group2_pd = new Imagen(width, height);
+			if (Math.abs(cont0 - cont1) < max_unbalancing && Math.abs(cont0 - cont2) < max_unbalancing
+					&& Math.abs(cont2 - cont1) < max_unbalancing) {
+				for (int i = 0; i < sol.length; i++) {
+					sol[i] = r.nextInt(3);
+					if (sol[i] == 1)
+						group1_pd.addSignal(this.dataset[i]);
+					if (sol[i] == 2)
+						group2_pd.addSignal(this.dataset[i]);
+				}
+				if (group1_pd.zncc(group2_pd) > this.max_zncc) {
+					this.max_zncc = group1_pd.zncc(group2_pd);// se actualiza el valor mejor de la correlación
+					this.half1_img = group1_pd.copy();// se guardan los promedios mejores
+					this.half2_img = group2_pd.copy();
+					this.bestSol = sol.clone();// se guarda el vector con la mejor solución
+				}
+
+				this.avg_img = new Imagen(this.width, this.height);
+				this.avg_img.addSignal(half1_img);
+				this.avg_img.addSignal(half2_img);
+			}
+		} else {
+			this.counter++;
+			if (Math.abs(cont0 - cont1) < max_unbalancing && Math.abs(cont0 - cont2) < max_unbalancing) {
+				// se van poniendo las soluciones
+				this.sol[level] = 0;
+				backtrackingPodaAux(level + 1, MAX_UNBALANCING, cont0 + 1, cont1, cont2);// los tres nodos de cada
+																							// nivel
+			}
+			if (Math.abs(cont1 - cont2) < max_unbalancing) {
+				this.sol[level] = 1;
+				backtrackingPodaAux(level + 1, MAX_UNBALANCING, cont0, cont1 + 1, cont2);
+			}
+			//if (Math.abs(cont0 - cont2) < max_unbalancing && Math.abs(cont1 - cont2) < max_unbalancing) {
+				this.sol[level] = 2;
+				backtrackingPodaAux(level + 1, MAX_UNBALANCING, cont0, cont1, cont2 + 1);
+			//}
+			level++;
+			backtrackingPodaAux(level, MAX_UNBALANCING, cont0, cont1, cont2);
+		}
+
 	}
 
 	/**
