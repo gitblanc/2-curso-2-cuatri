@@ -14,9 +14,9 @@ public class AvgNode extends Node {
 	private Imagen[] dataset;
 	private int grupo;
 	private int nivelSol;
-	private ArrayList<Imagen> imagenesNodo;
+	private ArrayList<Integer> imagenesNodo;
 
-	public AvgNode(Imagen[] imagenes, int grupo, ArrayList<Imagen> imagenesNodo) {
+	public AvgNode(Imagen[] imagenes, int grupo, ArrayList<Integer> imagenesNodo) {
 		this.dataset = imagenes;// copia de todas las imágenes
 		this.depth = imagenesNodo.size();// profundidad se corresponde con la longitud del array de imágenes del nodo
 		this.nivelSol = imagenes.length;// profundidad solución
@@ -49,9 +49,9 @@ public class AvgNode extends Node {
 	public ArrayList<Node> expand() {
 		// x3 new AvgNode, que imagen va a que conjunto
 		ArrayList<Node> res = new ArrayList<>();
-		res.add(new AvgNode(this.dataset, 0, new ArrayList<Imagen>(imagenesNodo)));
-		res.add(new AvgNode(this.dataset, 1, new ArrayList<Imagen>(imagenesNodo)));
-		res.add(new AvgNode(this.dataset, 2, new ArrayList<Imagen>(imagenesNodo)));
+		res.add(new AvgNode(this.dataset, 0, imagenesNodo));
+		res.add(new AvgNode(this.dataset, 1, imagenesNodo));
+		res.add(new AvgNode(this.dataset, 2, imagenesNodo));
 		return res;
 	}
 

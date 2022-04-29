@@ -271,6 +271,6 @@ public class PromediadoImagen extends BranchAndBound{
 	public void branchAndBound() {
 		this.counter = 1;
 		this.max_zncc = -1;
-		branchAndBound(new AvgNode(dataset, 0, new ArrayList<>()));
+		branchAndBound(new AvgNode(dataset, 0, new ArrayList<Integer>()));
 	}
 }
