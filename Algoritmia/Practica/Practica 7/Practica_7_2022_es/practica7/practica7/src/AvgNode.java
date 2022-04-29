@@ -22,12 +22,13 @@ public class AvgNode extends Node {
 		this.nivelSol = imagenes.length;// profundidad solución
 		this.grupo = grupo;
 		this.imagenesNodo = imagenesNodo;
+		calculateHeuristicValue();
 	}
 
 	@Override
 	public void calculateHeuristicValue() {
 		if (!isSolution()) {
-			this.heuristicValue = -1;
+			this.heuristicValue = -2;
 		} else {
 			Random r = new Random();
 			Imagen group1_pd = new Imagen(dataset[0].getWidth(), dataset[0].getHeight());

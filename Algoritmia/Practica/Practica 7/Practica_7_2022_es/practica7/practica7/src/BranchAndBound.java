@@ -33,11 +33,14 @@ public abstract class BranchAndBound {
 		ds.insert(rootNode); // First node to be explored
 
 		pruneLimit = rootNode.initialValuePruneLimit();
-
+		
+		int cont = 0;
 		while (!ds.empty() && ds.estimateBest() < pruneLimit) {
 			Node node = ds.extractBestNode();
 
 			ArrayList<Node> children = node.expand();
+			System.out.println(cont);
+			cont++;
 
 			for (Node child : children)
 				if (child.isSolution()) {

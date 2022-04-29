@@ -169,7 +169,7 @@ public class PromediadoImagen extends BranchAndBound{
 	public void splitSubsetsBacktracking(int max_unbalancing) {
 		this.counter = 1;
 		this.max_zncc = -1;
-		int level = 0;
+		int level = 3;
 		backtrackingPodaAux(level, max_unbalancing, 0, 0, 0);
 	}
 
@@ -179,7 +179,6 @@ public class PromediadoImagen extends BranchAndBound{
 			Imagen group1_pd = new Imagen(width, height);
 			Imagen group2_pd = new Imagen(width, height);
 			for (int i = 0; i < sol.length; i++) {
-				this.counter++;
 				sol[i] = r.nextInt(3);
 				if (sol[i] == 1)
 					group1_pd.addSignal(this.dataset[i]);
@@ -224,7 +223,7 @@ public class PromediadoImagen extends BranchAndBound{
 	public void splitSubsetsBacktracking() {
 		this.counter = 1;
 		this.max_zncc = -1;
-		int level = 0;
+		int level = 3;
 		backtrackingAux(level);
 
 	}
@@ -267,5 +266,11 @@ public class PromediadoImagen extends BranchAndBound{
 			//Complejidad
 			//a = 3, b = 1, k = 1(para la mayoria de casos) -> a > b^k, a^(n/b) -> O(n) = 3^n
 		}
+	}
+
+	public void branchAndBound() {
+		this.counter = 1;
+		this.max_zncc = -1;
+		branchAndBound(new AvgNode(dataset, 0, new ArrayList<>()));
 	}
 }

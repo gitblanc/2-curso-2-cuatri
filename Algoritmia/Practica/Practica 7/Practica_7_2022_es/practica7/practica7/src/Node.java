@@ -28,7 +28,7 @@ public abstract class Node implements Comparable<Node> {
 	 * Getter for depth
 	 * @return The depth variable
 	 */
-    public int getDepth() {return depth;}
+    public int getDepth() {return this.depth;}
 	  
     /**
      * Getter for heuristicValue
