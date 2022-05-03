@@ -1,0 +1,23 @@
+Ejer 13: 
+A) Se guardan los registros debido a que se hace un cambio de contexto y serán necesarios en caso de retomarse el proceso
+en el mismo punto.
+B) Si, el registerAccumulator_CPU, para mantener los resultados de las operaciones lógicas y poder retomar el proceso
+con los valoress ya calculados.
+C) Si, sería necesario recuperar el valor del acumulador.
+D) Solo es necesario modificar el OperatingSystem_SaveContext() y el OperatingSystem_RestoreContext() para almacenar y
+retomar el acumulador
+
+Ejer 14:
+La función OperatingSystem_TerminateProcess() mueve el proceso en ejecución al estado EXIT, si es un proceso de usuario
+reduce en uno la lista de procesos sin terminar y si esta llega a 0 y la ID del proecso coincide con SystemIdleProcess 
+lanza un aviso para anunciar el apagado del sistema.
+En caso de no ser un proceso de usuario o no ser el último proceso de usuario, selecciona el siguiente proceso de ususario
+haciendo uso de la función OperatingSystem_ShortTermScheduler().
+
+Ejer 16:
+El OS maneja las excepciones, porque utiliza la función OperatingSystem_InterruptLogic() para lanzar la interrupción.
+En cambio, IRET solo realiza una operación en la que apunta de nuevo a la instrucción anterior, por lo que se queda
+estancado en un bucle infinito.
+
+B) Está activo cuando una operación es llamada y el bit PSW tiene valor de privilegio de modo protegido, en cualquier 
+otro caso no se ejecuta en modo protegido. 

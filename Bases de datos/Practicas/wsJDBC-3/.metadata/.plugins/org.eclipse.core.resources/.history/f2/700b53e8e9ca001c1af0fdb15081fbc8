@@ -1,0 +1,388 @@
+package bbdd.jdbc1;
+
+import java.io.Console;
+import java.sql.*;
+import java.util.Scanner;
+
+public class Program {
+
+	private final static String USERNAME = "UO285176";
+	private final static String PASSWD = "1234qwerty##";
+	private final static String CONNECTION = "jdbc:oracle:thin:@156.35.94.98:1521:desa19";
+
+	public static void main(String[] args) throws SQLException {
+//		exercise1_1();
+//		exercise1_2();
+//		exercise2("rojo");
+//		exercise5_1();
+//		exercise5_2();
+//		exercise6_1();
+//		exercise6_2();
+		// exercise8();
+		ej2bExamen();
+	}
+
+	/*
+	 * 1. Crear un metodo en Java que muestre por pantalla los resultados de las
+	 * consultas 21 y 32 de la Practica SQL2. 1.1. (21) Obtener el nombre y el
+	 * apellido de los clientes que han adquirido un coche en un concesionario de
+	 * Madrid, el cual dispone de coches del modelo gti.
+	 */
+	public static void exercise1_1() throws SQLException {
+		DriverManager.registerDriver(new oracle.jdbc.OracleDriver());
+		Connection con = DriverManager.getConnection(CONNECTION, USERNAME, PASSWD);
+		StringBuilder query = new StringBuilder();
+		query.append("SELECT nombre, apellido\r\n" + "FROM clientes\r\n" + "WHERE dni IN (SELECT DISTINCT V.dni\r\n"
+				+ "    FROM ventas V, coches CH, concesionarios CO, distribucion D\r\n"
+				+ "    WHERE V.cifc=CO.cifc AND CO.ciudadc='madrid' AND CO.cifc=D.cifc\r\n"
+				+ "        AND D.codcoche = CH.codcoche AND CH.modelo='gti')");
+		Statement st = con.createStatement();
+		ResultSet rs = st.executeQuery(query.toString());
+
+		// rs show results
+
+		while (rs.next()) {
+			System.out.print("Nombre: " + rs.getString(1) + " ");
+			System.out.print(", Apellido: " + rs.getString(2));
+			System.out.println();
+		}
+
+		rs.close();
+		st.close();
+		con.close();
+	}
+
+	/*
+	 * 1.2. (32) Obtener un listado de los concesionarios cuyo promedio de coches
+	 * supera a la cantidad promedio de todos los concesionarios.
+	 */
+	public static void exercise1_2() throws SQLException {
+		DriverManager.registerDriver(new oracle.jdbc.OracleDriver());
+		Connection con = DriverManager.getConnection(CONNECTION, USERNAME, PASSWD);
+		StringBuilder query = new StringBuilder();
+		query.append("SELECT cifc,nombrec,ciudadc\r\n" + "FROM concesionarios\r\n" + "WHERE cifc IN(\r\n"
+				+ "SELECT cifc\r\n" + "FROM distribucion\r\n" + "GROUP BY cifc\r\n"
+				+ "HAVING SUM(cantidad)> (SELECT AVG(total) FROM(SELECT SUM(cantidad)total FROM distribucion GROUP BY cifc)))");
+		Statement st = con.createStatement();
+		ResultSet rs = st.executeQuery(query.toString());
+
+		// rs show results
+
+		while (rs.next()) {
+			System.out.print("CIFC: " + rs.getString(1) + " ");
+			System.out.print(", NOMBREC: " + rs.getString(2) + ", CIUDADC: " + rs.getString(3));
+			System.out.println();
+		}
+
+		rs.close();
+		st.close();
+		con.close();
+	}
+
+	/*
+	 * 2. Crear un metodo en Java que muestre por pantalla el resultado de la
+	 * consulta 6 de la Practica SQL2 de forma el color de la busqueda sea
+	 * introducido por el usuario. (6) Obtener el nombre de las marcas de las que se
+	 * han vendido coches de un color introducido por el usuario.
+	 */
+	public static void exercise2(final String color) throws SQLException {
+		DriverManager.registerDriver(new oracle.jdbc.OracleDriver());
+		Connection con = DriverManager.getConnection(CONNECTION, USERNAME, PASSWD);
+//		StringBuilder query = new StringBuilder();
+//		query.append("SELECT DISTINCT M.nombrem\r\n" + "FROM marcas M, marco R, ventas V\r\n"
+//				+ "WHERE M.cifm=R.cifm AND R.codcoche=V.codcoche AND V.color='" + color + "'");
+		StringBuilder query = new StringBuilder();
+		query.append("SELECT DISTINCT M.nombrem\r\n" + "FROM marcas M, marco R, ventas V\r\n"
+				+ "WHERE M.cifm=R.cifm AND R.codcoche=V.codcoche AND V.color= ?");
+		PreparedStatement pst = con.prepareStatement(query.toString());
+		pst.setString(1, color);
+		ResultSet rs = pst.executeQuery();// ya no se le pasa la query
+
+		// rs show results
+
+		while (rs.next()) {
+			System.out.print("MARCAS: " + rs.getString(1) + " ");
+			System.out.println();
+		}
+
+		rs.close();
+		pst.close();
+		con.close();
+	}
+
+	/*
+	 * 3. Crear un metodo en Java para ejecutar la consulta 27 de la Practica SQL2
+	 * de forma que los limites la cantidad de coches sean introducidos por el
+	 * usuario. (27) Obtener el cifc de los concesionarios que disponen de una
+	 * cantidad de coches comprendida entre dos cantidades introducidas por el
+	 * usuario, ambas inclusive.
+	 * 
+	 */
+	public static void exercise3() {
+
+	}
+
+	/*
+	 * 4. Crear un metodo en Java para ejecutar la consulta 24 de la Practica SQL2
+	 * de forma que tanto la ciudad del concesionario como el color sean
+	 * introducidos por el usuario. (24) Obtener los nombres de los clientes que no
+	 * han comprado coches de un color introducido por el usuario en concesionarios
+	 * de una ciudad introducida por el usuario.
+	 * 
+	 */
+	public static void exercise4() {
+
+	}
+
+	/*
+	 * 5. Crear un metodo en Java que haciendo uso de la instruccion SQL adecuada:
+	 * 5.1. Introduzca datos en la tabla coches cuyos datos son introducidos por el
+	 * usuario.
+	 * 
+	 */
+	public static void exercise5_1() throws SQLException {
+		DriverManager.registerDriver(new oracle.jdbc.OracleDriver());
+		Connection con = DriverManager.getConnection(CONNECTION, USERNAME, PASSWD);
+		String query = "INSERT into coches VALUES(?,?,?)";
+		PreparedStatement st = con.prepareStatement(query);
+
+		System.out.println("Codigo del coche");
+		int codcoche = ReadInt();
+		System.out.println("Nombre del coche");
+		String nombrech = ReadString();
+		System.out.println("Modelo del coche");
+		String modelo = ReadString();
+
+		st.setInt(1, codcoche);
+		st.setString(2, nombrech);
+		st.setString(3, modelo);
+
+		if (st.executeUpdate() == 1) {
+			System.out.println("Datos insertados");
+		} else {
+			System.out.println("No se insertaron datos");
+		}
+
+	}
+
+	/*
+	 * 5.2. Borre un determinado coche cuyo codigo es introducido por el usuario.
+	 */
+	public static void exercise5_2() throws SQLException {
+		DriverManager.registerDriver(new oracle.jdbc.OracleDriver());
+		Connection con = DriverManager.getConnection(CONNECTION, USERNAME, PASSWD);
+		String query = "update coches SET nombrech = ?, modelo = ?, where codcoche = ?";
+		PreparedStatement st = con.prepareStatement(query);
+
+		System.out.println("Codigo del coche");
+		int codcoche = ReadInt();
+		System.out.println("Nombre del coche");
+		String nombrech = ReadString();
+		System.out.println("Modelo del coche");
+		String modelo = ReadString();
+
+		st.setString(1, nombrech);
+		st.setString(2, modelo);
+		st.setInt(3, codcoche);
+
+		if (st.executeUpdate() == 1) {
+			System.out.println("Datos actualizados");
+		} else {
+			System.out.println("No se actualizaron datos");
+		}
+		st.close();
+		con.close();
+	}
+
+	/*
+	 * 5.3. Actualice el nombre y el modelo para un determinado coche cuyo codigo es
+	 * introducido por el usuario.
+	 */
+	public static void exercise5_3() throws SQLException {
+		DriverManager.registerDriver(new oracle.jdbc.OracleDriver());
+		Connection con = DriverManager.getConnection(CONNECTION, USERNAME, PASSWD);
+		String query = "DELETE from coches WHERE codcoche = ?";
+		PreparedStatement st = con.prepareStatement(query);
+
+		System.out.println("Codigo del coche");
+		int codcoche = ReadInt();
+
+		st.setInt(1, codcoche);
+
+		if (st.executeUpdate() == 1) {
+			System.out.println("Datos eliminados");
+		} else {
+			System.out.println("No se eliminaron datos");
+		}
+		st.close();
+		con.close();
+	}
+
+	/*
+	 * 6. Invocar la funcion y el procedimiento del ejercicio 10 de la practica PL1
+	 * desde una aplicacion Java. (10) Realizar un procedimiento y una funcion que
+	 * dado un codigo de concesionario devuelve el numero ventas que se han
+	 * realizado en el mismo. 6.1. Funcion
+	 */
+	public static void exercise6_1() throws SQLException {
+		DriverManager.registerDriver(new oracle.jdbc.OracleDriver());
+		Connection con = DriverManager.getConnection(CONNECTION, USERNAME, PASSWD);
+		CallableStatement cs = null;
+		String query = "{? = call ej10f(?)}";
+		cs = con.prepareCall(query);
+
+		System.out.println("Codigo del concesionario");
+		int code = ReadInt();
+
+		cs.registerOutParameter(1, Types.INTEGER);
+		cs.setInt(2, code);
+
+		cs.execute();
+		int numVentas = cs.getInt(1);
+		System.out.println("Ventas = " + numVentas);
+		cs.close();
+		con.close();
+	}
+
+	/*
+	 * 6.2. Procedimiento
+	 */
+	public static void exercise6_2() throws SQLException {
+		DriverManager.registerDriver(new oracle.jdbc.OracleDriver());
+		Connection con = DriverManager.getConnection(CONNECTION, USERNAME, PASSWD);
+		CallableStatement cs = null;
+		String query = "{call ej10_procedure(?,?)}";
+		cs = con.prepareCall(query);
+
+		System.out.println("Codigo del concesionario");
+		int code = ReadInt();
+
+		cs.setInt(1, code);
+		cs.registerOutParameter(2, Types.INTEGER);
+
+		cs.execute();
+		int numVentas = cs.getInt(2);
+		System.out.println("Ventas = " + numVentas);
+		cs.close();
+		con.close();
+	}
+
+	/*
+	 * 7. Invocar la funcion y el procedimiento del ejercicio 11 de la Practica PL1
+	 * desde una aplicacion Java. (11) Realizar un procedimiento y una funcion que
+	 * dada una ciudad que se le pasa como parametro devuelve el numero de clientes
+	 * de dicha ciudad. 7.1. Funcion
+	 * 
+	 */
+	public static void exercise7_1() {
+
+	}
+
+	/*
+	 * 7.2. Procedimiento
+	 */
+	public static void exercise7_2() {
+
+	}
+
+	/*
+	 * 8. Crear un metodo en Java que imprima por pantalla los coches que han sido
+	 * adquiridos por cada cliente. Ademas, debera imprimirse para cada cliente el
+	 * numero de coches que ha comprado y el numero de concesionarios en los que ha
+	 * comprado. Aquellos clientes que no han adquirido ningun coche no deben
+	 * aparecer en el listado.
+	 */
+	public static void exercise8() throws SQLException {
+		String queryClientes = "SELECT DISTINCT c.dni, nombre, apellido from "
+				+ "clientes c, ventas v  where c.dni = v.dni ";
+		String queryCount = "SELECT COUNT(*) as NCH, COUNT(DISTINCT CIFC as nco" + " from ventas where dni = ?) ";
+		String queryCoches = "SELECT ch.codcoche as codcoche, ch.nombrech as nomch "
+				+ "ch.modelo as mod, v.color as col from ventas v, coches ch where "
+				+ "ch.codcoche = v.codcoche and v.dni = ?";
+
+		Connection con = DriverManager.getConnection(CONNECTION, USERNAME, PASSWD);
+		Statement stClientes = con.createStatement();
+		PreparedStatement psCount = con.prepareStatement(queryCount);
+		PreparedStatement psCoches = con.prepareStatement(queryCoches);
+
+		ResultSet rsCoches = null;
+		ResultSet rsCount = null;
+		ResultSet rsClientes = stClientes.executeQuery(queryClientes);
+		while (rsClientes.next()) {
+			psCount.setString(1, rsClientes.getString("dni"));
+			rsCount = psCoches.executeQuery();
+			rsCount.next();
+			System.out.println("-Cliente: " + rsClientes.getString("nombre") + " " + rsClientes.getString("apellido")
+					+ " " + rsCoches.getInt("nch") + " " + rsCoches.getInt("nco"));
+			psCoches.setString(1, rsClientes.getString("dni"));
+			rsCoches = psCoches.executeQuery();
+
+			while (rsCoches.next()) {
+				System.out.println("---Coche: " + rsCoches.getString("codcoche") + " " + rsCoches.getString("nomch")
+						+ " " + rsCoches.getString("mod") + " " + rsCoches.getString("col"));
+			}
+			rsCoches.close();
+			rsCount.close();
+		}
+
+		psCoches.close();
+		psCount.close();
+		stClientes.close();
+		rsClientes.close();
+		con.close();
+
+	}
+
+	public static void ej2bExamen() throws SQLException {
+		String queryCine = "SELECT c.codcine, sum(precio) as income\r\n"
+				+ "        FROM cines c, salas s, entradas e\r\n"
+				+ "        WHERE c.codcine=s.codcine AND s.codsala=e.codsala AND c.localidad= ?\r\n"
+				+ "        GROUP BY c.codcine;";
+		String queryPelicula = "SELECT p.codpelicula, p.titulo, sum(precio) as income\r\n"
+				+ "        FROM peliculas p, entradas e, salas s\r\n"
+				+ "        WHERE p.codpelicula=e.codpelicula AND e.codsala=s.codsala AND s.codcine=code\r\n"
+				+ "        GROUP BY p.codpelicula, p.titulo";
+		
+		final String localidad = ReadString();
+		Connection con = DriverManager.getConnection(CONNECTION, USERNAME, PASSWD);
+		//PreparedStatement stPeliculas = con.prepareStatement(queryPelicula);
+		PreparedStatement stCine = con.prepareStatement(queryCine);
+
+		stCine.setString(1, localidad);
+		ResultSet rsCines = stCine.executeQuery();
+		while(rsCines.next()) {
+			final String codcine = rsCines.getString("CODCINE");
+			final int totalCine = rsCines.getInt("TOTAL_CINE");
+			System.out.println(String.format("Cine: %s - %d"));
+		}
+		stCine.close();
+		rsCines.close();
+		con.close();
+	}
+
+	public static void ej2aExamen() throws SQLException {
+		String queryCodPelicula = " SELECT tipo\r\n" + "    FROM peliculas\r\n"
+				+ "    WHERE codpelicula IN (SELECT codpelicula\r\n" + "        FROM proyectan\r\n"
+				+ "        WHERE sesion=(SELECT max(sesion) FROM proyectan)\r\n" + "        GROUP BY codpelicula\r\n"
+				+ "        ORDER BY sum(entradasvendidas) DESC\r\n" + "        FETCH FIRST 1 ROW ONLY)";
+
+		Connection con = DriverManager.getConnection(CONNECTION, USERNAME, PASSWD);
+		Statement stPeliculas = con.createStatement();
+
+		ResultSet rsPeliculas = stPeliculas.executeQuery(queryCodPelicula);
+		System.out.println("Tipo: " + rsPeliculas.toString());
+		stPeliculas.close();
+		rsPeliculas.close();
+		con.close();
+	}
+
+	@SuppressWarnings("resource")
+	private static String ReadString() {
+		return new Scanner(System.in).nextLine();
+	}
+
+	@SuppressWarnings("resource")
+	private static int ReadInt() {
+		return new Scanner(System.in).nextInt();
+	}
+}

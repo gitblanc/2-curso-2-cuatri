@@ -1,0 +1,150 @@
+36 messages loaded from file messagesTCH.txt
+17 messages loaded from file messagesSTD.txt
+0 Asserts Loaded
+[0] User program list:
+	Program [programVerySimple] with arrival time [10]
+	[0] Running Process Information:
+		[--- No running process ---]
+	[0] Ready-to-run processes queue: 
+USER:  DAEMONS:	 	[0] SLEEPING Queue:
+		[--- empty queue ---]
+	[0] PID association with program's name:
+	[0] Arrival Time Queue:
+		[SystemIdleProcess, 0, DAEMONS]
+		[programVerySimple, 10, USER]
+	[0] New process [3 - SystemIdleProcess] moving to the [NEW] state 
+	[0] Process [3] created from program [SystemIdleProcess]
+	[0] Process [3 - SystemIdleProcess] moving from the [NEW] state to the [READY] state
+	[0] Running Process Information:
+		[--- No running process ---]
+	[0] Ready-to-run processes queue: 
+USER:  DAEMONS:	 
+	[0] SLEEPING Queue:
+		[--- empty queue ---]
+	[0] PID association with program's name:
+		PID: 3 -> SystemIdleProcess
+	[0] Arrival Time Queue:
+		[programVerySimple, 10, USER]
+	[0] Process [3 - SystemIdleProcess] moving from the [READY] state to the [EXECUTING] state
+	[1] {0D 000 000} IRET 0 0 (PID: 3,PC: 180, Accumulator: 0, PSW: 0082 [--------X-----Z-])
+	[2] {01 57C 2CE} ADD 1404 718 (PID: 3,PC: 181, Accumulator: 2122, PSW: 0080 [--------X-------])
+	[3] {05 000 000} NOP 0 0 (PID: 3,PC: 182, Accumulator: 2122, PSW: 0080 [--------X-------])
+	[4] {06 801 000} JUMP -1 0 (PID: 3,PC: 181, Accumulator: 2122, PSW: 0080 [--------X-------])
+	[5] {05 000 000} NOP 0 0 (PID: 3,PC: 182, Accumulator: 2122, PSW: 0080 [--------X-------])
+	[6] {0C 009 000} OS 9 0 (PID: 3,PC: 246, Accumulator: 2122, PSW: 8080 [M-------X-------])
+	[7] Clock interrupt number [1] has occurred
+	[7] Running Process Information:
+		[PID: 3, Priority: 100, WakeUp: 0, Queue: DAEMONS]
+	[7] Ready-to-run processes queue: 
+USER:  DAEMONS:	 	[7] SLEEPING Queue:
+		[--- empty queue ---]
+	[7] PID association with program's name:
+		PID: 3 -> SystemIdleProcess
+	[7] Arrival Time Queue:
+		[programVerySimple, 10, USER]
+	[8] {0D 000 000} IRET 0 0 (PID: 3,PC: 182, Accumulator: 2122, PSW: 0080 [--------X-------])
+	[9] {06 801 000} JUMP -1 0 (PID: 3,PC: 181, Accumulator: 2122, PSW: 0080 [--------X-------])
+	[10] {05 000 000} NOP 0 0 (PID: 3,PC: 182, Accumulator: 2122, PSW: 0080 [--------X-------])
+	[11] {0C 009 000} OS 9 0 (PID: 3,PC: 246, Accumulator: 2122, PSW: 8080 [M-------X-------])
+	[12] Clock interrupt number [2] has occurred
+	[12] New process [0 - programVerySimple] moving to the [NEW] state 
+	[12] Process [0] created from program [programVerySimple]
+	[12] Process [0 - programVerySimple] moving from the [NEW] state to the [READY] state
+	[12] Running Process Information:
+		[PID: 3, Priority: 100, WakeUp: 0, Queue: DAEMONS]
+	[12] Ready-to-run processes queue: 
+USER:  
+DAEMONS:	 	[12] SLEEPING Queue:
+		[--- empty queue ---]
+	[12] PID association with program's name:
+		PID: 0 -> programVerySimple
+		PID: 3 -> SystemIdleProcess
+	[13] {0D 000 000} IRET 0 0 (PID: 3,PC: 182, Accumulator: 2122, PSW: 0080 [--------X-------])
+	[14] {06 801 000} JUMP -1 0 (PID: 3,PC: 181, Accumulator: 2122, PSW: 0080 [--------X-------])
+	[15] {05 000 000} NOP 0 0 (PID: 3,PC: 182, Accumulator: 2122, PSW: 0080 [--------X-------])
+	[16] {0C 009 000} OS 9 0 (PID: 3,PC: 246, Accumulator: 2122, PSW: 8080 [M-------X-------])
+	[17] Clock interrupt number [3] has occurred
+	[17] Running Process Information:
+		[PID: 3, Priority: 100, WakeUp: 0, Queue: DAEMONS]
+	[17] Ready-to-run processes queue: 
+USER:  
+DAEMONS:	 	[17] SLEEPING Queue:
+		[--- empty queue ---]
+	[17] PID association with program's name:
+		PID: 0 -> programVerySimple
+		PID: 3 -> SystemIdleProcess
+	[18] {0D 000 000} IRET 0 0 (PID: 3,PC: 182, Accumulator: 2122, PSW: 0080 [--------X-------])
+	[19] {06 801 000} JUMP -1 0 (PID: 3,PC: 181, Accumulator: 2122, PSW: 0080 [--------X-------])
+	[20] {05 000 000} NOP 0 0 (PID: 3,PC: 182, Accumulator: 2122, PSW: 0080 [--------X-------])
+	[21] {0C 009 000} OS 9 0 (PID: 3,PC: 246, Accumulator: 2122, PSW: 8080 [M-------X-------])
+	[22] Clock interrupt number [4] has occurred
+	[22] Running Process Information:
+		[PID: 3, Priority: 100, WakeUp: 0, Queue: DAEMONS]
+	[22] Ready-to-run processes queue: 
+USER:  
+DAEMONS:	 	[22] SLEEPING Queue:
+		[--- empty queue ---]
+	[22] PID association with program's name:
+		PID: 0 -> programVerySimple
+		PID: 3 -> SystemIdleProcess
+	[23] {0D 000 000} IRET 0 0 (PID: 3,PC: 182, Accumulator: 2122, PSW: 0080 [--------X-------])
+	[24] {06 801 000} JUMP -1 0 (PID: 3,PC: 181, Accumulator: 2122, PSW: 0080 [--------X-------])
+	[25] {05 000 000} NOP 0 0 (PID: 3,PC: 182, Accumulator: 2122, PSW: 0080 [--------X-------])
+	[26] {0C 009 000} OS 9 0 (PID: 3,PC: 246, Accumulator: 2122, PSW: 8080 [M-------X-------])
+	[27] Clock interrupt number [5] has occurred
+	[27] Running Process Information:
+		[PID: 3, Priority: 100, WakeUp: 0, Queue: DAEMONS]
+	[27] Ready-to-run processes queue: 
+USER:  
+DAEMONS:	 	[27] SLEEPING Queue:
+		[--- empty queue ---]
+	[27] PID association with program's name:
+		PID: 0 -> programVerySimple
+		PID: 3 -> SystemIdleProcess
+	[28] {0D 000 000} IRET 0 0 (PID: 3,PC: 182, Accumulator: 2122, PSW: 0080 [--------X-------])
+	[29] {06 801 000} JUMP -1 0 (PID: 3,PC: 181, Accumulator: 2122, PSW: 0080 [--------X-------])
+	[30] {05 000 000} NOP 0 0 (PID: 3,PC: 182, Accumulator: 2122, PSW: 0080 [--------X-------])
+	[31] {0C 009 000} OS 9 0 (PID: 3,PC: 246, Accumulator: 2122, PSW: 8080 [M-------X-------])
+	[32] Clock interrupt number [6] has occurred
+	[32] Running Process Information:
+		[PID: 3, Priority: 100, WakeUp: 0, Queue: DAEMONS]
+	[32] Ready-to-run processes queue: 
+USER:  
+DAEMONS:	 	[32] SLEEPING Queue:
+		[--- empty queue ---]
+	[32] PID association with program's name:
+		PID: 0 -> programVerySimple
+		PID: 3 -> SystemIdleProcess
+	[33] {0D 000 000} IRET 0 0 (PID: 3,PC: 182, Accumulator: 2122, PSW: 0080 [--------X-------])
+	[34] {06 801 000} JUMP -1 0 (PID: 3,PC: 181, Accumulator: 2122, PSW: 0080 [--------X-------])
+	[35] {05 000 000} NOP 0 0 (PID: 3,PC: 182, Accumulator: 2122, PSW: 0080 [--------X-------])
+	[36] {0C 009 000} OS 9 0 (PID: 3,PC: 246, Accumulator: 2122, PSW: 8080 [M-------X-------])
+	[37] Clock interrupt number [7] has occurred
+	[37] Running Process Information:
+		[PID: 3, Priority: 100, WakeUp: 0, Queue: DAEMONS]
+	[37] Ready-to-run processes queue: 
+USER:  
+DAEMONS:	 	[37] SLEEPING Queue:
+		[--- empty queue ---]
+	[37] PID association with program's name:
+		PID: 0 -> programVerySimple
+		PID: 3 -> SystemIdleProcess
+	[38] {0D 000 000} IRET 0 0 (PID: 3,PC: 182, Accumulator: 2122, PSW: 0080 [--------X-------])
+	[39] {06 801 000} JUMP -1 0 (PID: 3,PC: 181, Accumulator: 2122, PSW: 0080 [--------X-------])
+	[40] {05 000 000} NOP 0 0 (PID: 3,PC: 182, Accumulator: 2122, PSW: 0080 [--------X-------])
+	[41] {0C 009 000} OS 9 0 (PID: 3,PC: 246, Accumulator: 2122, PSW: 8080 [M-------X-------])
+	[42] Clock interrupt number [8] has occurred
+	[42] Running Process Information:
+		[PID: 3, Priority: 100, WakeUp: 0, Queue: DAEMONS]
+	[42] Ready-to-run processes queue: 
+USER:  
+DAEMONS:	 	[42] SLEEPING Queue:
+		[--- empty queue ---]
+	[42] PID association with program's name:
+		PID: 0 -> programVerySimple
+		PID: 3 -> SystemIdleProcess
+	[43] {0D 000 000} IRET 0 0 (PID: 3,PC: 182, Accumulator: 2122, PSW: 0080 [--------X-------])
+	[44] {06 801 000} JUMP -1 0 (PID: 3,PC: 181, Accumulator: 2122, PSW: 0080 [--------X-------])
+	[45] {05 000 000} NOP 0 0 (PID: 3,PC: 182, Accumulator: 2122, PSW: 0080 [--------X-------])
+	[46] {0C 009 000} OS 9 0 (PID: 3,PC: 246, Accumulator: 2122, PSW: 8080 [M-------X-------])
+	[47] Clock interrupt number [9] has occurred
