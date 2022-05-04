@@ -10,12 +10,12 @@ public class PromediadoImagen extends BranchAndBound{
 	private Imagen real_img, bad_img; // para almacenar las imagenes con patron bueno y malo (negativo del malo)
 	private Imagen avg_img, half1_img, half2_img; // para almacenar los promedios del subconjunto 1 y 2
 	private Imagen[] dataset; // almacena el conjunto de de imagenes generadas (buenas y malas)
-	private int[] sol; // array que determina donde poner las imágenes 0->no asignada, 1->primer
+	private int[] sol; // array que determina donde poner las imÃ¡genes 0->no asignada, 1->primer
 						// subconjunto, 2->segundo subconjunto
-	private int[] bestSol; // mejor solució
-	private int width, height; // ancho y alto de las imágenes
+	private int[] bestSol; // mejor soluciÃ³
+	private int width, height; // ancho y alto de las imÃ¡genes
 	// backtracking variables
-	private int counter; // contador de nodos en el arbol impl兤ito
+	private int counter; // contador de nodos en el arbol implå…¤ito
 	private double max_zncc; // donde almacenar el ZNCC final
 
 	public final static int MAX_UNBALANCING = 1;
@@ -23,14 +23,14 @@ public class PromediadoImagen extends BranchAndBound{
 	/**
 	 * Constructor
 	 * 
-	 * @real_path ruta del modelo de imagen "buena" (patró a encontrar) en disco
+	 * @real_path ruta del modelo de imagen "buena" (patrÃ³ a encontrar) en disco
 	 * @bad_path ruta del modelo de imagen "mala"
 	 * @n_real numero de imagenes buenas (>= 1)
 	 * @n_bad numero de imagenes "malas" (tiene que ser menor que las buenas)
 	 * @s_noise standard deviation for noise
 	 */
 	public PromediadoImagen(String real_path, String bad_path, int n_real, int n_bad, double s_noise) {
-		// crea el cojunto de imágenes a procesar
+		// crea el cojunto de imÃ¡genes a procesar
 		assert (n_real >= 1) && (n_bad < n_real);
 
 		// Cargando los patrones de referencia (buena y mala)
@@ -42,27 +42,27 @@ public class PromediadoImagen extends BranchAndBound{
 		// Se crean con conjunto de imagenes con un array ordenado aleatoriamente para
 		// posicionar
 		// las imagenes buenas y malas aleatoriamente
-		int total_imgs = n_real + n_bad; // numero total de imágenes
+		int total_imgs = n_real + n_bad; // numero total de imÃ¡genes
 		this.dataset = new Imagen[total_imgs];
-		this.sol = new int[total_imgs]; // dóde se almacena la solució actual (combinació de asignaciones): 0->no
+		this.sol = new int[total_imgs]; // dÃ³de se almacena la soluciÃ³ actual (combinaciÃ³ de asignaciones): 0->no
 										// asignada, 1->primer subconjunto, 2->segundo subconjunto
-		this.bestSol = new int[total_imgs]; // dóde se almacena la mejor solució
+		this.bestSol = new int[total_imgs]; // dÃ³de se almacena la mejor soluciÃ³
 		int[] rand_index = this.randomIndexes(total_imgs); // array con las posiciones aleatorias
 		Imagen hold_img; // imagen temporal
 		int region = 0; // 0-arriba, 1-bajo, 2-izquierda, 3-derecha
-		for (int i = 0; i < n_real; i++) { // imágenes buenas
-			hold_img = new Imagen(this.width, this.height); // creació de la imagen
-			hold_img.addSignal(this.real_img); // adir los valores de los p喆eles
+		for (int i = 0; i < n_real; i++) { // imÃ¡genes buenas
+			hold_img = new Imagen(this.width, this.height); // creaciÃ³ de la imagen
+			hold_img.addSignal(this.real_img); // aîƒ�dir los valores de los på–†eles
 			hold_img.suppressRegion(region); // suprimir una region
-			hold_img.addNoise(s_noise); // adir ruido
-			this.dataset[rand_index[i]] = hold_img; // incluir la imagne en una posció aleatorio de dataset
+			hold_img.addNoise(s_noise); // aîƒ�dir ruido
+			this.dataset[rand_index[i]] = hold_img; // incluir la imagne en una posciÃ³ aleatorio de dataset
 			if (region == 3)
 				region = 0;
 			else
 				region++;
 		}
 		region = 0;
-		for (int i = n_real; i < n_real + n_bad; i++) { // bucle para las imágenes malas
+		for (int i = n_real; i < n_real + n_bad; i++) { // bucle para las imÃ¡genes malas
 			hold_img = new Imagen(this.width, this.height);
 			hold_img.addSignal(this.bad_img);
 			hold_img.invertSignal();
@@ -94,9 +94,9 @@ public class PromediadoImagen extends BranchAndBound{
 	}
 
 	/**
-	 * Almacena las imágenes generadas según la mejor solució encontrada
+	 * Almacena las imÃ¡genes generadas segÃºn la mejor soluciÃ³ encontrada
 	 * 
-	 * @out_dir directorio donde se almacenan las imágenes
+	 * @out_dir directorio donde se almacenan las imÃ¡genes
 	 */
 	public void saveResults(String out_dir) {
 		this.avg_img.save(out_dir + "/img_avg.png");
@@ -108,14 +108,14 @@ public class PromediadoImagen extends BranchAndBound{
 	}
 
 	/**
-	 * @return devuelve el número de pasos requeridos por el algoritmo
+	 * @return devuelve el nÃºmero de pasos requeridos por el algoritmo
 	 */
 	public int getCounter() {
 		return counter;
 	}
 
 	/**
-	 * Calcula el ZNCC entre los promedios de los dos subconjuntos de imágenes
+	 * Calcula el ZNCC entre los promedios de los dos subconjuntos de imÃ¡genes
 	 * 
 	 * @return el valor de ZNCC
 	 */
@@ -148,10 +148,10 @@ public class PromediadoImagen extends BranchAndBound{
 					group2_pd.addSignal(this.dataset[i]);
 			}
 			if (group1_pd.zncc(group2_pd) > this.max_zncc) {
-				this.max_zncc = group1_pd.zncc(group2_pd);// se actualiza el valor mejor de la correlación
+				this.max_zncc = group1_pd.zncc(group2_pd);// se actualiza el valor mejor de la correlaciÃ³n
 				this.half1_img = group1_pd.copy();// se guardan los promedios mejores
 				this.half2_img = group2_pd.copy();
-				this.bestSol = x.clone();// se guarda el vector con la mejor solución
+				this.bestSol = x.clone();// se guarda el vector con la mejor soluciÃ³n
 			}
 		}
 		this.avg_img = new Imagen(this.width, this.height);
@@ -161,10 +161,10 @@ public class PromediadoImagen extends BranchAndBound{
 	}
 
 	/**
-	 * Algoritmo backtracking con condición balanceo
+	 * Algoritmo backtracking con condiciÃ³n balanceo
 	 * 
-	 * @max_unbalancing: (condición de poda) determina la diferencia máxima en el
-	 *                   número de imágenes entre los dos subconjuntos
+	 * @max_unbalancing: (condiciÃ³n de poda) determina la diferencia mÃ¡xima en el
+	 *                   nÃºmero de imÃ¡genes entre los dos subconjuntos
 	 */
 	public void splitSubsetsBacktracking(int max_unbalancing) {
 		this.counter = 1;
@@ -186,10 +186,10 @@ public class PromediadoImagen extends BranchAndBound{
 					group2_pd.addSignal(this.dataset[i]);
 			}
 			if (group1_pd.zncc(group2_pd) > this.max_zncc) {
-				this.max_zncc = group1_pd.zncc(group2_pd);// se actualiza el valor mejor de la correlación
+				this.max_zncc = group1_pd.zncc(group2_pd);// se actualiza el valor mejor de la correlaciÃ³n
 				this.half1_img = group1_pd.copy();// se guardan los promedios mejores
 				this.half2_img = group2_pd.copy();
-				this.bestSol = sol.clone();// se guarda el vector con la mejor solución
+				this.bestSol = sol.clone();// se guarda el vector con la mejor soluciÃ³n
 			}
 
 			this.avg_img = new Imagen(this.width, this.height);
@@ -218,7 +218,7 @@ public class PromediadoImagen extends BranchAndBound{
 	}
 
 	/**
-	 * Algoritmo backtracking sin condición de balanceo.
+	 * Algoritmo backtracking sin condiciÃ³n de balanceo.
 	 */
 	public void splitSubsetsBacktracking() {
 		this.counter = 1;
@@ -242,10 +242,10 @@ public class PromediadoImagen extends BranchAndBound{
 					group2_pd.addSignal(this.dataset[i]);
 			}
 			if (group1_pd.zncc(group2_pd) > this.max_zncc) {
-				this.max_zncc = group1_pd.zncc(group2_pd);// se actualiza el valor mejor de la correlación
+				this.max_zncc = group1_pd.zncc(group2_pd);// se actualiza el valor mejor de la correlaciÃ³n
 				this.half1_img = group1_pd.copy();// se guardan los promedios mejores
 				this.half2_img = group2_pd.copy();
-				this.bestSol = sol.clone();// se guarda el vector con la mejor solución
+				this.bestSol = sol.clone();// se guarda el vector con la mejor soluciÃ³n
 			}
 
 			this.avg_img = new Imagen(this.width, this.height);
@@ -269,8 +269,13 @@ public class PromediadoImagen extends BranchAndBound{
 	}
 
 	public void branchAndBound() {
-		this.counter = 1;
-		this.max_zncc = -1;
+//		this.counter = 1;
+//		this.max_zncc = -1;
 		branchAndBound(new AvgNode(dataset, 0, new ArrayList<Integer>()));
+		this.half1_img = ((AvgNode)bestNode).getHalf1_avg();
+		this.half2_img = ((AvgNode)bestNode).getHalf2_avg();
+		this.avg_img.addSignal(half1_img);
+		this.avg_img.addSignal(half2_img);
+		this.counter = super.counterBnB;
 	}
 }

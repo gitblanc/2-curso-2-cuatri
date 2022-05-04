@@ -1,5 +1,3 @@
-import java.util.ArrayList;
-
 public class PromediadoImagenBench {
 
 	// Ajustes del banco de pruebas
@@ -7,7 +5,7 @@ public class PromediadoImagenBench {
 	private static String BAD_IMG = "img/einstein_1_256.png";
 	private static String OUT_DIR_G = "out_g";
 	private static String OUT_DIR_B = "out_bt";
-	private static int N_IMGS = 3;
+	private static int N_IMGS = 10;
 	private static double PORCENTAJE_BAD = 25; // %
 	private static double S_NOISE = 5.0;// PONER 5.0 // Nivel de ruido - desvici est疣dar de una distrubuci
 										// Gaussiana

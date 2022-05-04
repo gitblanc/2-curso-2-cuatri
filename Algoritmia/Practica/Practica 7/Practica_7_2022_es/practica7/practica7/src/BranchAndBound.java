@@ -16,6 +16,7 @@ public abstract class BranchAndBound {
 	protected Node bestNode; // To save the final node of the best solution
 	protected Node rootNode; // Initial node
 	protected double pruneLimit; // To prune nodes above this value
+	protected int counterBnB;// contador para el branchandbound
 
 	/**
 	 * Constructor for BrancAndBount objects
@@ -30,18 +31,16 @@ public abstract class BranchAndBound {
 	 * @param rootNode Starting state of the problem
 	 */
 	public void branchAndBound(Node rootNode) {
+		this.counterBnB++;// contador
 		ds.insert(rootNode); // First node to be explored
 
 		pruneLimit = rootNode.initialValuePruneLimit();
-		
-		int cont = 0;
+
 		while (!ds.empty() && ds.estimateBest() < pruneLimit) {
 			Node node = ds.extractBestNode();
 
 			ArrayList<Node> children = node.expand();
-			System.out.println(cont);
-			cont++;
-
+			this.counterBnB += children.size();// contador
 			for (Node child : children)
 				if (child.isSolution()) {
 					double cost = child.getHeuristicValue();

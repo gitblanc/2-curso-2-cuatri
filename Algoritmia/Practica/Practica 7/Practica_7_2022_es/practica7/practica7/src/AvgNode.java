@@ -1,5 +1,5 @@
 import java.util.ArrayList;
-import java.util.Random;
+import java.util.UUID;
 
 /**
  * 
@@ -12,16 +12,14 @@ import java.util.Random;
 public class AvgNode extends Node {
 
 	private Imagen[] dataset;
-	private int grupo;
-	private int nivelSol;
-	private ArrayList<Integer> imagenesNodo;
+	private ArrayList<Integer> sol;
+	private Imagen half1_avg, half2_avg;
 
 	public AvgNode(Imagen[] imagenes, int grupo, ArrayList<Integer> imagenesNodo) {
+		ID = UUID.randomUUID();
 		this.dataset = imagenes;// copia de todas las imágenes
-		this.depth = imagenesNodo.size();// profundidad se corresponde con la longitud del array de imágenes del nodo
-		this.nivelSol = imagenes.length;// profundidad solución
-		this.grupo = grupo;
-		this.imagenesNodo = imagenesNodo;
+		this.depth = grupo;
+		this.sol = new ArrayList<Integer>(imagenesNodo);
 		calculateHeuristicValue();
 	}
 
@@ -30,17 +28,17 @@ public class AvgNode extends Node {
 		if (!isSolution()) {
 			this.heuristicValue = -2;
 		} else {
-			Random r = new Random();
 			Imagen group1_pd = new Imagen(dataset[0].getWidth(), dataset[0].getHeight());
 			Imagen group2_pd = new Imagen(dataset[0].getWidth(), dataset[0].getHeight());
-			for (int i = 0; i < nivelSol; i++) {
-				this.grupo = r.nextInt(3);
-				if (this.grupo == 1)
+			for (int i = 0; i < this.sol.size(); i++) {
+				if (sol.get(i) == 1)
 					group1_pd.addSignal(this.dataset[i]);
-				if (this.grupo == 2)
+				if (sol.get(i) == 2)
 					group2_pd.addSignal(this.dataset[i]);
 			}
-			this.heuristicValue = group1_pd.zncc(group2_pd) * -1;
+			this.heuristicValue = (group2_pd.zncc(group1_pd)) * (-1);
+			this.half1_avg = group1_pd.copy();
+			this.half2_avg = group2_pd.copy();
 		}
 
 	}
@@ -48,18 +46,29 @@ public class AvgNode extends Node {
 	@Override
 	public ArrayList<Node> expand() {
 		// x3 new AvgNode, que imagen va a que conjunto
-		ArrayList<Node> res = new ArrayList<>();
-		res.add(new AvgNode(this.dataset, 0, imagenesNodo));
-		res.add(new AvgNode(this.dataset, 1, imagenesNodo));
-		res.add(new AvgNode(this.dataset, 2, imagenesNodo));
+		ArrayList<Node> res = new ArrayList<Node>();
+		sol.add(0);
+		res.add(new AvgNode(dataset, depth+1, sol));
+		sol.set(depth, 1);
+		res.add(new AvgNode(dataset, depth+1, sol));
+		sol.set(depth, 2);
+		res.add(new AvgNode(dataset, depth+1, sol));
 		return res;
 	}
 
 	@Override
 	public boolean isSolution() {
 		// devuelve si es un nodo hoja o no
-		return getDepth() == this.nivelSol ? true : false;
+		return getDepth() == this.dataset.length;
 
+	}
+
+	public Imagen getHalf2_avg() {
+		return half2_avg;
+	}
+
+	public Imagen getHalf1_avg() {
+		return half1_avg;
 	}
 
 }
