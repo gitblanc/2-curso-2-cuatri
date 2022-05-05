@@ -223,7 +223,7 @@ public class PromediadoImagen extends BranchAndBound{
 	public void splitSubsetsBacktracking() {
 		this.counter = 1;
 		this.max_zncc = -1;
-		int level = 3;
+		int level = 0;
 		backtrackingAux(level);
 
 	}
@@ -269,8 +269,8 @@ public class PromediadoImagen extends BranchAndBound{
 	}
 
 	public void branchAndBound() {
-//		this.counter = 1;
-//		this.max_zncc = -1;
+		this.counter = 1;
+		this.max_zncc = -1;
 		branchAndBound(new AvgNode(dataset, 0, new ArrayList<Integer>()));
 		this.half1_img = ((AvgNode)bestNode).getHalf1_avg();
 		this.half2_img = ((AvgNode)bestNode).getHalf2_avg();
