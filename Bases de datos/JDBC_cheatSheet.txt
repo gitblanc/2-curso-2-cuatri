@@ -1,0 +1,113 @@
+PARA LOS SELECT
+
+Creamos la conexión
+-- Connection con = DriverManager.getConnection(connection, username, password);
+
+Primero crear un StateMent para ejecutar un comando
+-- Statement st = conn.createStatement();
+
+Crear la sentencia sql
+-- String query = "Select * from libros"; //sin punto y coma al final
+
+Ejecutar la instrucción
+-- st.executeQuery(query); //para los Select, devuelve un objeto ResultSet que se puede usar para procesar las filas
+
+-- ResultSet rs = st.executeQuery("Select * from libros");
+
+Para analizar el conjunto de resultados:
+-- while(rs.next()){
+	String isbn = rs.getString(1);
+	float precio = rs.getDouble("Precio");}
+-----------------------
+PARA LOS INSERT, UPDATE, DELETE, CREATE TABLE, DROP TABLE, etc
+
+Crear el objeto Statement
+-- Statement st = conn.createStatement();
+
+Especificar la sentencia a ejecutar
+-- String query = "Update libros set price = price*1.25";
+
+Ejecutar la instrucción
+-- st.executeUpdate(query);
+
+-----------------------
+Ejecución de sentencias predefinidas
+
+Especificar la sentencia SQL
+-- String query = "Select ...."
+
+Crear el PreparedStatement
+-- PreparedStatement psConsulta = conn.prepareStatement(query);
+
+Enlazar cada variable con su correspondiente valor a través del método setxxxx()
+-- psConsulta.setString(1, "McGrawHill");
+
+Ejecutar la consulta
+-- ResultSet rs = psConsulta.executeQuery();
+
+-----------------------
+
+importante cerrar los statements y la conexión al final
+
+---
+CLASES:
+- DriverManager
+
+INTERFACES:
+- Connection
+- Statement
+- PreparedStatement
+- CallableStatement
+- ResultSet
+
+----------------------
+TRANSACCIONES
+
+- Para hacerla definitiva usar commit.
+- Si se desean deshacer todas las sentencias usar rollback
+
+----------------------
+PROCEDIMIENTOS ALMACENADOS //forman una unidad lógica y hacen una tarea concreta
+				   //puede devolver un ResultSet o valores OUT e INOUT
+
+-- CallableStatement cs = con.prepareCall("{call MUESTRA_EDITORIALES}");
+   cs.execute();
+
+----------------------
+PROCEDIMIENTOS CON PARÁMETROS DE ENTRADA
+
+-- CallableStatement cs = con.prepareCall("{call MUESTRA_EDITORIALES (?,?)}"); // se usa la ?
+   cs.setString(1, "xyz");
+   cs.setString(2, "ab");
+   cs.execute();
+
+----------------------
+PROCEDIMIENTOS CON PARÁMETROS DE SALIDA (OUT)
+
+-- CallableStatement cs = con.prepareCall("{call MUESTRA_EDITORIALES (?)}"); // se usa la ?
+   cs.registerOutParameter(1, java.sql.Types.FLOAT);
+   cs.execute();
+   float media = cs.getFloat(1);
+
+----------------------
+PROCEDIMIENTOS CON PARÁMETROS DE SALIDA (INOUT)
+
+-- CallableStatement cs = con.prepareCall("{call MUESTRA_EDITORIALES (?)}"); // se usa la ?
+   cs.setByte(1,(byte)25);
+   cs.registerOutParameter(1, java.sql.Types.FLOAT);
+   cs.execute();
+   float media = cs.getFloat(1);
+
+----------------------
+INVOCACIÓN DE FUNCIONES
+
+-- CallableStatement cs = con.prepareCall (“{? = call CALCULA_MEDIA (?)}”);
+   cs.registerOutParameter(1,java.sql.Types.FLOAT);
+   cs.setString(2,mdni);
+   cs.execute();
+   float media = cs.getFloat(1);
+   System.out.println(“La media es : “+ media);
+
+
+
+
